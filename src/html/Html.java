@@ -21,6 +21,7 @@ public class Html implements Serializable {
 	};
 
 	private List<Table> tables = new ArrayList<Table>();
+	private long lastModifiedDate;
 	//private InputStreamReader reader;
 
 //	public Html(URL url) throws IOException {
@@ -30,9 +31,11 @@ public class Html implements Serializable {
 //
 //		//createTables();
 //	}
-	public Html(InputStreamReader reader) throws IOException{
-		//this.reader = reader;
-
+	public Html(URLConnection connection) throws IOException{
+		lastModifiedDate = connection.getLastModified();
+		
+		InputStreamReader reader = new InputStreamReader(connection.getInputStream());
+		
 		createTables(reader);
 	}
 

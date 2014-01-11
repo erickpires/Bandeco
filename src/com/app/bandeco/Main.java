@@ -33,8 +33,10 @@ public class Main extends Activity {
 		final Context context = this;
 
 		if (savedInstanceState != null
-				&& savedInstanceState.containsKey("html"))
+				&& savedInstanceState.containsKey("html")){
+			System.out.println("Bundle already exists");
 			html = (Html) savedInstanceState.getSerializable("html");
+		}
 
 		else {
 			try {

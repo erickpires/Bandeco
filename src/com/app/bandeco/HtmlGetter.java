@@ -34,9 +34,9 @@ public class HtmlGetter extends AsyncTask<String, Void, Html> {
 			URL url = new URL(params[0]);
 			
 			URLConnection connection = url.openConnection();
-			InputStreamReader isr = new InputStreamReader(connection.getInputStream());
+			//InputStreamReader isr = new InputStreamReader(connection.getInputStream());
 			
-			result = new Html(isr);
+			result = new Html(connection);
 			
 		} catch (Exception e) {
 			exception = e;
