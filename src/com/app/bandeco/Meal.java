@@ -7,18 +7,20 @@ public class Meal {
 	private String pratoPrincipal;
 	private String vegetariana;
 	private String guarnicao;
-	private String acompanhamento;
+	private String feijao;
+	private String arroz;
 	private String sobremesa;
 	private String refresco;
 	
 	public Meal(String entrada, String pratoPrincipal, String vegetariana,
-			String guarnicao, String acompanhamento, String sobremesa,
+			String guarnicao, String feijao, String arroz, String sobremesa,
 			String refresco) {
 		this.entrada = entrada;
 		this.pratoPrincipal = pratoPrincipal;
 		this.vegetariana = vegetariana;
 		this.guarnicao = guarnicao;
-		this.acompanhamento = acompanhamento;
+		this.feijao = feijao;
+		this.arroz = arroz;
 		this.sobremesa = sobremesa;
 		this.refresco = refresco;
 	}
@@ -39,8 +41,12 @@ public class Meal {
 		return guarnicao;
 	}
 
-	public String getAcompanhamento() {
-		return acompanhamento;
+	public String getFeijao() {
+		return feijao;
+	}
+	
+	public String getArroz() {
+		return arroz;
 	}
 
 	public String getSobremesa() {
