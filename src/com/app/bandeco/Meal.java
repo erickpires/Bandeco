@@ -1,5 +1,7 @@
 package com.app.bandeco;
 
+import java.util.List;
+
 public class Meal {
 	//Sorry, but this part will be written in Portuguese
 	
@@ -11,18 +13,63 @@ public class Meal {
 	private String arroz;
 	private String sobremesa;
 	private String refresco;
+	private String acompanhamento;
+	private String type;
 	
-	public Meal(String entrada, String pratoPrincipal, String vegetariana,
-			String guarnicao, String feijao, String arroz, String sobremesa,
-			String refresco) {
-		this.entrada = entrada;
-		this.pratoPrincipal = pratoPrincipal;
-		this.vegetariana = vegetariana;
-		this.guarnicao = guarnicao;
-		this.feijao = feijao;
-		this.arroz = arroz;
-		this.sobremesa = sobremesa;
-		this.refresco = refresco;
+	public Meal(List<String> tableColumn, Indexer indexer, String type){
+		String tmp;
+		
+		this.type = type;
+		
+		entrada = tableColumn.get(indexer.getIndexOfEntrada());
+		pratoPrincipal = tableColumn.get(indexer.getIndexOfPratoPrincipal());
+		vegetariana = tableColumn.get(indexer.getIndexOfVegetariana());
+		guarnicao = tableColumn.get(indexer.getIndexOfGuarnicao());
+		
+		tmp = tableColumn.get(indexer.getIndexOfAcompanhamento());
+		
+		String[] acomp = tmp.split(";;");
+		
+		arroz = acomp[0];
+		feijao = acomp[1];
+		
+		tmp = tableColumn.get(indexer.getIndexOfSobremesa());
+		
+		String[] sobremesaRefresco = tmp.split("/");
+		
+		sobremesa = sobremesaRefresco[0];
+		refresco = sobremesaRefresco[1];
+		
+		formatText();
+		
+		acompanhamento = arroz + " e " + feijao;
+	}
+	
+//	public Meal(String entrada, String pratoPrincipal, String vegetariana,
+//			String guarnicao, String feijao, String arroz, String sobremesa,
+//			String refresco) {
+//		this.entrada = entrada;
+//		this.pratoPrincipal = pratoPrincipal;
+//		this.vegetariana = vegetariana;
+//		this.guarnicao = guarnicao;
+//		this.feijao = feijao;
+//		this.arroz = arroz;
+//		this.sobremesa = sobremesa;
+//		this.refresco = refresco;
+//	}
+
+	private void formatText() {
+		entrada = entrada.trim();
+		pratoPrincipal = pratoPrincipal.trim();
+		vegetariana = vegetariana.trim();
+		guarnicao = guarnicao.trim();
+		feijao = feijao.trim();
+		sobremesa = sobremesa.trim();
+		refresco = refresco.trim();
+		arroz = arroz.trim();
+		
+		arroz = arroz.replace("/", "ou");
+		
 	}
 
 	public String getEntrada() {
@@ -55,5 +102,13 @@ public class Meal {
 
 	public String getRefresco() {
 		return refresco;
+	}
+	
+	public String getAcompanhamento(){
+		return acompanhamento;
+	}
+
+	public String getType() {
+		return type;
 	}
 }

@@ -9,37 +9,21 @@
     tools:context=".Main" >
 
     <Spinner
-        android:id="@+id/meal_spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/button1" />
-
-    <Spinner
         android:id="@+id/day_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/button1" />
+        android:layout_centerHorizontal="true" />
 
-    <Button
-        android:id="@+id/button1"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+    <view.MealCard
+        android:id="@+id/mealCard1"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/meal_spinner"
-        android:layout_centerHorizontal="true"
-        android:text="Button" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp"
-        android:text="@string/hello_world" />
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/day_spinner"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/bg_card"
+        android:text="" />
 
 </RelativeLayout>

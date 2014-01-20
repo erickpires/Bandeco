@@ -95,10 +95,6 @@ public class Html implements Serializable {
 				currentColumn = 0;
 			}
 		}
-
-		for (int i = 0; i < tables.size(); i++)
-			if (tables.get(i).searchValueInColumn(0, "Acompanhamento") != -1)
-				System.out.println(i);
 	}
 	
 	public List<Table> getTables(){
@@ -106,7 +102,7 @@ public class Html implements Serializable {
 	}
 
 	private static String getDataFromLine(String str) {
-		str = str.replaceAll("<br />", "|");
+		str = str.replaceAll("<br />", ";;");
 		str = str.replaceAll("<[[/]a-zA-Z=\"0-9#:.! -]*>", "");
 		str = str.replaceAll("&nbsp;", "");
 		str = str.replaceAll(" [ ]*", " ");

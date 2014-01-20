@@ -2,7 +2,9 @@
 <resources>
 
     <string name="app_name">Bandeco</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Configurações</string>
+    <string name="action_update">Atualizar</string>
+    <string name="action_about">Sobre</string>
     <string name="hello_world">Hello world!</string>
 
     <string-array name="days_array">

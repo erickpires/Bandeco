@@ -73,6 +73,16 @@ public class Table implements Serializable {
 
 		return l;
 	}
+	
+	public List<String> getColumn(int column, int start) {
+		List<String> l = new ArrayList<String>();
+
+		for (int i = start; i < rows(); i++)
+			if (columns(i) > column)
+				l.add(getElement(i, column));
+
+		return l;
+	}
 
 	@Override
 	public String toString() {
