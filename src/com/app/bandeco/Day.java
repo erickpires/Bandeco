@@ -1,5 +1,9 @@
 package com.app.bandeco;
 
+import view.Card;
+
+import com.fima.cardsui.views.CardUI;
+
 public class Day {
 	private Meal lunch;
 	private Meal dinner;
@@ -43,5 +47,14 @@ public class Day {
 		default:
 			return null;
 		}
+	}
+
+	public void generateCards(CardUI cardUI) {
+		Card lunchCard = lunch.createCard();
+		Card dinnerCard = dinner.createCard();
+		
+		cardUI.addCardToLastStack(dinnerCard);
+		cardUI.addCardToLastStack(lunchCard);
+		
 	}
 }

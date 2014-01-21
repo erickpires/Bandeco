@@ -6,6 +6,8 @@
     <string name="action_update">Atualizar</string>
     <string name="action_about">Sobre</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title">Title</string>
+    <string name="desc">Description</string>
 
     <string-array name="days_array">
         <item>Monday</item>

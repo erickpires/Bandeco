@@ -1,20 +1,26 @@
 package com.app.bandeco;
 
 import html.Html;
+
 import java.util.concurrent.ExecutionException;
 
-import view.MealCard;
-
+import view.Card;
+import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
+
+import com.fima.cardsui.objects.CardStack;
+import com.fima.cardsui.views.CardUI;
 
 public class Main extends Activity {
 
@@ -22,6 +28,7 @@ public class Main extends Activity {
 	private Html html;
 	private Context context;
 	private Week week;
+	private CardUI cardUI;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -56,15 +63,29 @@ public class Main extends Activity {
 		daysAdapter
 				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		daySpinner.setAdapter(daysAdapter);;
-		final MealCard mealCard = (MealCard) findViewById(R.id.mealCard1);
-
+		final RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.relative_layout);
+		
 		daySpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
 
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view,
 					int pos, long id) {
-				mealCard.setDay(week.getDay(pos));
-				mealCard.setMeal(week.getDay(pos).getLunch());
+				
+				relativeLayout.removeView(cardUI);
+				cardUI = new CardUI(getApplication());
+				Day today = week.getDay(pos);
+//				
+				cardUI.addStack(new CardStack("" + today));
+				today.generateCards(cardUI);
+				//cardUI.addCardToLastStack(new Card("titulo", "corpo", "#0000", "#0000", false));
+//				
+				cardUI.refresh();
+				
+				relativeLayout.addView(cardUI);
+				
+				RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) cardUI.getLayoutParams();
+				params.addRule(RelativeLayout.BELOW, R.id.day_spinner);
+				cardUI.setLayoutParams(params);
 
 			}
 
