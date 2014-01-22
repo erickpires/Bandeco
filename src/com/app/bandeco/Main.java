@@ -4,31 +4,31 @@ import html.Html;
 
 import java.util.concurrent.ExecutionException;
 
-import view.Card;
-import android.app.ActionBar.LayoutParams;
-import android.app.Activity;
+import model.Week;
+import adapters.TabsAdapter;
+import android.app.ActionBar;
+import android.app.ActionBar.Tab;
+import android.app.ActionBar.TabListener;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Bundle;
-import android.text.Layout;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.ArrayAdapter;
-import android.widget.RelativeLayout;
-import android.widget.Spinner;
+import android.widget.Toast;
 
-import com.fima.cardsui.objects.CardStack;
-import com.fima.cardsui.views.CardUI;
-
-public class Main extends Activity {
+public class Main extends FragmentActivity implements TabListener {
 
 	private static final String url = "http://www.nutricao.ufrj.br/cardapio.htm";
 	private Html html;
 	private Context context;
 	private Week week;
-	private CardUI cardUI;
+	
+	private ActionBar actionBar;
+	private ViewPager viewPager;
+	private TabsAdapter tabsAdapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -54,45 +54,46 @@ public class Main extends Activity {
 		}
 		
 		week = new Week(html.getTables());
-
-		final Spinner daySpinner = (Spinner) findViewById(R.id.day_spinner);
-		ArrayAdapter<CharSequence> daysAdapter = ArrayAdapter
-				.createFromResource(this, R.array.days_array,
-						android.R.layout.simple_spinner_item);
-
-		daysAdapter
-				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		daySpinner.setAdapter(daysAdapter);;
-		final RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.relative_layout);
 		
-		daySpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
-
+		
+		actionBar = getActionBar();
+		viewPager = (ViewPager) findViewById(R.id.pager);
+		tabsAdapter = new TabsAdapter(getSupportFragmentManager());
+		
+		viewPager.setAdapter(tabsAdapter);
+		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+		tabsAdapter.setMain(this);
+		
+		
+		Tab tabDay = actionBar.newTab();
+		Tab tabWeek = actionBar.newTab();
+		
+		tabDay.setText("Dia");
+		tabDay.setTabListener(this);
+		
+		tabWeek.setText("Semana");
+		tabWeek.setTabListener(this);
+		
+		actionBar.addTab(tabDay);
+		actionBar.addTab(tabWeek);
+		
+		viewPager.setOnPageChangeListener(new OnPageChangeListener() {
+			
 			@Override
-			public void onItemSelected(AdapterView<?> parent, View view,
-					int pos, long id) {
-				
-				relativeLayout.removeView(cardUI);
-				cardUI = new CardUI(getApplication());
-				Day today = week.getDay(pos);
-//				
-				cardUI.addStack(new CardStack("" + today));
-				today.generateCards(cardUI);
-				//cardUI.addCardToLastStack(new Card("titulo", "corpo", "#0000", "#0000", false));
-//				
-				cardUI.refresh();
-				
-				relativeLayout.addView(cardUI);
-				
-				RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) cardUI.getLayoutParams();
-				params.addRule(RelativeLayout.BELOW, R.id.day_spinner);
-				cardUI.setLayoutParams(params);
-
+			public void onPageSelected(int pos) {
+				actionBar.setSelectedNavigationItem(pos);
 			}
-
+			
 			@Override
-			public void onNothingSelected(AdapterView<?> parent) {
+			public void onPageScrolled(int arg0, float arg1, int arg2) {	
+			}
+			
+			@Override
+			public void onPageScrollStateChanged(int arg0) {
 			}
 		});
+
+		
 	}
 
 	@Override
@@ -122,10 +123,10 @@ public class Main extends Activity {
 		case R.id.action_update:
 			try {
 				html = new HtmlGetter(context).execute(url).get();
-			} catch (InterruptedException e1) {
+				Toast.makeText(this, "Cardápio Atualizado", Toast.LENGTH_SHORT).show();
+			} catch (Exception e1) {
 				e1.printStackTrace();
-			} catch (ExecutionException e1) {
-				e1.printStackTrace();
+				Toast.makeText(this, "Problemas ao atualizar: " + e1, Toast.LENGTH_LONG).show();
 			}
 			
 			return true;
@@ -140,5 +141,27 @@ public class Main extends Activity {
 			return false;
 		}
 	}
+	
+	@Override
+	public void onTabReselected(Tab tab, FragmentTransaction ft) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onTabSelected(Tab tab, FragmentTransaction ft) {
+		viewPager.setCurrentItem(tab.getPosition());
+	}
+
+	@Override
+	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Week getWeek() {
+		return week;
+	}
+
 
 }

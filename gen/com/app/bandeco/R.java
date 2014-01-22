@@ -208,48 +208,51 @@ public final class R {
         public static final int widget_margin_top_bottom=0x7f05001a;
     }
     public static final class drawable {
-        public static final int bg_card=0x7f020000;
-        public static final int card=0x7f020001;
-        public static final int card_background=0x7f020002;
-        public static final int card_background_shadow=0x7f020003;
-        public static final int card_shadow=0x7f020004;
-        public static final int ic_launcher=0x7f020005;
-        public static final int ic_menu_moreoverflow_normal_holo_light=0x7f020006;
-        public static final int selectable_background_cardbank=0x7f020007;
-        public static final int top_shadow=0x7f020008;
+        public static final int card=0x7f020000;
+        public static final int card_background=0x7f020001;
+        public static final int card_background_shadow=0x7f020002;
+        public static final int card_shadow=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
+        public static final int ic_menu_moreoverflow_normal_holo_light=0x7f020005;
+        public static final int selectable_background_cardbank=0x7f020006;
+        public static final int top_shadow=0x7f020007;
     }
     public static final class id {
-        public static final int ScrollView1=0x7f0a0007;
-        public static final int action_about=0x7f0a0011;
-        public static final int action_settings=0x7f0a000f;
-        public static final int action_update=0x7f0a0010;
+        public static final int RelativeLayout1=0x7f0a000f;
+        public static final int ScrollView1=0x7f0a0006;
+        public static final int action_about=0x7f0a0013;
+        public static final int action_settings=0x7f0a0011;
+        public static final int action_update=0x7f0a0012;
         public static final int cardContent=0x7f0a000b;
-        public static final int contentLayout=0x7f0a0002;
-        public static final int day_spinner=0x7f0a0001;
-        public static final int description=0x7f0a0004;
+        public static final int contentLayout=0x7f0a0001;
+        public static final int description=0x7f0a0003;
+        public static final int expandableListView1=0x7f0a0010;
         public static final int footer=0x7f0a0009;
-        public static final int listView=0x7f0a0005;
+        public static final int listView=0x7f0a0004;
+        public static final int pager=0x7f0a0000;
         public static final int placeholder=0x7f0a000a;
-        public static final int relative_layout=0x7f0a0000;
+        public static final int relative_layout=0x7f0a0008;
         public static final int stackContainer=0x7f0a000e;
         public static final int stackRoot=0x7f0a000c;
         public static final int stackTitle=0x7f0a000d;
-        public static final int sticky=0x7f0a0006;
-        public static final int tableLayout=0x7f0a0008;
-        public static final int title=0x7f0a0003;
+        public static final int sticky=0x7f0a0005;
+        public static final int tableLayout=0x7f0a0007;
+        public static final int title=0x7f0a0002;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int card=0x7f030001;
         public static final int cards_view=0x7f030002;
         public static final int cards_view_multicolumn=0x7f030003;
-        public static final int footer_fragment=0x7f030004;
-        public static final int header=0x7f030005;
-        public static final int item_card=0x7f030006;
-        public static final int item_card_empty_first=0x7f030007;
-        public static final int item_card_empty_last=0x7f030008;
-        public static final int item_play_card_empty_first=0x7f030009;
-        public static final int item_stack=0x7f03000a;
+        public static final int day_layout=0x7f030004;
+        public static final int footer_fragment=0x7f030005;
+        public static final int header=0x7f030006;
+        public static final int item_card=0x7f030007;
+        public static final int item_card_empty_first=0x7f030008;
+        public static final int item_card_empty_last=0x7f030009;
+        public static final int item_play_card_empty_first=0x7f03000a;
+        public static final int item_stack=0x7f03000b;
+        public static final int week_layout=0x7f03000c;
     }
     public static final class menu {
         public static final int main=0x7f090000;
