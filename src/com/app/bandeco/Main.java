@@ -11,6 +11,7 @@ import android.app.ActionBar.Tab;
 import android.app.ActionBar.TabListener;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
@@ -31,7 +32,7 @@ public class Main extends FragmentActivity implements TabListener {
 	private TabsAdapter tabsAdapter;
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState) {		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
@@ -64,7 +65,6 @@ public class Main extends FragmentActivity implements TabListener {
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		tabsAdapter.setMain(this);
 		
-		
 		Tab tabDay = actionBar.newTab();
 		Tab tabWeek = actionBar.newTab();
 		
@@ -72,7 +72,9 @@ public class Main extends FragmentActivity implements TabListener {
 		tabDay.setTabListener(this);
 		
 		tabWeek.setText("Semana");
+		System.out.println("------------------------------------" + tabWeek);
 		tabWeek.setTabListener(this);
+		
 		
 		actionBar.addTab(tabDay);
 		actionBar.addTab(tabWeek);

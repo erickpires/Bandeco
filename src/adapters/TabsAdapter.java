@@ -10,19 +10,21 @@ import com.app.bandeco.Main;
 
 public class TabsAdapter extends FragmentPagerAdapter {
 
-	DayFragment DayFragment = new DayFragment();
-	WeekFragment weekFragment = new WeekFragment();
+	DayFragment dayFragment;
+	WeekFragment weekFragment;
 	
 	public TabsAdapter(FragmentManager fm) {
 		super(fm);
 		// TODO Auto-generated constructor stub
+		dayFragment = new DayFragment();
+		weekFragment = new WeekFragment();
 	}
 
 	@Override
 	public Fragment getItem(int arg0) {
 		switch (arg0) {
 		case 0:
-			return DayFragment;
+			return dayFragment;
 		case 1:
 			return weekFragment;
 		default:
@@ -36,7 +38,7 @@ public class TabsAdapter extends FragmentPagerAdapter {
 	}
 
 	public void setMain(Main main) {
-		DayFragment.setMain(main);
+		dayFragment.setMain(main);
 		weekFragment.setMain(main);
 		
 	}

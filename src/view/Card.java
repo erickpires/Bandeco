@@ -10,9 +10,9 @@ import com.fima.cardsui.objects.RecyclableCard;
 
 public class Card extends RecyclableCard {
 
-	public Card(String titlePlay, String description, String color,
+	public Card(String title, String description, String color,
 			String titleColor, Boolean isClickable) {
-		super(titlePlay, description, color, titleColor, false,
+		super(title, description, color, titleColor, false,
 				isClickable);
 	}
 

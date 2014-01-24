@@ -2,9 +2,9 @@ package model;
 
 import java.util.List;
 
-import com.app.bandeco.Indexer;
-
 import view.Card;
+
+import com.app.bandeco.Indexer;
 
 public class Meal {
 	// Sorry, but this part will be written in Portuguese
@@ -19,6 +19,7 @@ public class Meal {
 	private String refresco;
 	private String acompanhamento;
 	private String type;
+	private Day day;
 
 	public Meal(List<String> tableColumn, Indexer indexer, String type) {
 		String tmp;
@@ -126,6 +127,13 @@ public class Meal {
 	}
 
 	public Card createCard() {
+		
+		
+		return new Card(type, this.toString(), "#424242", "#0000e4", false);
+	}
+	
+	@Override
+	public String toString(){
 		String text = "";
 		text += "Entrada: " + entrada + "\n";
 		text += "Guarnição : " + guarnicao + "\n";
@@ -135,6 +143,14 @@ public class Meal {
 		text += "Sobremesa :  " + sobremesa + "\n";
 		text += "Refresco: " + refresco + "\n";
 		
-		return new Card(type, text, "#000000", "#0000e4", false);
+		return text;
+	}
+
+	public String getDay() {
+		return "" + day;
+	}
+
+	public void setDay(Day day) {
+		this.day = day;	
 	}
 }

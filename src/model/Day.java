@@ -13,6 +13,9 @@ public class Day {
 		this.lunch = lunch;
 		this.dinner = dinner;
 		this.weekDay = weekDay;
+		
+		lunch.setDay(this);
+		dinner.setDay(this);
 	}
 
 	public Meal getLunch() {
