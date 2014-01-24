@@ -6,8 +6,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.app.bandeco.Main;
-
 public class TabsAdapter extends FragmentPagerAdapter {
 
 	DayFragment dayFragment;
@@ -15,7 +13,6 @@ public class TabsAdapter extends FragmentPagerAdapter {
 	
 	public TabsAdapter(FragmentManager fm) {
 		super(fm);
-		// TODO Auto-generated constructor stub
 		dayFragment = new DayFragment();
 		weekFragment = new WeekFragment();
 	}
@@ -35,12 +32,6 @@ public class TabsAdapter extends FragmentPagerAdapter {
 	@Override
 	public int getCount() {
 		return 2;
-	}
-
-	public void setMain(Main main) {
-		dayFragment.setMain(main);
-		weekFragment.setMain(main);
-		
 	}
 
 }

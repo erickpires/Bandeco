@@ -1,7 +1,6 @@
 package com.app.bandeco;
 
 import java.util.List;
-import java.util.Locale;
 
 public class Indexer {
 	private int indexOfEntrada;
@@ -34,28 +33,6 @@ public class Indexer {
 				indexOfRefresco = i;
 		}
 	}
-	
-//	public void setIndexOfEntrada(int indexOfEntrada) {
-//		this.indexOfEntrada = indexOfEntrada;
-//	}
-//	public void setIndexOfPratoPrincipal(int indexOfPratoPrincipal) {
-//		this.indexOfPratoPrincipal = indexOfPratoPrincipal;
-//	}
-//	public void setIndexOfVegetariana(int indexOfVegetariana) {
-//		this.indexOfVegetariana = indexOfVegetariana;
-//	}
-//	public void setIndexOfGuarnicao(int indexOfGuarnicao) {
-//		this.indexOfGuarnicao = indexOfGuarnicao;
-//	}
-//	public void setIndexOfAcompanhamento(int indexOfAcompanhamento) {
-//		this.indexOfAcompanhamento = indexOfAcompanhamento;
-//	}
-//	public void setIndexOfRefresco(int indexOfRefresco) {
-//		this.indexOfRefresco = indexOfRefresco;
-//	}
-//	public void setIndexOfSobremesa(int indexOfSobremesa) {
-//		this.indexOfSobremesa = indexOfSobremesa;
-//	}
 	
 	public int getIndexOfEntrada() {
 		return indexOfEntrada;

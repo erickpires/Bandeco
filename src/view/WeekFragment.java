@@ -1,12 +1,6 @@
 package view;
 
-import java.util.Calendar;
-
-import model.Week;
 import adapters.MyExpandableListViewAdapter;
-import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -18,39 +12,25 @@ import com.app.bandeco.Main;
 
 public class WeekFragment extends Fragment {
 
-	private Main main;
-
-	@TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
-	@SuppressLint("NewApi")
+	private MyExpandableListViewAdapter adapter;
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		ListView listView = (ListView) inflater.inflate(com.app.bandeco.R.layout.week_layout, container, false);
 		
+		System.out.println(container);
 		
-		Calendar calendar = Calendar.getInstance();
-		
-		MyExpandableListViewAdapter adapter = new MyExpandableListViewAdapter(getActivity());
-		Week week = main.getWeek();
+		adapter = new MyExpandableListViewAdapter(getActivity());
 		
 		for(int i = 0; i < 7; i++){
-			adapter.add(week.getDay(i).getLunch());
-			adapter.add(week.getDay(i).getDinner());
+			adapter.add(Main.week.getDay(i).getLunch());
+			adapter.add(Main.week.getDay(i).getDinner());
 		}
-//		adapter.add(null);
-//		adapter.add(null);
+		
 		adapter.setLimit(1);
 		listView.setAdapter(adapter);
-		
-		
-		
-		
+
 		
 		return listView;
-	}
-
-	public void setMain(Main main) {
-		this.main = main;
-		
 	}
 }

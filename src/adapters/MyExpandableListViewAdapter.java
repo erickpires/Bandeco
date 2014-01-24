@@ -4,33 +4,26 @@ import model.Meal;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.renderscript.Program.TextureType;
-import android.text.InputType;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
-import com.app.bandeco.Main;
 import com.haarman.listviewanimations.itemmanipulation.ExpandableListItemAdapter;
 
 public class MyExpandableListViewAdapter extends
 		ExpandableListItemAdapter<Meal> {
 
 	private Context context;
-	private Main main;
 
 	public MyExpandableListViewAdapter(Context context) {
 		super(context);
-		// super(context,
-		// com.app.bandeco.R.layout.activity_expandablelistitem_card,
-		// com.app.bandeco.R.id.ListView1,
-		// com.app.bandeco.R.id.activity_expandablelistitem_card_content);
 		this.context = context;
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -53,12 +46,9 @@ public class MyExpandableListViewAdapter extends
 		tv.setTextColor(Color.parseColor("#424242"));
 		tv.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
 		tv.setPadding(8, 5, 48, 0);
-		//tv.setEms(20);
 		tv.setGravity(Gravity.CENTER | Gravity.LEFT);
-
-		tv.setCompoundDrawablePadding(15);
-		//tv.setLines(12);
 		
+		tv.setLines(calculateMagicNumber()); //This is a workaround (gambiarra) and you should not care about it
 		tv.setBackgroundResource(com.app.bandeco.R.drawable.card_bg);
 		rl.addView(tv);
 		LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) tv
@@ -66,10 +56,8 @@ public class MyExpandableListViewAdapter extends
 		params.setMargins(30, 0, 30, 0); // substitute parameters for left, top,
 											// right, bottom
 		params.width = LinearLayout.LayoutParams.MATCH_PARENT;
-		params.height =  LinearLayout.LayoutParams.WRAP_CONTENT;;
+		params.height = LinearLayout.LayoutParams.WRAP_CONTENT;
 		tv.setLayoutParams(params);
-
-		System.out.println(rl.getLayoutParams());
 		
 		return rl;
 	}
@@ -105,9 +93,18 @@ public class MyExpandableListViewAdapter extends
 
 		return rl;
 	}
-
-	public void setMain(Main main) {
-		this.main = main;
+	
+	private int calculateMagicNumber() {
+		WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+		Display d = wm.getDefaultDisplay();
+		
+		int width = d.getWidth();
+		
+		if(width < 400)
+			return 12;
+		if(width < 750)
+			return 10;
+		else
+			return 8;
 	}
-
 }
