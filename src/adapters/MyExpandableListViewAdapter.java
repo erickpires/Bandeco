@@ -66,7 +66,7 @@ public class MyExpandableListViewAdapter extends
 		params.setMargins(30, 0, 30, 0); // substitute parameters for left, top,
 											// right, bottom
 		params.width = LinearLayout.LayoutParams.MATCH_PARENT;
-		params.height = 180;
+		params.height =  LinearLayout.LayoutParams.WRAP_CONTENT;;
 		tv.setLayoutParams(params);
 
 		System.out.println(rl.getLayoutParams());
