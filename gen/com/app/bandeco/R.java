@@ -212,11 +212,12 @@ public final class R {
         public static final int card_background=0x7f020001;
         public static final int card_background_shadow=0x7f020002;
         public static final int card_bg=0x7f020003;
-        public static final int card_shadow=0x7f020004;
-        public static final int ic_launcher=0x7f020005;
-        public static final int ic_menu_moreoverflow_normal_holo_light=0x7f020006;
-        public static final int selectable_background_cardbank=0x7f020007;
-        public static final int top_shadow=0x7f020008;
+        public static final int card_bg_title=0x7f020004;
+        public static final int card_shadow=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int ic_menu_moreoverflow_normal_holo_light=0x7f020007;
+        public static final int selectable_background_cardbank=0x7f020008;
+        public static final int top_shadow=0x7f020009;
     }
     public static final class id {
         public static final int ListView1=0x7f0a000f;

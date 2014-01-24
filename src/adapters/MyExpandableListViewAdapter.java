@@ -74,21 +74,23 @@ public class MyExpandableListViewAdapter extends
 
 		TextView tv = new TextView(context);
 
-		tv.setText(" " + meal.getType() + ", " + meal.getDay() + "\n");
+		tv.setText(meal.getType() + ", " + meal.getDay());
 		tv.setClickable(false);
 
 		tv.setTextSize(18);
-		tv.setTextColor(Color.parseColor("#707070"));
+		tv.setTextColor(Color.parseColor("#7094FF"));
 		tv.setTypeface(Typeface.create("sans-serif-thin", Typeface.NORMAL));
 		tv.setPadding(8, 0, 0, 0);
+		tv.setGravity(Gravity.CENTER);
 
-		tv.setBackgroundResource(com.app.bandeco.R.drawable.card_bg);
+		tv.setBackgroundResource(com.app.bandeco.R.drawable.card_bg_title);
 		rl.addView(tv);
 		RelativeLayout.LayoutParams params = (LayoutParams) tv
 				.getLayoutParams();
 		params.setMargins(30, 0, 30, 0); // substitute parameters for left, top,
 											// right, bottom
 		params.width = RelativeLayout.LayoutParams.MATCH_PARENT;
+		params.height = 50;
 		tv.setLayoutParams(params);
 
 		return rl;
