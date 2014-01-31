@@ -7,23 +7,23 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Calendar;
 
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+
 import html.Html;
 import model.Week;
 import adapters.TabsAdapter;
-import android.app.ActionBar;
-import android.app.ActionBar.Tab;
-import android.app.ActionBar.TabListener;
-import android.app.FragmentTransaction;
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.ActionBar.Tab;
+import com.actionbarsherlock.app.ActionBar.TabListener;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.view.Menu;
-import android.view.MenuItem;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
 import android.widget.Toast;
 
-public class Main extends FragmentActivity implements TabListener {
+public class Main extends SherlockFragmentActivity implements TabListener {
 
 	// private static final String url =
 	// "http://www.nutricao.ufrj.br/cardapio.htm";
@@ -44,6 +44,7 @@ public class Main extends FragmentActivity implements TabListener {
 		context = this;
 
 		File saved = new File(getFilesDir(), "saved.inst");
+		System.out.println(saved);
 
 		if (savedInstanceState != null
 				&& savedInstanceState.containsKey("html")) {
@@ -74,7 +75,7 @@ public class Main extends FragmentActivity implements TabListener {
 
 		week = new Week(html.getTables());
 
-		actionBar = getActionBar();
+		actionBar = getSupportActionBar();
 		viewPager = (ViewPager) findViewById(R.id.pager);
 		tabsAdapter = new TabsAdapter(getSupportFragmentManager());
 
@@ -120,7 +121,7 @@ public class Main extends FragmentActivity implements TabListener {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.main, menu);
+		getSupportMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
@@ -151,22 +152,22 @@ public class Main extends FragmentActivity implements TabListener {
 		}
 	}
 
-	@Override
-	public void onTabReselected(Tab tab, FragmentTransaction ft) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void onTabSelected(Tab tab, FragmentTransaction ft) {
-		viewPager.setCurrentItem(tab.getPosition());
-	}
-
-	@Override
-	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-		// TODO Auto-generated method stub
-
-	}
+//	@Override
+//	public void onTabReselected(Tab tab, FragmentTransaction ft) {
+//		// TODO Auto-generated method stub
+//
+//	}
+//
+//	@Override
+//	public void onTabSelected(Tab tab, FragmentTransaction ft) {
+//		viewPager.setCurrentItem(tab.getPosition());
+//	}
+//
+//	@Override
+//	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
+//		// TODO Auto-generated method stub
+//
+//	}
 
 	private void createHtml() {
 		Runnable r = new Runnable() {
@@ -201,6 +202,8 @@ public class Main extends FragmentActivity implements TabListener {
 	}
 	
 	private void saveHtmlInstance(File saved) {
+		saved.delete();
+		
 		FileOutputStream outputStream;
 		ObjectOutputStream objectOutputStream;
 		try {
@@ -214,6 +217,28 @@ public class Main extends FragmentActivity implements TabListener {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public void onTabSelected(Tab tab,
+			android.support.v4.app.FragmentTransaction ft) {
+		
+		viewPager.setCurrentItem(tab.getPosition());
+		
+	}
+
+	@Override
+	public void onTabUnselected(Tab tab,
+			android.support.v4.app.FragmentTransaction ft) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onTabReselected(Tab tab,
+			android.support.v4.app.FragmentTransaction ft) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
