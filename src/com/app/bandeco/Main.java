@@ -1,7 +1,13 @@
 package com.app.bandeco;
 
-import html.Html;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.Calendar;
 
+import html.Html;
 import model.Week;
 import adapters.TabsAdapter;
 import android.app.ActionBar;
@@ -19,6 +25,8 @@ import android.widget.Toast;
 
 public class Main extends FragmentActivity implements TabListener {
 
+	// private static final String url =
+	// "http://www.nutricao.ufrj.br/cardapio.htm";
 	private static final String url = "http://www.nutricao.ufrj.br/cardapio.htm";
 	private Html html;
 	private Context context;
@@ -35,6 +43,8 @@ public class Main extends FragmentActivity implements TabListener {
 
 		context = this;
 
+		File saved = new File(getFilesDir(), "saved.inst");
+
 		if (savedInstanceState != null
 				&& savedInstanceState.containsKey("html")) {
 			System.out.println("Bundle already exists");
@@ -42,8 +52,25 @@ public class Main extends FragmentActivity implements TabListener {
 		}
 
 		else {
-			createHtml();
+			if (saved.exists()) {
+				System.out.println("There's a saved file instance");
+				createHtmlFromFile(saved);
+
+			} else
+				createHtml();
 		}
+		Calendar now = Calendar.getInstance();
+		Calendar htmlCalendar = html.getCalendar();
+
+		if (now.get(Calendar.WEEK_OF_YEAR) > htmlCalendar
+				.get(Calendar.WEEK_OF_YEAR)
+				|| now.get(Calendar.YEAR) > htmlCalendar.get(Calendar.YEAR)) {
+			
+			createHtml();
+			System.out.println("File is not up-to-dated");
+		}
+
+		saveHtmlInstance(saved);
 
 		week = new Week(html.getTables());
 
@@ -108,9 +135,9 @@ public class Main extends FragmentActivity implements TabListener {
 			return true;
 
 		case R.id.action_update:
-				createHtml();
-				Toast.makeText(this, "Cardápio Atualizado", Toast.LENGTH_SHORT)
-						.show();
+			createHtml();
+			Toast.makeText(this, "Cardápio Atualizado", Toast.LENGTH_SHORT)
+					.show();
 			return true;
 
 		case R.id.action_about:
@@ -141,7 +168,7 @@ public class Main extends FragmentActivity implements TabListener {
 
 	}
 
-	private void createHtml(){
+	private void createHtml() {
 		Runnable r = new Runnable() {
 			@Override
 			public void run() {
@@ -154,6 +181,39 @@ public class Main extends FragmentActivity implements TabListener {
 		};
 
 		new Thread(r).run();
+	}
+	
+	private void createHtmlFromFile(File saved) {
+		FileInputStream inputStream;
+		ObjectInputStream objectInputStream;
+		try {
+			inputStream = new FileInputStream(saved);
+			objectInputStream = new ObjectInputStream(inputStream);
+
+			html = (Html) objectInputStream.readObject();
+
+			objectInputStream.close();
+			inputStream.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	private void saveHtmlInstance(File saved) {
+		FileOutputStream outputStream;
+		ObjectOutputStream objectOutputStream;
+		try {
+			outputStream = new FileOutputStream(saved);
+			objectOutputStream = new ObjectOutputStream(outputStream);
+
+			objectOutputStream.writeObject(html);
+
+			objectOutputStream.close();
+			outputStream.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

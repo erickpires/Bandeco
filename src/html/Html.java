@@ -7,6 +7,8 @@ import java.io.Serializable;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class Html implements Serializable {
@@ -21,8 +23,9 @@ public class Html implements Serializable {
 	};
 
 	private List<Table> tables = new ArrayList<Table>();
-	private long lastModifiedDate;
+	//private long lastModifiedDate;
 	//private InputStreamReader reader;
+	private Calendar calendar;
 
 //	public Html(URL url) throws IOException {
 //		URLConnection connection = url.openConnection();
@@ -32,9 +35,12 @@ public class Html implements Serializable {
 //		//createTables();
 //	}
 	public Html(URLConnection connection) throws IOException{
-		lastModifiedDate = connection.getLastModified();
+		long lastModifiedDate = connection.getLastModified();
 		
 		InputStreamReader reader = new InputStreamReader(connection.getInputStream());
+		
+		calendar = Calendar.getInstance();
+		calendar.setTime(new Date(lastModifiedDate));
 		
 		createTables(reader);
 	}
@@ -108,5 +114,9 @@ public class Html implements Serializable {
 		str = str.replaceAll(" [ ]*", " ");
 
 		return str;
+	}
+
+	public Calendar getCalendar() {
+		return calendar;
 	}
 }

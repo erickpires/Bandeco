@@ -18,7 +18,7 @@ public class WeekFragment extends Fragment {
 			Bundle savedInstanceState) {
 		ListView listView = (ListView) inflater.inflate(com.app.bandeco.R.layout.week_layout, container, false);
 		
-		System.out.println(container);
+		//System.out.println(container);
 		
 		adapter = new MyExpandableListViewAdapter(getActivity());
 		

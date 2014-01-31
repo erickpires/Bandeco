@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Bandeco</string>
+    <string name="app_name">É Peixe Hoje?</string>
     <string name="action_settings">Configurações</string>
     <string name="action_update">Atualizar</string>
     <string name="action_about">Sobre</string>

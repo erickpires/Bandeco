@@ -49,7 +49,13 @@ public class MyExpandableListViewAdapter extends
 		tv.setGravity(Gravity.CENTER | Gravity.LEFT);
 		
 		tv.setLines(calculateMagicNumber()); //This is a workaround (gambiarra) and you should not care about it
-		tv.setBackgroundResource(com.app.bandeco.R.drawable.card_bg);
+		
+		if(meal.getPratoPrincipal().toLowerCase().contains("peixe"))
+			tv.setBackgroundResource(com.app.bandeco.R.drawable.card_bg_fish);
+		
+		else
+			tv.setBackgroundResource(com.app.bandeco.R.drawable.card_bg);
+		
 		rl.addView(tv);
 		LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) tv
 				.getLayoutParams();
