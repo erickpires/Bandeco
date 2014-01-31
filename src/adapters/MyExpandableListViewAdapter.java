@@ -88,6 +88,7 @@ public class MyExpandableListViewAdapter extends
 		tv.setTypeface(Typeface.create("sans-serif-thin", Typeface.NORMAL));
 		tv.setPadding(8, 0, 0, 0);
 		tv.setGravity(Gravity.CENTER);
+		tv.setLines(3);
 
 		tv.setBackgroundResource(com.app.bandeco.R.drawable.card_bg_title);
 		rl.addView(tv);
@@ -96,7 +97,7 @@ public class MyExpandableListViewAdapter extends
 		params.setMargins(30, 0, 30, 0); // substitute parameters for left, top,
 											// right, bottom
 		params.width = RelativeLayout.LayoutParams.MATCH_PARENT;
-		params.height = 24 * 3;
+		params.height = RelativeLayout.LayoutParams.WRAP_CONTENT;
 		tv.setLayoutParams(params);
 
 		return rl;
