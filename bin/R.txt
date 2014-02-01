@@ -233,6 +233,7 @@ int dimen max_waveform_height 0x7f070070
 int dimen mic_height 0x7f070072
 int dimen min_height_background_image 0x7f07005b
 int dimen min_preview_area_width 0x7f07003b
+int dimen my_margin 0x7f0700bd
 int dimen negative_unit 0x7f070084
 int dimen photo_crop_stroke_width 0x7f070011
 int dimen photo_crop_width 0x7f070010

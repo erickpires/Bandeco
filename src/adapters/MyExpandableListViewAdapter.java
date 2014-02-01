@@ -2,6 +2,7 @@ package adapters;
 
 import model.Meal;
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.view.Display;
@@ -14,6 +15,7 @@ import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
+import com.app.bandeco.R;
 import com.haarman.listviewanimations.itemmanipulation.ExpandableListItemAdapter;
 
 public class MyExpandableListViewAdapter extends
@@ -92,11 +94,14 @@ public class MyExpandableListViewAdapter extends
 		tv.setGravity(Gravity.CENTER);
 		tv.setLines(3);
 
+		
+		int margin = context.getResources().getDimensionPixelSize(R.dimen.my_margin);
+		
 		tv.setBackgroundResource(com.app.bandeco.R.drawable.card_bg_title);
 		rl.addView(tv);
 		RelativeLayout.LayoutParams params = (LayoutParams) tv
 				.getLayoutParams();
-		params.setMargins(55, 0, 55, 0); // substitute parameters for left, top,
+		params.setMargins(margin, 0, margin, 0); // substitute parameters for left, top,
 											// right, bottom
 		params.width = RelativeLayout.LayoutParams.MATCH_PARENT;
 		params.height = RelativeLayout.LayoutParams.WRAP_CONTENT;

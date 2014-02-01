@@ -902,6 +902,7 @@ containing a value of this type.
         public static final int mic_height=0x7f070072;
         public static final int min_height_background_image=0x7f07005b;
         public static final int min_preview_area_width=0x7f07003b;
+        public static final int my_margin=0x7f0700bd;
         public static final int negative_unit=0x7f070084;
         public static final int photo_crop_stroke_width=0x7f070011;
         public static final int photo_crop_width=0x7f070010;
