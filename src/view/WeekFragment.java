@@ -18,6 +18,7 @@ public class WeekFragment extends Fragment {
 			Bundle savedInstanceState) {
 		ListView listView = (ListView) inflater.inflate(com.app.bandeco.R.layout.week_layout, container, false);
 		
+		listView.setPadding(0, 15, 0, 0);
 		//System.out.println(container);
 		
 		adapter = new MyExpandableListViewAdapter(getActivity());

@@ -54,6 +54,8 @@ public class MyExpandableListViewAdapter extends
 		
 		tv.setLines(calculateMagicNumber()); //This is a workaround (gambiarra) and you should not care about it
 		
+		int margin = context.getResources().getDimensionPixelSize(R.dimen.my_margin);
+		
 		if(meal.getPratoPrincipal().toLowerCase().contains("peixe"))
 			tv.setBackgroundResource(com.app.bandeco.R.drawable.card_bg_fish);
 		
@@ -63,7 +65,7 @@ public class MyExpandableListViewAdapter extends
 		rl.addView(tv);
 		LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) tv
 				.getLayoutParams();
-		params.setMargins(55, 0, 55, 0); // substitute parameters for left, top,
+		params.setMargins(margin, 0, margin, 0); // substitute parameters for left, top,
 											// right, bottom
 		params.width = LinearLayout.LayoutParams.MATCH_PARENT;
 		params.height = LinearLayout.LayoutParams.WRAP_CONTENT;
