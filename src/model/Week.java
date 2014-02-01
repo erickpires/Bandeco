@@ -38,11 +38,9 @@ public class Week {
 		for(int i = 0; i < 7; i++){
 			Meal lunch = new Meal(lunchTable.getColumn(i + 1, start), lunchIndexer, "Almoço");
 			Meal dinner = new Meal(dinnerTable.getColumn(i + 1, start), dinnerIndexer, "Jantar");
-
 			
 			days[i] = new Day(lunch, dinner, i);
 		}
-		
 	}
 
 	private void createIndexers() {
@@ -55,7 +53,6 @@ public class Week {
 	}
 
 	public Day getDay(int index) {
-		// TODO Auto-generated method stub
 		return days[index];
 	}
 }

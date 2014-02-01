@@ -36,6 +36,8 @@ public class MyExpandableListViewAdapter extends
 			rl = new LinearLayout(context);
 		}
 
+		rl.removeAllViews();
+		
 		TextView tv = new TextView(context);
 
 		tv.setText("" + meal );
@@ -109,6 +111,8 @@ public class MyExpandableListViewAdapter extends
 		
 		int width = d.getWidth();
 		
+		if(width < 300)
+			return 15;
 		if(width < 400)
 			return 12;
 		if(width < 750)
