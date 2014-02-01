@@ -136,11 +136,11 @@ public class Meal {
 	public String toString(){
 		String text = "";
 		text += "Entrada: " + entrada + "\n";
-		text += "Guarnição : " + guarnicao + "\n";
-		text += "Prato Principal : " + pratoPrincipal + "\n";
-		text += "Op. Vegetariana : " + vegetariana + "\n";
-		text += "Acompanhamento :  " + acompanhamento + "\n";
-		text += "Sobremesa :  " + sobremesa + "\n";
+		text += "Guarnição: " + guarnicao + "\n";
+		text += "Prato Principal: " + pratoPrincipal + "\n";
+		text += "Op. Vegetariana: " + vegetariana + "\n";
+		text += "Acompanhamento:  " + acompanhamento + "\n";
+		text += "Sobremesa:  " + sobremesa + "\n";
 		text += "Refresco: " + refresco + "\n";
 		
 		return text;

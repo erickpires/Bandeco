@@ -44,7 +44,6 @@ public class Main extends SherlockFragmentActivity implements TabListener {
 		context = this;
 
 		File saved = new File(getFilesDir(), "saved.inst");
-		System.out.println(saved);
 
 		if (savedInstanceState != null
 				&& savedInstanceState.containsKey("html")) {
@@ -63,10 +62,11 @@ public class Main extends SherlockFragmentActivity implements TabListener {
 		Calendar now = Calendar.getInstance();
 		Calendar htmlCalendar = html.getCalendar();
 
-		if (now.get(Calendar.WEEK_OF_YEAR) > htmlCalendar
-				.get(Calendar.WEEK_OF_YEAR)
-				|| now.get(Calendar.YEAR) > htmlCalendar.get(Calendar.YEAR)) {
-			
+		if ((now.get(Calendar.WEEK_OF_YEAR) > htmlCalendar
+				.get(Calendar.WEEK_OF_YEAR) || now.get(Calendar.YEAR) > htmlCalendar
+				.get(Calendar.YEAR))
+				&& now.get(Calendar.DAY_OF_WEEK) > Calendar.SUNDAY) {
+
 			createHtml();
 			System.out.println("File is not up-to-dated");
 		}
@@ -152,22 +152,22 @@ public class Main extends SherlockFragmentActivity implements TabListener {
 		}
 	}
 
-//	@Override
-//	public void onTabReselected(Tab tab, FragmentTransaction ft) {
-//		// TODO Auto-generated method stub
-//
-//	}
-//
-//	@Override
-//	public void onTabSelected(Tab tab, FragmentTransaction ft) {
-//		viewPager.setCurrentItem(tab.getPosition());
-//	}
-//
-//	@Override
-//	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-//		// TODO Auto-generated method stub
-//
-//	}
+	// @Override
+	// public void onTabReselected(Tab tab, FragmentTransaction ft) {
+	// // TODO Auto-generated method stub
+	//
+	// }
+	//
+	// @Override
+	// public void onTabSelected(Tab tab, FragmentTransaction ft) {
+	// viewPager.setCurrentItem(tab.getPosition());
+	// }
+	//
+	// @Override
+	// public void onTabUnselected(Tab tab, FragmentTransaction ft) {
+	// // TODO Auto-generated method stub
+	//
+	// }
 
 	private void createHtml() {
 		Runnable r = new Runnable() {
@@ -183,7 +183,7 @@ public class Main extends SherlockFragmentActivity implements TabListener {
 
 		new Thread(r).run();
 	}
-	
+
 	private void createHtmlFromFile(File saved) {
 		FileInputStream inputStream;
 		ObjectInputStream objectInputStream;
@@ -198,12 +198,12 @@ public class Main extends SherlockFragmentActivity implements TabListener {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	private void saveHtmlInstance(File saved) {
 		saved.delete();
-		
+
 		FileOutputStream outputStream;
 		ObjectOutputStream objectOutputStream;
 		try {
@@ -222,23 +222,23 @@ public class Main extends SherlockFragmentActivity implements TabListener {
 	@Override
 	public void onTabSelected(Tab tab,
 			android.support.v4.app.FragmentTransaction ft) {
-		
+
 		viewPager.setCurrentItem(tab.getPosition());
-		
+
 	}
 
 	@Override
 	public void onTabUnselected(Tab tab,
 			android.support.v4.app.FragmentTransaction ft) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void onTabReselected(Tab tab,
 			android.support.v4.app.FragmentTransaction ft) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
