@@ -121,9 +121,9 @@ public class MyExpandableListViewAdapter extends
 		if(width < 300)
 			return 15;
 		if(width < 400)
-			return 12;
+			return 13;
 		if(width < 750)
-			return 10;
+			return 11;
 		else
 			return 8;
 	}
