@@ -61,7 +61,7 @@ public class MyExpandableListViewAdapter extends
 		rl.addView(tv);
 		LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) tv
 				.getLayoutParams();
-		params.setMargins(30, 0, 30, 0); // substitute parameters for left, top,
+		params.setMargins(55, 0, 55, 0); // substitute parameters for left, top,
 											// right, bottom
 		params.width = LinearLayout.LayoutParams.MATCH_PARENT;
 		params.height = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -96,7 +96,7 @@ public class MyExpandableListViewAdapter extends
 		rl.addView(tv);
 		RelativeLayout.LayoutParams params = (LayoutParams) tv
 				.getLayoutParams();
-		params.setMargins(30, 0, 30, 0); // substitute parameters for left, top,
+		params.setMargins(55, 0, 55, 0); // substitute parameters for left, top,
 											// right, bottom
 		params.width = RelativeLayout.LayoutParams.MATCH_PARENT;
 		params.height = RelativeLayout.LayoutParams.WRAP_CONTENT;
