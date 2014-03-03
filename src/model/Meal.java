@@ -36,18 +36,27 @@ public class Meal {
 		String[] acomp = tmp.split(";;");
 
 		arroz = acomp[0];
-		feijao = acomp[1];
+		if(acomp.length > 1)
+			feijao = acomp[1];
+		else
+			feijao = "";
 
 		tmp = tableColumn.get(indexer.getIndexOfSobremesa());
 
 		String[] sobremesaRefresco = tmp.split("/");
 
 		sobremesa = sobremesaRefresco[0];
-		refresco = sobremesaRefresco[1];
+		if(sobremesaRefresco.length > 1)
+			refresco = sobremesaRefresco[1];
+		else
+			refresco = "";
 
 		formatText();
 
-		acompanhamento = arroz + " e " + feijao;
+		acompanhamento = arroz;
+		
+		if(feijao.length() > 0)
+			 acompanhamento += " e " + feijao;
 	}
 
 	// public Meal(String entrada, String pratoPrincipal, String vegetariana,
