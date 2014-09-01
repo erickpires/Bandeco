@@ -92,6 +92,11 @@
       <setting name="OPEN_NEW_TAB" value="true" />
     </FindUsagesManager>
   </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="$PROJECT_DIR$/../keystore.jks" />
+    <option name="KEY_ALIAS" value="pass" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="tasksExpandState">
       <map>
@@ -1931,6 +1936,10 @@
     <property name="FullScreen" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="0424126098" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="CompII" />
+    <property name="last_opened_file_path" value="$USER_HOME$/android-sdks/keystore" />
+    <property name="ExportedModule" value="bandeco" />
+    <property name="ExportedApkPath" value="$PROJECT_DIR$/bandeco/bandeco.apk" />
+    <property name="AndroidRunProguardForReleaseBuild" value="false" />
   </component>
   <component name="RunManager" selected="Android Application.bandeco">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
