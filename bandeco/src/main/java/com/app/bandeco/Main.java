@@ -7,23 +7,25 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Calendar;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-
 import html.Html;
 import model.Week;
 import adapters.TabsAdapter;
-import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.app.ActionBar.Tab;
-import com.actionbarsherlock.app.ActionBar.TabListener;
+
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
+
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
 
-public class Main extends SherlockFragmentActivity implements TabListener {
+import static android.support.v7.app.ActionBar.Tab;
+
+public class Main extends ActionBarActivity implements ActionBar.TabListener {
 
 	// private static final String url =
 	// "http://www.nutricao.ufrj.br/cardapio.htm";
@@ -113,7 +115,7 @@ public class Main extends SherlockFragmentActivity implements TabListener {
     }
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getSupportMenuInflater().inflate(R.menu.main, menu);
+		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
@@ -124,7 +126,7 @@ public class Main extends SherlockFragmentActivity implements TabListener {
 		switch (item.getItemId()) {
 		case R.id.action_settings:
 			// show settings
-			System.out.println("update");
+            startActivity(new Intent(this, Settings.class));
 			return true;
 
 		case R.id.action_update:
@@ -135,7 +137,7 @@ public class Main extends SherlockFragmentActivity implements TabListener {
 
 		case R.id.action_about:
 			// show about
-			System.out.println("about");
+            startActivity(new Intent(this, About.class));
 			return true;
 
 		default:
@@ -194,43 +196,35 @@ public class Main extends SherlockFragmentActivity implements TabListener {
 	}
 
 	private void saveHtmlInstance(File saved) {
-		saved.delete();
+        saved.delete();
 
-		FileOutputStream outputStream;
-		ObjectOutputStream objectOutputStream;
-		try {
-			outputStream = new FileOutputStream(saved);
-			objectOutputStream = new ObjectOutputStream(outputStream);
+        FileOutputStream outputStream;
+        ObjectOutputStream objectOutputStream;
+        try {
+            outputStream = new FileOutputStream(saved);
+            objectOutputStream = new ObjectOutputStream(outputStream);
 
-			objectOutputStream.writeObject(html);
+            objectOutputStream.writeObject(html);
 
-			objectOutputStream.close();
-			outputStream.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+            objectOutputStream.close();
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
-	@Override
-	public void onTabSelected(Tab tab,
-			android.support.v4.app.FragmentTransaction ft) {
+    @Override
+    public void onTabSelected(Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
+        viewPager.setCurrentItem(tab.getPosition());
+    }
 
-		viewPager.setCurrentItem(tab.getPosition());
+    @Override
+    public void onTabUnselected(Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
+        // TODO Auto-generated method stub
+    }
 
-	}
-
-	@Override
-	public void onTabUnselected(Tab tab,
-			android.support.v4.app.FragmentTransaction ft) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void onTabReselected(Tab tab,
-			android.support.v4.app.FragmentTransaction ft) {
-		// TODO Auto-generated method stub
-
-	}
-
+    @Override
+    public void onTabReselected(Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
+        // TODO Auto-generated method stub
+    }
 }

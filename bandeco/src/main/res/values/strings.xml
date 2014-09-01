@@ -7,12 +7,9 @@
     <string name="action_about">Sobre</string>
     <string name="title">Title</string>
     <string name="desc">Description</string>
-
     <string name="hoje">Hoje</string>
     <string name="semana">Semana</string>
-
     <string name="cardapio_atualizado">Cardápio Atualizado</string>
-
     <string name="entrada">Entrada: </string>
     <string name="guarnicao">Guarnição: </string>
     <string name="prato_principal">Prato Principal: </string>
@@ -30,9 +27,13 @@
         <item>Saturday</item>
         <item>Sunday</item>
     </string-array>
-    
     <string-array name="meals_array">
         <item>Lunch</item>
         <item>Dinner</item>
     </string-array>
+
+    <string name="title_activity_about">Sobre</string>
+    <string name="title_activity_settings">Configurações</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>
