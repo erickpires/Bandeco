@@ -31,7 +31,7 @@ public class DayFragment extends Fragment {
 		cardUI = new CardUI(getActivity());
 		Day today = Main.week.getDay(Day.adaptDayOfWeek(calendar.get(Calendar.DAY_OF_WEEK)));
 		
-		cardUI.addStack(new CardStack("" + today));
+		cardUI.addStack(new CardStack(""));
 		today.generateCards(cardUI);
 		
 		cardUI.refresh();

@@ -8,8 +8,18 @@
     <string name="title">Title</string>
     <string name="desc">Description</string>
 
-    <string name="dia">Dia</string>
+    <string name="hoje">Hoje</string>
     <string name="semana">Semana</string>
+
+    <string name="cardapio_atualizado">Cardápio Atualizado</string>
+
+    <string name="entrada">Entrada: </string>
+    <string name="guarnicao">Guarnição: </string>
+    <string name="prato_principal">Prato Principal: </string>
+    <string name="vegetariano">Prato Vegetariano: </string>
+    <string name="acompanhamento">Acompanhamento: </string>
+    <string name="sobremesa">Sobremesa: </string>
+    <string name="refresco">Refresco: </string>
 
     <string-array name="days_array">
         <item>Monday</item>

@@ -734,14 +734,22 @@
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment />
 
+    <string name="acompanhamento">Acompanhamento: </string>
     <string name="action_about">Sobre</string>
     <string name="action_settings">Configurações</string>
     <string name="action_update">Atualizar</string>
     <string name="app_name">É Peixe Hoje?</string>
+    <string name="cardapio_atualizado">Cardápio Atualizado</string>
     <string name="desc">Description</string>
-    <string name="dia">Dia</string>
+    <string name="entrada">Entrada: </string>
+    <string name="guarnicao">Guarnição: </string>
+    <string name="hoje">Hoje</string>
+    <string name="prato_principal">Prato Principal: </string>
+    <string name="refresco">Refresco: </string>
     <string name="semana">Semana</string>
+    <string name="sobremesa">Sobremesa: </string>
     <string name="title">Title</string>
+    <string name="vegetariano">Prato Vegetariano: </string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/styles.xml -->
     <eat-comment />
 

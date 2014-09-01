@@ -66,25 +66,27 @@ public class Main extends SherlockFragmentActivity implements TabListener {
 		saveHtmlInstance(saved);
 
 		week = new Week(html.getTables());
+
+        actionBar = getSupportActionBar();
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+
+        viewPager = (ViewPager) findViewById(R.id.pager);
 	}
 
     @Override
     public void onResume(){
         super.onResume();
 
-        actionBar = getSupportActionBar();
-        viewPager = (ViewPager) findViewById(R.id.pager);
         tabsAdapter = new TabsAdapter(getSupportFragmentManager());
 
         viewPager.setAdapter(tabsAdapter);
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
         actionBar.removeAllTabs();
 
         Tab tabDay = actionBar.newTab();
         Tab tabWeek = actionBar.newTab();
 
-        tabDay.setText(getString(R.string.dia));
+        tabDay.setText(getString(R.string.hoje));
         tabDay.setTabListener(this);
 
         tabWeek.setText(getString(R.string.semana));
@@ -127,7 +129,7 @@ public class Main extends SherlockFragmentActivity implements TabListener {
 
 		case R.id.action_update:
 			createHtml();
-			Toast.makeText(this, "Cardápio Atualizado", Toast.LENGTH_SHORT)
+			Toast.makeText(this, getString(R.string.cardapio_atualizado), Toast.LENGTH_SHORT)
 					.show();
 			return true;
 

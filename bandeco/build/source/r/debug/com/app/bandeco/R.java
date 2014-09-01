@@ -1151,14 +1151,22 @@ containing a value of this type.
         public static final int abs__searchview_description_voice=0x7f0a000a;
         public static final int abs__shareactionprovider_share_with=0x7f0a000b;
         public static final int abs__shareactionprovider_share_with_application=0x7f0a000c;
-        public static final int action_about=0x7f0a000d;
-        public static final int action_settings=0x7f0a000e;
-        public static final int action_update=0x7f0a000f;
-        public static final int app_name=0x7f0a0010;
-        public static final int desc=0x7f0a0011;
-        public static final int dia=0x7f0a0012;
-        public static final int semana=0x7f0a0013;
-        public static final int title=0x7f0a0014;
+        public static final int acompanhamento=0x7f0a000d;
+        public static final int action_about=0x7f0a000e;
+        public static final int action_settings=0x7f0a000f;
+        public static final int action_update=0x7f0a0010;
+        public static final int app_name=0x7f0a0011;
+        public static final int cardapio_atualizado=0x7f0a0012;
+        public static final int desc=0x7f0a0013;
+        public static final int entrada=0x7f0a0014;
+        public static final int guarnicao=0x7f0a0015;
+        public static final int hoje=0x7f0a0016;
+        public static final int prato_principal=0x7f0a0017;
+        public static final int refresco=0x7f0a0018;
+        public static final int semana=0x7f0a0019;
+        public static final int sobremesa=0x7f0a001a;
+        public static final int title=0x7f0a001b;
+        public static final int vegetariano=0x7f0a001c;
     }
     public static final class style {
         /** 

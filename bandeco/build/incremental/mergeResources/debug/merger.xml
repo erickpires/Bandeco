@@ -5040,7 +5040,7 @@ sans-serif
             <file
                 path="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml"
                 qualifiers="" >
-                <string name="desc" >Description
+                <string name="cardapio_atualizado" >Cardápio Atualizado
                 </string>
 
                 <string-array name="days_array" >
@@ -5081,15 +5081,31 @@ Dinner
                     </item>
                 </string-array>
 
+                <string name="guarnicao" >Guarnição: 
+                </string>
+                <string name="entrada" >Entrada: 
+                </string>
+                <string name="hoje" >Hoje
+                </string>
+                <string name="desc" >Description
+                </string>
+                <string name="sobremesa" >Sobremesa: 
+                </string>
+                <string name="refresco" >Refresco: 
+                </string>
+                <string name="app_name" >É Peixe Hoje?
+                </string>
                 <string name="semana" >Semana
                 </string>
                 <string name="title" >Title
                 </string>
-                <string name="app_name" >É Peixe Hoje?
+                <string name="vegetariano" >Prato Vegetariano: 
                 </string>
                 <string name="action_about" >Sobre
                 </string>
-                <string name="dia" >Dia
+                <string name="acompanhamento" >Acompanhamento: 
+                </string>
+                <string name="prato_principal" >Prato Principal: 
                 </string>
             </file>
             <file
@@ -5175,6 +5191,16 @@ Dinner
                 <dimen name="activity_horizontal_margin" >128dp
                 </dimen>
             </file>
+            <file
+                name="ic_launcher"
+                path="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/drawable-xxxhdpi/ic_launcher.png"
+                qualifiers="xxxhdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/drawable-xxhdpi/ic_launcher.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
         </source>
         <source path="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/res/rs/debug" />
         <source path="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/res/generated/debug" />

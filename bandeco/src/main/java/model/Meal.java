@@ -91,7 +91,7 @@ public class Meal {
 		refresco = refresco.replace(";;", "");
 		arroz = arroz.replace(";;", "");
 
-		arroz = arroz.replace("/", "ou");
+		arroz = arroz.replace("/", "ou ");
 
 	}
 
@@ -147,9 +147,9 @@ public class Meal {
 		text += "Entrada: " + entrada + "\n";
 		text += "Guarnição: " + guarnicao + "\n";
 		text += "Prato Principal: " + pratoPrincipal + "\n";
-		text += "Op. Vegetariana: " + vegetariana + "\n";
-		text += "Acompanhamento:  " + acompanhamento + "\n";
-		text += "Sobremesa:  " + sobremesa + "\n";
+		text += "Prato Vegetariano: " + vegetariana + "\n";
+		text += "Acompanhamento: " + acompanhamento + "\n";
+		text += "Sobremesa: " + sobremesa + "\n";
 		text += "Refresco: " + refresco + "\n";
 		
 		return text;
