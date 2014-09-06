@@ -2,14 +2,38 @@
 <resources>
 
     <string name="app_name">É Peixe Hoje?</string>
+
     <string name="action_settings">Configurações</string>
     <string name="action_update">Atualizar</string>
     <string name="action_about">Sobre</string>
+
     <string name="title">Title</string>
     <string name="desc">Description</string>
+
     <string name="hoje">Hoje</string>
     <string name="semana">Semana</string>
+
     <string name="cardapio_atualizado">Cardápio Atualizado</string>
+
+    <string name="versao">Versão: </string>
+    <string name="developed_by">Desenvolvido por:</string>
+    <string name="developer_name">Erick Pires</string>
+
+    <string name="show">Exibir</string>
+    <string name="lunch_only">Apenas almoço</string>
+    <string name="dinner_only">Apenas jantar</string>
+    <string name="both_meals">Ambas refeições</string>
+
+    <string name="negative_words">O que não gosto</string>
+    <string name="positive_words">O que gosto</string>
+
+    <string name="receive_notifications">Receber notificações</string>
+
+    <string name="lunch_notification">Notificação de almoço</string>
+    <string name="dinner_notification">Notificação de jantar</string>
+
+    <string name="new_word">Nova palavra</string>
+
     <string name="entrada">Entrada: </string>
     <string name="guarnicao">Guarnição: </string>
     <string name="prato_principal">Prato Principal: </string>
@@ -34,6 +58,4 @@
 
     <string name="title_activity_about">Sobre</string>
     <string name="title_activity_settings">Configurações</string>
-    <string name="hello_world">Hello world!</string>
-
 </resources>

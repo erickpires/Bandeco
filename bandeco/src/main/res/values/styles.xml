@@ -1,5 +1,4 @@
 <resources>
-	<color name="bg_color">#FFE3E3E3</color>
     <!--
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.

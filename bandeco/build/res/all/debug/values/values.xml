@@ -94,7 +94,7 @@
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
     <color name="abc_search_url_text_selected">@android:color/black</color>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/styles.xml -->
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/color.xml -->
     <eat-comment />
 
     <color name="bg_color">#FFE3E3E3</color>
@@ -107,6 +107,13 @@
     <color name="card_separator">#ffe5e5e5</color>
     <color name="card_text">#ff8d8d8d</color>
     <color name="card_title_text">#ff707070</color>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/color.xml -->
+    <eat-comment />
+
+    <color name="gray_text">#666</color>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
+    <eat-comment />
+
     <color name="stroke">#dddddd</color>
     <color name="text_light">#66000000</color>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
@@ -589,6 +596,16 @@
     <dimen name="correction_popup_width_1buttons">60.0dip</dimen>
     <dimen name="correction_popup_width_2buttons">120.0dip</dimen>
     <dimen name="correction_popup_width_3buttons">160.0dip</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
+    <eat-comment />
+
+    <dimen name="default_minimal_padding">10dp</dimen>
+    <dimen name="default_side_padding">20dp</dimen>
+    <dimen name="default_side_padding_identented">30dp</dimen>
+    <dimen name="default_top_padding">15dp</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
+    <eat-comment />
+
     <dimen name="dialog_corner_radius">8.0px</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
     <eat-comment />
@@ -718,6 +735,13 @@
     <dimen name="text_block_side_padding">@dimen/card_padding</dimen>
     <dimen name="text_block_top_padding">14.0dip</dimen>
     <dimen name="tidbit_padding">12.0dip</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
+    <eat-comment />
+
+    <dimen name="top_padding">10px</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
+    <eat-comment />
+
     <dimen name="unit">16.0dip</dimen>
     <dimen name="unit_small_caps">14.0dip</dimen>
     <dimen name="units_2">32.0dip</dimen>
@@ -774,20 +798,32 @@
     <string name="action_settings">Configurações</string>
     <string name="action_update">Atualizar</string>
     <string name="app_name">É Peixe Hoje?</string>
+    <string name="both_meals">Ambas refeições</string>
     <string name="cardapio_atualizado">Cardápio Atualizado</string>
     <string name="desc">Description</string>
+    <string name="developed_by">Desenvolvido por:</string>
+    <string name="developer_name">Erick Pires</string>
+    <string name="dinner_notification">Notificação de jantar</string>
+    <string name="dinner_only">Apenas jantar</string>
     <string name="entrada">Entrada: </string>
     <string name="guarnicao">Guarnição: </string>
-    <string name="hello_world">Hello world!</string>
     <string name="hoje">Hoje</string>
+    <string name="lunch_notification">Notificação de almoço</string>
+    <string name="lunch_only">Apenas almoço</string>
+    <string name="negative_words">O que não gosto</string>
+    <string name="new_word">Nova palavra</string>
+    <string name="positive_words">O que gosto</string>
     <string name="prato_principal">Prato Principal: </string>
+    <string name="receive_notifications">Receber notificações</string>
     <string name="refresco">Refresco: </string>
     <string name="semana">Semana</string>
+    <string name="show">Exibir</string>
     <string name="sobremesa">Sobremesa: </string>
     <string name="title">Title</string>
     <string name="title_activity_about">Sobre</string>
     <string name="title_activity_settings">Configurações</string>
     <string name="vegetariano">Prato Vegetariano: </string>
+    <string name="versao">Versão: </string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/styles.xml -->
     <eat-comment />
 

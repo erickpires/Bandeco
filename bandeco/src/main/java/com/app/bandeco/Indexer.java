@@ -21,7 +21,7 @@ public class Indexer {
 				indexOfEntrada = i;
 			if(field.contains("acompanhamento"))
 				indexOfAcompanhamento = i;
-			if(field.contains("prato principal"))
+			if(field.contains("principal"))
 				indexOfPratoPrincipal = i;
 			if(field.contains("vegetarian"))
 				indexOfVegetariana = i;
