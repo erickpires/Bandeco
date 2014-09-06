@@ -1,7 +1,6 @@
 package com.app.bandeco;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.support.v7.app.ActionBar;
@@ -12,12 +11,16 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 
+import com.sleepbot.datetimepicker.time.RadialPickerLayout;
+import com.sleepbot.datetimepicker.time.TimePickerDialog;
+
 import java.util.ArrayList;
 
 import view.ListDialogFragment;
 
 import static android.content.SharedPreferences.Editor;
 import static android.widget.CompoundButton.*;
+import static com.sleepbot.datetimepicker.time.TimePickerDialog.*;
 
 
 public class Settings extends ActionBarActivity {
@@ -37,8 +40,12 @@ public class Settings extends ActionBarActivity {
     public static final String NEGATIVE_WORDS = "NegativeWords";
     public static final String POSITIVE_WORDS = "PositiveWords";
     public static final String RECEIVE_NOTIFICATIONS = "ReceiveNotifications";
-    public static final String LUNCH_NOTIFICATION_TIME = "LunchNotificationTime";
-    public static final String DINNER_NOTIFICATION_TIME = "DinnerNotificationTime";
+    public static final String LUNCH_NOTIFICATION_HOUR = "LunchNotificationTime";
+    public static final String LUNCH_NOTIFICATION_MINUTE = "LunchNotificationMinute";
+    public static final String DINNER_NOTIFICATION_HOUR = "DinnerNotificationTime";
+    public static final String DINNER_NOTIFICATION_MINUTE = "DinnerNotificationMinute";
+
+    public static final String TIMEPICKER_TAG = "timepicker";
 
     private int mealOption;
     private String negativeWords;
@@ -46,6 +53,10 @@ public class Settings extends ActionBarActivity {
     //TODO use a database to get rid of this workaround
     private boolean receiveNotifications;
     //TODO notifications time options
+    private int lunchNotificationHour;
+    private int lunchNotificationMinute;
+    private int dinnerNotificationHour;
+    private int dinnerNotificationMinute;
 
     private SharedPreferences settings;
     private View showMeals;
@@ -62,7 +73,7 @@ public class Settings extends ActionBarActivity {
     private TextView dinnerNotificationTimeTextView;
     private TextView lunchNotificationTextView;
     private TextView dinnerNotificationTextView;
-    private Context context;
+
     private ArrayList<String> negativeList;
     private ArrayList<String> positiveList;
 
@@ -82,7 +93,6 @@ public class Settings extends ActionBarActivity {
                 getString(mealsOptions[1]),
                 getString(mealsOptions[2])};
 
-        context = getApplicationContext();
 
         negativeList = new ArrayList<String>();
         negativeList.add("Peixe");
@@ -108,7 +118,10 @@ public class Settings extends ActionBarActivity {
         editor.putString(NEGATIVE_WORDS, negativeWords);
         editor.putString(POSITIVE_WORDS, positiveWords);
         editor.putBoolean(RECEIVE_NOTIFICATIONS, receiveNotifications);
-
+        editor.putInt(LUNCH_NOTIFICATION_HOUR, lunchNotificationHour);
+        editor.putInt(LUNCH_NOTIFICATION_MINUTE, lunchNotificationMinute);
+        editor.putInt(DINNER_NOTIFICATION_HOUR, dinnerNotificationHour);
+        editor.putInt(DINNER_NOTIFICATION_MINUTE, dinnerNotificationMinute);
 
         editor.commit();
     }
@@ -118,6 +131,10 @@ public class Settings extends ActionBarActivity {
         negativeWords = settings.getString(NEGATIVE_WORDS, null);
         positiveWords = settings.getString(POSITIVE_WORDS, null);
         receiveNotifications = settings.getBoolean(RECEIVE_NOTIFICATIONS, false);
+        lunchNotificationHour = settings.getInt(LUNCH_NOTIFICATION_HOUR, 12);
+        lunchNotificationMinute = settings.getInt(LUNCH_NOTIFICATION_MINUTE, 0);
+        dinnerNotificationHour = settings.getInt(DINNER_NOTIFICATION_HOUR, 18);
+        dinnerNotificationMinute = settings.getInt(DINNER_NOTIFICATION_MINUTE, 0);
 
     }
 
@@ -226,12 +243,44 @@ public class Settings extends ActionBarActivity {
         });
 
         //Lunch notification time
+        updateLunchNoticationTime();
 
-        lunchNotificationTimeTextView.setText("12:00");
+        lunchNotificationLayout.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                OnTimeSetListener onTimeSetListener = new OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(RadialPickerLayout radialPickerLayout, int hour, int minute) {
+                        lunchNotificationHour = hour;
+                        lunchNotificationMinute = minute;
+                        updateLunchNoticationTime();
+                    }
+                };
+
+                TimePickerDialog timePicker = TimePickerDialog.newInstance(onTimeSetListener, lunchNotificationHour, lunchNotificationMinute, true);
+                timePicker.show(getSupportFragmentManager(), TIMEPICKER_TAG);
+            }
+        });
 
         //Dinner notification time
+        updateDinnerNoticationTime();
 
-        dinnerNotificationTimeTextView.setText("17:00");
+        dinnerNotificationLayout.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                OnTimeSetListener onTimeSetListener = new OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(RadialPickerLayout radialPickerLayout, int hour, int minute) {
+                        dinnerNotificationHour = hour;
+                        dinnerNotificationMinute = minute;
+                        updateDinnerNoticationTime();
+                    }
+                };
+
+                TimePickerDialog timePicker = TimePickerDialog.newInstance(onTimeSetListener, dinnerNotificationHour, dinnerNotificationMinute, true);
+                timePicker.show(getSupportFragmentManager(), TIMEPICKER_TAG);
+            }
+        });
     }
 
     private void updateMealType() {
@@ -263,6 +312,16 @@ public class Settings extends ActionBarActivity {
             dinnerNotificationTextView.setEnabled(false);
             dinnerNotificationTimeTextView.setEnabled(false);
         }
+    }
+
+    private void updateLunchNoticationTime(){
+        String tmp = String.format("%02d:%02d", lunchNotificationHour, lunchNotificationMinute);
+        lunchNotificationTimeTextView.setText(tmp);
+    }
+
+    private void updateDinnerNoticationTime(){
+        String tmp = String.format("%02d:%02d", dinnerNotificationHour, dinnerNotificationMinute);
+        dinnerNotificationTimeTextView.setText(tmp);
     }
 
     private void updateNegativeWords() {

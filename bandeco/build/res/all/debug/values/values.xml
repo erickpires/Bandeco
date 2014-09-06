@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:ns1="http://schemas.android.com/apk/res/android">
 
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment />
@@ -94,10 +94,19 @@
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
     <color name="abc_search_url_text_selected">@android:color/black</color>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <color name="ampm_text_color">#8c8c8c</color>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/color.xml -->
     <eat-comment />
 
     <color name="bg_color">#FFE3E3E3</color>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <color name="blue">#ff33b5e5</color>
+    <color name="calendar_header">#ff999999</color>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
     <eat-comment />
 
@@ -107,15 +116,34 @@
     <color name="card_separator">#ffe5e5e5</color>
     <color name="card_text">#ff8d8d8d</color>
     <color name="card_title_text">#ff707070</color>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <color name="circle_background">#fff2f2f2</color>
+    <color name="darker_blue">#ff0099cc</color>
+    <color name="date_picker_text_normal">#ff999999</color>
+    <color name="date_picker_view_animator">#fff2f2f2</color>
+    <color name="done_text_color_disabled">#ffcccccc</color>
+    <color name="done_text_color_normal">#ff333333</color>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/color.xml -->
     <eat-comment />
 
     <color name="gray_text">#666</color>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <color name="line_background">#ffcccccc</color>
+    <color name="numbers_text_color">#8c8c8c</color>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
     <eat-comment />
 
     <color name="stroke">#dddddd</color>
     <color name="text_light">#66000000</color>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <color name="transparent_black">#7F000000</color>
+    <color name="white">#ffffffff</color>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
     <eat-comment />
 
@@ -558,6 +586,11 @@
 
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <dimen name="ampm_label_size">16sp</dimen>
+    <dimen name="ampm_left_padding">6dip</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
     <eat-comment />
 
@@ -596,6 +629,15 @@
     <dimen name="correction_popup_width_1buttons">60.0dip</dimen>
     <dimen name="correction_popup_width_2buttons">120.0dip</dimen>
     <dimen name="correction_popup_width_3buttons">160.0dip</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <dimen name="date_picker_component_width">270dip</dimen>
+    <dimen name="date_picker_header_height">30dip</dimen>
+    <dimen name="date_picker_header_text_size">14dip</dimen>
+    <dimen name="date_picker_view_animator_height">270dip</dimen>
+    <dimen name="day_number_select_circle_radius">16dip</dimen>
+    <dimen name="day_number_size">16sp</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
     <eat-comment />
 
@@ -623,7 +665,21 @@
     <dimen name="dialog_text_size">18.0sp</dimen>
     <dimen name="dialog_width">320.0dip</dimen>
     <dimen name="divider_height">1.0dip</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <dimen name="done_label_size">14sp</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
+    <eat-comment />
+
     <dimen name="extra_height_to_account_for_system_space_in_landscape">0.0dip</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <dimen name="extra_time_label_margin">-30dp</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
+    <eat-comment />
+
     <dimen name="first_run_context_image_height">100.0dip</dimen>
     <dimen name="first_run_padding">24.0dip</dimen>
     <dimen name="footer_height">50.0dip</dimen>
@@ -635,6 +691,13 @@
     <dimen name="hands_free_padding">12.0dip</dimen>
     <dimen name="hands_free_small_padding">8.0dip</dimen>
     <dimen name="header_footer_size">48.0dip</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <dimen name="header_height">96dip</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
+    <eat-comment />
+
     <dimen name="high_confidence_answer_card_image_height">300.0dip</dimen>
     <dimen name="high_confidence_answer_card_image_width">160.0dip</dimen>
     <dimen name="high_confidence_answer_card_min_spacing">28.0dip</dimen>
@@ -672,6 +735,15 @@
     <dimen name="mic_height">84.0dip</dimen>
     <dimen name="min_height_background_image">138.0dip</dimen>
     <dimen name="min_preview_area_width">0.0dip</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <dimen name="minimum_margin_sides">48dip</dimen>
+    <dimen name="minimum_margin_top_bottom">24dip</dimen>
+    <dimen name="month_day_label_text_size">10sp</dimen>
+    <dimen name="month_label_size">16sp</dimen>
+    <dimen name="month_list_item_header_height">50dip</dimen>
+    <dimen name="month_select_circle_radius">45dip</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
     <eat-comment />
 
@@ -683,6 +755,13 @@
     <dimen name="photo_crop_stroke_width">1.0dip</dimen>
     <dimen name="photo_crop_width">280.0dip</dimen>
     <dimen name="photo_preview_size">200.0dip</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <dimen name="picker_dimen">270dip</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
+    <eat-comment />
+
     <dimen name="playpausebutton_size">60.0dip</dimen>
     <dimen name="preview_image_height">120.0dip</dimen>
     <dimen name="preview_image_size">250.0dip</dimen>
@@ -700,6 +779,17 @@
     <dimen name="search_plate_icon_height">34.0dip</dimen>
     <dimen name="search_plate_icon_width">32.0dip</dimen>
     <dimen name="search_plate_minimum_padding">12.0dip</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <dimen name="selected_calendar_layout_height">155dip</dimen>
+    <dimen name="selected_date_day_size">75dip</dimen>
+    <dimen name="selected_date_month_size">30dip</dimen>
+    <dimen name="selected_date_year_size">30dip</dimen>
+    <dimen name="separator_padding">4dip</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
+    <eat-comment />
+
     <dimen name="small_unit">3.0dip</dimen>
     <dimen name="small_units_2">6.0dip</dimen>
     <dimen name="small_units_3">9.0dip</dimen>
@@ -735,6 +825,10 @@
     <dimen name="text_block_side_padding">@dimen/card_padding</dimen>
     <dimen name="text_block_top_padding">14.0dip</dimen>
     <dimen name="tidbit_padding">12.0dip</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <dimen name="time_label_size">60sp</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
     <eat-comment />
 
@@ -765,13 +859,39 @@
     <dimen name="webview_margin_left">60.0dip</dimen>
     <dimen name="widget_margin_left_right">8.0dip</dimen>
     <dimen name="widget_margin_top_bottom">8.0dip</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <dimen name="year_label_height">64dip</dimen>
+    <dimen name="year_label_text_size">22dip</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
     <eat-comment />
 
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <item name="animator" type="id">false</item>
+    <item name="date_picker_day" type="id">false</item>
+    <item name="date_picker_header" type="id">false</item>
+    <item name="date_picker_month" type="id">false</item>
+    <item name="date_picker_month_and_day" type="id">false</item>
+    <item name="date_picker_year" type="id">false</item>
+    <item name="day_picker_selected_date_layout" type="id">false</item>
+    <item name="done" type="id">false</item>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
+    <eat-comment />
+
     <item name="home" type="id"/>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <item name="month_text_view" type="id">false</item>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
+    <eat-comment />
+
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
 
@@ -797,33 +917,119 @@
     <string name="action_about">Sobre</string>
     <string name="action_settings">Configurações</string>
     <string name="action_update">Atualizar</string>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <item name="ampm_circle_radius_multiplier" format="float" type="string">0.19</item>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
+    <eat-comment />
+
     <string name="app_name">É Peixe Hoje?</string>
     <string name="both_meals">Ambas refeições</string>
     <string name="cardapio_atualizado">Cardápio Atualizado</string>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <item name="circle_radius_multiplier" format="float" type="string">0.82</item>
+    <item name="circle_radius_multiplier_24HourMode" format="float" type="string">0.85</item>
+
+    <string name="day_of_week_label_typeface" translatable="false">sans-serif</string>
+    <string name="day_picker_description">Month grid of days</string>
+    <string name="deleted_key"><ns1:g id="key" example="4">%1$s</ns1:g> deleted</string>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
+    <eat-comment />
+
     <string name="desc">Description</string>
     <string name="developed_by">Desenvolvido por:</string>
     <string name="developer_name">Erick Pires</string>
     <string name="dinner_notification">Notificação de jantar</string>
     <string name="dinner_only">Apenas jantar</string>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <string name="done_label">Done</string>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
+    <eat-comment />
+
     <string name="entrada">Entrada: </string>
     <string name="guarnicao">Guarnição: </string>
     <string name="hoje">Hoje</string>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <string name="hour_picker_description">Hours circular slider</string>
+    <string name="item_is_selected">%1$s selected</string>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
+    <eat-comment />
+
     <string name="lunch_notification">Notificação de almoço</string>
     <string name="lunch_only">Apenas almoço</string>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <string name="minute_picker_description">Minutes circular slider</string>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
+    <eat-comment />
+
     <string name="negative_words">O que não gosto</string>
     <string name="new_word">Nova palavra</string>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <item name="numbers_radius_multiplier_inner" format="float" type="string">0.60</item>
+    <item name="numbers_radius_multiplier_normal" format="float" type="string">0.81</item>
+    <item name="numbers_radius_multiplier_outer" format="float" type="string">0.83</item>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
+    <eat-comment />
+
     <string name="positive_words">O que gosto</string>
     <string name="prato_principal">Prato Principal: </string>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <string name="radial_numbers_typeface" translatable="false">sans-serif</string>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
+    <eat-comment />
+
     <string name="receive_notifications">Receber notificações</string>
     <string name="refresco">Refresco: </string>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <string name="sans_serif" translatable="false">sans-serif</string>
+    <string name="select_day">Select month and day</string>
+    <string name="select_hours">Select hours</string>
+    <string name="select_minutes">Select minutes</string>
+    <string name="select_year">Select year</string>
+
+    <item name="selection_radius_multiplier" format="float" type="string">0.16</item>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
+    <eat-comment />
+
     <string name="semana">Semana</string>
     <string name="show">Exibir</string>
     <string name="sobremesa">Sobremesa: </string>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <item name="text_size_multiplier_inner" format="float" type="string">0.14</item>
+    <item name="text_size_multiplier_normal" format="float" type="string">0.17</item>
+    <item name="text_size_multiplier_outer" format="float" type="string">0.11</item>
+
+    <string name="time_placeholder" translatable="false">--</string>
+    <string name="time_separator" translatable="false">:</string>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
+    <eat-comment />
+
     <string name="title">Title</string>
     <string name="title_activity_about">Sobre</string>
     <string name="title_activity_settings">Configurações</string>
     <string name="vegetariano">Prato Vegetariano: </string>
     <string name="versao">Versão: </string>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <string name="year_picker_description">Year list</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/styles.xml -->
     <eat-comment />
 
@@ -1610,5 +1816,20 @@
     <style name="Widget.AppCompat.ProgressBar.Horizontal" parent="Widget.AppCompat.Base.ProgressBar.Horizontal" />
 
     <style name="Widget.AppCompat.Spinner.DropDown.ActionBar" parent="Widget.AppCompat.Base.Spinner" />
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <style name="ampm_label">
+        <item name="android:textSize">@dimen/ampm_label_size</item>
+        <item name="android:textColor">@color/ampm_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="day_of_week_label_condensed" />
+
+    <style name="time_label">
+        <item name="android:textSize">@dimen/time_label_size</item>
+        <item name="android:textColor">@color/numbers_text_color</item>
+    </style>
 
 </resources>

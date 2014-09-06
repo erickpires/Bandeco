@@ -15,5 +15,13 @@
     <dimen name="abc_action_bar_subtitle_text_size">12dp</dimen>
     <dimen name="abc_action_bar_subtitle_top_margin">-2dp</dimen>
     <dimen name="abc_action_bar_title_text_size">16dp</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.1/res/values-land/values.xml -->
+    <eat-comment />
+
+    <dimen name="dialog_height">200dip</dimen>
+    <dimen name="left_side_width">250dip</dimen>
+    <dimen name="selected_date_day_size">100dp</dimen>
+    <dimen name="selected_date_month_size">30dp</dimen>
+    <dimen name="selected_date_year_size">30dp</dimen>
 
 </resources>

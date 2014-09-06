@@ -20,10 +20,11 @@ android {
 dependencies {
     compile project(':cardsUILib')
     compile project(':listViewAnimations')
-    compile files('libs/nineoldandroids-2.4.0.jar')
+    compile 'com.nineoldandroids:library:2.4.0'
     // You must install or update the Support Repository through the SDK manager to use this dependency.
     compile 'com.android.support:support-v4:19.1.0'
     // You must install or update the Support Repository through the SDK manager to use this dependency.
     compile 'com.android.support:support-v4:19.1.0'
     compile 'com.android.support:appcompat-v7:19.+'
+    compile 'com.github.flavienlaurent.datetimepicker:library:0.0.1'
 }
