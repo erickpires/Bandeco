@@ -23,26 +23,30 @@
         android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true" />
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/versao"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/textView"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
+        android:text="@string/versao" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textVersionName"
-        android:layout_below="@+id/textView"
-        android:layout_toRightOf="@+id/textView2" />
+        android:layout_below="@+id/textView"/>
+    </LinearLayout>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/linearLayout1"
         android:id="@+id/imageView1"
         android:src="@drawable/divider"
         android:layout_marginTop="20dp"/>

@@ -112,7 +112,8 @@ public class MyExpandableListViewAdapter extends
 		return rl;
 	}
 	
-	private int calculateMagicNumber() {
+	@SuppressWarnings("deprecation")
+    private int calculateMagicNumber() {
 		WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
 		Display d = wm.getDefaultDisplay();
 		

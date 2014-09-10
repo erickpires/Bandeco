@@ -29,13 +29,19 @@
         <activity
             android:name="com.app.bandeco.About"
             android:label="@string/title_activity_about"
-            android:parentActivityName=".Main" >
+            android:parentActivityName="com.app.bandeco.Main" >
         </activity>
         <activity
             android:name="com.app.bandeco.Settings"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".Main" >
+            android:parentActivityName="com.app.bandeco.Main" >
         </activity>
+
+        <service
+            android:name="com.app.bandeco.NotificationService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
     </application>
 
 </manifest>

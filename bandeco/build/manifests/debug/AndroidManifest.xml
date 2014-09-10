@@ -18,6 +18,9 @@
         </activity>
         <activity android:label="@string/title_activity_settings" android:name="com.app.bandeco.Settings" android:parentActivityName="com.app.bandeco.Main">
         </activity>
+
+        <service android:enabled="true" android:exported="true" android:name="com.app.bandeco.NotificationService">
+        </service>
     </application>
 
 </manifest>

@@ -15,16 +15,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+
+    lintOptions {
+        checkReleaseBuilds false
+
+    }
 }
 
 dependencies {
     compile project(':cardsUILib')
     compile project(':listViewAnimations')
-    compile 'com.nineoldandroids:library:2.4.0'
+    // You must install or update the Support Repository through the SDK manager to use this dependency.
     // You must install or update the Support Repository through the SDK manager to use this dependency.
     compile 'com.android.support:support-v4:19.1.0'
     // You must install or update the Support Repository through the SDK manager to use this dependency.
     compile 'com.android.support:support-v4:19.1.0'
     compile 'com.android.support:appcompat-v7:19.+'
-    compile 'com.github.flavienlaurent.datetimepicker:library:0.0.1'
+    compile 'com.github.flavienlaurent.datetimepicker:library:0.0.2'
 }

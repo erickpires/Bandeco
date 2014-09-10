@@ -1,7 +1,10 @@
 package com.app.bandeco;
 
+import android.app.AlarmManager;
 import android.app.AlertDialog;
+import android.app.PendingIntent;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
@@ -15,12 +18,15 @@ import com.sleepbot.datetimepicker.time.RadialPickerLayout;
 import com.sleepbot.datetimepicker.time.TimePickerDialog;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import view.ListDialogFragment;
 
+import static android.app.AlarmManager.*;
 import static android.content.SharedPreferences.Editor;
 import static android.widget.CompoundButton.*;
 import static com.sleepbot.datetimepicker.time.TimePickerDialog.*;
+import static java.util.Calendar.*;
 
 
 public class Settings extends ActionBarActivity {
@@ -28,6 +34,9 @@ public class Settings extends ActionBarActivity {
     public static final int LUNCH_ONLY = 0;
     public static final int DINNER_ONLY = 1;
     public static final int BOTH_MEALS = 2;
+
+    private static final int MEAL_TYPE_LUNCH = 0;
+    private static final int MEAL_TYPE_DINNER = 1;
 
     private static final int[] mealsOptions = new int[]{R.string.lunch_only,
             R.string.dinner_only,
@@ -46,6 +55,7 @@ public class Settings extends ActionBarActivity {
     public static final String DINNER_NOTIFICATION_MINUTE = "DinnerNotificationMinute";
 
     public static final String TIMEPICKER_TAG = "timepicker";
+    public static final String MEAL_TYPE = "MealTime";
 
     private int mealOption;
     private String negativeWords;
@@ -108,6 +118,8 @@ public class Settings extends ActionBarActivity {
     @Override
     protected void onPause() {
         saveSettings();
+        setupNotificationAlarm(MEAL_TYPE_LUNCH);
+        setupNotificationAlarm(MEAL_TYPE_DINNER);
         super.onPause();
     }
 
@@ -243,7 +255,7 @@ public class Settings extends ActionBarActivity {
         });
 
         //Lunch notification time
-        updateLunchNoticationTime();
+        updateLunchNotificationTime();
 
         lunchNotificationLayout.setOnClickListener(new OnClickListener() {
             @Override
@@ -253,7 +265,7 @@ public class Settings extends ActionBarActivity {
                     public void onTimeSet(RadialPickerLayout radialPickerLayout, int hour, int minute) {
                         lunchNotificationHour = hour;
                         lunchNotificationMinute = minute;
-                        updateLunchNoticationTime();
+                        updateLunchNotificationTime();
                     }
                 };
 
@@ -263,7 +275,7 @@ public class Settings extends ActionBarActivity {
         });
 
         //Dinner notification time
-        updateDinnerNoticationTime();
+        updateDinnerNotificationTime();
 
         dinnerNotificationLayout.setOnClickListener(new OnClickListener() {
             @Override
@@ -273,7 +285,7 @@ public class Settings extends ActionBarActivity {
                     public void onTimeSet(RadialPickerLayout radialPickerLayout, int hour, int minute) {
                         dinnerNotificationHour = hour;
                         dinnerNotificationMinute = minute;
-                        updateDinnerNoticationTime();
+                        updateDinnerNotificationTime();
                     }
                 };
 
@@ -314,21 +326,75 @@ public class Settings extends ActionBarActivity {
         }
     }
 
-    private void updateLunchNoticationTime(){
+    private void updateLunchNotificationTime() {
         String tmp = String.format("%02d:%02d", lunchNotificationHour, lunchNotificationMinute);
         lunchNotificationTimeTextView.setText(tmp);
     }
 
-    private void updateDinnerNoticationTime(){
+    private void updateDinnerNotificationTime() {
         String tmp = String.format("%02d:%02d", dinnerNotificationHour, dinnerNotificationMinute);
         dinnerNotificationTimeTextView.setText(tmp);
     }
 
     private void updateNegativeWords() {
+        clearList(negativeList);
         negativeWordsList.setText("" + negativeList);
     }
 
-    private void updatePositiveWords(){
+    private void updatePositiveWords() {
+        clearList(positiveList);
         positiveWordsList.setText("" + positiveList);
+    }
+
+    private void clearList(ArrayList<String> list) {
+
+        while (list.contains(""))
+            list.remove("");
+
+        if (list.isEmpty())
+            list.add("");
+    }
+
+    private void setupNotificationAlarm(int mealType) {
+        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+
+        Intent intentNotificationService = new Intent(getApplicationContext(), NotificationService.class);
+        intentNotificationService.putExtra(MEAL_TYPE, mealType);
+
+        PendingIntent pendingIntent = PendingIntent.getService(getApplicationContext(), mealType, intentNotificationService, 0);
+
+        alarmManager.cancel(pendingIntent);
+
+        if(mealType == MEAL_TYPE_LUNCH && mealOption == DINNER_ONLY)
+            return;
+
+        if(mealType == MEAL_TYPE_DINNER && mealOption == LUNCH_ONLY)
+            return;
+
+        Calendar calendar = getCalendar(mealType);
+
+        alarmManager.setInexactRepeating(RTC, calendar.getTimeInMillis(), INTERVAL_DAY, pendingIntent);
+
+        System.out.println("Notifying: " + mealType);
+    }
+
+
+    private Calendar getCalendar(int mealType) {
+        Calendar calendar = getInstance();
+        switch (mealType) {
+            case MEAL_TYPE_LUNCH:
+                calendar.set(HOUR_OF_DAY, lunchNotificationHour);
+                calendar.set(MINUTE, lunchNotificationMinute);
+                break;
+            case MEAL_TYPE_DINNER:
+                calendar.set(HOUR_OF_DAY, dinnerNotificationHour);
+                calendar.set(MINUTE, dinnerNotificationMinute);
+                break;
+        }
+        calendar.set(SECOND, 0);
+
+        if(calendar.before(getInstance()))
+            calendar.add(DATE, 1);
+        return calendar;
     }
 }
