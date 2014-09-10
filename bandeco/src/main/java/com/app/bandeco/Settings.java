@@ -3,9 +3,12 @@ package com.app.bandeco;
 import android.app.AlarmManager;
 import android.app.AlertDialog;
 import android.app.PendingIntent;
+import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -20,6 +23,8 @@ import com.sleepbot.datetimepicker.time.TimePickerDialog;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import database.DatabaseContract;
+import database.DatabaseHelper;
 import view.ListDialogFragment;
 
 import static android.app.AlarmManager.*;
@@ -86,6 +91,7 @@ public class Settings extends ActionBarActivity {
 
     private ArrayList<String> negativeList;
     private ArrayList<String> positiveList;
+    private SQLiteDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,13 +109,7 @@ public class Settings extends ActionBarActivity {
                 getString(mealsOptions[1]),
                 getString(mealsOptions[2])};
 
-
-        negativeList = new ArrayList<String>();
-        negativeList.add("Peixe");
-        negativeList.add("Cação");
-
-        positiveList = new ArrayList<String>();
-        positiveList.add("");
+        database = new DatabaseHelper(getBaseContext()).getWritableDatabase();
 
         getSettings();
         createUI();
@@ -121,6 +121,8 @@ public class Settings extends ActionBarActivity {
         setupNotificationAlarm(MEAL_TYPE_LUNCH);
         setupNotificationAlarm(MEAL_TYPE_DINNER);
         super.onPause();
+
+        database.close();
     }
 
     private void saveSettings() {
@@ -135,7 +137,19 @@ public class Settings extends ActionBarActivity {
         editor.putInt(DINNER_NOTIFICATION_HOUR, dinnerNotificationHour);
         editor.putInt(DINNER_NOTIFICATION_MINUTE, dinnerNotificationMinute);
 
+        saveListToDB(positiveList, DatabaseContract.PositiveWords.TABLE_NAME);
+        saveListToDB(negativeList, DatabaseContract.NegativeWords.TABLE_NAME);
+
         editor.commit();
+    }
+
+    private void saveListToDB(ArrayList<String> list, String table) {
+        for(String s : list){
+            ContentValues values = new ContentValues();
+            values.put(DatabaseContract.PositiveWords.WORD, s);
+
+            database.insertOrThrow(table, null, values);
+        }
     }
 
     private void getSettings() {
@@ -148,6 +162,27 @@ public class Settings extends ActionBarActivity {
         dinnerNotificationHour = settings.getInt(DINNER_NOTIFICATION_HOUR, 18);
         dinnerNotificationMinute = settings.getInt(DINNER_NOTIFICATION_MINUTE, 0);
 
+
+        positiveList = getListFromDB(DatabaseContract.PositiveWords.TABLE_NAME,new String[] {DatabaseContract.PositiveWords.WORD});
+        negativeList = getListFromDB(DatabaseContract.NegativeWords.TABLE_NAME, new String[] {DatabaseContract.NegativeWords.WORD});
+    }
+
+    private ArrayList<String> getListFromDB(String table, String[] projection) {
+        ArrayList<String> list = new ArrayList<String>();
+
+        Cursor cursor = database.query(table, projection, null, null, null, null, null);
+
+        int column = cursor.getColumnIndex(projection[0]);
+
+        if(cursor.moveToFirst())
+            do{
+                list.add(cursor.getString(column));
+
+            }while(cursor.moveToNext());
+
+        database.delete(table, null, null);
+
+        return list;
     }
 
     private void createUI() {
