@@ -8,12 +8,14 @@ import java.io.ObjectOutputStream;
 import java.util.Calendar;
 import java.util.concurrent.ExecutionException;
 
+import database.DatabaseHelper;
 import html.Html;
 import model.Week;
 import adapters.TabsAdapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -28,7 +30,6 @@ import static android.support.v7.app.ActionBar.Tab;
 
 public class Main extends ActionBarActivity implements ActionBar.TabListener {
 
-    private Html html;
     private Context context;
     public static Week week;
 
@@ -43,38 +44,16 @@ public class Main extends ActionBarActivity implements ActionBar.TabListener {
 
         context = this;
 
-        System.out.println("HTML is: " + html);
-
-        File saved = new File(getFilesDir(), "saved.inst");
-
-		/*if (saved.exists()) {
-            System.out.println("There's a saved file instance");
-			createHtmlFromFile(saved);
-		} else*/
-        createHtml();
-
-        System.out.println("HTML is: " + html);
-
-        Calendar now = Calendar.getInstance();
-        Calendar htmlCalendar = html.getCalendar();
-
-        if ((now.get(Calendar.WEEK_OF_YEAR) > htmlCalendar
-                .get(Calendar.WEEK_OF_YEAR) || now.get(Calendar.YEAR) > htmlCalendar
-                .get(Calendar.YEAR))
-                && now.get(Calendar.DAY_OF_WEEK) > Calendar.SUNDAY) {
-
-            createHtml();
-            System.out.println("File is not up-to-dated");
-        }
-
-        saveHtmlInstance(saved);
-
-        week = new Week(html.getTables());
+        DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext());
+        SQLiteDatabase database = databaseHelper.getReadableDatabase();
+        week = ApplicationHelper.getWeekFromDatabase(database);
 
         actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
         viewPager = (ViewPager) findViewById(R.id.pager);
+
+        database.close();
     }
 
     @Override
@@ -167,55 +146,6 @@ public class Main extends ActionBarActivity implements ActionBar.TabListener {
     // // TODO Auto-generated method stub
     //
     // }
-
-    private void createHtml() {
-
-        try {
-            html = new HtmlGetter(context).execute(ApplicationHelper.url).get();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        }
-
-
-        //new Thread(r).run();
-    }
-
-    private void createHtmlFromFile(File saved) {
-        FileInputStream inputStream;
-        ObjectInputStream objectInputStream;
-        try {
-            inputStream = new FileInputStream(saved);
-            objectInputStream = new ObjectInputStream(inputStream);
-
-            html = (Html) objectInputStream.readObject();
-
-            objectInputStream.close();
-            inputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    private void saveHtmlInstance(File saved) {
-        saved.delete();
-
-        FileOutputStream outputStream;
-        ObjectOutputStream objectOutputStream;
-        try {
-            outputStream = new FileOutputStream(saved);
-            objectOutputStream = new ObjectOutputStream(outputStream);
-
-            objectOutputStream.writeObject(html);
-
-            objectOutputStream.close();
-            outputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
     @Override
     public void onTabSelected(Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {

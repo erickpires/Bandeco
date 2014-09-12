@@ -23,8 +23,8 @@ public class WeekFragment extends Fragment {
 		adapter = new MyExpandableListViewAdapter(getActivity());
 		
 		for(int i = 0; i < 7; i++){
-			adapter.add(2 * i, Main.week.getDay(i).getLunch());
-			adapter.add(2 * i + 1, Main.week.getDay(i).getDinner());
+			adapter.add(2 * i, Main.week.getDayAt(i).getLunch());
+			adapter.add(2 * i + 1, Main.week.getDayAt(i).getDinner());
 		}
 		
 		adapter.setLimit(1);

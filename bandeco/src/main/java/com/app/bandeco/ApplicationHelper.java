@@ -4,7 +4,9 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import database.DatabaseContract;
 import model.Meal;
+import model.Week;
 
 import static database.DatabaseContract.*;
 
@@ -54,15 +56,49 @@ public abstract class ApplicationHelper {
         Cursor cursor = database.query(Meals.TABLE_NAME, projection, selection, selectionValues, null, null, null);
 
         if(cursor.moveToFirst()){
-            meal.setEntrada(cursor.getString(cursor.getColumnIndex(Meals.ENTRADA)));
-            meal.setGuarnicao(cursor.getString(cursor.getColumnIndex(Meals.GUARNICAO)));
-            meal.setPratoPrincipal(cursor.getString(cursor.getColumnIndex(Meals.PRATO_PRINCIPAL)));
-            meal.setPratoVegetariano(cursor.getString(cursor.getColumnIndex(Meals.PRATO_VEGETARIANO)));
-            meal.setAcompanhamento(cursor.getString(cursor.getColumnIndex(Meals.ACOMPANHAMENTO)));
-            meal.setSobremesa(cursor.getString(cursor.getColumnIndex(Meals.SOBREMESA)));
-            meal.setRefresco(cursor.getString(cursor.getColumnIndex(Meals.REFRESCO)));
+            setMealWithCursor(meal, cursor);
         }
 
         return meal;
+    }
+
+    private static void setMealWithCursor(Meal meal, Cursor cursor) {
+        meal.setEntrada(cursor.getString(cursor.getColumnIndex(Meals.ENTRADA)));
+        meal.setGuarnicao(cursor.getString(cursor.getColumnIndex(Meals.GUARNICAO)));
+        meal.setPratoPrincipal(cursor.getString(cursor.getColumnIndex(Meals.PRATO_PRINCIPAL)));
+        meal.setPratoVegetariano(cursor.getString(cursor.getColumnIndex(Meals.PRATO_VEGETARIANO)));
+        meal.setAcompanhamento(cursor.getString(cursor.getColumnIndex(Meals.ACOMPANHAMENTO)));
+        meal.setSobremesa(cursor.getString(cursor.getColumnIndex(Meals.SOBREMESA)));
+        meal.setRefresco(cursor.getString(cursor.getColumnIndex(Meals.REFRESCO)));
+    }
+
+    public static Week getWeekFromDatabase(SQLiteDatabase database) {
+        Week week = Week.createEmptyWeek();
+
+        String[] projection = {Meals.MEAL_TYPE,
+                Meals.DAY,
+                Meals.ENTRADA,
+                Meals.GUARNICAO,
+                Meals.PRATO_PRINCIPAL,
+                Meals.PRATO_VEGETARIANO,
+                Meals.ACOMPANHAMENTO,
+                Meals.SOBREMESA,
+                Meals.REFRESCO};
+
+        String orderBy = Meals.DAY;
+
+        Cursor cursor = database.query(Meals.TABLE_NAME, projection, null, null, null, null, null);
+
+        if(cursor.moveToFirst())
+            do{
+                int mealType = cursor.getInt(cursor.getColumnIndex(Meals.MEAL_TYPE));
+                int day = cursor.getInt(cursor.getColumnIndex(Meals.DAY));
+
+                Meal meal = week.getDayAt(day).getMeal(mealType);
+                setMealWithCursor(meal, cursor);
+
+            }while (cursor.moveToNext());
+
+        return week;
     }
 }

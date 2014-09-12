@@ -3,6 +3,7 @@ package model;
 import html.Table;
 import java.util.List;
 
+import com.app.bandeco.ApplicationHelper;
 import com.app.bandeco.Indexer;
 
 public class Week {
@@ -15,6 +16,10 @@ public class Week {
 	private Indexer dinnerIndexer;
 	private static final int startingRow = 1;
     private static final int columnsOffset = 1;
+
+    private Week(){
+
+    }
 
     public Week(List<Table> tables){
 		for (int i = 0; i < tables.size(); i++)
@@ -52,7 +57,21 @@ public class Week {
 		dinnerIndexer = new Indexer(tmp);
 	}
 
-	public Day getDay(int index) {
+	public Day getDayAt(int index) {
 		return days[index];
 	}
+
+    public static Week createEmptyWeek() {
+        Week week = new Week();
+
+        for (int i = 0; i < week.days.length; i++){
+            Meal lunch = new Meal(ApplicationHelper.MEAL_TYPE_LUNCH);
+            Meal dinner = new Meal(ApplicationHelper.MEAL_TYPE_DINNER);
+
+            week.days[i] = new Day(lunch, dinner, i);
+            lunch.setDay(week.days[i]);
+            dinner.setDay(week.days[i]);
+        }
+        return week;
+    }
 }

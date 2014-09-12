@@ -14,7 +14,6 @@ import java.net.URLConnection;
 import database.DatabaseHelper;
 import html.Html;
 import model.Day;
-import model.Meal;
 import model.Week;
 
 import static com.app.bandeco.ApplicationHelper.*;
@@ -62,7 +61,7 @@ public class UpdateService extends Service {
         Week week = new Week(html.getTables());
 
         for(int i = 0; i < DAYS_IN_THE_WEEK; i++){
-            Day day = week.getDay(i);
+            Day day = week.getDayAt(i);
 
             day.getLunch();
 

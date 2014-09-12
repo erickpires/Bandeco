@@ -2,7 +2,10 @@ package model;
 
 import view.Card;
 
+import com.app.bandeco.ApplicationHelper;
 import com.fima.cardsui.views.CardUI;
+
+import static com.app.bandeco.ApplicationHelper.*;
 
 public class Day {
 	private Meal lunch;
@@ -66,4 +69,15 @@ public class Day {
 	public static int adaptDayOfWeek(int day) {
 		return (day + 5) % 7;
 	}
+
+    public Meal getMeal(int mealType) {
+        switch (mealType){
+            case MEAL_TYPE_LUNCH:
+                return lunch;
+            case MEAL_TYPE_DINNER:
+                return dinner;
+            default:
+                return null;
+        }
+    }
 }
