@@ -19,34 +19,14 @@ public class MealNotification {
 
     private static final String NOTIFICATION_TAG = "Meal";
 
-    /**
-     * Shows the notification, or updates a previously shown notification of
-     * this type, with the given parameters.
-     * <p>
-     * TODO: Customize this method's arguments to present relevant content in
-     * the notification.
-     * <p>
-     * TODO: Customize the contents of this method to tweak the behavior and
-     * presentation of meal notifications. Make
-     * sure to follow the
-     * <a href="https://developer.android.com/design/patterns/notifications.html">
-     * Notification design guidelines</a> when doing so.
-     *
-     * @see #cancel(Context)
-     */
     public static void notify(final Context context,
             final String title, final String text) {
         final Resources res = context.getResources();
 
         // This image is used as the notification's large icon (thumbnail).
-        // TODO: Remove this if your notification has no relevant thumbnail.
         final Bitmap picture = BitmapFactory.decodeResource(res, R.drawable.ic_stat_fork_knife);
 
-
-
         final String ticker = title;
-        //final String text = res.getString(
-        //        R.string.meal_notification_placeholder_text_template, exampleString);
 
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
 

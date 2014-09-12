@@ -1,15 +1,6 @@
 package com.app.bandeco;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.util.Calendar;
-import java.util.concurrent.ExecutionException;
-
 import database.DatabaseHelper;
-import html.Html;
 import model.Week;
 import adapters.TabsAdapter;
 
@@ -24,7 +15,6 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import static android.support.v7.app.ActionBar.Tab;
 
@@ -103,49 +93,26 @@ public class Main extends ActionBarActivity implements ActionBar.TabListener {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
 
         switch (item.getItemId()) {
             case R.id.action_settings:
-                // show settings
                 startActivity(new Intent(this, Settings.class));
                 return true;
 
             case R.id.action_update:
-                //createHtml();
-
                 Intent intent = new Intent(getApplicationContext(), UpdateService.class);
                 startService(intent);
 
                 return true;
 
             case R.id.action_about:
-                // show about
                 startActivity(new Intent(this, About.class));
                 return true;
 
             default:
-                // return super.onOptionsItemSelected(item);
-                return false;
+                return super.onOptionsItemSelected(item);
         }
     }
-
-    // @Override
-    // public void onTabReselected(Tab tab, FragmentTransaction ft) {
-    // // TODO Auto-generated method stub
-    //
-    // }
-    //
-    // @Override
-    // public void onTabSelected(Tab tab, FragmentTransaction ft) {
-    // viewPager.setCurrentItem(tab.getPosition());
-    // }
-    //
-    // @Override
-    // public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-    // // TODO Auto-generated method stub
-    //
-    // }
 
     @Override
     public void onTabSelected(Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {

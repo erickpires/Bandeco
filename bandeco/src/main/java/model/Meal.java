@@ -3,12 +3,10 @@ package model;
 import java.util.List;
 
 import view.Card;
-
 import com.app.bandeco.ApplicationHelper;
 import com.app.bandeco.Indexer;
 
 public class Meal {
-	// Sorry, but this part will be written in Portuguese
 
 	private String entrada;
 	private String pratoPrincipal;
@@ -77,19 +75,6 @@ public class Meal {
 			 acompanhamento += " e " + feijao;
 	}
 
-	// public Meal(String entrada, String pratoPrincipal, String vegetariana,
-	// String guarnicao, String feijao, String arroz, String sobremesa,
-	// String refresco) {
-	// this.entrada = entrada;
-	// this.pratoPrincipal = pratoPrincipal;
-	// this.vegetariana = vegetariana;
-	// this.guarnicao = guarnicao;
-	// this.feijao = feijao;
-	// this.arroz = arroz;
-	// this.sobremesa = sobremesa;
-	// this.refresco = refresco;
-	// }
-
 	private void formatText() {
 		entrada = entrada.trim();
 		pratoPrincipal = pratoPrincipal.trim();
@@ -127,14 +112,6 @@ public class Meal {
 
 	public String getGuarnicao() {
 		return guarnicao;
-	}
-
-	public String getFeijao() {
-		return feijao;
-	}
-
-	public String getArroz() {
-		return arroz;
 	}
 
 	public String getSobremesa() {
@@ -209,7 +186,7 @@ public class Meal {
 		this.day = day;	
 	}
 
-    public static final String mealTypeFromInt(int mealType){
+    public static String mealTypeFromInt(int mealType){
         switch (mealType){
             case ApplicationHelper.MEAL_TYPE_LUNCH:
                 return "Almoço";

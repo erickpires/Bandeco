@@ -1,15 +1,13 @@
 package html;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Table implements Serializable {
+public class Table {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -1791808816952834003L;
 	List<List<String>> table = new ArrayList<List<String>>();
 
 	public String getElement(int row, int column) {

@@ -33,8 +33,6 @@ public class NotificationService extends Service {
 
         dayOfTheWeek = Day.adaptDayOfWeek(today.get(Calendar.DAY_OF_WEEK));
 
-        System.out.println("Today is: " + dayOfTheWeek);
-
         Meal meal = ApplicationHelper.getMealFromDatabase(database, dayOfTheWeek, mealType);
 
         MealNotification.notify(getApplicationContext(), meal.getType(), meal.toString());

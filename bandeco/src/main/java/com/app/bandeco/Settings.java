@@ -41,12 +41,9 @@ public class Settings extends ActionBarActivity {
     public static final int DINNER_ONLY = 1;
     public static final int BOTH_MEALS = 2;
 
-
-
     private static final int[] mealsOptions = new int[]{R.string.lunch_only,
             R.string.dinner_only,
             R.string.both_meals};
-
 
     private String[] mealsChoices;
 
@@ -407,7 +404,6 @@ public class Settings extends ActionBarActivity {
 
         System.out.println("Notifying: " + mealType);
     }
-
 
     private Calendar getCalendar(int mealType) {
         Calendar calendar = getInstance();

@@ -1,8 +1,6 @@
 package model;
 
 import view.Card;
-
-import com.app.bandeco.ApplicationHelper;
 import com.fima.cardsui.views.CardUI;
 
 import static com.app.bandeco.ApplicationHelper.*;

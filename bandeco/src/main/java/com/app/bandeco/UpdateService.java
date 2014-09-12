@@ -35,7 +35,6 @@ public class UpdateService extends Service {
             Thread t = new Thread() {
                 public void run() {
                     Html html = createHtml();
-                    System.out.println("Finished Downloading");
 
                     if(html != null)
                         updateDatabaseInfo(html);
