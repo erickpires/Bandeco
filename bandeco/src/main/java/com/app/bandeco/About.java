@@ -13,7 +13,8 @@ import android.widget.TextView;
 
 public class About extends ActionBarActivity {
 
-    private static final Uri uri = Uri.parse("https://twitter.com/ericktpires");
+    private static final Uri myTwitter = Uri.parse("https://twitter.com/ericktpires");
+    private static final Uri designerDribbble = Uri.parse("https://dribbble.com/aPronsky");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +40,17 @@ public class About extends ActionBarActivity {
         textViewAuthor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent openUrl = new Intent(Intent.ACTION_VIEW, uri);
+                Intent openUrl = new Intent(Intent.ACTION_VIEW, myTwitter);
+                startActivity(openUrl);
+            }
+        });
+
+        TextView textViewIconDesigner = (TextView) findViewById(R.id.textViewIconDesigner);
+
+        textViewIconDesigner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openUrl = new Intent(Intent.ACTION_VIEW, designerDribbble);
                 startActivity(openUrl);
             }
         });

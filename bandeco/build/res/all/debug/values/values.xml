@@ -958,6 +958,14 @@
     <eat-comment />
 
     <string name="hour_picker_description">Hours circular slider</string>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="icon_by">Ícone por:</string>
+    <string name="icon_designer_name">Alex Pronsky</string>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
+    <eat-comment />
+
     <string name="item_is_selected">%1$s selected</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment />

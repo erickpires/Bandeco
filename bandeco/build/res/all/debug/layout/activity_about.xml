@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">>
+    android:layout_height="match_parent">
 
     <ImageView
         android:layout_width="fill_parent"
@@ -67,7 +67,27 @@
         android:id="@+id/textViewAuthor"
         android:textColor="#3887CF"
         android:layout_below="@+id/textView3"
-        android:layout_centerHorizontal="true" />/>
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/icon_by"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/textViewAuthor"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/icon_designer_name"
+        android:id="@+id/textViewIconDesigner"
+        android:textColor="#3887CF"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true" />
+    />
 </RelativeLayout>
 
 <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/layout/activity_about.xml -->
