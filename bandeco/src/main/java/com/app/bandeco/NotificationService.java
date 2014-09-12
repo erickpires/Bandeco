@@ -23,7 +23,7 @@ public class NotificationService extends Service {
 
         String tmp = mealType == 0 ? "Almoco" : "Jantar";
 
-        MealNotification.notify(getApplicationContext(), tmp, 0);
+        MealNotification.notify(getApplicationContext(), tmp);
 
         stopSelf();
         return START_NOT_STICKY;

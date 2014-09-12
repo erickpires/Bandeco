@@ -10,8 +10,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import view.MealNotification;
-
 
 public class About extends ActionBarActivity {
 

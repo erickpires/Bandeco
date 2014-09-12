@@ -1,39 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:id="@+id/list_layout">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:paddingTop="@dimen/default_minimal_padding">
 
+    <LinearLayout
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:paddingTop="@dimen/default_minimal_padding">
+        android:id="@+id/list_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:orientation="vertical"
+            android:id="@+id/list"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:id="@+id/list"
-            />
-    </ScrollView>
+            android:orientation="vertical" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/divider"
-        android:layout_marginTop="@dimen/default_minimal_padding"
-        tools:ignore="ContentDescription" />
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/new_word"
-        android:id="@+id/new_element_button" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_minimal_padding"
+            android:src="@drawable/divider"
+            tools:ignore="ContentDescription" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/new_element_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/new_word" />
+    </LinearLayout>
+</ScrollView>

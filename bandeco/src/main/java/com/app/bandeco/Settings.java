@@ -51,8 +51,6 @@ public class Settings extends ActionBarActivity {
     private String[] mealsChoices;
 
     public static final String SHOW_MEALS = "ShowMeals";
-    public static final String NEGATIVE_WORDS = "NegativeWords";
-    public static final String POSITIVE_WORDS = "PositiveWords";
     public static final String RECEIVE_NOTIFICATIONS = "ReceiveNotifications";
     public static final String LUNCH_NOTIFICATION_HOUR = "LunchNotificationTime";
     public static final String LUNCH_NOTIFICATION_MINUTE = "LunchNotificationMinute";
@@ -63,9 +61,6 @@ public class Settings extends ActionBarActivity {
     public static final String MEAL_TYPE = "MealTime";
 
     private int mealOption;
-    private String negativeWords;
-    private String positiveWords;
-    //TODO use a database to get rid of this workaround
     private boolean receiveNotifications;
     //TODO notifications time options
     private int lunchNotificationHour;
@@ -121,7 +116,11 @@ public class Settings extends ActionBarActivity {
         setupNotificationAlarm(MEAL_TYPE_LUNCH);
         setupNotificationAlarm(MEAL_TYPE_DINNER);
         super.onPause();
+    }
 
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
         database.close();
     }
 
@@ -129,8 +128,6 @@ public class Settings extends ActionBarActivity {
         Editor editor = settings.edit();
 
         editor.putInt(SHOW_MEALS, mealOption);
-        editor.putString(NEGATIVE_WORDS, negativeWords);
-        editor.putString(POSITIVE_WORDS, positiveWords);
         editor.putBoolean(RECEIVE_NOTIFICATIONS, receiveNotifications);
         editor.putInt(LUNCH_NOTIFICATION_HOUR, lunchNotificationHour);
         editor.putInt(LUNCH_NOTIFICATION_MINUTE, lunchNotificationMinute);
@@ -154,8 +151,6 @@ public class Settings extends ActionBarActivity {
 
     private void getSettings() {
         mealOption = settings.getInt(SHOW_MEALS, BOTH_MEALS);
-        negativeWords = settings.getString(NEGATIVE_WORDS, null);
-        positiveWords = settings.getString(POSITIVE_WORDS, null);
         receiveNotifications = settings.getBoolean(RECEIVE_NOTIFICATIONS, false);
         lunchNotificationHour = settings.getInt(LUNCH_NOTIFICATION_HOUR, 12);
         lunchNotificationMinute = settings.getInt(LUNCH_NOTIFICATION_MINUTE, 0);
