@@ -35,7 +35,7 @@ public class MealNotification {
      * @see #cancel(Context)
      */
     public static void notify(final Context context,
-            final String exampleString) {
+            final String title, final String text) {
         final Resources res = context.getResources();
 
         // This image is used as the notification's large icon (thumbnail).
@@ -43,11 +43,10 @@ public class MealNotification {
         final Bitmap picture = BitmapFactory.decodeResource(res, R.drawable.ic_stat_fork_knife);
 
 
-        final String ticker = exampleString;
-        final String title = res.getString(
-                R.string.meal_notification_title_template, exampleString);
-        final String text = res.getString(
-                R.string.meal_notification_placeholder_text_template, exampleString);
+
+        final String ticker = title;
+        //final String text = res.getString(
+        //        R.string.meal_notification_placeholder_text_template, exampleString);
 
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
 

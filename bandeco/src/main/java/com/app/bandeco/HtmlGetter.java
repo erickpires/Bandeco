@@ -49,7 +49,6 @@ public class HtmlGetter extends AsyncTask<String, Void, Html> {
         // TODO: check this.exception
         // TODO: do something with the html
         dialog.dismiss();
-        Toast.makeText(context, "saindo", Toast.LENGTH_LONG).show();
         System.out.println("Exception : " + exception);
         if (exception != null) {
             try {

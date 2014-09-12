@@ -1,6 +1,7 @@
 package com.app.bandeco;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import model.Meal;
@@ -32,5 +33,36 @@ public abstract class ApplicationHelper {
         values.put(Meals.REFRESCO, meal.getRefresco());
 
         db.insertWithOnConflict(Meals.TABLE_NAME, null, values, SQLiteDatabase.CONFLICT_REPLACE);
+    }
+
+    public static Meal getMealFromDatabase(SQLiteDatabase database, int dayOfTheWeek, int mealType) {
+        Meal meal = new Meal(mealType);
+
+        String[] projection = {Meals.ENTRADA,
+                               Meals.GUARNICAO,
+                               Meals.PRATO_PRINCIPAL,
+                               Meals.PRATO_VEGETARIANO,
+                               Meals.ACOMPANHAMENTO,
+                               Meals.SOBREMESA,
+                               Meals.REFRESCO};
+
+        String selection = Meals.MEAL_TYPE + "=? AND " + Meals.DAY + "=?";
+
+        String[] selectionValues = {String.valueOf(mealType),
+                                    String.valueOf(dayOfTheWeek)};
+
+        Cursor cursor = database.query(Meals.TABLE_NAME, projection, selection, selectionValues, null, null, null);
+
+        if(cursor.moveToFirst()){
+            meal.setEntrada(cursor.getString(cursor.getColumnIndex(Meals.ENTRADA)));
+            meal.setGuarnicao(cursor.getString(cursor.getColumnIndex(Meals.GUARNICAO)));
+            meal.setPratoPrincipal(cursor.getString(cursor.getColumnIndex(Meals.PRATO_PRINCIPAL)));
+            meal.setPratoVegetariano(cursor.getString(cursor.getColumnIndex(Meals.PRATO_VEGETARIANO)));
+            meal.setAcompanhamento(cursor.getString(cursor.getColumnIndex(Meals.ACOMPANHAMENTO)));
+            meal.setSobremesa(cursor.getString(cursor.getColumnIndex(Meals.SOBREMESA)));
+            meal.setRefresco(cursor.getString(cursor.getColumnIndex(Meals.REFRESCO)));
+        }
+
+        return meal;
     }
 }

@@ -4,6 +4,7 @@ import java.util.List;
 
 import view.Card;
 
+import com.app.bandeco.ApplicationHelper;
 import com.app.bandeco.Indexer;
 
 public class Meal {
@@ -20,6 +21,23 @@ public class Meal {
 	private String acompanhamento;
 	private String type;
 	private Day day;
+
+    public Meal(String mealType){
+        this.type = mealType;
+
+        // Ensures that the important fields are filled
+        entrada = "";
+        pratoPrincipal = "";
+        vegetariana = "";
+        guarnicao = "";
+        sobremesa = "";
+        refresco = "";
+        acompanhamento = "";
+    }
+
+    public Meal(int mealType){
+        this(mealTypeFromInt(mealType));
+    }
 
 	public Meal(List<String> tableColumn, Indexer indexer, String type) {
 		String tmp;
@@ -135,6 +153,34 @@ public class Meal {
 		return type;
 	}
 
+    public void setEntrada(String entrada) {
+        this.entrada = entrada;
+    }
+
+    public void setPratoPrincipal(String pratoPrincipal) {
+        this.pratoPrincipal = pratoPrincipal;
+    }
+
+    public void setPratoVegetariano(String vegetariana) {
+        this.vegetariana = vegetariana;
+    }
+
+    public void setGuarnicao(String guarnicao) {
+        this.guarnicao = guarnicao;
+    }
+
+    public void setSobremesa(String sobremesa) {
+        this.sobremesa = sobremesa;
+    }
+
+    public void setRefresco(String refresco) {
+        this.refresco = refresco;
+    }
+
+    public void setAcompanhamento(String acompanhamento) {
+        this.acompanhamento = acompanhamento;
+    }
+
 	public Card createCard() {
 		
 		
@@ -162,4 +208,15 @@ public class Meal {
 	public void setDay(Day day) {
 		this.day = day;	
 	}
+
+    public static final String mealTypeFromInt(int mealType){
+        switch (mealType){
+            case ApplicationHelper.MEAL_TYPE_LUNCH:
+                return "Almoço";
+            case ApplicationHelper.MEAL_TYPE_DINNER:
+                return "Jantar";
+            default:
+                return null;
+        }
+    }
 }
