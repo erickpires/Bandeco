@@ -5,6 +5,21 @@ package database;
  */
 public abstract class DatabaseContract {
 
+    public static abstract class LastUpdate{
+        public static final String TABLE_NAME = "last_update";
+        public static final String TABLE_ID = "id";
+        public static final String DATE = "last_date";
+
+        public static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + " ( " +
+                TABLE_ID + " INTEGER PRIMARY KEY, " +
+                DATE + " DATETIME" +
+                ");"
+                ;
+
+        public static final String DESTROY_TABLE =
+                "DROP TABLE IF EXISTS " + TABLE_NAME + ";"
+                ;
+    }
 
     public static abstract class Meals {
         public static final String TABLE_NAME = "meals";
@@ -28,7 +43,7 @@ public abstract class DatabaseContract {
                 PRATO_VEGETARIANO + " TEXT, " +
                 ACOMPANHAMENTO + " TEXT, " +
                 SOBREMESA + " TEXT, " +
-                REFRESCO + "TEXT, " +
+                REFRESCO + " TEXT, " +
                 "PRIMARY KEY (" + MEAL_TYPE + ", " + DAY + ")" +
                 ");"
                 ;

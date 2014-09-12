@@ -42,6 +42,11 @@
             android:enabled="true"
             android:exported="true" >
         </service>
+        <service
+            android:name="com.app.bandeco.UpdateService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
     </application>
 
 </manifest>

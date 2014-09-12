@@ -23,6 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(Meals.CREATE_TABLE);
         db.execSQL(PositiveWords.CREATE_TABLE);
         db.execSQL(NegativeWords.CREATE_TABLE);
+        db.execSQL(LastUpdate.CREATE_TABLE);
     }
 
     @Override
@@ -30,5 +31,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(Meals.DESTROY_TABLE);
         db.execSQL(PositiveWords.DESTROY_TABLE);
         db.execSQL(NegativeWords.DESTROY_TABLE);
+        db.execSQL(LastUpdate.DESTROY_TABLE);
     }
 }

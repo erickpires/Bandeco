@@ -31,6 +31,8 @@ public class Day {
 		return weekDayToString(weekDay);
 	}
 
+    // Monday is considered the first day of the week
+    // this way I can keep the site pattern
 	private static String weekDayToString(int weekDay) {
 		switch (weekDay) {
 		case 0:

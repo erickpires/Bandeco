@@ -103,7 +103,7 @@ public class Meal {
 		return pratoPrincipal;
 	}
 
-	public String getVegetariana() {
+	public String getPratoVegetariano() {
 		return vegetariana;
 	}
 

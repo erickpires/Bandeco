@@ -21,6 +21,8 @@
 
         <service android:enabled="true" android:exported="true" android:name="com.app.bandeco.NotificationService">
         </service>
+        <service android:enabled="true" android:exported="true" android:name="com.app.bandeco.UpdateService">
+        </service>
     </application>
 
 </manifest>

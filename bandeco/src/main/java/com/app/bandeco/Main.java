@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Calendar;
+import java.util.concurrent.ExecutionException;
 
 import html.Html;
 import model.Week;
@@ -27,56 +28,57 @@ import static android.support.v7.app.ActionBar.Tab;
 
 public class Main extends ActionBarActivity implements ActionBar.TabListener {
 
-	// private static final String url =
-	// "http://www.nutricao.ufrj.br/cardapio.htm";
-	private static final String url = "http://www.nutricao.ufrj.br/cardapio.htm";
-	private Html html;
-	private Context context;
-	public static Week week;
+    private Html html;
+    private Context context;
+    public static Week week;
 
-	private ActionBar actionBar;
-	private ViewPager viewPager;
-	private TabsAdapter tabsAdapter;
+    private ActionBar actionBar;
+    private ViewPager viewPager;
+    private TabsAdapter tabsAdapter;
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-		context = this;
+        context = this;
 
-		File saved = new File(getFilesDir(), "saved.inst");
+        System.out.println("HTML is: " + html);
 
-		if (saved.exists()) {
-			System.out.println("There's a saved file instance");
+        File saved = new File(getFilesDir(), "saved.inst");
+
+		/*if (saved.exists()) {
+            System.out.println("There's a saved file instance");
 			createHtmlFromFile(saved);
-		} else
-			createHtml();
+		} else*/
+        createHtml();
 
-		Calendar now = Calendar.getInstance();
-		Calendar htmlCalendar = html.getCalendar();
+        System.out.println("HTML is: " + html);
 
-		if ((now.get(Calendar.WEEK_OF_YEAR) > htmlCalendar
-				.get(Calendar.WEEK_OF_YEAR) || now.get(Calendar.YEAR) > htmlCalendar
-				.get(Calendar.YEAR))
-				&& now.get(Calendar.DAY_OF_WEEK) > Calendar.SUNDAY) {
+        Calendar now = Calendar.getInstance();
+        Calendar htmlCalendar = html.getCalendar();
 
-			createHtml();
-			System.out.println("File is not up-to-dated");
-		}
+        if ((now.get(Calendar.WEEK_OF_YEAR) > htmlCalendar
+                .get(Calendar.WEEK_OF_YEAR) || now.get(Calendar.YEAR) > htmlCalendar
+                .get(Calendar.YEAR))
+                && now.get(Calendar.DAY_OF_WEEK) > Calendar.SUNDAY) {
 
-		saveHtmlInstance(saved);
+            createHtml();
+            System.out.println("File is not up-to-dated");
+        }
 
-		week = new Week(html.getTables());
+        saveHtmlInstance(saved);
+
+        week = new Week(html.getTables());
 
         actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
         viewPager = (ViewPager) findViewById(R.id.pager);
-	}
+    }
 
     @Override
-    public void onResume(){
+    public void onResume() {
         super.onResume();
 
         tabsAdapter = new TabsAdapter(getSupportFragmentManager());
@@ -113,89 +115,91 @@ public class Main extends ActionBarActivity implements ActionBar.TabListener {
             }
         });
     }
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle item selection
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
 
-		switch (item.getItemId()) {
-		case R.id.action_settings:
-			// show settings
-            startActivity(new Intent(this, Settings.class));
-			return true;
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
 
-		case R.id.action_update:
-			createHtml();
-			Toast.makeText(this, getString(R.string.cardapio_atualizado), Toast.LENGTH_SHORT)
-					.show();
-			return true;
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                // show settings
+                startActivity(new Intent(this, Settings.class));
+                return true;
 
-		case R.id.action_about:
-			// show about
-            startActivity(new Intent(this, About.class));
-			return true;
+            case R.id.action_update:
+                //createHtml();
 
-		default:
-			// return super.onOptionsItemSelected(item);
-			return false;
-		}
-	}
+                Intent intent = new Intent(getApplicationContext(), UpdateService.class);
+                startService(intent);
 
-	// @Override
-	// public void onTabReselected(Tab tab, FragmentTransaction ft) {
-	// // TODO Auto-generated method stub
-	//
-	// }
-	//
-	// @Override
-	// public void onTabSelected(Tab tab, FragmentTransaction ft) {
-	// viewPager.setCurrentItem(tab.getPosition());
-	// }
-	//
-	// @Override
-	// public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-	// // TODO Auto-generated method stub
-	//
-	// }
+                return true;
 
-	private void createHtml() {
-		Runnable r = new Runnable() {
-			@Override
-			public void run() {
-				try {
-					html = new HtmlGetter(context).execute(url).get();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		};
+            case R.id.action_about:
+                // show about
+                startActivity(new Intent(this, About.class));
+                return true;
 
-		new Thread(r).run();
-	}
+            default:
+                // return super.onOptionsItemSelected(item);
+                return false;
+        }
+    }
 
-	private void createHtmlFromFile(File saved) {
-		FileInputStream inputStream;
-		ObjectInputStream objectInputStream;
-		try {
-			inputStream = new FileInputStream(saved);
-			objectInputStream = new ObjectInputStream(inputStream);
+    // @Override
+    // public void onTabReselected(Tab tab, FragmentTransaction ft) {
+    // // TODO Auto-generated method stub
+    //
+    // }
+    //
+    // @Override
+    // public void onTabSelected(Tab tab, FragmentTransaction ft) {
+    // viewPager.setCurrentItem(tab.getPosition());
+    // }
+    //
+    // @Override
+    // public void onTabUnselected(Tab tab, FragmentTransaction ft) {
+    // // TODO Auto-generated method stub
+    //
+    // }
 
-			html = (Html) objectInputStream.readObject();
+    private void createHtml() {
 
-			objectInputStream.close();
-			inputStream.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+        try {
+            html = new HtmlGetter(context).execute(ApplicationHelper.url).get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
 
-	}
 
-	private void saveHtmlInstance(File saved) {
+        //new Thread(r).run();
+    }
+
+    private void createHtmlFromFile(File saved) {
+        FileInputStream inputStream;
+        ObjectInputStream objectInputStream;
+        try {
+            inputStream = new FileInputStream(saved);
+            objectInputStream = new ObjectInputStream(inputStream);
+
+            html = (Html) objectInputStream.readObject();
+
+            objectInputStream.close();
+            inputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void saveHtmlInstance(File saved) {
         saved.delete();
 
         FileOutputStream outputStream;

@@ -31,6 +31,9 @@
     <string name="sobremesa">Sobremesa: </string>
     <string name="refresco">Refresco: </string>
 
+
+    <string name="no_connection">Não conectado!</string>
+
     <string-array name="days_array">
         <item>Monday</item>
         <item>Tuesday</item>

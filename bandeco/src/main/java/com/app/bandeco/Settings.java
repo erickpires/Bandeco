@@ -30,6 +30,7 @@ import view.ListDialogFragment;
 import static android.app.AlarmManager.*;
 import static android.content.SharedPreferences.Editor;
 import static android.widget.CompoundButton.*;
+import static com.app.bandeco.ApplicationHelper.*;
 import static com.sleepbot.datetimepicker.time.TimePickerDialog.*;
 import static java.util.Calendar.*;
 
@@ -40,8 +41,7 @@ public class Settings extends ActionBarActivity {
     public static final int DINNER_ONLY = 1;
     public static final int BOTH_MEALS = 2;
 
-    private static final int MEAL_TYPE_LUNCH = 0;
-    private static final int MEAL_TYPE_DINNER = 1;
+
 
     private static final int[] mealsOptions = new int[]{R.string.lunch_only,
             R.string.dinner_only,
