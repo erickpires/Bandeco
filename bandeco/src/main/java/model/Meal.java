@@ -167,11 +167,11 @@ public class Meal {
 	@Override
 	public String toString(){
 		String text = "";
-		text += "Entrada: " + entrada + "\n";
-		text += "Guarnição: " + guarnicao + "\n";
 		text += "Prato Principal: " + pratoPrincipal + "\n";
 		text += "Prato Vegetariano: " + vegetariana + "\n";
 		text += "Acompanhamento: " + acompanhamento + "\n";
+        text += "Guarnição: " + guarnicao + "\n";
+        text += "Entrada: " + entrada + "\n";
 		text += "Sobremesa: " + sobremesa + "\n";
 		text += "Refresco: " + refresco + "\n";
 		
