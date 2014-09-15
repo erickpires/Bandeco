@@ -95,6 +95,7 @@ public class Html {
         str = str.replaceAll("[\t]+", " ");
         str = str.replaceAll("[ ]+", " ");
 		str = str.replaceAll(" [ ]+", " ");
+        str = str.replaceAll("(c|C)( )?/", "com");
 
 		return str;
 	}
