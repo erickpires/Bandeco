@@ -8,8 +8,11 @@ import android.net.NetworkInfo;
 import android.os.IBinder;
 import android.widget.Toast;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Date;
 
 import database.DatabaseHelper;
 import html.Html;
@@ -30,42 +33,57 @@ public class UpdateService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        if(checkConnection()) {
+        if (checkConnection()) {
 
             Thread t = new Thread() {
                 public void run() {
-                    Html html = createHtml();
+                    URL url = null;
+                    try {
+                        url = new URL(ApplicationHelper.url);
 
-                    if(html != null)
-                        updateDatabaseInfo(html);
-                    else
-                        System.out.println("Failed to get site");
+                        URLConnection connection = url.openConnection();
+
+                        Date date = new Date(connection.getLastModified());
+
+                        Html html = new Html(connection);
+
+                        if (html != null)
+                            updateDatabaseInfo(html, date);
+                        else
+                            System.out.println("Failed to get site");
+
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
 
                     stopSelf();
                 }
             };
 
             t.start();
-        }
-        else
+        } else
             Toast.makeText(getBaseContext(), R.string.no_connection, Toast.LENGTH_SHORT).show();
 
         return START_NOT_STICKY;
     }
 
-    private void updateDatabaseInfo(Html html) {
+    private void updateDatabaseInfo(Html html, Date date) {
         DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext());
         SQLiteDatabase database = databaseHelper.getWritableDatabase();
 
         Week week = new Week(html.getTables());
 
-        for(int i = 0; i < DAYS_IN_THE_WEEK; i++){
+        for (int i = 0; i < DAYS_IN_THE_WEEK; i++) {
             Day day = week.getDayAt(i);
 
             day.getLunch();
 
             insertMealInDatabase(database, day.getLunch(), i, MEAL_TYPE_LUNCH);
             insertMealInDatabase(database, day.getDinner(), i, MEAL_TYPE_DINNER);
+
+            updateLastModifiedInDatabase(database, date);
         }
 
         database.close();
@@ -75,27 +93,12 @@ public class UpdateService extends Service {
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
 
-        if(networkInfo == null ||
-           !networkInfo.isConnected() ||
-           !networkInfo.isAvailable())
+        if (networkInfo == null ||
+                !networkInfo.isConnected() ||
+                !networkInfo.isAvailable())
 
             return false;
 
         return true;
-    }
-
-    private Html createHtml() {
-
-        try {
-            URL url = new URL(ApplicationHelper.url);
-
-            URLConnection connection = url.openConnection();
-
-            return new Html(connection);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
     }
 }

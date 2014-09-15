@@ -4,6 +4,9 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import model.Meal;
 import model.Week;
 
@@ -19,6 +22,7 @@ public abstract class ApplicationHelper {
 
     public static final int MEAL_TYPE_LUNCH = 0;
     public static final int MEAL_TYPE_DINNER = 1;
+    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     public static void insertMealInDatabase(SQLiteDatabase db, Meal meal, int day, int mealType){
         ContentValues values = new ContentValues();
@@ -34,6 +38,15 @@ public abstract class ApplicationHelper {
         values.put(Meals.REFRESCO, meal.getRefresco());
 
         db.insertWithOnConflict(Meals.TABLE_NAME, null, values, SQLiteDatabase.CONFLICT_REPLACE);
+    }
+
+    public static void updateLastModifiedInDatabase(SQLiteDatabase db, Date date){
+        ContentValues values = new ContentValues();
+
+        values.put(LastUpdate.TABLE_ID, 0);
+        values.put(LastUpdate.DATE, dateFormat.format(date));
+
+        db.insertWithOnConflict(LastUpdate.TABLE_NAME, null, values, SQLiteDatabase.CONFLICT_REPLACE);
     }
 
     public static Meal getMealFromDatabase(SQLiteDatabase database, int dayOfTheWeek, int mealType) {
