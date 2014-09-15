@@ -5,8 +5,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
+import database.DatabaseContract;
 import model.Meal;
 import model.Week;
 
@@ -112,5 +114,33 @@ public abstract class ApplicationHelper {
             }while (cursor.moveToNext());
 
         return week;
+    }
+
+    public static void saveListToDB(SQLiteDatabase database, ArrayList<String> list, String table) {
+        //Cleans table before insert elements
+        database.delete(table, null, null);
+
+        for (String s : list) {
+            ContentValues values = new ContentValues();
+            values.put(DatabaseContract.PositiveWords.WORD, s);
+
+            database.insertOrThrow(table, null, values);
+        }
+    }
+
+    public static ArrayList<String> getListFromDB(SQLiteDatabase database, String table, String[] projection) {
+        ArrayList<String> list = new ArrayList<String>();
+
+        Cursor cursor = database.query(table, projection, null, null, null, null, null);
+
+        int column = cursor.getColumnIndex(projection[0]);
+
+        if (cursor.moveToFirst())
+            do {
+                list.add(cursor.getString(column));
+
+            } while (cursor.moveToNext());
+
+        return list;
     }
 }

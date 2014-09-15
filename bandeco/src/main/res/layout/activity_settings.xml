@@ -174,5 +174,32 @@
             android:text="" />
     </LinearLayout>
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/divider"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/notify_when_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/default_top_padding"
+        android:paddingTop="@dimen/default_top_padding" >
+        <TextView
+            android:id="@+id/notify_when_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_side_padding"
+            android:text="@string/notify"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/notify_when_option_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_side_padding_identented" />
+    </LinearLayout>
+
 </LinearLayout>
 </ScrollView>

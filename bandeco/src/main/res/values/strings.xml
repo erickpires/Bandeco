@@ -29,8 +29,14 @@
     <string name="positive_words">O que gosto</string>
 
     <string name="receive_notifications">Receber notificações</string>
+    
     <string name="lunch_notification">Notificação de almoço</string>
     <string name="dinner_notification">Notificação de jantar</string>
+    
+    <string name="notify">Notificar</string>
+    <string name="always">Sempre</string>
+    <string name="only_if_I_like">Somente quando eu gostar</string>
+    <string name="only_if_I_dislike">Somente quando eu não gostar</string>
 
     <string name="new_word">Nova palavra</string>
 

@@ -917,6 +917,7 @@
     <string name="action_about">Sobre</string>
     <string name="action_settings">Configurações</string>
     <string name="action_update">Atualizar</string>
+    <string name="always">Sempre</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment />
 
@@ -984,6 +985,7 @@
     <string name="negative_words">O que não gosto</string>
     <string name="new_word">Nova palavra</string>
     <string name="no_connection">Não conectado!</string>
+    <string name="notify">Notificar</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment />
 
@@ -993,6 +995,8 @@
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment />
 
+    <string name="only_if_I_dislike">Somente quando eu não gostar</string>
+    <string name="only_if_I_like">Somente quando eu gostar</string>
     <string name="positive_words">O que gosto</string>
     <string name="prato_principal">Prato Principal: </string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
