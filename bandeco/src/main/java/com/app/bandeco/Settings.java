@@ -365,12 +365,16 @@ public class Settings extends ActionBarActivity {
 
     private void updateNegativeWords() {
         clearList(negativeList);
-        negativeWordsList.setText("" + negativeList);
+        negativeWordsList.setText(getStringFromList(negativeList));
     }
 
     private void updatePositiveWords() {
         clearList(positiveList);
-        positiveWordsList.setText("" + positiveList);
+        positiveWordsList.setText(getStringFromList(positiveList));
+    }
+
+    private String getStringFromList(ArrayList<String> list) {
+        return list.toString().replaceAll("(\\[|\\])", "");
     }
 
     private void clearList(ArrayList<String> list) {
