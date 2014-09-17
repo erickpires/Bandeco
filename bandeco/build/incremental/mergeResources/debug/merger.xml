@@ -4102,16 +4102,16 @@ false
                     msgid="2031811694353399454" >"Επιλέξτε κάποια εφαρμογή"
                 </string>
                 <string
+                    name="abc_action_menu_overflow_description"
+                    msgid="3588849162933574182" >"Περισσότερες επιλογές"
+                </string>
+                <string
                     name="abc_searchview_description_clear"
                     msgid="3691816814315814921" >"Διαγραφή ερωτήματος"
                 </string>
                 <string
                     name="abc_searchview_description_voice"
                     msgid="893419373245838918" >"Φωνητική αναζήτηση"
-                </string>
-                <string
-                    name="abc_action_menu_overflow_description"
-                    msgid="3588849162933574182" >"Περισσότερες επιλογές"
                 </string>
             </file>
             <file
@@ -11412,16 +11412,16 @@ true
                     msgid="4076576682505996667" >"Atlikta"
                 </string>
                 <string
+                    name="abc_shareactionprovider_share_with_application"
+                    msgid="7165123711973476752" >"Bendrinti naudojant „%s“"
+                </string>
+                <string
                     name="abc_action_bar_home_description"
                     msgid="4600421777120114993" >"Eiti į pagrindinį puslapį"
                 </string>
                 <string
                     name="abc_searchview_description_search"
                     msgid="8264924765203268293" >"Paieška"
-                </string>
-                <string
-                    name="abc_shareactionprovider_share_with_application"
-                    msgid="7165123711973476752" >"Bendrinti naudojant „%s“"
                 </string>
             </file>
         </source>
@@ -12227,6 +12227,8 @@ Sunday
                 <string name="dinner_only" >Apenas jantar
                 </string>
                 <string name="versao" >Versão: 
+                </string>
+                <string name="never" >Nunca
                 </string>
                 <string name="new_word" >Nova palavra
                 </string>

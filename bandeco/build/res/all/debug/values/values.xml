@@ -983,6 +983,7 @@
     <eat-comment />
 
     <string name="negative_words">O que não gosto</string>
+    <string name="never">Nunca</string>
     <string name="new_word">Nova palavra</string>
     <string name="no_connection">Não conectado!</string>
     <string name="notify">Notificar</string>
