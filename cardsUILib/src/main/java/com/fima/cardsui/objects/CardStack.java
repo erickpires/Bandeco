@@ -68,7 +68,7 @@ public class CardStack extends AbstractCard {
         mContext = context;
 
         // try to recycle views if possible
-        Log.d("CardStack", String.format("Checking to recycle view. convertView is %s", (convertView == null ? "null" : "not null")));
+        Log.d("CardStack", String.format("Checking to recycle erick.bandeco.view. convertView is %s", (convertView == null ? "null" : "not null")));
         if (convertView != null) {
             Log.d("CardStack", String.format("Checking types.  convertView is %d, need %d", convertView.getId(), R.id.stackRoot));
             // can only convert something with the correct root element
@@ -107,7 +107,7 @@ public class CardStack extends AbstractCard {
 
             int topPx = 0;
 
-            // handle the view
+            // handle the erick.bandeco.view
             if (i == 0) {
                 cardView = card.getViewFirst(context);
             }
@@ -164,24 +164,24 @@ public class CardStack extends AbstractCard {
     /**
      * Attempt to modify the convertView instead of inflating a new View for this CardStack.
      * If convertView isn't compatible, it isn't modified.
-     * @param convertView view to try reusing
+     * @param convertView erick.bandeco.view to try reusing
      * @return true on success, false if the convertView is not compatible
      */
     private boolean convert(View convertView) {
         // only convert singleton stacks
         if (cards.size() != 1) {
-            Log.d("CardStack", "Can't convert view: num cards is " + cards.size());
+            Log.d("CardStack", "Can't convert erick.bandeco.view: num cards is " + cards.size());
             return false;
         }
 
         RelativeLayout container = (RelativeLayout) convertView.findViewById(R.id.stackContainer);
         if (container == null) {
-            Log.d("CardStack", "Can't convert view: can't find stackContainer");
+            Log.d("CardStack", "Can't convert erick.bandeco.view: can't find stackContainer");
             return false;
         }
 
         if (container.getChildCount() != 1) {
-            Log.d("CardStack", "Can't convert view: child count is " + container.getChildCount());
+            Log.d("CardStack", "Can't convert erick.bandeco.view: child count is " + container.getChildCount());
             return false;
         }
 
@@ -190,7 +190,7 @@ public class CardStack extends AbstractCard {
         View convertCardView = container.getChildAt(0);
 
         if (convertCardView == null || convertCardView.getId() != card.getId()) {
-            Log.d("CardStack", String.format("Can't convert view: child Id is 0x%x, card Id is 0x%x", convertCardView != null ? convertCardView.getId() : 0, card.getId()));
+            Log.d("CardStack", String.format("Can't convert erick.bandeco.view: child Id is 0x%x, card Id is 0x%x", convertCardView != null ? convertCardView.getId() : 0, card.getId()));
             return false;
         }
 

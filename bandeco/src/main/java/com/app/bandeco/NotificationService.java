@@ -9,24 +9,21 @@ import android.os.IBinder;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-import database.DatabaseContract;
-import database.DatabaseHelper;
-import model.Day;
-import model.Meal;
-import view.MealNotification;
+import erick.bandeco.database.DatabaseHelper;
+import erick.bandeco.model.Day;
+import erick.bandeco.model.Meal;
+import erick.bandeco.view.MealNotification;
+import erick.bandeco.view.Settings;
 
-import static database.DatabaseContract.*;
+import static erick.bandeco.database.DatabaseContract.*;
 
 public class NotificationService extends Service {
-
-    private int notifyWhenOption;
 
     public NotificationService() {
     }
 
     @Override
     public IBinder onBind(Intent intent) {
-        // TODO: Return the communication channel to the service.
         throw new UnsupportedOperationException("Not yet implemented");
     }
 
@@ -34,7 +31,7 @@ public class NotificationService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
 
         SharedPreferences preferences = getSharedPreferences(getString(R.string.app_name), 0);
-        notifyWhenOption = preferences.getInt(Settings.NOTIFY_WHEN, Settings.NOTIFY_ALWAYS);
+        int notifyWhenOption = preferences.getInt(Settings.NOTIFY_WHEN, Settings.NOTIFY_ALWAYS);
 
         int mealType = intent.getExtras().getInt(Settings.MEAL_TYPE);
 
@@ -44,7 +41,7 @@ public class NotificationService extends Service {
         Calendar today = Calendar.getInstance();
         int dayOfTheWeek = Day.adaptDayOfWeek(today.get(Calendar.DAY_OF_WEEK));
 
-        Meal meal = ApplicationHelper.getMealFromDatabase(database, dayOfTheWeek, mealType);
+        Meal meal = OperationsWithDB.getMealFromDatabase(database, dayOfTheWeek, mealType);
 
         if(shouldNotify(notifyWhenOption, meal, database)) {
             MealNotification.notify(getApplicationContext(), meal.getType(), meal.toString());
@@ -60,12 +57,12 @@ public class NotificationService extends Service {
             return true;
 
         if(notifyWhenOption == Settings.NOTIFY_IF_LIKE) {
-            ArrayList<String> likeList = ApplicationHelper.getListFromDB(db, PositiveWords.TABLE_NAME, new String[]{PositiveWords.WORD});
+            ArrayList<String> likeList = OperationsWithDB.getListFromDB(db, PositiveWords.TABLE_NAME, new String[]{PositiveWords.WORDS});
             return hasMatch(meal, likeList);
         }
 
         else {
-            ArrayList<String> dislikeList = ApplicationHelper.getListFromDB(db, NegativeWords.TABLE_NAME, new String[]{NegativeWords.WORD});
+            ArrayList<String> dislikeList = OperationsWithDB.getListFromDB(db, NegativeWords.TABLE_NAME, new String[]{NegativeWords.WORD});
             return hasMatch(meal, dislikeList);
         }
     }

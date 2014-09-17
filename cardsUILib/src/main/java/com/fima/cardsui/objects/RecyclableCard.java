@@ -40,10 +40,10 @@ public abstract class RecyclableCard extends Card {
     }
 
     /**
-     * Set the values of child views.  The view will not be null and
+     * Set the values of child views.  The erick.bandeco.view will not be null and
      * is guaranteed to have the layout of the root element equal to
      * the layout resource ID from getCardLayoutId().
-     * @param convertView non-null view to modify
+     * @param convertView non-null erick.bandeco.view to modify
      */
     protected abstract void applyTo(View convertView);
 

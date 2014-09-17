@@ -7,7 +7,7 @@ import android.util.Log;
 
 /**
  * Contains method(s) to create a {@link Card}-family object from its
- * serializable model.
+ * serializable erick.bandeco.model.
  * 
  * <p>
  * Note that any similarities to Card Factory Ltd
@@ -24,9 +24,9 @@ public class CardFactory {
 	 * @param model
 	 *            The {@link CardModel} to "inflate" into an
 	 *            {@link AbstractCard}
-	 * @return An {@link AbstractCard} that matches the model data
+	 * @return An {@link AbstractCard} that matches the erick.bandeco.model data
 	 * @throws InstantiationException
-	 *             Thrown when the class specified by the model cannot be
+	 *             Thrown when the class specified by the erick.bandeco.model cannot be
 	 *             instantiated (no default ctor).
 	 * @throws IllegalAccessException
 	 *             Thrown if I missed a setAccessible(true) somewhere, or if the
@@ -73,15 +73,15 @@ public class CardFactory {
 		}
 
 		/*
-		 * Obtain a list of fields within the model. As most of them match those
+		 * Obtain a list of fields within the erick.bandeco.model. As most of them match those
 		 * in AbstractCard, the card's content will be preserved. Since the
-		 * model inherits only from Object, all fields collected here will be
+		 * erick.bandeco.model inherits only from Object, all fields collected here will be
 		 * what we need.
 		 */
 		Field[] sourceFields = model.getClass().getDeclaredFields();
 
 		/*
-		 * Now iterate over the fields in the model.
+		 * Now iterate over the fields in the erick.bandeco.model.
 		 */
 		for (int i = 0; i < sourceFields.length; i++) {
 			// Just a reference for the field we're copying in this pass
@@ -103,8 +103,8 @@ public class CardFactory {
 			if (destField != null) {
 				/*
 				 * We need to get the specific field that matches the one in the
-				 * model and set it to the same value as the corresponding field
-				 * in the model.
+				 * erick.bandeco.model and set it to the same value as the corresponding field
+				 * in the erick.bandeco.model.
 				 */
 				destField.setAccessible(true); // "Trust me."
 				destField.set(newCard, curField.get(model));
@@ -115,8 +115,8 @@ public class CardFactory {
 			} else {
 				/*
 				 * We have encountered a field (CardModel.data,
-				 * CardModel.cardClass, ...) in the model that does not exist in
-				 * the view that can represent it, so we just skip it. Yes, this
+				 * CardModel.cardClass, ...) in the erick.bandeco.model that does not exist in
+				 * the erick.bandeco.view that can represent it, so we just skip it. Yes, this
 				 * breaks the "for loop is fixed" convention, but this really is
 				 * the easiest way.
 				 * 

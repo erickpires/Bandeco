@@ -14,57 +14,55 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.Date;
 
-import database.DatabaseHelper;
-import html.Html;
-import model.Day;
-import model.Week;
+import erick.bandeco.database.DatabaseHelper;
+import erick.bandeco.html.Html;
+import erick.bandeco.model.Day;
+import erick.bandeco.model.Week;
 
-import static com.app.bandeco.ApplicationHelper.*;
+import static com.app.bandeco.OperationsWithDB.*;
+import static com.app.bandeco.Constants.*;
 
 public class UpdateService extends Service {
-    public UpdateService() {
-    }
 
     @Override
     public IBinder onBind(Intent intent) {
-        // TODO: Return the communication channel to the service.
         throw new UnsupportedOperationException("Not yet implemented");
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        if (checkConnection()) {
+        if (!checkConnection()) {
+            Toast.makeText(getBaseContext(), R.string.no_connection, Toast.LENGTH_SHORT).show();
+            stopSelf();
 
-            Thread t = new Thread() {
-                public void run() {
-                    URL url = null;
-                    try {
-                        url = new URL(ApplicationHelper.url);
+            return START_NOT_STICKY;
+        }
 
-                        URLConnection connection = url.openConnection();
+        Thread t = new Thread() {
+            public void run() {
+                try {
+                    URL url = new URL(SITE_URL);
 
-                        Date date = new Date(connection.getLastModified());
+                    URLConnection connection = url.openConnection();
 
-                        Html html = new Html(connection);
+                    Date date = new Date(connection.getLastModified());
 
-                        if (html != null)
-                            updateDatabaseInfo(html, date);
-                        else
-                            System.out.println("Failed to get site");
+                    Html html = new Html(connection);
 
-                    } catch (MalformedURLException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                    updateDatabaseInfo(html, date);
 
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }finally {
                     stopSelf();
                 }
-            };
+            }
+        };
 
-            t.start();
-        } else
-            Toast.makeText(getBaseContext(), R.string.no_connection, Toast.LENGTH_SHORT).show();
+        t.start();
+
 
         return START_NOT_STICKY;
     }
@@ -93,12 +91,9 @@ public class UpdateService extends Service {
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
 
-        if (networkInfo == null ||
-                !networkInfo.isConnected() ||
-                !networkInfo.isAvailable())
+        return (networkInfo != null &&
+                networkInfo.isConnected() &&
+                networkInfo.isAvailable());
 
-            return false;
-
-        return true;
     }
 }

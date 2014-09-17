@@ -81,7 +81,7 @@ public abstract class Card extends AbstractCard {
             e.printStackTrace();
         }
 
-        // ((TextView) view.findViewById(R.id.title)).setText(this.title);
+        // ((TextView) erick.bandeco.view.findViewById(R.id.title)).setText(this.title);
 
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
@@ -108,7 +108,7 @@ public abstract class Card extends AbstractCard {
             e.printStackTrace();
         }
 
-        // ((TextView) view.findViewById(R.id.title)).setText(this.title);
+        // ((TextView) erick.bandeco.view.findViewById(R.id.title)).setText(this.title);
 
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
@@ -135,7 +135,7 @@ public abstract class Card extends AbstractCard {
             e.printStackTrace();
         }
 
-        // ((TextView) view.findViewById(R.id.title)).setText(this.title);
+        // ((TextView) erick.bandeco.view.findViewById(R.id.title)).setText(this.title);
 
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
@@ -197,7 +197,7 @@ public abstract class Card extends AbstractCard {
      * Attempt to reuse convertCardView.  Should not modify convertCardView if it's
      * not compatible.  The implementer should check the card content part and
      * verify that it matches.
-     * @param convertCardView the view to convert, with root Id equal to Card.getId()
+     * @param convertCardView the erick.bandeco.view to convert, with root Id equal to Card.getId()
      * @return true on success, false if not compatible
      */
     public abstract boolean convert(View convertCardView);

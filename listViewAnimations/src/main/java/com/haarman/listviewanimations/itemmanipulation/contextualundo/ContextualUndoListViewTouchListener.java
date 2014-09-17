@@ -121,7 +121,7 @@ public class ContextualUndoListViewTouchListener implements SwipeOnTouchListener
 				return false;
 			}
 
-			// Find the child view that was touched (perform a hit test)
+			// Find the child erick.bandeco.view that was touched (perform a hit test)
 			Rect rect = new Rect();
 			int childCount = mListView.getChildCount();
 			int[] listViewCoords = new int[2];

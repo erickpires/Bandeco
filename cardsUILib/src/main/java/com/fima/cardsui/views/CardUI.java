@@ -102,7 +102,7 @@ public class CardUI extends FrameLayout {
             // init observable scrollview
             mListView = (QuickReturnListView) findViewById(R.id.listView);
         } else {
-            //initialize the mulitcolumn view
+            //initialize the mulitcolumn erick.bandeco.view
             inflater.inflate(R.layout.cards_view_multicolumn, this);
             mTableLayout = (TableLayout) findViewById(R.id.tableLayout);
         }

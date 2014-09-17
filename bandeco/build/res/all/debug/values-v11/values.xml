@@ -4,7 +4,7 @@
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values-v11/styles.xml -->
     <eat-comment />
 
-    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
         <!-- API 11 theme customizations can go here. -->
     </style>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-v11/values.xml -->

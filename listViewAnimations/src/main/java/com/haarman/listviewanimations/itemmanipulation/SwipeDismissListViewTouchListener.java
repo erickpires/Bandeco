@@ -18,7 +18,7 @@
  */
 package com.haarman.listviewanimations.itemmanipulation;
 
-//import static com.nineoldandroids.view.ViewHelper.setAlpha;
+//import static com.nineoldandroids.erick.bandeco.view.ViewHelper.setAlpha;
 import static com.nineoldandroids.view.ViewPropertyAnimator.animate;
 
 import java.util.ArrayList;
@@ -87,10 +87,10 @@ public class SwipeDismissListViewTouchListener implements SwipeOnTouchListener {
 	private boolean mTouchChildTouched;
 
 	/**
-	 * Constructs a new swipe-to-dismiss touch listener for the given list view.
+	 * Constructs a new swipe-to-dismiss touch listener for the given list erick.bandeco.view.
 	 *
 	 * @param listView
-	 *            The list view whose items should be dismissable.
+	 *            The list erick.bandeco.view whose items should be dismissable.
 	 * @param callback
 	 *            The callback to trigger when the user has indicated that she
 	 *            would like to dismiss one or more list items.
@@ -167,7 +167,7 @@ public class SwipeDismissListViewTouchListener implements SwipeOnTouchListener {
 
 		mSwipeInitiated = false;
 
-		// Find the child view that was touched (perform a hit test)
+		// Find the child erick.bandeco.view that was touched (perform a hit test)
 		Rect rect = new Rect();
 		int childCount = mListView.getChildCount();
 		int[] listViewCoords = new int[2];
@@ -402,7 +402,7 @@ public class SwipeDismissListViewTouchListener implements SwipeOnTouchListener {
 	protected void recycleDismissedViewsItems(List<PendingDismissData> pendingDismisses) {
 		ViewGroup.LayoutParams lp;
 		for (PendingDismissData pendingDismiss : pendingDismisses) {
-			// Reset view presentation
+			// Reset erick.bandeco.view presentation
 			ViewHelper.setAlpha(pendingDismiss.view, 1f);
 			ViewHelper.setTranslationX(pendingDismiss.view, 0);
 			lp = pendingDismiss.view.getLayoutParams();

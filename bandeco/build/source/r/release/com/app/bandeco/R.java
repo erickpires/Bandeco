@@ -73,7 +73,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
          */
         public static final int actionDropDownStyle=0x7f010066;
         /** 
-             An optional layout to be used as an action view.
+             An optional layout to be used as an action erick.bandeco.view.
              See {@link android.view.MenuItem#setActionView(android.view.View)}
              for more info.
         
@@ -148,7 +148,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
          */
         public static final int actionOverflowButtonStyle=0x7f010019;
         /** 
-             The name of an optional ActionProvider class to instantiate an action view
+             The name of an optional ActionProvider class to instantiate an action erick.bandeco.view
              and perform operations such as default action for that menu item.
              See {@link android.view.MenuItem#setActionProvider(android.view.ActionProvider)}
              for more info.
@@ -163,7 +163,7 @@ containing a value of this type.
         public static final int actionProviderClass=0x7f01005f;
         /** 
              The name of an optional View class to instantiate and use as an
-             action view. See {@link android.view.MenuItem#setActionView(android.view.View)}
+             action erick.bandeco.view. See {@link android.view.MenuItem#setActionView(android.view.View)}
              for more info.
         
          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
@@ -600,8 +600,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
                  label with it even if it has an icon representation.
             </td></tr>
 <tr><td><code>collapseActionView</code></td><td>8</td><td>
-                 This item's action view collapses to a normal menu
-                 item. When expanded, the action view takes over a
+                 This item's action erick.bandeco.view collapses to a normal menu
+                 item. When expanded, the action erick.bandeco.view takes over a
                  larger segment of its container.
             </td></tr>
 </table>
@@ -2492,13 +2492,13 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #MenuItem_actionLayout com.app.bandeco:actionLayout}</code></td><td>
-             An optional layout to be used as an action view.</td></tr>
+             An optional layout to be used as an action erick.bandeco.view.</td></tr>
            <tr><td><code>{@link #MenuItem_actionProviderClass com.app.bandeco:actionProviderClass}</code></td><td>
-             The name of an optional ActionProvider class to instantiate an action view
+             The name of an optional ActionProvider class to instantiate an action erick.bandeco.view
              and perform operations such as default action for that menu item.</td></tr>
            <tr><td><code>{@link #MenuItem_actionViewClass com.app.bandeco:actionViewClass}</code></td><td>
              The name of an optional View class to instantiate and use as an
-             action view.</td></tr>
+             action erick.bandeco.view.</td></tr>
            <tr><td><code>{@link #MenuItem_android_alphabeticShortcut android:alphabeticShortcut}</code></td><td>
              The alphabetic shortcut key.</td></tr>
            <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td> Whether the item is capable of displaying a check mark.</td></tr>
@@ -2552,7 +2552,7 @@ containing a value of this type.
           <p>
           @attr description
           
-             An optional layout to be used as an action view.
+             An optional layout to be used as an action erick.bandeco.view.
              See {@link android.view.MenuItem#setActionView(android.view.View)}
              for more info.
         
@@ -2568,7 +2568,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>
           @attr description
           
-             The name of an optional ActionProvider class to instantiate an action view
+             The name of an optional ActionProvider class to instantiate an action erick.bandeco.view
              and perform operations such as default action for that menu item.
              See {@link android.view.MenuItem#setActionProvider(android.view.ActionProvider)}
              for more info.
@@ -2590,7 +2590,7 @@ containing a value of this type.
           @attr description
           
              The name of an optional View class to instantiate and use as an
-             action view. See {@link android.view.MenuItem#setActionView(android.view.View)}
+             action erick.bandeco.view. See {@link android.view.MenuItem#setActionView(android.view.View)}
              for more info.
         
 
@@ -2778,8 +2778,8 @@ containing a value of this type.
                  label with it even if it has an icon representation.
             </td></tr>
 <tr><td><code>collapseActionView</code></td><td>8</td><td>
-                 This item's action view collapses to a normal menu
-                 item. When expanded, the action view takes over a
+                 This item's action erick.bandeco.view collapses to a normal menu
+                 item. When expanded, the action erick.bandeco.view takes over a
                  larger segment of its container.
             </td></tr>
 </table>
@@ -3256,7 +3256,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td>
-             Boolean that controls whether a view can take focus.</td></tr>
+             Boolean that controls whether a erick.bandeco.view can take focus.</td></tr>
            <tr><td><code>{@link #View_paddingEnd com.app.bandeco:paddingEnd}</code></td><td> Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.</td></tr>
            <tr><td><code>{@link #View_paddingStart com.app.bandeco:paddingStart}</code></td><td> Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.</td></tr>
            </table>
@@ -3271,11 +3271,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>
           @attr description
           
-             Boolean that controls whether a view can take focus.  By default the user can not
-             move focus to a view; by setting this attribute to true the view is
+             Boolean that controls whether a erick.bandeco.view can take focus.  By default the user can not
+             move focus to a erick.bandeco.view; by setting this attribute to true the erick.bandeco.view is
              allowed to take focus.  This value does not impact the behavior of
              directly calling {@link android.view.View#requestFocus}, which will
-             always request focus regardless of this view.  It only impacts where
+             always request focus regardless of this erick.bandeco.view.  It only impacts where
              focus navigation will try to move focus.
         
           <p>This corresponds to the global attribute

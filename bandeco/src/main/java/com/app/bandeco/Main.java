@@ -1,10 +1,11 @@
 package com.app.bandeco;
 
-import database.DatabaseHelper;
-import model.Week;
-import adapters.TabsAdapter;
+import erick.bandeco.database.DatabaseHelper;
+import erick.bandeco.model.Week;
+import erick.bandeco.adapters.TabsAdapter;
+import erick.bandeco.view.About;
+import erick.bandeco.view.Settings;
 
-import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -20,23 +21,19 @@ import static android.support.v7.app.ActionBar.Tab;
 
 public class Main extends ActionBarActivity implements ActionBar.TabListener {
 
-    private Context context;
     public static Week week;
 
     private ActionBar actionBar;
     private ViewPager viewPager;
-    private TabsAdapter tabsAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        context = this;
-
         DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext());
         SQLiteDatabase database = databaseHelper.getReadableDatabase();
-        week = ApplicationHelper.getWeekFromDatabase(database);
+        week = OperationsWithDB.getWeekFromDatabase(database);
 
         actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -50,7 +47,7 @@ public class Main extends ActionBarActivity implements ActionBar.TabListener {
     public void onResume() {
         super.onResume();
 
-        tabsAdapter = new TabsAdapter(getSupportFragmentManager());
+        TabsAdapter tabsAdapter = new TabsAdapter(getSupportFragmentManager());
 
         viewPager.setAdapter(tabsAdapter);
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Lint Report</title>
+<meta http-equiv="Content-Type" content="text/erick.bandeco.html; charset=UTF-8" /><title>Lint Report</title>
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto" />
 <link rel="stylesheet" type="text/css" href="lint-results-release-fatal_files/hololike.css" />
 <script language="javascript" type="text/javascript"> 
@@ -38,7 +38,7 @@ Check performed at Wed Sep 10 10:55:38 BRT 2014.<br/>
 <div class="id"><a href="#" title="Return to top">ValidFragment: Fragment not instantiatable</a><div class="issueSeparator"></div>
 </div>
 <div class="warningslist">
-<span class="location"><a href="../src/main/java/view/ListDialogFragment.java">../src/main/java/view/ListDialogFragment.java</a>:28</span>: <span class="message">This fragment should provide a default constructor (a public constructor with no arguments) (view.ListDialogFragment)</span><br /><pre class="errorlines">
+<span class="location"><a href="../src/main/java/erick.bandeco.view/ListDialogFragment.java">../src/main/java/erick.bandeco.view/ListDialogFragment.java</a>:28</span>: <span class="message">This fragment should provide a default constructor (a public constructor with no arguments) (erick.bandeco.view.ListDialogFragment)</span><br /><pre class="errorlines">
 <span class="lineno">  25</span>     private OnDismissListener onDismissListener;
 <span class="lineno">  26</span>     private LinearLayout listLinearLayout;
 <span class="lineno">  27</span> 
@@ -46,7 +46,7 @@ Check performed at Wed Sep 10 10:55:38 BRT 2014.<br/>
 <span class="lineno">  29</span>         super();
 <span class="lineno">  30</span>         
 </pre>
-<span class="location"><a href="../src/main/java/view/ListDialogFragment.java">../src/main/java/view/ListDialogFragment.java</a>:29</span>: <span class="message">Avoid non-default constructors in fragments: use a default constructor plus Fragment#setArguments(Bundle) instead</span><br /><pre class="errorlines">
+<span class="location"><a href="../src/main/java/erick.bandeco.view/ListDialogFragment.java">../src/main/java/erick.bandeco.view/ListDialogFragment.java</a>:29</span>: <span class="message">Avoid non-default constructors in fragments: use a default constructor plus Fragment#setArguments(Bundle) instead</span><br /><pre class="errorlines">
 <span class="lineno">  26</span>     private LinearLayout listLinearLayout;
 <span class="lineno">  27</span> 
 <span class="lineno">  28</span>     public ListDialogFragment(ArrayList&lt;String> list){
@@ -63,7 +63,7 @@ Explanation: Ensures that <code>Fragment</code> subclasses can be instantiated.<
 From the Fragment documentation:<br/>
 <b>Every</b> fragment must have an empty constructor, so it can be instantiated when restoring its activity's state. It is strongly recommended that subclasses do not have other constructors with parameters, since these constructors will not be called when the fragment is re-instantiated; instead, arguments can be supplied by the caller with <code>setArguments(Bundle)</code> and later retrieved by the Fragment with <code>getArguments()</code>.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/app/Fragment.html#Fragment()">http://developer.android.com/reference/android/app/Fragment.html#Fragment()</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/app/Fragment.erick.bandeco.html#Fragment()">http://developer.android.com/reference/android/app/Fragment.erick.bandeco.html#Fragment()</a>
 </div><br/>To suppress this error, use the issue id "ValidFragment" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 
@@ -84,7 +84,7 @@ Explanation: Checks that AdapterViews do not define their children in XML.</div>
 <div class="explanation">
 AdapterViews such as ListViews must be configured with data from Java code, such as a ListAdapter.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/widget/AdapterView.html">http://developer.android.com/reference/android/widget/AdapterView.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/widget/AdapterView.erick.bandeco.html">http://developer.android.com/reference/android/widget/AdapterView.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "AdapterViewChildren" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="AllowBackup"></a>
@@ -99,7 +99,7 @@ Category: Security</div>
 Severity: <span class="warning">Warning</span><div class="summary">
 Explanation: Ensure that allowBackup is explicitly set in the application's manifest.</div>
 <div class="explanation">
-The allowBackup attribute determines if an application's data can be backed up and restored. It is documented at <a href="http://developer.android.com/reference/android/R.attr.html#allowBackup">http://developer.android.com/reference/android/R.attr.html#allowBackup</a><br/>
+The allowBackup attribute determines if an application's data can be backed up and restored. It is documented at <a href="http://developer.android.com/reference/android/R.attr.erick.bandeco.html#allowBackup">http://developer.android.com/reference/android/R.attr.erick.bandeco.html#allowBackup</a><br/>
 <br/>
 By default, this flag is set to <code>true</code>. When this flag is set to <code>true</code>, application data can be backed up and restored by the user using <code>adb backup</code> and <code>adb restore</code>.<br/>
 <br/>
@@ -109,7 +109,7 @@ Setting <code>allowBackup="false"</code> opts an application out of both backup 
 <br/>
 To fix this warning, decide whether your application should support backup, and explicitly set <code>android:allowBackup=(true|false)"</code>
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/R.attr.html#allowBackup">http://developer.android.com/reference/android/R.attr.html#allowBackup</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/R.attr.erick.bandeco.html#allowBackup">http://developer.android.com/reference/android/R.attr.erick.bandeco.html#allowBackup</a>
 </div><br/>To suppress this error, use the issue id "AllowBackup" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="AlwaysShowAction"></a>
@@ -128,7 +128,7 @@ If <code>always</code> is used sparingly there are usually no problems and behav
 <br/>
 This check looks for menu XML files that contain more than two <code>always</code> actions, or some <code>always</code> actions and no <code>ifRoom</code> actions. In Java code, it looks for projects that contain references to <code>MenuItem.SHOW_AS_ACTION_ALWAYS</code> and no references to <code>MenuItem.SHOW_AS_ACTION_IF_ROOM</code>.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/patterns/actionbar.html">http://developer.android.com/design/patterns/actionbar.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/patterns/actionbar.erick.bandeco.html">http://developer.android.com/design/patterns/actionbar.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "AlwaysShowAction" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="Assert"></a>
@@ -198,7 +198,7 @@ According to the Android Design Guide,<br/>
 <br/>
 This check looks for button bars and buttons which look like cancel buttons, and makes sure that these are on the left.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/building-blocks/dialogs.html">http://developer.android.com/design/building-blocks/dialogs.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/building-blocks/dialogs.erick.bandeco.html">http://developer.android.com/design/building-blocks/dialogs.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "ButtonOrder" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="ButtonStyle"></a>
@@ -213,7 +213,7 @@ Explanation: Ensures that buttons in button bars are borderless.</div>
 <div class="explanation">
 Button bars typically use a borderless style for the buttons. Set the <code>style="?android:attr/buttonBarButtonStyle"</code> attribute on each of the buttons, and set <code>style="?android:attr/buttonBarStyle"</code> on the parent layout
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/building-blocks/buttons.html">http://developer.android.com/design/building-blocks/buttons.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/building-blocks/buttons.erick.bandeco.html">http://developer.android.com/design/building-blocks/buttons.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "ButtonStyle" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="CommitPrefEdits"></a>
@@ -260,7 +260,7 @@ Non-textual widgets like ImageViews and ImageButtons should use the <code>conten
 <br/>
 Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore="ContentDescription" attribute.<br/>
 <br/>
-Note that for text fields, you should not set both the <code>hint</code> and the <code>contentDescription</code> attributes since the hint will never be shown. Just set the <code>hint</code>. See <a href="http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases">http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases</a>.
+Note that for text fields, you should not set both the <code>hint</code> and the <code>contentDescription</code> attributes since the hint will never be shown. Just set the <code>hint</code>. See <a href="http://developer.android.com/guide/topics/ui/accessibility/checklist.erick.bandeco.html#special-cases">http://developer.android.com/guide/topics/ui/accessibility/checklist.erick.bandeco.html#special-cases</a>.
 </div>
 <br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "ContentDescription" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
@@ -310,7 +310,7 @@ Calling <code>String#toLowerCase()</code> or <code>#toUpperCase()</code> <b>with
 <br/>
 If you want the methods to just perform ASCII replacement, for example to convert an enum name, call <code>String#toUpperCase(Locale.US)</code> instead. If you really want to use the current locale, call <code>String#toUpperCase(Locale.getDefault())</code> instead.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/java/util/Locale.html#default_locale">http://developer.android.com/reference/java/util/Locale.html#default_locale</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/java/util/Locale.erick.bandeco.html#default_locale">http://developer.android.com/reference/java/util/Locale.erick.bandeco.html#default_locale</a>
 </div><br/>To suppress this error, use the issue id "DefaultLocale" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="Deprecated"></a>
@@ -405,7 +405,7 @@ Category: Correctness</div>
 Severity: <span class="warning">Warning</span><div class="summary">
 Explanation: Checks for duplicate ids across layouts that are combined with include tags.</div>
 <div class="explanation">
-It's okay for two independent layouts to use the same ids. However, if layouts are combined with include tags, then the id's need to be unique within any chain of included layouts, or <code>Activity#findViewById()</code> can return an unexpected view.
+It's okay for two independent layouts to use the same ids. However, if layouts are combined with include tags, then the id's need to be unique within any chain of included layouts, or <code>Activity#findViewById()</code> can return an unexpected erick.bandeco.view.
 </div>
 <br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "DuplicateIncludedIds" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
@@ -523,7 +523,7 @@ Accessing a field within the class that defines a getter for that field is at le
 <br/>
 <b>NOTE</b>: As of Android 2.3 (Gingerbread), this optimization is performed automatically by Dalvik, so there is no need to change your code; this is only relevant if you are targeting older versions of Android.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/design/performance.html#internal_get_set">http://developer.android.com/guide/practices/design/performance.html#internal_get_set</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/design/performance.erick.bandeco.html#internal_get_set">http://developer.android.com/guide/practices/design/performance.erick.bandeco.html#internal_get_set</a>
 </div><br/>To suppress this error, use the issue id "FieldGetter" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="FloatMath"></a>
@@ -538,7 +538,7 @@ Explanation: Suggests replacing <code>android.util.FloatMath</code> calls with <
 <div class="explanation">
 In older versions of Android, using <code>android.util.FloatMath</code> was recommended for performance reasons when operating on floats. However, on modern hardware doubles are just as fast as float (though they take more memory), and in recent versions of Android, <code>FloatMath</code> is actually slower than using <code>java.lang.Math</code> due to the way the JIT optimizes <code>java.lang.Math</code>. Therefore, you should use <code>Math</code> instead of <code>FloatMath</code> if you are only targeting Froyo and above.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/design/performance.html#avoidfloat">http://developer.android.com/guide/practices/design/performance.html#avoidfloat</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/design/performance.erick.bandeco.html#avoidfloat">http://developer.android.com/guide/practices/design/performance.erick.bandeco.html#avoidfloat</a>
 </div><br/>To suppress this error, use the issue id "FloatMath" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="GifUsage"></a>
@@ -553,7 +553,7 @@ Explanation: Checks for images using the GIF file format which is discouraged.</
 <div class="explanation">
 The <code>.gif</code> file format is discouraged. Consider using <code>.png</code> (preferred) or <code>.jpg</code> (acceptable) instead.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap">http://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/resources/drawable-resource.erick.bandeco.html#Bitmap">http://developer.android.com/guide/topics/resources/drawable-resource.erick.bandeco.html#Bitmap</a>
 </div><br/>To suppress this error, use the issue id "GifUsage" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="GradleCompatible"></a>
@@ -716,9 +716,9 @@ Category: Usability:Icons</div>
 Severity: <span class="warning">Warning</span><div class="summary">
 Explanation: Checks that icons follow the recommended visual style.</div>
 <div class="explanation">
-Notification icons and Action Bar icons should only white and shades of gray. See the Android Design Guide for more details. Note that the way Lint decides whether an icon is an action bar icon or a notification icon is based on the filename prefix: <code>ic_menu_</code> for action bar icons, <code>ic_stat_</code> for notification icons etc. These correspond to the naming conventions documented in <a href="http://developer.android.com/guide/practices/ui_guidelines/icon_design.html">http://developer.android.com/guide/practices/ui_guidelines/icon_design.html</a>
+Notification icons and Action Bar icons should only white and shades of gray. See the Android Design Guide for more details. Note that the way Lint decides whether an icon is an action bar icon or a notification icon is based on the filename prefix: <code>ic_menu_</code> for action bar icons, <code>ic_stat_</code> for notification icons etc. These correspond to the naming conventions documented in <a href="http://developer.android.com/guide/practices/ui_guidelines/icon_design.erick.bandeco.html">http://developer.android.com/guide/practices/ui_guidelines/icon_design.erick.bandeco.html</a>
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/style/iconography.html">http://developer.android.com/design/style/iconography.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/style/iconography.erick.bandeco.html">http://developer.android.com/design/style/iconography.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "IconColors" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="IconDensities"></a>
@@ -733,9 +733,9 @@ Explanation: Ensures that icons provide custom versions for all supported densit
 <div class="explanation">
 Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies icons which do not have complete coverage across the densities.<br/>
 <br/>
-Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable <code>ANDROID_LINT_INCLUDE_LDPI=true</code>. For more information on current density usage, see <a href="http://developer.android.com/resources/dashboard/screens.html">http://developer.android.com/resources/dashboard/screens.html</a>
+Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable <code>ANDROID_LINT_INCLUDE_LDPI=true</code>. For more information on current density usage, see <a href="http://developer.android.com/resources/dashboard/screens.erick.bandeco.html">http://developer.android.com/resources/dashboard/screens.erick.bandeco.html</a>
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/screens_support.html">http://developer.android.com/guide/practices/screens_support.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/screens_support.erick.bandeco.html">http://developer.android.com/guide/practices/screens_support.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "IconDensities" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="IconDipSize"></a>
@@ -792,7 +792,7 @@ Explanation: Ensures that launcher icons, notification icons etc have the correc
 <div class="explanation">
 There are predefined sizes (for each density) for launcher icons. You should follow these conventions to make sure your icons fit in with the overall look of the platform.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/style/iconography.html">http://developer.android.com/design/style/iconography.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/style/iconography.erick.bandeco.html">http://developer.android.com/design/style/iconography.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "IconExpectedSize" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="IconExtension"></a>
@@ -819,11 +819,11 @@ Category: Usability:Icons</div>
 Severity: <span class="warning">Warning</span><div class="summary">
 Explanation: Checks that launcher icons follow the recommended visual style.</div>
 <div class="explanation">
-According to the Android Design Guide (<a href="http://developer.android.com/design/style/iconography.html">http://developer.android.com/design/style/iconography.html</a>) your launcher icons should "use a distinct silhouette", a "three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth."<br/>
+According to the Android Design Guide (<a href="http://developer.android.com/design/style/iconography.erick.bandeco.html">http://developer.android.com/design/style/iconography.erick.bandeco.html</a>) your launcher icons should "use a distinct silhouette", a "three-dimensional, front erick.bandeco.view, with a slight perspective as if viewed from above, so that users perceive some depth."<br/>
 <br/>
 The unique silhouette implies that your launcher icon should not be a filled square.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/style/iconography.html">http://developer.android.com/design/style/iconography.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/style/iconography.erick.bandeco.html">http://developer.android.com/design/style/iconography.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "IconLauncherShape" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="IconLocation"></a>
@@ -838,7 +838,7 @@ Explanation: Ensures that images are not defined in the density-independent draw
 <div class="explanation">
 The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to <code>drawable-mdpi</code> and consider providing higher and lower resolution versions in <code>drawable-ldpi</code>, <code>drawable-hdpi</code> and <code>drawable-xhdpi</code>. If the icon <b>really</b> is density independent (for example a solid color) you can place it in <code>drawable-nodpi</code>.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/screens_support.html">http://developer.android.com/guide/practices/screens_support.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/screens_support.erick.bandeco.html">http://developer.android.com/guide/practices/screens_support.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "IconLocation" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="IconMissingDensityFolder"></a>
@@ -852,9 +852,9 @@ Severity: <span class="warning">Warning</span><div class="summary">
 Explanation: Ensures that all the density folders are present.</div>
 <div class="explanation">
 Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies folders which are missing, such as <code>drawable-hdpi</code>.<br/>
-Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable <code>ANDROID_LINT_INCLUDE_LDPI=true</code>. For more information on current density usage, see <a href="http://developer.android.com/resources/dashboard/screens.html">http://developer.android.com/resources/dashboard/screens.html</a>
+Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable <code>ANDROID_LINT_INCLUDE_LDPI=true</code>. For more information on current density usage, see <a href="http://developer.android.com/resources/dashboard/screens.erick.bandeco.html">http://developer.android.com/resources/dashboard/screens.erick.bandeco.html</a>
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/screens_support.html">http://developer.android.com/guide/practices/screens_support.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/screens_support.erick.bandeco.html">http://developer.android.com/guide/practices/screens_support.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "IconMissingDensityFolder" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="IconMixedNinePatch"></a>
@@ -1047,7 +1047,7 @@ Explanation: Ensures that interfaces added with addJavascriptInterface are annot
 <div class="explanation">
 As of API 17, you must annotate methods in objects registered with the <code>addJavascriptInterface</code> method with a <code>@JavascriptInterface</code> annotation.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/webkit/WebView.html#addJavascriptInterface(java.lang.Object, java.lang.String)">http://developer.android.com/reference/android/webkit/WebView.html#addJavascriptInterface(java.lang.Object, java.lang.String)</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/webkit/WebView.erick.bandeco.html#addJavascriptInterface(java.lang.Object, java.lang.String)">http://developer.android.com/reference/android/webkit/WebView.erick.bandeco.html#addJavascriptInterface(java.lang.Object, java.lang.String)</a>
 </div><br/>To suppress this error, use the issue id "JavascriptInterface" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="LabelFor"></a>
@@ -1062,7 +1062,7 @@ Explanation: Ensures that text fields are marked with a <code>labelFor</code> at
 <div class="explanation">
 Text fields should be labelled with a <code>labelFor</code> attribute, provided your <code>minSdkVersion</code> is at least 17.<br/>
 <br/>
-If your view is labeled but by a label in a different layout which includes this one, just suppress this warning from lint.
+If your erick.bandeco.view is labeled but by a label in a different layout which includes this one, just suppress this warning from lint.
 </div>
 <br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "LabelFor" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
@@ -1131,7 +1131,7 @@ From the action bar documentation:<br/>
 * If the action item appears with only the icon, a user can long-press the item to reveal a tool-tip that displays the action item's title.<br/>
 The android:icon is always optional, but recommended.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/ui/actionbar.html">http://developer.android.com/guide/topics/ui/actionbar.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/ui/actionbar.erick.bandeco.html">http://developer.android.com/guide/topics/ui/actionbar.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "MenuTitle" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="MergeRootFrame"></a>
@@ -1146,7 +1146,7 @@ Explanation: Checks whether a root &lt;FrameLayout> can be replaced with a <code
 <div class="explanation">
 If a <code>&lt;FrameLayout></code> is the root of a layout and does not provide background or padding etc, it can often be replaced with a <code>&lt;merge></code> tag which is slightly more efficient. Note that this depends on context, so make sure you understand how the <code>&lt;merge></code> tag works before proceeding.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.html">http://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.html</a>
+<br/><div class="moreinfo">More info: <a href="http://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.erick.bandeco.html">http://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "MergeRootFrame" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="MissingApplicationIcon"></a>
@@ -1161,7 +1161,7 @@ Explanation: Checks that the application icon is set.</div>
 <div class="explanation">
 You should set an icon for the application as whole because there is no default. This attribute must be set as a reference to a drawable resource containing the image (for example <code>@drawable/icon</code>).
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/tools/publishing/preparing.html#publishing-configure">http://developer.android.com/tools/publishing/preparing.html#publishing-configure</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/tools/publishing/preparing.erick.bandeco.html#publishing-configure">http://developer.android.com/tools/publishing/preparing.erick.bandeco.html#publishing-configure</a>
 </div><br/>To suppress this error, use the issue id "MissingApplicationIcon" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="MissingId"></a>
@@ -1180,9 +1180,9 @@ If you do not specify an android:id or an android:tag attribute on a &lt;fragmen
 <br/>
 "Each fragment requires a unique identifier that the system can use to restore the fragment if the activity is restarted (and which you can use to capture the fragment to perform transactions, such as remove it). * Supply the android:id attribute with a unique ID.<br/>
 * Supply the android:tag attribute with a unique string.<br/>
-If you provide neither of the previous two, the system uses the ID of the container view.
+If you provide neither of the previous two, the system uses the ID of the container erick.bandeco.view.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/components/fragments.html">http://developer.android.com/guide/components/fragments.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/components/fragments.erick.bandeco.html">http://developer.android.com/guide/components/fragments.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "MissingId" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="MissingPrefix"></a>
@@ -1219,7 +1219,7 @@ This lint check looks at each translation of a <code>&lt;plural></code> and make
 <br/>
 For example, an English translation must provide a string for <code>quantity="one"</code>. Similarly, a Czech translation must provide a string for <code>quantity="few"</code>.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals">http://developer.android.com/guide/topics/resources/string-resource.html#Plurals</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/resources/string-resource.erick.bandeco.html#Plurals">http://developer.android.com/guide/topics/resources/string-resource.erick.bandeco.html#Plurals</a>
 </div><br/>To suppress this error, use the issue id "MissingQuantity" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="MissingRegistered"></a>
@@ -1234,7 +1234,7 @@ Explanation: Ensures that classes referenced in the manifest are present in the 
 <div class="explanation">
 If a class is referenced in the manifest, it must also exist in the project (or in one of the libraries included by the project. This check helps uncover typos in registration names, or attempts to rename or move classes without updating the manifest file properly.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/manifest/manifest-intro.html">http://developer.android.com/guide/topics/manifest/manifest-intro.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/manifest/manifest-intro.erick.bandeco.html">http://developer.android.com/guide/topics/manifest/manifest-intro.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "MissingRegistered" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="MissingSuperCall"></a>
@@ -1266,7 +1266,7 @@ You should define the version information for your application.<br/>
 <br/>
 <code>android:versionName</code>: A string value that represents the release version of the application code, as it should be shown to users.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/tools/publishing/versioning.html#appversioning">http://developer.android.com/tools/publishing/versioning.html#appversioning</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/tools/publishing/versioning.erick.bandeco.html#appversioning">http://developer.android.com/tools/publishing/versioning.erick.bandeco.html#appversioning</a>
 </div><br/>To suppress this error, use the issue id "MissingVersion" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="NestedScrolling"></a>
@@ -1332,7 +1332,7 @@ Category: Performance</div>
 Severity: <span class="warning">Warning</span><div class="summary">
 Explanation: Looks for layout params that are not valid for the given parent layout.</div>
 <div class="explanation">
-The given layout_param is not defined for the given layout, meaning it has no effect. This usually happens when you change the parent layout or move view code around without updating the layout params. This will cause useless attribute processing at runtime, and is misleading for others reading the layout so the parameter should be removed.
+The given layout_param is not defined for the given layout, meaning it has no effect. This usually happens when you change the parent layout or move erick.bandeco.view code around without updating the layout params. This will cause useless attribute processing at runtime, and is misleading for others reading the layout so the parameter should be removed.
 </div>
 <br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "ObsoleteLayoutParam" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
@@ -1348,9 +1348,9 @@ Explanation: Checks that the manifest specifies a targetSdkVersion that is recen
 <div class="explanation">
 When your application runs on a version of Android that is more recent than your <code>targetSdkVersion</code> specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the <code>targetSdkVersion</code> is less than 14, your app may get an option button in the UI.<br/>
 <br/>
-To fix this issue, set the <code>targetSdkVersion</code> to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: <a href="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html">http://developer.android.com/reference/android/os/Build.VERSION_CODES.html</a>
+To fix this issue, set the <code>targetSdkVersion</code> to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: <a href="http://developer.android.com/reference/android/os/Build.VERSION_CODES.erick.bandeco.html">http://developer.android.com/reference/android/os/Build.VERSION_CODES.erick.bandeco.html</a>
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html">http://developer.android.com/reference/android/os/Build.VERSION_CODES.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/os/Build.VERSION_CODES.erick.bandeco.html">http://developer.android.com/reference/android/os/Build.VERSION_CODES.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "OldTargetApi" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="OnClick"></a>
@@ -1363,7 +1363,7 @@ Category: Correctness</div>
 Severity: <span class="error">Error</span><div class="summary">
 Explanation: Ensures that <code>onClick</code> attribute values refer to real methods.</div>
 <div class="explanation">
-The <code>onClick</code> attribute value should be the name of a method in this View's context to invoke when the view is clicked. This name must correspond to a public method that takes exactly one parameter of type <code>View</code>.<br/>
+The <code>onClick</code> attribute value should be the name of a method in this View's context to invoke when the erick.bandeco.view is clicked. This name must correspond to a public method that takes exactly one parameter of type <code>View</code>.<br/>
 <br/>
 Must be a string value, using '\;' to escape characters such as '\n' or '\uxxxx' for a unicode character.
 </div>
@@ -1393,9 +1393,9 @@ It also checks for empty LinearLayouts without an <code>orientation</code> attri
 Priority: 3 / 10<br/>
 Category: Performance</div>
 Severity: <span class="warning">Warning</span><div class="summary">
-Explanation: Looks for overdraw issues (where a view is painted only to be fully painted over)</div>
+Explanation: Looks for overdraw issues (where a erick.bandeco.view is painted only to be fully painted over)</div>
 <div class="explanation">
-If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called "overdraw".<br/>
+If you set a background drawable on a root erick.bandeco.view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called "overdraw".<br/>
 <br/>
 NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it's currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.<br/>
 <br/>
@@ -1437,7 +1437,7 @@ Explanation: Checks that classes implementing <code>Parcelable</code> also provi
 <div class="explanation">
 According to the <code>Parcelable</code> interface documentation, "Classes implementing the Parcelable interface must also have a static field called <code>CREATOR</code>, which is an object implementing the <code>Parcelable.Creator</code> interface.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/os/Parcelable.html">http://developer.android.com/reference/android/os/Parcelable.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/os/Parcelable.erick.bandeco.html">http://developer.android.com/reference/android/os/Parcelable.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "ParcelCreator" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="ProguardSplit"></a>
@@ -1489,9 +1489,9 @@ Category: Correctness</div>
 Severity: <span class="warning">Warning</span><div class="summary">
 Explanation: Looks for use of the <code>px</code> dimension.</div>
 <div class="explanation">
-For performance reasons and to keep the code simpler, the Android system uses pixels as the standard unit for expressing dimension or coordinate values. That means that the dimensions of a view are always expressed in the code using pixels, but always based on the current screen density. For instance, if <code>myView.getWidth()</code> returns 10, the view is 10 pixels wide on the current screen, but on a device with a higher density screen, the value returned might be 15. If you use pixel values in your application code to work with bitmaps that are not pre-scaled for the current screen density, you might need to scale the pixel values that you use in your code to match the un-scaled bitmap source.
+For performance reasons and to keep the code simpler, the Android system uses pixels as the standard unit for expressing dimension or coordinate values. That means that the dimensions of a erick.bandeco.view are always expressed in the code using pixels, but always based on the current screen density. For instance, if <code>myView.getWidth()</code> returns 10, the erick.bandeco.view is 10 pixels wide on the current screen, but on a device with a higher density screen, the value returned might be 15. If you use pixel values in your application code to work with bitmaps that are not pre-scaled for the current screen density, you might need to scale the pixel values that you use in your code to match the un-scaled bitmap source.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/screens_support.html#screen-independence">http://developer.android.com/guide/practices/screens_support.html#screen-independence</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/screens_support.erick.bandeco.html#screen-independence">http://developer.android.com/guide/practices/screens_support.erick.bandeco.html#screen-independence</a>
 </div><br/>To suppress this error, use the issue id "PxUsage" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="Recycle"></a>
@@ -1522,7 +1522,7 @@ Activities, services and content providers should be registered in the <code>And
 <br/>
 If your activity is simply a parent class intended to be subclassed by other "real" activities, make it an abstract class.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/manifest/manifest-intro.html">http://developer.android.com/guide/topics/manifest/manifest-intro.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/manifest/manifest-intro.erick.bandeco.html">http://developer.android.com/guide/topics/manifest/manifest-intro.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "Registered" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="RequiredSize"></a>
@@ -1658,7 +1658,7 @@ Your code should not reference the <code>/sdcard</code> path directly; instead u
 <br/>
 Similarly, do not reference the <code>/data/data/</code> path directly; it can vary in multi-user scenarios. Instead, use <code>Context.getFilesDir().getPath()</code>.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/data/data-storage.html#filesExternal">http://developer.android.com/guide/topics/data/data-storage.html#filesExternal</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/data/data-storage.erick.bandeco.html#filesExternal">http://developer.android.com/guide/topics/data/data-storage.erick.bandeco.html#filesExternal</a>
 </div><br/>To suppress this error, use the issue id "SdCardPath" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="SecureRandom"></a>
@@ -1673,7 +1673,7 @@ Explanation: Looks for suspicious usage of the SecureRandom class.</div>
 <div class="explanation">
 Specifying a fixed seed will cause the instance to return a predictable sequence of numbers. This may be useful for testing but it is not appropriate for secure use.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/java/security/SecureRandom.html">http://developer.android.com/reference/java/security/SecureRandom.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/java/security/SecureRandom.erick.bandeco.html">http://developer.android.com/reference/java/security/SecureRandom.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "SecureRandom" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="SelectableText"></a>
@@ -1704,7 +1704,7 @@ Explanation: Looks for invocations of android.webkit.WebSettings.setJavaScriptEn
 <div class="explanation">
 Your code should not invoke <code>setJavaScriptEnabled</code> if you are not sure that your app really requires JavaScript support.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/security.html">http://developer.android.com/guide/practices/security.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/security.erick.bandeco.html">http://developer.android.com/guide/practices/security.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "SetJavaScriptEnabled" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="ShowToast"></a>
@@ -1735,7 +1735,7 @@ Almost all callers should use <code>getDateInstance()</code>, <code>getDateTimeI
 <br/>
 Therefore, you should either use the form of the SimpleDateFormat constructor where you pass in an explicit locale, such as Locale.US, or use one of the get instance methods, or suppress this error if really know what you are doing.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/java/text/SimpleDateFormat.html">http://developer.android.com/reference/java/text/SimpleDateFormat.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/java/text/SimpleDateFormat.erick.bandeco.html">http://developer.android.com/reference/java/text/SimpleDateFormat.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "SimpleDateFormat" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="SmallSp"></a>
@@ -1766,7 +1766,7 @@ When setting text sizes, you should normally use <code>sp</code>, or "scale-inde
 <br/>
 There <b>are</b> cases where you might need to use <code>dp</code>; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user's font size settings are not respected, so consider adjusting the layout itself to be more flexible.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/training/multiscreen/screendensities.html">http://developer.android.com/training/multiscreen/screendensities.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/training/multiscreen/screendensities.erick.bandeco.html">http://developer.android.com/training/multiscreen/screendensities.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "SpUsage" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="StateListReachable"></a>
@@ -1861,7 +1861,7 @@ Explanation: Looks for 0dp as the width in a vertical LinearLayout or as the hei
 <div class="explanation">
 Using 0dp as the width in a horizontal LinearLayout with weights is a useful trick to ensure that only the weights (and not the intrinsic sizes) are used when sizing the children.<br/>
 <br/>
-However, if you use 0dp for the opposite dimension, the view will be invisible. This can happen if you change the orientation of a layout without also flipping the 0dp dimension in all the children.
+However, if you use 0dp for the opposite dimension, the erick.bandeco.view will be invisible. This can happen if you change the orientation of a layout without also flipping the 0dp dimension in all the children.
 </div>
 <br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "Suspicious0dp" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
@@ -1895,7 +1895,7 @@ Explanation: Looks for text fields missing <code>inputType</code> or <code>hint<
 <div class="explanation">
 Providing an <code>inputType</code> attribute on a text field improves usability because depending on the data to be input, optimized keyboards can be shown to the user (such as just digits and parentheses for a phone number). Similarly,a hint attribute displays a hint to the user for what is expected in the text field.<br/>
 <br/>
-The lint detector also looks at the <code>id</code> of the view, and if the id offers a hint of the purpose of the field (for example, the <code>id</code> contains the phrase <code>phone</code> or <code>email</code>), then lint will also ensure that the <code>inputType</code> contains the corresponding type attributes.<br/>
+The lint detector also looks at the <code>id</code> of the erick.bandeco.view, and if the id offers a hint of the purpose of the field (for example, the <code>id</code> contains the phrase <code>phone</code> or <code>email</code>), then lint will also ensure that the <code>inputType</code> contains the corresponding type attributes.<br/>
 <br/>
 If you really want to keep the text field generic, you can suppress this warning by setting <code>inputType="text"</code>.
 </div>
@@ -1942,7 +1942,7 @@ Explanation: Checks whether a layout has too many views.</div>
 <div class="explanation">
 Using too many views in a single layout is bad for performance. Consider using compound drawables or other tricks for reducing the number of views in this layout.<br/>
 <br/>
-The maximum view count defaults to 80 but can be configured with the environment variable <code>ANDROID_LINT_MAX_VIEW_COUNT</code>.
+The maximum erick.bandeco.view count defaults to 80 but can be configured with the environment variable <code>ANDROID_LINT_MAX_VIEW_COUNT</code>.
 </div>
 <br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "TooManyViews" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
@@ -1958,11 +1958,11 @@ Explanation: Looks for calls to JCA primitives that may be affected by SecureRan
 <div class="explanation">
 Key generation, signing, encryption, and random number generation may not receive cryptographically strong values due to improper initialization of the underlying PRNG on Android 4.3 and below.<br/>
 <br/>
-If your application relies on cryptographically secure random number generation you should apply the workaround described in https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html .<br/>
+If your application relies on cryptographically secure random number generation you should apply the workaround described in https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.erick.bandeco.html .<br/>
 <br/>
 This lint rule is mostly informational; it does not accurately detect whether cryptographically secure RNG is required, or whether the workaround has already been applied. After reading the blog entry and updating your code if necessary, you can disable this lint issue.
 </div>
-<br/><div class="moreinfo">More info: <a href="https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html">https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html</a>
+<br/><div class="moreinfo">More info: <a href="https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.erick.bandeco.html">https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "TrulyRandom" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="TypographyDashes"></a>
@@ -2079,9 +2079,9 @@ Category: Correctness</div>
 Severity: <span class="warning">Warning</span><div class="summary">
 Explanation: Makes sure that @+id references refer to views in the same layout.</div>
 <div class="explanation">
-The <code>@+id/</code> syntax refers to an existing id, or creates a new one if it has not already been defined elsewhere. However, this means that if you have a typo in your reference, or if the referred view no longer exists, you do not get a warning since the id will be created on demand.<br/>
+The <code>@+id/</code> syntax refers to an existing id, or creates a new one if it has not already been defined elsewhere. However, this means that if you have a typo in your reference, or if the referred erick.bandeco.view no longer exists, you do not get a warning since the id will be created on demand.<br/>
 <br/>
-This is sometimes intentional, for example where you are referring to a view which is provided in a different layout via an include. However, it is usually an accident where you have a typo or you have renamed a view without updating all the references to it.
+This is sometimes intentional, for example where you are referring to a erick.bandeco.view which is provided in a different layout via an include. However, it is usually an accident where you have a typo or you have renamed a erick.bandeco.view without updating all the references to it.
 </div>
 <br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "UnknownIdInLayout" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
@@ -2142,7 +2142,7 @@ Android defines a number of different quantity strings, such as <code>zero</code
 This lint check looks at the quantity strings defined for each translation and flags any quantity strings that are unused (because the language does not make that quantity distinction, and Android will therefore not look it up.).<br/>
 For example, in Chinese, only the <code>other</code> quantity is used, so even if you provide translations for <code>zero</code> and <code>one</code>, these strings will <b>not</b> be returned when <code>getQuantityString()</code> is called, even with <code>0</code> or <code>1</code>.
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals">http://developer.android.com/guide/topics/resources/string-resource.html#Plurals</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/resources/string-resource.erick.bandeco.html#Plurals">http://developer.android.com/guide/topics/resources/string-resource.erick.bandeco.html#Plurals</a>
 </div><br/>To suppress this error, use the issue id "UnusedQuantity" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="UnusedResources"></a>
@@ -2269,7 +2269,7 @@ Explanation: Checks that the minimum SDK and target SDK attributes are defined.<
 <div class="explanation">
 The manifest should contain a <code>&lt;uses-sdk></code> element which defines the minimum API Level required for the application to run, as well as the target version (the highest API level you have tested the version for.)
 </div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/manifest/uses-sdk-element.html">http://developer.android.com/guide/topics/manifest/uses-sdk-element.html</a>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/manifest/uses-sdk-element.erick.bandeco.html">http://developer.android.com/guide/topics/manifest/uses-sdk-element.erick.bandeco.html</a>
 </div><br/>To suppress this error, use the issue id "UsesMinSdkAttributes" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="ViewConstructor"></a>
@@ -2287,7 +2287,7 @@ Some layout tools (such as the Android layout editor for Studio &amp; Eclipse) n
 * <code>View(Context context, AttributeSet attrs)</code><br/>
 * <code>View(Context context, AttributeSet attrs, int defStyle)</code><br/>
 <br/>
-If your custom view needs to perform initialization which does not apply when used in a layout editor, you can surround the given code with a check to see if <code>View#isInEditMode()</code> is false, since that method will return <code>false</code> at runtime but true within a user interface editor.
+If your custom erick.bandeco.view needs to perform initialization which does not apply when used in a layout editor, you can surround the given code with a check to see if <code>View#isInEditMode()</code> is false, since that method will return <code>false</code> at runtime but true within a user interface editor.
 </div>
 <br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "ViewConstructor" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
@@ -2301,7 +2301,7 @@ Category: Performance</div>
 Severity: <span class="warning">Warning</span><div class="summary">
 Explanation: Finds potential leaks when using <code>View.setTag</code></div>
 <div class="explanation">
-Prior to Android 4.0, the implementation of <code>View.setTag(int, Object)</code> would store the objects in a static map, where the values were strongly referenced. This means that if the object contains any references pointing back to the context, the context (which points to pretty much everything else) will leak. If you pass a view, the view provides a reference to the context that created it. Similarly, view holders typically contain a view, and cursors are sometimes also associated with views.
+Prior to Android 4.0, the implementation of <code>View.setTag(int, Object)</code> would store the objects in a static map, where the values were strongly referenced. This means that if the object contains any references pointing back to the context, the context (which points to pretty much everything else) will leak. If you pass a erick.bandeco.view, the erick.bandeco.view provides a reference to the context that created it. Similarly, erick.bandeco.view holders typically contain a erick.bandeco.view, and cursors are sometimes also associated with views.
 </div>
 <br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "ViewTag" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
@@ -2317,7 +2317,7 @@ Explanation: Looks for problems with <code>WakeLock</code> usage.</div>
 <div class="explanation">
 Failing to release a wakelock properly can keep the Android device in a high power mode, which reduces battery life. There are several causes of this, such as releasing the wake lock in <code>onDestroy()</code> instead of in <code>onPause()</code>, failing to call <code>release()</code> in all possible code paths after an <code>acquire()</code>, and so on.<br/>
 <br/>
-NOTE: If you are using the lock just to keep the screen on, you should strongly consider using <code>FLAG_KEEP_SCREEN_ON</code> instead. This window flag will be correctly managed by the platform as the user moves between applications and doesn't require a special permission. See <a href="http://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#FLAG_KEEP_SCREEN_ON">http://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#FLAG_KEEP_SCREEN_ON</a>.
+NOTE: If you are using the lock just to keep the screen on, you should strongly consider using <code>FLAG_KEEP_SCREEN_ON</code> instead. This window flag will be correctly managed by the platform as the user moves between applications and doesn't require a special permission. See <a href="http://developer.android.com/reference/android/erick.bandeco.view/WindowManager.LayoutParams.erick.bandeco.html#FLAG_KEEP_SCREEN_ON">http://developer.android.com/reference/android/erick.bandeco.view/WindowManager.LayoutParams.erick.bandeco.html#FLAG_KEEP_SCREEN_ON</a>.
 </div>
 <br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "Wakelock" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
@@ -2331,7 +2331,7 @@ Category: Correctness</div>
 Severity: <span class="error">Error</span><div class="summary">
 Explanation: Ensures that WebViews are not placed in parents with wrap_content layout.</div>
 <div class="explanation">
-The WebView implementation has certain performance optimizations which will not work correctly if the parent view is using <code>wrap_content</code> rather than <code>match_parent</code>. This can lead to subtle UI bugs.
+The WebView implementation has certain performance optimizations which will not work correctly if the parent erick.bandeco.view is using <code>wrap_content</code> rather than <code>match_parent</code>. This can lead to subtle UI bugs.
 </div>
 <br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "WebViewLayout" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
@@ -2380,7 +2380,7 @@ To suppress a lint warning with an annotation, add a @SuppressLint("id") annotat
 To suppress a lint warning in an XML file, add a tools:ignore="id" attribute on the element containing the error, or one of its surrounding elements. You also need to define the namespace for the tools prefix on the root element in your document, next to the xmlns:android declaration:<br/>
 * xmlns:tools="http://schemas.android.com/tools"<br/>
 <br/>
-To suppress lint warnings with a configuration XML file, create a file named lint.xml and place it at the root directory of the project in which it applies. (If you use the Eclipse plugin's Lint view, you can suppress errors there via the toolbar and Eclipse will create the lint.xml file for you.).<br/>
+To suppress lint warnings with a configuration XML file, create a file named lint.xml and place it at the root directory of the project in which it applies. (If you use the Eclipse plugin's Lint erick.bandeco.view, you can suppress errors there via the toolbar and Eclipse will create the lint.xml file for you.).<br/>
 <br/>
 The format of the lint.xml file is something like the following:<br/>
 <br/>

@@ -14,9 +14,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:label="@string/title_activity_about" android:name="com.app.bandeco.About" android:parentActivityName="com.app.bandeco.Main">
+        <activity android:label="@string/title_activity_about" android:name="erick.bandeco.view.About" android:parentActivityName="com.app.bandeco.Main">
         </activity>
-        <activity android:label="@string/title_activity_settings" android:name="com.app.bandeco.Settings" android:parentActivityName="com.app.bandeco.Main">
+        <activity android:label="@string/title_activity_settings" android:name="erick.bandeco.view.Settings" android:parentActivityName="com.app.bandeco.Main">
         </activity>
 
         <service android:enabled="true" android:exported="true" android:name="com.app.bandeco.NotificationService">

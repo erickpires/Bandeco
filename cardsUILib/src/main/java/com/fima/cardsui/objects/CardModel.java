@@ -3,7 +3,7 @@ package com.fima.cardsui.objects;
 import java.io.Serializable;
 
 /**
- * A card model that represents all the basic information about a {@link Card}
+ * A card erick.bandeco.model that represents all the basic information about a {@link Card}
  * (actually, it's a concrete copy of {@link AbstractCard} that's
  * {@link Serializable}). CardModel objects can be used to store information
  * about cards across configuration changes, or even saved to USB storage.
@@ -148,7 +148,7 @@ public class CardModel implements Serializable {
 	}
 
 	/**
-	 * @return Arbitrary data associated with this card model
+	 * @return Arbitrary data associated with this card erick.bandeco.model
 	 */
 	public Object getData() {
 		return data;
@@ -207,7 +207,7 @@ public class CardModel implements Serializable {
 
 	/**
 	 * @param Arbitrary
-	 *            data associated with this card model (POJOs plx, no context
+	 *            data associated with this card erick.bandeco.model (POJOs plx, no context
 	 *            leaks)
 	 */
 	public void setData(Object data) {

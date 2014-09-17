@@ -237,14 +237,14 @@ public abstract class AnimationAdapter extends BaseAdapterDecorator {
 	}
 
 	/**
-	 * Get the delay in milliseconds before an animation of a view should start. Defaults to {@value #DEFAULTANIMATIONDELAYMILLIS}.
+	 * Get the delay in milliseconds before an animation of a erick.bandeco.view should start. Defaults to {@value #DEFAULTANIMATIONDELAYMILLIS}.
 	 */
 	protected long getAnimationDelayMillis() {
 		return mAnimationDelayMillis;
 	}
 
 	/**
-	 * Set the delay in milliseconds before an animation of a view should start. Defaults to {@value #DEFAULTANIMATIONDELAYMILLIS}.
+	 * Set the delay in milliseconds before an animation of a erick.bandeco.view should start. Defaults to {@value #DEFAULTANIMATIONDELAYMILLIS}.
 	 * @param delayMillis the time in milliseconds.
 	 */
 	public void setAnimationDelayMillis(long delayMillis) {
@@ -268,12 +268,12 @@ public abstract class AnimationAdapter extends BaseAdapterDecorator {
 
 	/**
 	 * Get the Animators to apply to the views. In addition to the returned
-	 * Animators, an alpha transition will be applied to the view.
+	 * Animators, an alpha transition will be applied to the erick.bandeco.view.
 	 * 
 	 * @param parent
-	 *            The parent of the view
+	 *            The parent of the erick.bandeco.view
 	 * @param view
-	 *            The view that will be animated, as retrieved by getView()
+	 *            The erick.bandeco.view that will be animated, as retrieved by getView()
 	 */
 	public abstract Animator[] getAnimators(ViewGroup parent, View view);
 }

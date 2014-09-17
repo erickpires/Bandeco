@@ -33,7 +33,7 @@ import com.nineoldandroids.view.ViewHelper;
 /**
  * A {@link android.view.View.OnTouchListener} that makes any {@link View}
  * dismissable when the user swipes (drags her finger) horizontally across the
- * view.
+ * erick.bandeco.view.
  * 
  * <p>
  * <em>For {@link android.widget.ListView} list items that don't manage their own touch events
@@ -48,12 +48,12 @@ import com.nineoldandroids.view.ViewHelper;
  * </p>
  * 
  * <pre>
- * view.setOnTouchListener(new SwipeDismissTouchListener(view, null, // Optional
+ * erick.bandeco.view.setOnTouchListener(new SwipeDismissTouchListener(erick.bandeco.view, null, // Optional
  * 																	// token/cookie
  * 																	// object
  * 		new SwipeDismissTouchListener.OnDismissCallback() {
- * 			public void onDismiss(View view, Object token) {
- * 				parent.removeView(view);
+ * 			public void onDismiss(View erick.bandeco.view, Object token) {
+ * 				parent.removeView(erick.bandeco.view);
  * 			}
  * 		}));
  * </pre>
@@ -86,13 +86,13 @@ public class SwipeDismissTouchListener implements View.OnTouchListener {
 
 	/**
 	 * The callback interface used by {@link SwipeDismissTouchListener} to
-	 * inform its client about a successful dismissal of the view for which it
+	 * inform its client about a successful dismissal of the erick.bandeco.view for which it
 	 * was created.
 	 */
 	public interface OnDismissCallback {
 		/**
 		 * Called when the user has indicated they she would like to dismiss the
-		 * view.
+		 * erick.bandeco.view.
 		 * 
 		 * @param view
 		 *            The originating {@link View} to be dismissed.
@@ -103,16 +103,16 @@ public class SwipeDismissTouchListener implements View.OnTouchListener {
 	}
 
 	/**
-	 * Constructs a new swipe-to-dismiss touch listener for the given view.
+	 * Constructs a new swipe-to-dismiss touch listener for the given erick.bandeco.view.
 	 * 
 	 * @param view
-	 *            The view to make dismissable.
+	 *            The erick.bandeco.view to make dismissable.
 	 * @param token
 	 *            An optional token/cookie object to be passed through to the
 	 *            callback.
 	 * @param callback
 	 *            The callback to trigger when the user has indicated that she
-	 *            would like to dismiss this view.
+	 *            would like to dismiss this erick.bandeco.view.
 	 */
 	public SwipeDismissTouchListener(View view, Object token,
 			OnDismissCallback callback) {
@@ -129,7 +129,7 @@ public class SwipeDismissTouchListener implements View.OnTouchListener {
 
 	@Override
 	public boolean onTouch(View view, MotionEvent motionEvent) {
-		// offset because the view is translated during swipe
+		// offset because the erick.bandeco.view is translated during swipe
 		motionEvent.offsetLocation(mTranslationX, 0);
 
 		if (mViewWidth < 2) {
@@ -142,7 +142,7 @@ public class SwipeDismissTouchListener implements View.OnTouchListener {
 			mDownX = motionEvent.getRawX();
 			mVelocityTracker = VelocityTracker.obtain();
 			mVelocityTracker.addMovement(motionEvent);
-			//view.onTouchEvent(motionEvent);
+			//erick.bandeco.view.onTouchEvent(motionEvent);
 			return false;
 		}
 
@@ -251,7 +251,7 @@ public class SwipeDismissTouchListener implements View.OnTouchListener {
 	}
 
 	private void performDismiss() {
-		// Animate the dismissed view to zero-height and then fire the dismiss
+		// Animate the dismissed erick.bandeco.view to zero-height and then fire the dismiss
 		// callback.
 		// This triggers layout on each animation frame; in the future we may
 		// want to do something
@@ -267,7 +267,7 @@ public class SwipeDismissTouchListener implements View.OnTouchListener {
 			@Override
 			public void onAnimationEnd(Animator animation) {
 				mCallback.onDismiss(mView, mToken);
-				// Reset view presentation
+				// Reset erick.bandeco.view presentation
 				setAlpha(mView, 1f);
 				ViewHelper.setTranslationX(mView, 0);
 				// mView.setAlpha(1f);

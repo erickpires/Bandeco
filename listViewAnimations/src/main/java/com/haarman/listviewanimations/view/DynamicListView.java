@@ -214,7 +214,7 @@ public class DynamicListView extends ListView {
 		return drawable;
 	}
 
-	/** Returns a bitmap showing a screenshot of the view passed in. */
+	/** Returns a bitmap showing a screenshot of the erick.bandeco.view passed in. */
 	private Bitmap getBitmapFromView(View v) {
 		Bitmap bitmap = Bitmap.createBitmap(v.getWidth(), v.getHeight(), Bitmap.Config.ARGB_8888);
 		Canvas canvas = new Canvas(bitmap);
@@ -239,7 +239,7 @@ public class DynamicListView extends ListView {
 		mBelowItemId = position + 1 < adapter.getCount() ? adapter.getItemId(position + 1) : INVALID_ROW_ID;
 	}
 
-	/** Retrieves the view in the list corresponding to itemID */
+	/** Retrieves the erick.bandeco.view in the list corresponding to itemID */
 	public View getViewForID(long itemID) {
 		int firstVisiblePosition = getFirstVisiblePosition();
 		ListAdapter adapter = getAdapter();

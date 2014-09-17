@@ -42,7 +42,7 @@ import com.nineoldandroids.view.ViewHelper;
 
 /**
  * Warning: a stable id for each item in the adapter is required. The decorated
- * adapter should not try to cast convertView to a particular view. The
+ * adapter should not try to cast convertView to a particular erick.bandeco.view. The
  * undoLayout should have the same height as the content row.
  * <p>
  * Usage: <br>
