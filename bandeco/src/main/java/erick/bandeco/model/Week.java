@@ -22,14 +22,14 @@ public class Week {
     }
 
     public Week(List<Table> tables){
-		for (int i = 0; i < tables.size(); i++)
-			if (tables.get(i).searchValueInColumn(0, "Acompanhamento") != -1){
-				if(tables.get(i).searchValueInColumn(0, "Almoço") != -1)
-					lunchTable = tables.get(i);
-				
-				if(tables.get(i).searchValueInColumn(0, "Jantar") != -1)
-					dinnerTable = tables.get(i);
-			}
+        for (Table table : tables)
+            if (table.searchValueInColumn(0, "Acompanhamento") != -1) {
+                if (table.searchValueInColumn(0, "Almoço") != -1)
+                    lunchTable = table;
+
+                if (table.searchValueInColumn(0, "Jantar") != -1)
+                    dinnerTable = table;
+            }
 		
 		if(lunchTable == null || dinnerTable == null)
 			throw new RuntimeException("Couldn't find tables");

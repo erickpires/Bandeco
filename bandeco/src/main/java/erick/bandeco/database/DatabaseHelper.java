@@ -6,9 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import static erick.bandeco.database.DatabaseContract.*;
 
-/**
- * Created by erick on 9/10/14.
- */
+
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     public static final String DB_NAME = "Bandeco.db";

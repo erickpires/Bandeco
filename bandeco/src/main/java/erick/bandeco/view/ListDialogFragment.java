@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,9 +17,6 @@ import java.util.ArrayList;
 
 import static android.content.DialogInterface.*;
 
-/**
- * Created by erick on 9/3/14.
- */
 public class ListDialogFragment extends DialogFragment {
 
     private ArrayList<String> list;
@@ -31,6 +29,7 @@ public class ListDialogFragment extends DialogFragment {
         this.list = list;
     }
     
+    @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         LayoutInflater inflater = getActivity().getLayoutInflater();

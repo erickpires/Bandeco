@@ -26,8 +26,6 @@ public class MealNotification {
         // This image is used as the notification's large icon (thumbnail).
         final Bitmap picture = BitmapFactory.decodeResource(res, R.drawable.ic_stat_fork_knife);
 
-        final String ticker = title;
-
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
 
                 .setDefaults(Notification.DEFAULT_ALL)
@@ -36,7 +34,7 @@ public class MealNotification {
                 .setContentText(text)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setLargeIcon(picture)
-                .setTicker(ticker)
+                .setTicker(title)
                 .setContentIntent(
                         PendingIntent.getActivity(
                                 context,

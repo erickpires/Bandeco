@@ -24,8 +24,6 @@ public class Main extends ActionBarActivity {
 
     public static Week week;
 
-    //private ActionBar actionBar;
-    private ViewPager viewPager;
     private TabsAdapter tabsAdapter;
     private DatabaseHelper databaseHelper;
 
@@ -43,7 +41,7 @@ public class Main extends ActionBarActivity {
         toolbar.setLogo(R.drawable.ic_logo);
         setSupportActionBar(toolbar);
 
-        viewPager = (ViewPager) findViewById(R.id.pager);
+        ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         tabsAdapter = new TabsAdapter(getSupportFragmentManager());
         viewPager.setAdapter(tabsAdapter);
 

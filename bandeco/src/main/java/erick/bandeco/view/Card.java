@@ -29,8 +29,8 @@ public class Card extends RecyclableCard {
 		((TextView) convertView.findViewById(R.id.description))
 				.setText(description);
 
-		if (isClickable == true)
-			((LinearLayout) convertView.findViewById(R.id.contentLayout))
+		if (isClickable)
+			convertView.findViewById(R.id.contentLayout)
 					.setBackgroundResource(R.drawable.selectable_background_cardbank);
 
 	}

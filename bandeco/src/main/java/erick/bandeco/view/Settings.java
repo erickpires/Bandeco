@@ -142,7 +142,7 @@ public class Settings extends ActionBarActivity {
         saveListToDB(database, positiveList, DatabaseContract.PositiveWords.TABLE_NAME, DatabaseContract.PositiveWords.WORDS);
         saveListToDB(database, negativeList, DatabaseContract.NegativeWords.TABLE_NAME, DatabaseContract.NegativeWords.WORD);
 
-        editor.commit();
+        editor.apply();
     }
 
     private void getSettings() {

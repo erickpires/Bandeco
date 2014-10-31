@@ -44,15 +44,6 @@ public class Table {
 		table.get(row).add(value);
 	}
 
-	public int searchForValueInRow(int row, String value) {
-		List<String> l = table.get(row);
-		for (int i = 0; i < l.size(); i++)
-			if (l.get(i).toLowerCase().contains(value.toLowerCase()))
-				return i;
-
-		return -1;
-	}
-
 	public int searchValueInColumn(int column, String value) {
 		for (int i = 0; i < table.size(); i++) {
 			String s = table.get(i).get(column);
@@ -60,16 +51,6 @@ public class Table {
 				return i;
 		}
 		return -1;
-	}
-
-	public List<String> getColumn(int column) {
-		List<String> l = new ArrayList<String>();
-
-		for (int i = 0; i < rows(); i++)
-			if (columns(i) > column)
-				l.add(getElement(i, column));
-
-		return l;
 	}
 	
 	public List<String> getColumn(int column, int start) {

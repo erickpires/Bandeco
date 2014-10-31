@@ -40,7 +40,7 @@ public class About extends ActionBarActivity {
         try {
             PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_META_DATA);
             textViewVersionName.setText(pInfo.versionName);
-        } catch (PackageManager.NameNotFoundException e) {
+        } catch (PackageManager.NameNotFoundException ignored) {
 
         }
 

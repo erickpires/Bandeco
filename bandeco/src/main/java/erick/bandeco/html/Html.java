@@ -11,13 +11,9 @@ import java.util.List;
 
 public class Html {
 
-	/**
-	 * 
-	 */
-
 	enum Estado {
 		ignorando, lendoTabela, lendoLinha, lendoCampo
-	};
+	}
 
 	private List<Table> tables = new ArrayList<Table>();
 
@@ -35,8 +31,7 @@ public class Html {
 
 		String tmp = "";
 		int currentRow = 0;
-		int currentColumn = 0;
-		int currentTable = 0;
+        int currentTable = 0;
 
 		while ((inputLine = in.readLine()) != null) {
 
@@ -66,23 +61,20 @@ public class Html {
 				tables.get(currentTable).add(currentRow, data);
 
 				tmp = "";
-				currentColumn++;
-			}
+            }
 
 			if (inputLine.contains("</tr") && estado == Estado.lendoLinha) {
 				estado = Estado.lendoTabela;
 
 				currentRow++;
-				currentColumn = 0;
-			}
+            }
 
 			if (inputLine.contains("</table") && estado == Estado.lendoTabela) {
 				estado = Estado.ignorando;
 
 				currentTable++;
 				currentRow = 0;
-				currentColumn = 0;
-			}
+            }
 		}
 	}
 	
