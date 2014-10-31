@@ -11,4 +11,11 @@
             <item name="windowActionBar">false</item>
         </style>
 
+    <style name="AppThemeToolbar" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/toolbar_color</item>
+        <item name="colorPrimaryDark">@color/toolbar_color</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
 </resources>

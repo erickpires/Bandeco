@@ -222,13 +222,13 @@ public final class R {
 		public static final int item_stack = 0x7f030029;
 	}
 	public static final class style {
-		public static final int CardLightText = 0x7f0c0064;
-		public static final int CardText = 0x7f0c0065;
-		public static final int CardTitle = 0x7f0c0066;
-		public static final int CardTitleBold = 0x7f0c0067;
-		public static final int Item = 0x7f0c0068;
-		public static final int Item_Sticky = 0x7f0c0069;
-		public static final int Item_Top = 0x7f0c006a;
-		public static final int StackTitle = 0x7f0c007b;
+		public static final int CardLightText = 0x7f0c0065;
+		public static final int CardText = 0x7f0c0066;
+		public static final int CardTitle = 0x7f0c0067;
+		public static final int CardTitleBold = 0x7f0c0068;
+		public static final int Item = 0x7f0c0069;
+		public static final int Item_Sticky = 0x7f0c006a;
+		public static final int Item_Top = 0x7f0c006b;
+		public static final int StackTitle = 0x7f0c007c;
 	}
 }

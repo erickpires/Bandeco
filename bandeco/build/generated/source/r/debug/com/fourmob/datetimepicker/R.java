@@ -122,10 +122,10 @@ public final class R {
 	public static final class style {
 		public static final int AppBaseTheme = 0x7f0c0000;
 		public static final int AppTheme = 0x7f0c0001;
-		public static final int ampm_label = 0x7f0c00ea;
-		public static final int day_of_week_label_condensed = 0x7f0c00eb;
-		public static final int done_button_light = 0x7f0c00f5;
-		public static final int time_label = 0x7f0c00ec;
-		public static final int time_label_thin = 0x7f0c00f6;
+		public static final int ampm_label = 0x7f0c00eb;
+		public static final int day_of_week_label_condensed = 0x7f0c00ec;
+		public static final int done_button_light = 0x7f0c00f6;
+		public static final int time_label = 0x7f0c00ed;
+		public static final int time_label_thin = 0x7f0c00f7;
 	}
 }
