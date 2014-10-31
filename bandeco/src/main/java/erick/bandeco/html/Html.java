@@ -92,7 +92,7 @@ public class Html {
 
 	private static String getDataFromLine(String str) {
         str = str.replaceAll("<br />", Constants.BREAK_LINE);
-		str = str.replaceAll("<[[/]a-zA-Z=\"0-9#:.! -]*>", "");
+		str = str.replaceAll("<[^>]*>", "");
 		str = str.replaceAll("&nbsp;", "");
         str = str.replaceAll("[\t]+", " ");
         str = str.replaceAll("[ ]+", " ");
