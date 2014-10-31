@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.IBinder;
+import android.support.v4.content.LocalBroadcastManager;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -51,6 +52,7 @@ public class UpdateService extends Service {
 
                     updateDatabaseInfo(html, date);
 
+                    LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(new Intent("update_event"));
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
                 } catch (IOException e) {

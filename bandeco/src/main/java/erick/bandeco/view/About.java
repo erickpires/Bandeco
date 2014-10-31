@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
 
 import com.app.bandeco.R;
+import com.app.bandeco.Utils;
 
 
 public class About extends ActionBarActivity {
@@ -31,6 +32,8 @@ public class About extends ActionBarActivity {
 
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
+
+        Utils.changeStatusColor(this);
 
         TextView textViewVersionName = (TextView) findViewById(R.id.textVersionName);
 

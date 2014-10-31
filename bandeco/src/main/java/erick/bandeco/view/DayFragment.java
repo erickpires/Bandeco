@@ -40,4 +40,6 @@ public class DayFragment extends Fragment {
 		return relativeLayout;
 	}
 
+    public void update() {
+    }
 }

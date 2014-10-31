@@ -1,195 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
 
-    <LinearLayout
-        android:layout_width="fill_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/settings_toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:background="?attr/colorPrimaryDark" />
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/settings_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimaryDark"/>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
         <LinearLayout
-            android:id="@+id/show_meals"
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="@dimen/default_top_padding"
-            android:paddingTop="@dimen/default_top_padding">
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/show_meals"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/default_side_padding"
-                android:text="@string/show"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/default_top_padding"
+                android:paddingTop="@dimen/default_top_padding">
 
-            <TextView
-                android:id="@+id/meal_type"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/default_side_padding"
+                    android:text="@string/show"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/meal_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/default_side_padding_identented"
+                    android:text="" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/default_side_padding_identented"
-                android:text="" />
+                android:src="@drawable/divider"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:id="@+id/negative_words"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/default_top_padding"
+                android:paddingTop="@dimen/default_top_padding">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/default_side_padding"
+                    android:text="@string/negative_words"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/negative_words_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/default_side_padding_identented"
+                    android:textColor="@color/gray_text" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/divider"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:id="@+id/positive_words"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/default_top_padding"
+                android:paddingTop="@dimen/default_top_padding">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/default_side_padding"
+                    android:text="@string/positive_words"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/positive_words_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/default_side_padding_identented"
+                    android:textColor="@color/gray_text" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/divider"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:id="@+id/notify_when_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/default_top_padding"
+                android:paddingTop="@dimen/default_top_padding">
+
+                <TextView
+                    android:id="@+id/notify_when_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/default_side_padding"
+                    android:text="@string/notify"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/notify_when_option_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/default_side_padding_identented" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/divider"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:id="@+id/lunch_notification_time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/default_top_padding"
+                android:paddingTop="@dimen/default_top_padding">
+
+                <TextView
+                    android:id="@+id/lunch_notification_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/default_side_padding"
+                    android:text="@string/lunch_notification"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/lunch_notification_time_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/default_side_padding_identented"
+                    android:text="" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/divider"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:id="@+id/dinner_notification_time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/default_top_padding"
+                android:paddingTop="@dimen/default_top_padding">
+
+                <TextView
+                    android:id="@+id/dinner_notification_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/default_side_padding"
+                    android:text="@string/dinner_notification"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/dinner_notification_time_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/default_side_padding_identented"
+                    android:text="" />
+            </LinearLayout>
+
         </LinearLayout>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/divider"
-            tools:ignore="ContentDescription" />
-
-        <LinearLayout
-            android:id="@+id/negative_words"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="@dimen/default_top_padding"
-            android:paddingTop="@dimen/default_top_padding">
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/default_side_padding"
-                android:text="@string/negative_words"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
-            <TextView
-                android:id="@+id/negative_words_list"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:paddingLeft="@dimen/default_side_padding_identented"
-                android:textColor="@color/gray_text" />
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/divider"
-            tools:ignore="ContentDescription" />
-
-        <LinearLayout
-            android:id="@+id/positive_words"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="@dimen/default_top_padding"
-            android:paddingTop="@dimen/default_top_padding">
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/default_side_padding"
-                android:text="@string/positive_words"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
-            <TextView
-                android:id="@+id/positive_words_list"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:paddingLeft="@dimen/default_side_padding_identented"
-                android:textColor="@color/gray_text" />
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/divider"
-            tools:ignore="ContentDescription" />
-
-        <LinearLayout
-            android:id="@+id/notify_when_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="@dimen/default_top_padding"
-            android:paddingTop="@dimen/default_top_padding">
-
-            <TextView
-                android:id="@+id/notify_when_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/default_side_padding"
-                android:text="@string/notify"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
-            <TextView
-                android:id="@+id/notify_when_option_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/default_side_padding_identented" />
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/divider"
-            tools:ignore="ContentDescription" />
-
-        <LinearLayout
-            android:id="@+id/lunch_notification_time_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="@dimen/default_top_padding"
-            android:paddingTop="@dimen/default_top_padding">
-
-            <TextView
-                android:id="@+id/lunch_notification_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/default_side_padding"
-                android:text="@string/lunch_notification"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
-            <TextView
-                android:id="@+id/lunch_notification_time_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/default_side_padding_identented"
-                android:text="" />
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/divider"
-            tools:ignore="ContentDescription" />
-
-        <LinearLayout
-            android:id="@+id/dinner_notification_time_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="@dimen/default_top_padding"
-            android:paddingTop="@dimen/default_top_padding">
-
-            <TextView
-                android:id="@+id/dinner_notification_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/default_side_padding"
-                android:text="@string/dinner_notification"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
-            <TextView
-                android:id="@+id/dinner_notification_time_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/default_side_padding_identented"
-                android:text="" />
-        </LinearLayout>
-
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</LinearLayout>

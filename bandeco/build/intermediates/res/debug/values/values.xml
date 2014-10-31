@@ -125,6 +125,9 @@
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="status_color">#FFc26a1d</color>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
     <eat-comment/>
     <color name="stroke">#dddddd</color>

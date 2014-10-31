@@ -13,10 +13,14 @@ public class TabsAdapter extends FragmentPagerAdapter {
 	
 	public TabsAdapter(FragmentManager fm) {
 		super(fm);
-		dayFragment = new DayFragment();
-		weekFragment = new WeekFragment();
 	}
 
+    public void dataChanged(){
+        dayFragment = new DayFragment();
+        weekFragment = new WeekFragment();
+
+        notifyDataSetChanged();
+    }
 	@Override
 	public Fragment getItem(int arg0) {
 		switch (arg0) {
@@ -28,6 +32,11 @@ public class TabsAdapter extends FragmentPagerAdapter {
 			return null;
 		}
 	}
+
+    public int getItemPosition(Object object) {
+        System.out.println("Called");
+        return POSITION_NONE;
+    }
 
 	@Override
 	public int getCount() {

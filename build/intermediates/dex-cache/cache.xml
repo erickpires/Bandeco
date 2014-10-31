@@ -14,6 +14,12 @@
         revision="21.0.2"
         sha1="2fc859b7abb78d29169f6a582b45cbe1f3f1a4cc"/>
     <item
+        dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/systembartint-1.0.3-63adeead74e7b2f2519d6cb6f1ef0fe75cff1d91.jar"
+        jar="/home/erick/.gradle/caches/modules-2/files-2.1/com.readystatesoftware.systembartint/systembartint/1.0.3/de4f7404e2f58d8f6e83cb1e85d0c2d6c2987287/systembartint-1.0.3.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="de4f7404e2f58d8f6e83cb1e85d0c2d6c2987287"/>
+    <item
         dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/classes-515cbf20695572f9b5f89f8c31b11195f46f7330.jar"
         jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
         jumboMode="false"

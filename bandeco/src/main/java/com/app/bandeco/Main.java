@@ -6,19 +6,19 @@ import erick.bandeco.adapters.TabsAdapter;
 import erick.bandeco.view.About;
 import erick.bandeco.view.Settings;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
 
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v7.widget.Toolbar;
-
-import static android.support.v7.app.ActionBar.Tab;
 
 public class Main extends ActionBarActivity {
 
@@ -26,20 +26,28 @@ public class Main extends ActionBarActivity {
 
     //private ActionBar actionBar;
     private ViewPager viewPager;
+    private TabsAdapter tabsAdapter;
+    private DatabaseHelper databaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext());
+        databaseHelper = new DatabaseHelper(getBaseContext());
         SQLiteDatabase database = databaseHelper.getReadableDatabase();
+
         week = OperationsWithDB.getWeekFromDatabase(database);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setLogo(R.drawable.ic_logo);
         setSupportActionBar(toolbar);
 
         viewPager = (ViewPager) findViewById(R.id.pager);
+        tabsAdapter = new TabsAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(tabsAdapter);
+
+        Utils.changeStatusColor(this);
 
         database.close();
     }
@@ -47,9 +55,22 @@ public class Main extends ActionBarActivity {
     @Override
     public void onResume() {
         super.onResume();
+        updateData();
+        LocalBroadcastManager.getInstance(this).registerReceiver(messageReceiver, new IntentFilter("update_event"));
+    }
 
-        TabsAdapter tabsAdapter = new TabsAdapter(getSupportFragmentManager());
-        viewPager.setAdapter(tabsAdapter);
+    private BroadcastReceiver messageReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            updateData();
+        }
+    };
+
+    private void updateData() {
+        SQLiteDatabase database = databaseHelper.getReadableDatabase();
+        week = OperationsWithDB.getWeekFromDatabase(database);
+        database.close();
+        tabsAdapter.dataChanged();
     }
 
     @Override

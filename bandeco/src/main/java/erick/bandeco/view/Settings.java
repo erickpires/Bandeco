@@ -16,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.app.bandeco.NotificationService;
 import com.app.bandeco.R;
+import com.app.bandeco.Utils;
 import com.sleepbot.datetimepicker.time.RadialPickerLayout;
 import com.sleepbot.datetimepicker.time.TimePickerDialog;
 
@@ -93,6 +94,8 @@ public class Settings extends ActionBarActivity {
 
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
+
+        Utils.changeStatusColor(this);
 
         settings = getSharedPreferences(getString(R.string.app_name), 0);
 

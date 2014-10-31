@@ -14,8 +14,8 @@ public final class R {
 		public static final int card_separator = 0x7f070019;
 		public static final int card_text = 0x7f07001a;
 		public static final int card_title_text = 0x7f07001b;
-		public static final int stroke = 0x7f070042;
-		public static final int text_light = 0x7f070045;
+		public static final int stroke = 0x7f070043;
+		public static final int text_light = 0x7f070046;
 	}
 	public static final class dimen {
 		public static final int action_bar_switch_padding = 0x7f080025;
@@ -192,11 +192,11 @@ public final class R {
 		public static final int widget_margin_top_bottom = 0x7f0800f6;
 	}
 	public static final class drawable {
-		public static final int card = 0x7f020034;
-		public static final int card_background = 0x7f020035;
-		public static final int card_background_shadow = 0x7f020036;
-		public static final int card_shadow = 0x7f02003a;
-		public static final int top_shadow = 0x7f020042;
+		public static final int card = 0x7f020033;
+		public static final int card_background = 0x7f020034;
+		public static final int card_background_shadow = 0x7f020035;
+		public static final int card_shadow = 0x7f020039;
+		public static final int top_shadow = 0x7f020044;
 	}
 	public static final class id {
 		public static final int ScrollView1 = 0x7f09006c;
