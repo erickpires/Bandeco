@@ -1,5 +1,7 @@
 package erick.bandeco.html;
 
+import com.app.bandeco.Constants;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -89,7 +91,7 @@ public class Html {
 	}
 
 	private static String getDataFromLine(String str) {
-        str = str.replaceAll("<br />", ";;");
+        str = str.replaceAll("<br />", Constants.BREAK_LINE);
 		str = str.replaceAll("<[[/]a-zA-Z=\"0-9#:.! -]*>", "");
 		str = str.replaceAll("&nbsp;", "");
         str = str.replaceAll("[\t]+", " ");

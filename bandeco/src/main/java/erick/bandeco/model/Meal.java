@@ -7,6 +7,8 @@ import erick.bandeco.view.Card;
 import com.app.bandeco.Constants;
 import erick.bandeco.html.Indexer;
 
+import static com.app.bandeco.Constants.BREAK_LINE;
+
 public class Meal {
 
 	private String entrada;
@@ -50,7 +52,7 @@ public class Meal {
 
 		tmp = tableColumn.get(indexer.getIndexOfAcompanhamento());
 
-		String[] acomp = tmp.split(";;");
+		String[] acomp = tmp.split(BREAK_LINE);
 
 		arroz = acomp[0];
 		if(acomp.length > 1)
@@ -86,16 +88,16 @@ public class Meal {
 		refresco = refresco.trim();
 		arroz = arroz.trim();
 		
-		entrada = entrada.replace(";;", "");
-		pratoPrincipal = pratoPrincipal.replace(";;", "");
-		vegetariana = vegetariana.replace(";;", "");
-		guarnicao = guarnicao.replace(";;", "");
-		feijao = feijao.replace(";;", "");
-		sobremesa = sobremesa.replace(";;", "");
-		refresco = refresco.replace(";;", "");
-		arroz = arroz.replace(";;", "");
+		entrada = entrada.replace(BREAK_LINE, "");
+		pratoPrincipal = pratoPrincipal.replace(BREAK_LINE, "");
+		vegetariana = vegetariana.replace(BREAK_LINE, "");
+		guarnicao = guarnicao.replace(BREAK_LINE, "");
+		feijao = feijao.replace(BREAK_LINE, "");
+		sobremesa = sobremesa.replace(BREAK_LINE, "");
+		refresco = refresco.replace(BREAK_LINE, "");
+		arroz = arroz.replace(BREAK_LINE, "");
 
-		arroz = arroz.replace("/", "ou ");
+		arroz = arroz.replaceAll(" */ *", " ou ");
 
 	}
 

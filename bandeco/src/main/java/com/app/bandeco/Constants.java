@@ -6,6 +6,8 @@ import erick.bandeco.database.DatabaseContract;
 
 public abstract class Constants {
     public static final String SITE_URL = "http://www.nutricao.ufrj.br/cardapio.htm";
+
+    public static final String BREAK_LINE = ";;";
     //public static final String SITE_URL = "http://dcc.ufrj.br/~erickpires/cardapio1.htm";
 
 

@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="stickylistheaders_lib">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/bandeco/build/exploded-aar/Bandeco/listViewAnimations/unspecified/libs/stickylistheaders_lib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/listViewAnimations/libs/stickylistheaders_lib.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

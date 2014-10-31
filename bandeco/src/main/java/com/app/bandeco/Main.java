@@ -16,14 +16,15 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.support.v7.widget.Toolbar;
 
 import static android.support.v7.app.ActionBar.Tab;
 
-public class Main extends ActionBarActivity implements ActionBar.TabListener {
+public class Main extends ActionBarActivity {
 
     public static Week week;
 
-    private ActionBar actionBar;
+    //private ActionBar actionBar;
     private ViewPager viewPager;
 
     @Override
@@ -35,8 +36,8 @@ public class Main extends ActionBarActivity implements ActionBar.TabListener {
         SQLiteDatabase database = databaseHelper.getReadableDatabase();
         week = OperationsWithDB.getWeekFromDatabase(database);
 
-        actionBar = getSupportActionBar();
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         viewPager = (ViewPager) findViewById(R.id.pager);
 
@@ -48,38 +49,7 @@ public class Main extends ActionBarActivity implements ActionBar.TabListener {
         super.onResume();
 
         TabsAdapter tabsAdapter = new TabsAdapter(getSupportFragmentManager());
-
         viewPager.setAdapter(tabsAdapter);
-
-        actionBar.removeAllTabs();
-
-        Tab tabDay = actionBar.newTab();
-        Tab tabWeek = actionBar.newTab();
-
-        tabDay.setText(getString(R.string.hoje));
-        tabDay.setTabListener(this);
-
-        tabWeek.setText(getString(R.string.semana));
-        tabWeek.setTabListener(this);
-
-        actionBar.addTab(tabDay);
-        actionBar.addTab(tabWeek);
-
-        viewPager.setOnPageChangeListener(new OnPageChangeListener() {
-
-            @Override
-            public void onPageSelected(int pos) {
-                actionBar.setSelectedNavigationItem(pos);
-            }
-
-            @Override
-            public void onPageScrolled(int arg0, float arg1, int arg2) {
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int arg0) {
-            }
-        });
     }
 
     @Override
@@ -109,20 +79,5 @@ public class Main extends ActionBarActivity implements ActionBar.TabListener {
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
-
-    @Override
-    public void onTabSelected(Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
-        viewPager.setCurrentItem(tab.getPosition());
-    }
-
-    @Override
-    public void onTabUnselected(Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
-        // TODO Auto-generated method stub
-    }
-
-    @Override
-    public void onTabReselected(Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
-        // TODO Auto-generated method stub
     }
 }
