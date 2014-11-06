@@ -102,15 +102,9 @@ public class Settings extends ActionBarActivity {
 
         settings = getSharedPreferences(getString(R.string.app_name), 0);
 
-        mealsChoices = new String[]{getString(R.string.lunch_only),
-                getString(R.string.dinner_only),
-                getString(R.string.both_meals)};
+        mealsChoices = getResources().getStringArray(R.array.show_options);
 
-        notifyWhenChoices = new String[]{getString(R.string.always),
-                getString(R.string.only_if_I_like),
-                getString(R.string.only_if_not_dislike),
-                getString(R.string.never)
-        };
+        notifyWhenChoices = getResources().getStringArray(R.array.notify_when_options);
 
         daysOfTheWeek = getResources().getStringArray(R.array.days_array);
 

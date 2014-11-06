@@ -23,9 +23,11 @@
     <string name="manage_meal_items">Gerenciar itens do cardápio</string>
 
     <string name="show">Exibir</string>
-    <string name="lunch_only">Apenas almoço</string>
-    <string name="dinner_only">Apenas jantar</string>
-    <string name="both_meals">Ambas refeições</string>
+    <string-array name="show_options">
+        <item name="lunch_only">Apenas almoço</item>
+        <item name="dinner_only">Apenas jantar</item>
+        <item name="both_meals">Ambas refeições</item>
+    </string-array>
 
     <string name="negative_words">O que não gosto</string>
     <string name="positive_words">O que gosto</string>
@@ -34,10 +36,12 @@
     <string name="dinner_notification">Notificação de jantar</string>
     
     <string name="notify">Notificar</string>
-    <string name="always">Sempre</string>
-    <string name="only_if_I_like">Se houver algo que gosto</string>
-    <string name="only_if_not_dislike">Se não houver algo que não gosto</string>
-    <string name="never">Nunca</string>
+    <string-array name="notify_when_options">
+        <item name="always">Sempre</item>
+        <item name="only_if_I_like">Se houver algo que gosto</item>
+        <item name="only_if_not_dislike">Se não houver algo que não gosto</item>
+        <item name="never">Nunca</item>
+    </string-array>
 
     <string name="days_to_notify">Em quais dias notificar</string>
 
