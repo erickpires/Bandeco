@@ -71,25 +71,167 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="activity_settings.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="activity_settings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/layout/activity_settings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41454545" vertical-offset="1092" max-vertical-offset="3705">
-              <caret line="88" column="42" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+            <state vertical-scroll-proportion="-7.6153846" vertical-offset="792" max-vertical-offset="4605">
+              <caret line="66" column="44" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
               <folding>
-                <element signature="e#4063#4103#0" expanded="true" />
-                <element signature="e#4145#4185#0" expanded="true" />
-                <element signature="e#4227#4267#0" expanded="true" />
-                <element signature="e#4307#4347#0" expanded="true" />
-                <element signature="e#5907#5947#0" expanded="true" />
-                <element signature="e#5989#6029#0" expanded="true" />
-                <element signature="e#6071#6111#0" expanded="true" />
-                <element signature="e#6151#6191#0" expanded="true" />
+                <element signature="e#1261#1289#0" expanded="true" />
+                <element signature="e#1325#1353#0" expanded="true" />
+                <element signature="e#1583#1612#0" expanded="true" />
+                <element signature="e#1654#1683#0" expanded="true" />
+                <element signature="e#1725#1754#0" expanded="true" />
+                <element signature="e#1794#1823#0" expanded="true" />
+                <element signature="e#1857#1871#0" expanded="true" />
+                <element signature="e#2249#2289#0" expanded="true" />
+                <element signature="e#2331#2371#0" expanded="true" />
+                <element signature="e#2413#2453#0" expanded="true" />
+                <element signature="e#2493#2533#0" expanded="true" />
+                <element signature="e#3101#3128#0" expanded="true" />
+                <element signature="e#3164#3191#0" expanded="true" />
+                <element signature="e#3373#3402#0" expanded="true" />
+                <element signature="e#3444#3473#0" expanded="true" />
+                <element signature="e#3515#3544#0" expanded="true" />
+                <element signature="e#3584#3613#0" expanded="true" />
+                <element signature="e#3647#3674#0" expanded="true" />
+                <element signature="e#4348#4376#0" expanded="true" />
+                <element signature="e#4412#4440#0" expanded="true" />
+                <element signature="e#4670#4699#0" expanded="true" />
+                <element signature="e#4741#4770#0" expanded="true" />
+                <element signature="e#4812#4841#0" expanded="true" />
+                <element signature="e#4881#4910#0" expanded="true" />
+                <element signature="e#4944#4968#0" expanded="true" />
+                <element signature="e#5445#5485#0" expanded="true" />
+                <element signature="e#5527#5567#0" expanded="true" />
+                <element signature="e#5609#5649#0" expanded="true" />
+                <element signature="e#5689#5729#0" expanded="true" />
+                <element signature="e#6257#6285#0" expanded="true" />
+                <element signature="e#6321#6349#0" expanded="true" />
+                <element signature="e#6579#6608#0" expanded="true" />
+                <element signature="e#6650#6679#0" expanded="true" />
+                <element signature="e#6721#6750#0" expanded="true" />
+                <element signature="e#6790#6819#0" expanded="true" />
+                <element signature="e#6853#6877#0" expanded="true" />
+                <element signature="e#7354#7394#0" expanded="true" />
+                <element signature="e#7436#7476#0" expanded="true" />
+                <element signature="e#7518#7558#0" expanded="true" />
+                <element signature="e#7598#7638#0" expanded="true" />
+                <element signature="e#8170#8198#0" expanded="true" />
+                <element signature="e#8234#8262#0" expanded="true" />
+                <element signature="e#8503#8532#0" expanded="true" />
+                <element signature="e#8574#8603#0" expanded="true" />
+                <element signature="e#8645#8674#0" expanded="true" />
+                <element signature="e#8714#8743#0" expanded="true" />
+                <element signature="e#8777#8793#0" expanded="true" />
+                <element signature="e#9188#9228#0" expanded="true" />
+                <element signature="e#9270#9310#0" expanded="true" />
+                <element signature="e#9352#9392#0" expanded="true" />
+                <element signature="e#9432#9472#0" expanded="true" />
+                <element signature="e#10007#10034#0" expanded="true" />
+                <element signature="e#10070#10097#0" expanded="true" />
+                <element signature="e#10279#10308#0" expanded="true" />
+                <element signature="e#10350#10379#0" expanded="true" />
+                <element signature="e#10421#10450#0" expanded="true" />
+                <element signature="e#10490#10519#0" expanded="true" />
+                <element signature="e#10553#10577#0" expanded="true" />
+                <element signature="e#11267#11295#0" expanded="true" />
+                <element signature="e#11331#11359#0" expanded="true" />
+                <element signature="e#11607#11636#0" expanded="true" />
+                <element signature="e#11678#11707#0" expanded="true" />
+                <element signature="e#11749#11778#0" expanded="true" />
+                <element signature="e#11818#11847#0" expanded="true" />
+                <element signature="e#11881#11909#0" expanded="true" />
+                <element signature="e#12309#12349#0" expanded="true" />
+                <element signature="e#12391#12431#0" expanded="true" />
+                <element signature="e#12473#12513#0" expanded="true" />
+                <element signature="e#12553#12593#0" expanded="true" />
+                <element signature="e#13174#13202#0" expanded="true" />
+                <element signature="e#13238#13266#0" expanded="true" />
+                <element signature="e#13515#13544#0" expanded="true" />
+                <element signature="e#13586#13615#0" expanded="true" />
+                <element signature="e#13657#13686#0" expanded="true" />
+                <element signature="e#13726#13755#0" expanded="true" />
+                <element signature="e#13789#13818#0" expanded="true" />
+                <element signature="e#14219#14259#0" expanded="true" />
+                <element signature="e#14301#14341#0" expanded="true" />
+                <element signature="e#14383#14423#0" expanded="true" />
+                <element signature="e#14463#14503#0" expanded="true" />
               </folding>
             </state>
           </provider>
           <provider editor-type-id="android-designer">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constants.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+              <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="color.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/values/color.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+              <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NotificationService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/NotificationService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="1140">
+              <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.64" vertical-offset="529" max-vertical-offset="1215">
+              <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dimens.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/values/dimens.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Settings.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/Settings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="5475">
+              <caret line="285" column="33" selection-start-line="285" selection-start-column="33" selection-end-line="285" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utils.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6770833" vertical-offset="0" max-vertical-offset="576">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -1803,7 +1945,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/bandeco/src/main/java/database/DatabaseHelper.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/HtmlGetter.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/view/MealNotification.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/html/Table.java" />
@@ -1833,8 +1974,6 @@
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/DayFragment.java" />
         <option value="$PROJECT_DIR$/bandeco/build.gradle" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/bandeco/src/main/res/values/color.xml" />
-        <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Utils.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/database/DatabaseHelper.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/html/Html.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/html/Table.java" />
@@ -1843,17 +1982,20 @@
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/ListDialogFragment.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/ListWrapper.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/MealNotification.java" />
-        <option value="$PROJECT_DIR$/bandeco/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/layout/activity_about.xml" />
-        <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Main.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/adapters/TabsAdapter.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/model/Meal.java" />
+        <option value="$PROJECT_DIR$/bandeco/src/main/res/values/color.xml" />
+        <option value="$PROJECT_DIR$/bandeco/src/main/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/bandeco/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/bandeco/src/main/res/layout/activity_settings.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Constants.java" />
-        <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/About.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/Settings.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/NotificationService.java" />
-        <option value="$PROJECT_DIR$/bandeco/src/main/res/layout/activity_settings.xml" />
+        <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Main.java" />
+        <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/About.java" />
+        <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Utils.java" />
       </list>
     </option>
   </component>
@@ -2504,12 +2646,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32942432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2519,7 +2661,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30957684" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32850778" sideWeight="0.6114072" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32850778" sideWeight="0.6114072" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2730,22 +2872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28645834" vertical-offset="0" max-vertical-offset="576">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/values/color.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.052083332" vertical-offset="0" max-vertical-offset="576">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/OperationsWithDB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1665">
@@ -2757,13 +2883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1260">
           <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2820,25 +2939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/MealNotification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38181818" vertical-offset="0" max-vertical-offset="550">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/layout/activity_about.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-27.307692" vertical-offset="985" max-vertical-offset="1830">
@@ -2870,14 +2970,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
           <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1320">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2917,69 +3009,189 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38181818" vertical-offset="0" max-vertical-offset="550">
+          <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/layout/activity_settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.6153846" vertical-offset="792" max-vertical-offset="4605">
+          <caret line="66" column="44" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
+          <folding>
+            <element signature="e#1261#1289#0" expanded="true" />
+            <element signature="e#1325#1353#0" expanded="true" />
+            <element signature="e#1583#1612#0" expanded="true" />
+            <element signature="e#1654#1683#0" expanded="true" />
+            <element signature="e#1725#1754#0" expanded="true" />
+            <element signature="e#1794#1823#0" expanded="true" />
+            <element signature="e#1857#1871#0" expanded="true" />
+            <element signature="e#2249#2289#0" expanded="true" />
+            <element signature="e#2331#2371#0" expanded="true" />
+            <element signature="e#2413#2453#0" expanded="true" />
+            <element signature="e#2493#2533#0" expanded="true" />
+            <element signature="e#3101#3128#0" expanded="true" />
+            <element signature="e#3164#3191#0" expanded="true" />
+            <element signature="e#3373#3402#0" expanded="true" />
+            <element signature="e#3444#3473#0" expanded="true" />
+            <element signature="e#3515#3544#0" expanded="true" />
+            <element signature="e#3584#3613#0" expanded="true" />
+            <element signature="e#3647#3674#0" expanded="true" />
+            <element signature="e#4348#4376#0" expanded="true" />
+            <element signature="e#4412#4440#0" expanded="true" />
+            <element signature="e#4670#4699#0" expanded="true" />
+            <element signature="e#4741#4770#0" expanded="true" />
+            <element signature="e#4812#4841#0" expanded="true" />
+            <element signature="e#4881#4910#0" expanded="true" />
+            <element signature="e#4944#4968#0" expanded="true" />
+            <element signature="e#5445#5485#0" expanded="true" />
+            <element signature="e#5527#5567#0" expanded="true" />
+            <element signature="e#5609#5649#0" expanded="true" />
+            <element signature="e#5689#5729#0" expanded="true" />
+            <element signature="e#6257#6285#0" expanded="true" />
+            <element signature="e#6321#6349#0" expanded="true" />
+            <element signature="e#6579#6608#0" expanded="true" />
+            <element signature="e#6650#6679#0" expanded="true" />
+            <element signature="e#6721#6750#0" expanded="true" />
+            <element signature="e#6790#6819#0" expanded="true" />
+            <element signature="e#6853#6877#0" expanded="true" />
+            <element signature="e#7354#7394#0" expanded="true" />
+            <element signature="e#7436#7476#0" expanded="true" />
+            <element signature="e#7518#7558#0" expanded="true" />
+            <element signature="e#7598#7638#0" expanded="true" />
+            <element signature="e#8170#8198#0" expanded="true" />
+            <element signature="e#8234#8262#0" expanded="true" />
+            <element signature="e#8503#8532#0" expanded="true" />
+            <element signature="e#8574#8603#0" expanded="true" />
+            <element signature="e#8645#8674#0" expanded="true" />
+            <element signature="e#8714#8743#0" expanded="true" />
+            <element signature="e#8777#8793#0" expanded="true" />
+            <element signature="e#9188#9228#0" expanded="true" />
+            <element signature="e#9270#9310#0" expanded="true" />
+            <element signature="e#9352#9392#0" expanded="true" />
+            <element signature="e#9432#9472#0" expanded="true" />
+            <element signature="e#10007#10034#0" expanded="true" />
+            <element signature="e#10070#10097#0" expanded="true" />
+            <element signature="e#10279#10308#0" expanded="true" />
+            <element signature="e#10350#10379#0" expanded="true" />
+            <element signature="e#10421#10450#0" expanded="true" />
+            <element signature="e#10490#10519#0" expanded="true" />
+            <element signature="e#10553#10577#0" expanded="true" />
+            <element signature="e#11267#11295#0" expanded="true" />
+            <element signature="e#11331#11359#0" expanded="true" />
+            <element signature="e#11607#11636#0" expanded="true" />
+            <element signature="e#11678#11707#0" expanded="true" />
+            <element signature="e#11749#11778#0" expanded="true" />
+            <element signature="e#11818#11847#0" expanded="true" />
+            <element signature="e#11881#11909#0" expanded="true" />
+            <element signature="e#12309#12349#0" expanded="true" />
+            <element signature="e#12391#12431#0" expanded="true" />
+            <element signature="e#12473#12513#0" expanded="true" />
+            <element signature="e#12553#12593#0" expanded="true" />
+            <element signature="e#13174#13202#0" expanded="true" />
+            <element signature="e#13238#13266#0" expanded="true" />
+            <element signature="e#13515#13544#0" expanded="true" />
+            <element signature="e#13586#13615#0" expanded="true" />
+            <element signature="e#13657#13686#0" expanded="true" />
+            <element signature="e#13726#13755#0" expanded="true" />
+            <element signature="e#13789#13818#0" expanded="true" />
+            <element signature="e#14219#14259#0" expanded="true" />
+            <element signature="e#14301#14341#0" expanded="true" />
+            <element signature="e#14383#14423#0" expanded="true" />
+            <element signature="e#14463#14503#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/Settings.java">
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/MealNotification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24131945" vertical-offset="71" max-vertical-offset="5130">
-          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
-          <folding>
-            <element signature="e#3939#3978#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.026041666" vertical-offset="210" max-vertical-offset="990">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/values/color.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/NotificationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0173612" vertical-offset="209" max-vertical-offset="1080">
-          <caret line="68" column="21" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="1140">
+          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/values/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.446461" vertical-offset="294" max-vertical-offset="1140">
-          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/About.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53125" vertical-offset="69" max-vertical-offset="990">
-          <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.390625" vertical-offset="0" max-vertical-offset="1140">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
           <folding>
-            <element signature="e#1258#1601#0" expanded="true" />
-            <element signature="e#1590#1591#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/layout/activity_settings.xml">
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41454545" vertical-offset="1092" max-vertical-offset="3705">
-          <caret line="88" column="42" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
-          <folding>
-            <element signature="e#4063#4103#0" expanded="true" />
-            <element signature="e#4145#4185#0" expanded="true" />
-            <element signature="e#4227#4267#0" expanded="true" />
-            <element signature="e#4307#4347#0" expanded="true" />
-            <element signature="e#5907#5947#0" expanded="true" />
-            <element signature="e#5989#6029#0" expanded="true" />
-            <element signature="e#6071#6111#0" expanded="true" />
-            <element signature="e#6151#6191#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.050347224" vertical-offset="1" max-vertical-offset="1320">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.64" vertical-offset="529" max-vertical-offset="1215">
+          <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="5475">
+          <caret line="285" column="33" selection-start-line="285" selection-start-column="33" selection-end-line="285" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6770833" vertical-offset="0" max-vertical-offset="576">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

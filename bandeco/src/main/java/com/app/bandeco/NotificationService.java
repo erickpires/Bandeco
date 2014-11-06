@@ -32,13 +32,17 @@ public class NotificationService extends Service {
 
         SharedPreferences preferences = getSharedPreferences(getString(R.string.app_name), 0);
         int notifyWhenOption = preferences.getInt(Settings.NOTIFY_WHEN, Settings.NOTIFY_ALWAYS);
-
+        int daysToNotifyCode = preferences.getInt(Settings.DAYS_TO_NOTIFY, Constants.DEFAULT_DAYS_TO_NOTIFY_CODE);
         int mealType = intent.getExtras().getInt(Settings.MEAL_TYPE);
+
+        Calendar today = Calendar.getInstance();
+
+        if(!Utils.shouldNotifyToday(daysToNotifyCode, today))
+            return START_NOT_STICKY;
 
         DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext());
         SQLiteDatabase database = databaseHelper.getReadableDatabase();
 
-        Calendar today = Calendar.getInstance();
         int dayOfTheWeek = Day.adaptDayOfWeek(today.get(Calendar.DAY_OF_WEEK));
 
         Meal meal = OperationsWithDB.getMealFromDatabase(database, dayOfTheWeek, mealType);

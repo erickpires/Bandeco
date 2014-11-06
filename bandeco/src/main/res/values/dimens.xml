@@ -6,9 +6,12 @@
     <dimen name="my_margin">32dp</dimen>
 
     <dimen name="top_padding">10px</dimen>
+
     <dimen name="default_top_padding">15dp</dimen>
     <dimen name="default_side_padding">20dp</dimen>
     <dimen name="default_side_padding_identented">30dp</dimen>
     <dimen name="default_minimal_padding">10dp</dimen>
+
+    <dimen name="double_top_padding">25dp</dimen>
 
 </resources>

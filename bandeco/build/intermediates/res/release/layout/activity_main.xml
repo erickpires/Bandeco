@@ -11,8 +11,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?attr/colorPrimaryDark"
-    android:paddingStart="@dimen/default_side_padding"
-    android:paddingLeft="@dimen/default_side_padding"
+    android:paddingStart="@dimen/default_minimal_padding"
+    android:paddingLeft="@dimen/default_minimal_padding"
     app:contentInsetStart="5dp"
     app:theme="@style/AppThemeToolbar"
     app:popupTheme="@style/Theme.AppCompat.Light">

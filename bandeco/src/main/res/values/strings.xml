@@ -20,6 +20,8 @@
     <string name="icon_by">Ícone por:</string>
     <string name="icon_designer_name">Alex Pronsky</string>
 
+    <string name="manage_meal_items">Gerenciar itens do cardápio</string>
+
     <string name="show">Exibir</string>
     <string name="lunch_only">Apenas almoço</string>
     <string name="dinner_only">Apenas jantar</string>
@@ -37,6 +39,8 @@
     <string name="only_if_not_dislike">Se não houver algo que não gosto</string>
     <string name="never">Nunca</string>
 
+    <string name="days_to_notify">Em quais dias notificar</string>
+
     <string name="new_word">Nova palavra</string>
 
     <string name="entrada">Entrada: </string>
@@ -51,14 +55,15 @@
     <string name="no_connection">Não conectado!</string>
 
     <string-array name="days_array">
-        <item>Monday</item>
-        <item>Tuesday</item>
-        <item>Wednesday</item>
-        <item>Thursday</item>
-        <item>Friday</item>
-        <item>Saturday</item>
-        <item>Sunday</item>
+        <item>Domingo</item>
+        <item>Segunda-feira</item>
+        <item>Terça-feira</item>
+        <item>Quarta-feira</item>
+        <item>Quinta-feira</item>
+        <item>Sexta-feira</item>
+        <item>Sábado</item>
     </string-array>
+
     <string-array name="meals_array">
         <item>Lunch</item>
         <item>Dinner</item>

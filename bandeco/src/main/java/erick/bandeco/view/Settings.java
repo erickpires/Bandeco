@@ -48,6 +48,7 @@ public class Settings extends ActionBarActivity {
 
     private String[] mealsChoices;
     private String[] notifyWhenChoices;
+    private String[] daysOfTheWeek;
 
     public static final String SHOW_MEALS = "ShowMeals";
     public static final String LUNCH_NOTIFICATION_HOUR = "LunchNotificationTime";
@@ -55,6 +56,7 @@ public class Settings extends ActionBarActivity {
     public static final String DINNER_NOTIFICATION_HOUR = "DinnerNotificationTime";
     public static final String DINNER_NOTIFICATION_MINUTE = "DinnerNotificationMinute";
     public static final String NOTIFY_WHEN = "NotifyWhen";
+    public static final String DAYS_TO_NOTIFY = "DaysToNotify";
 
     public static final String TIMEPICKER_TAG = "timepicker";
     public static final String MEAL_TYPE = "MealTime";
@@ -65,6 +67,7 @@ public class Settings extends ActionBarActivity {
     private int dinnerNotificationHour;
     private int dinnerNotificationMinute;
     private int notifyWhenOption;
+    private int daysToNotifyCode;
 
     private SharedPreferences settings;
     private TextView mealType;
@@ -109,6 +112,8 @@ public class Settings extends ActionBarActivity {
                 getString(R.string.never)
         };
 
+        daysOfTheWeek = getResources().getStringArray(R.array.days_array);
+
         database = new DatabaseHelper(getBaseContext()).getWritableDatabase();
 
         getSettings();
@@ -138,6 +143,7 @@ public class Settings extends ActionBarActivity {
         editor.putInt(DINNER_NOTIFICATION_HOUR, dinnerNotificationHour);
         editor.putInt(DINNER_NOTIFICATION_MINUTE, dinnerNotificationMinute);
         editor.putInt(NOTIFY_WHEN, notifyWhenOption);
+        editor.putInt(DAYS_TO_NOTIFY, daysToNotifyCode);
 
         saveListToDB(database, positiveList, DatabaseContract.PositiveWords.TABLE_NAME, DatabaseContract.PositiveWords.WORDS);
         saveListToDB(database, negativeList, DatabaseContract.NegativeWords.TABLE_NAME, DatabaseContract.NegativeWords.WORD);
@@ -152,6 +158,7 @@ public class Settings extends ActionBarActivity {
         dinnerNotificationHour = settings.getInt(DINNER_NOTIFICATION_HOUR, 18);
         dinnerNotificationMinute = settings.getInt(DINNER_NOTIFICATION_MINUTE, 0);
         notifyWhenOption = settings.getInt(NOTIFY_WHEN, NOTIFY_ALWAYS);
+        daysToNotifyCode = settings.getInt(DAYS_TO_NOTIFY, DEFAULT_DAYS_TO_NOTIFY_CODE);
 
         positiveList = getListFromDB(database, DatabaseContract.PositiveWords.TABLE_NAME, new String[]{DatabaseContract.PositiveWords.WORDS});
         negativeList = getListFromDB(database, DatabaseContract.NegativeWords.TABLE_NAME, new String[]{DatabaseContract.NegativeWords.WORD});
@@ -177,6 +184,8 @@ public class Settings extends ActionBarActivity {
 
         View notifyWhenLayout = findViewById(R.id.notify_when_layout);
         notifyWhenOptionTextView = (TextView) findViewById(R.id.notify_when_option_textView);
+
+        final View daysToNotifyLayout = findViewById(R.id.days_to_notify_layout);
 
         //Meals to show
         mealType.setText(mealsChoices[mealOption]);
@@ -263,6 +272,26 @@ public class Settings extends ActionBarActivity {
                         dialog.dismiss();
                     }
                 });
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+        });
+
+        //Days to notify
+        daysToNotifyLayout.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(Settings.this);
+                boolean[] checked = Utils.getBooleansFromDaysCode(daysToNotifyCode);
+
+               builder.setMultiChoiceItems(daysOfTheWeek, checked, new DialogInterface.OnMultiChoiceClickListener() {
+                   @Override
+                   public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+                       daysToNotifyCode ^= DAYS_TO_NOTIFY_CODES[which];
+                   }
+               });
+
                 AlertDialog alert = builder.create();
                 alert.show();
             }

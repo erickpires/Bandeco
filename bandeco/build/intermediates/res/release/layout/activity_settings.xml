@@ -43,7 +43,8 @@
                     android:paddingRight="@dimen/default_side_padding"
                     android:paddingEnd="@dimen/default_side_padding"
                     android:text="@string/show"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/primary_text_color" />
 
                 <TextView
                     android:id="@+id/meal_type"
@@ -54,6 +55,33 @@
                     android:paddingRight="@dimen/default_side_padding_identented"
                     android:paddingEnd="@dimen/default_side_padding_identented"
                     android:text="" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/divider"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:id="@+id/manage_meal_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/double_top_padding"
+                android:paddingTop="@dimen/double_top_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/default_side_padding"
+                    android:paddingStart="@dimen/default_side_padding"
+                    android:paddingRight="@dimen/default_side_padding"
+                    android:paddingEnd="@dimen/default_side_padding"
+                    android:text="@string/manage_meal_items"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/primary_text_color"/>
+
             </LinearLayout>
 
             <ImageView
@@ -79,13 +107,15 @@
                     android:paddingRight="@dimen/default_side_padding"
                     android:paddingEnd="@dimen/default_side_padding"
                     android:text="@string/negative_words"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/primary_text_color"/>
 
                 <TextView
                     android:id="@+id/negative_words_list"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:ellipsize="end"
                     android:paddingLeft="@dimen/default_side_padding_identented"
                     android:paddingStart="@dimen/default_side_padding_identented"
                     android:paddingRight="@dimen/default_side_padding_identented"
@@ -115,13 +145,15 @@
                     android:paddingRight="@dimen/default_side_padding"
                     android:paddingEnd="@dimen/default_side_padding"
                     android:text="@string/positive_words"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/primary_text_color"/>
 
                 <TextView
                     android:id="@+id/positive_words_list"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:ellipsize="end"
                     android:paddingLeft="@dimen/default_side_padding_identented"
                     android:paddingStart="@dimen/default_side_padding_identented"
                     android:paddingRight="@dimen/default_side_padding_identented"
@@ -151,7 +183,8 @@
                     android:paddingRight="@dimen/default_side_padding"
                     android:paddingEnd="@dimen/default_side_padding"
                     android:text="@string/notify"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/primary_text_color"/>
 
                 <TextView
                     android:id="@+id/notify_when_option_textView"
@@ -161,6 +194,33 @@
                     android:paddingStart="@dimen/default_side_padding_identented"
                     android:paddingRight="@dimen/default_side_padding_identented"
                     android:paddingEnd="@dimen/default_side_padding_identented" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/divider"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:id="@+id/days_to_notify_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/double_top_padding"
+                android:paddingTop="@dimen/double_top_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/default_side_padding"
+                    android:paddingStart="@dimen/default_side_padding"
+                    android:paddingRight="@dimen/default_side_padding"
+                    android:paddingEnd="@dimen/default_side_padding"
+                    android:text="@string/days_to_notify"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/primary_text_color"/>
+
             </LinearLayout>
 
             <ImageView
@@ -186,7 +246,8 @@
                     android:paddingRight="@dimen/default_side_padding"
                     android:paddingEnd="@dimen/default_side_padding"
                     android:text="@string/lunch_notification"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/primary_text_color"/>
 
                 <TextView
                     android:id="@+id/lunch_notification_time_textview"
@@ -222,7 +283,8 @@
                     android:paddingRight="@dimen/default_side_padding"
                     android:paddingEnd="@dimen/default_side_padding"
                     android:text="@string/dinner_notification"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/primary_text_color"/>
 
                 <TextView
                     android:id="@+id/dinner_notification_time_textview"
