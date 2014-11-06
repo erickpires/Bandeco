@@ -62,13 +62,18 @@ public class Meal {
 
 		tmp = tableColumn.get(indexer.getIndexOfSobremesa());
 
-		String[] sobremesaRefresco = tmp.split("/");
+        if(indexer.getIndexOfRefresco() == indexer.getIndexOfSobremesa()) {
 
-		sobremesa = sobremesaRefresco[0];
-		if(sobremesaRefresco.length > 1)
-			refresco = sobremesaRefresco[1];
-		else
-			refresco = "";
+            String[] sobremesaRefresco = tmp.split(Constants.SOBREMESA_REFRESCO_SEPARATOR);
+
+            sobremesa = sobremesaRefresco[0];
+            if (sobremesaRefresco.length > 1)
+                refresco = sobremesaRefresco[1];
+            else
+                refresco = "";
+        }else
+            refresco = tableColumn.get(indexer.getIndexOfRefresco());
+
 
 		formatText();
 

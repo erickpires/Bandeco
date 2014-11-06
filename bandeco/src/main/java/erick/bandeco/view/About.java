@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
 
+import com.app.bandeco.Constants;
 import com.app.bandeco.R;
 import com.app.bandeco.Utils;
 
@@ -34,6 +35,17 @@ public class About extends ActionBarActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         Utils.changeStatusColor(this);
+
+        //This should not be here in the final version
+        toolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(Constants.SITE_URL == Constants.SITE_URL_OFICIAL)
+                    Constants.SITE_URL = Constants.SITE_URL_BACKUP;
+                else
+                    Constants.SITE_URL = Constants.SITE_URL_OFICIAL;
+            }
+        });
 
         TextView textViewVersionName = (TextView) findViewById(R.id.textVersionName);
 
