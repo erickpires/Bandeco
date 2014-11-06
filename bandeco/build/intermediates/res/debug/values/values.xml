@@ -587,8 +587,8 @@
     <item format="float" name="numbers_radius_multiplier_outer" type="string">0.83</item>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="only_if_I_dislike">Somente quando eu não gostar</string>
-    <string name="only_if_I_like">Somente quando eu gostar</string>
+    <string name="only_if_I_like">Se houver algo que gosto</string>
+    <string name="only_if_not_dislike">Se não houver algo que não gosto</string>
     <string name="positive_words">O que gosto</string>
     <string name="prato_principal">Prato Principal: </string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->

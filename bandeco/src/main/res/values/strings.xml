@@ -33,8 +33,8 @@
     
     <string name="notify">Notificar</string>
     <string name="always">Sempre</string>
-    <string name="only_if_I_like">Somente quando eu gostar</string>
-    <string name="only_if_I_dislike">Somente quando eu não gostar</string>
+    <string name="only_if_I_like">Se houver algo que gosto</string>
+    <string name="only_if_not_dislike">Se não houver algo que não gosto</string>
     <string name="never">Nunca</string>
 
     <string name="new_word">Nova palavra</string>

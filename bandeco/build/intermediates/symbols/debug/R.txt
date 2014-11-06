@@ -832,8 +832,8 @@ int string notify 0x7f0b0031
 int string numbers_radius_multiplier_inner 0x7f0b0032
 int string numbers_radius_multiplier_normal 0x7f0b0033
 int string numbers_radius_multiplier_outer 0x7f0b0034
-int string only_if_I_dislike 0x7f0b0035
-int string only_if_I_like 0x7f0b0036
+int string only_if_I_like 0x7f0b0035
+int string only_if_not_dislike 0x7f0b0036
 int string positive_words 0x7f0b0037
 int string prato_principal 0x7f0b0038
 int string radial_numbers_typeface 0x7f0b0039

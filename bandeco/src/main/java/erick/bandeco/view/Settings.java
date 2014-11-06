@@ -43,7 +43,7 @@ public class Settings extends ActionBarActivity {
 
     public static final int NOTIFY_ALWAYS = 0;
     public static final int NOTIFY_IF_LIKE = 1;
-    public static final int NOTIFY_IF_DISLIKE = 2;
+    public static final int NOTIFY_IF_NOT_DISLIKE = 2;
     public static final int NEVER_NOTIFY = 3;
 
     private String[] mealsChoices;
@@ -105,7 +105,7 @@ public class Settings extends ActionBarActivity {
 
         notifyWhenChoices = new String[]{getString(R.string.always),
                 getString(R.string.only_if_I_like),
-                getString(R.string.only_if_I_dislike),
+                getString(R.string.only_if_not_dislike),
                 getString(R.string.never)
         };
 

@@ -1813,8 +1813,8 @@ containing a value of this type.
         public static final int numbers_radius_multiplier_inner=0x7f0b0032;
         public static final int numbers_radius_multiplier_normal=0x7f0b0033;
         public static final int numbers_radius_multiplier_outer=0x7f0b0034;
-        public static final int only_if_I_dislike=0x7f0b0035;
-        public static final int only_if_I_like=0x7f0b0036;
+        public static final int only_if_I_like=0x7f0b0035;
+        public static final int only_if_not_dislike=0x7f0b0036;
         public static final int positive_words=0x7f0b0037;
         public static final int prato_principal=0x7f0b0038;
         public static final int radial_numbers_typeface=0x7f0b0039;

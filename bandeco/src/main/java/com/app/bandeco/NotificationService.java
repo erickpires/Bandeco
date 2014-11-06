@@ -61,10 +61,12 @@ public class NotificationService extends Service {
             return hasMatch(meal, likeList);
         }
 
-        else {
+        else if(notifyWhenOption == Settings.NOTIFY_IF_NOT_DISLIKE) {
             ArrayList<String> dislikeList = OperationsWithDB.getListFromDB(db, NegativeWords.TABLE_NAME, new String[]{NegativeWords.WORD});
-            return hasMatch(meal, dislikeList);
+            return !hasMatch(meal, dislikeList);
         }
+
+        return false;
     }
 
     private static boolean hasMatch(Meal meal, ArrayList<String> list) {
