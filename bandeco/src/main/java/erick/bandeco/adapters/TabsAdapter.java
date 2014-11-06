@@ -34,7 +34,6 @@ public class TabsAdapter extends FragmentPagerAdapter {
 	}
 
     public int getItemPosition(Object object) {
-        System.out.println("Called");
         return POSITION_NONE;
     }
 

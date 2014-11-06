@@ -53,7 +53,7 @@ public class Main extends ActionBarActivity {
     @Override
     public void onResume() {
         super.onResume();
-        updateData();
+        tabsAdapter.dataChanged();
         LocalBroadcastManager.getInstance(this).registerReceiver(messageReceiver, new IntentFilter("update_event"));
     }
 
@@ -68,7 +68,10 @@ public class Main extends ActionBarActivity {
         SQLiteDatabase database = databaseHelper.getReadableDatabase();
         week = OperationsWithDB.getWeekFromDatabase(database);
         database.close();
-        tabsAdapter.dataChanged();
+        try {
+            tabsAdapter.dataChanged();
+        }catch (IllegalStateException ignored){}
+
     }
 
     @Override
