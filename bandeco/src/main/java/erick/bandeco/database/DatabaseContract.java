@@ -70,12 +70,12 @@ public abstract class DatabaseContract {
     public static abstract class NegativeWords {
         public static final String TABLE_NAME = "negative_words";
         public static final String WORD_ID = "word_id";
-        public static final String WORD = "word";
+        public static final String WORDS = "word";
 
         public static final String CREATE_TABLE =
                 "CREATE TABLE " + TABLE_NAME + " ( " +
                 WORD_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                WORD + " TEXT" +
+                        WORDS + " TEXT" +
                 ");"
                 ;
 

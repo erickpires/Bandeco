@@ -69,6 +69,8 @@ public class Settings extends ActionBarActivity {
     private int notifyWhenOption;
     private int daysToNotifyCode;
 
+    private boolean shouldUpdateBD = false;
+
     private SharedPreferences settings;
     private TextView mealType;
     private TextView negativeWordsList;
@@ -140,8 +142,10 @@ public class Settings extends ActionBarActivity {
         editor.putInt(DAYS_TO_NOTIFY, daysToNotifyCode);
         editor.apply();
 
-        saveListToDB(database, positiveList, DatabaseContract.PositiveWords.TABLE_NAME, DatabaseContract.PositiveWords.WORDS);
-        saveListToDB(database, negativeList, DatabaseContract.NegativeWords.TABLE_NAME, DatabaseContract.NegativeWords.WORD);
+        if(shouldUpdateBD) {
+            saveListToDB(database, positiveList, DatabaseContract.PositiveWords.TABLE_NAME, DatabaseContract.PositiveWords.WORDS);
+            saveListToDB(database, negativeList, DatabaseContract.NegativeWords.TABLE_NAME, DatabaseContract.NegativeWords.WORDS);
+        }
     }
 
     private void getSettings() {
@@ -154,7 +158,7 @@ public class Settings extends ActionBarActivity {
         daysToNotifyCode = settings.getInt(DAYS_TO_NOTIFY, DEFAULT_DAYS_TO_NOTIFY_CODE);
 
         positiveList = getListFromDB(database, DatabaseContract.PositiveWords.TABLE_NAME, new String[]{DatabaseContract.PositiveWords.WORDS});
-        negativeList = getListFromDB(database, DatabaseContract.NegativeWords.TABLE_NAME, new String[]{DatabaseContract.NegativeWords.WORD});
+        negativeList = getListFromDB(database, DatabaseContract.NegativeWords.TABLE_NAME, new String[]{DatabaseContract.NegativeWords.WORDS});
     }
 
     private void createUI() {
@@ -213,6 +217,7 @@ public class Settings extends ActionBarActivity {
         negativeWordsLayout.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+                shouldUpdateBD = true;
 
                 ListDialogFragment dialogFragment = new ListDialogFragment(negativeList);
                 dialogFragment.setOnDismissListener(new DialogInterface.OnDismissListener() {
@@ -232,6 +237,8 @@ public class Settings extends ActionBarActivity {
         positiveWordsLayout.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+                shouldUpdateBD = true;
+
                 ListDialogFragment dialogFragment = new ListDialogFragment(positiveList);
                 dialogFragment.setOnDismissListener(new DialogInterface.OnDismissListener() {
                     @Override

@@ -66,7 +66,7 @@ public class NotificationService extends Service {
         }
 
         else if(notifyWhenOption == Settings.NOTIFY_IF_NOT_DISLIKE) {
-            ArrayList<String> dislikeList = OperationsWithDB.getListFromDB(db, NegativeWords.TABLE_NAME, new String[]{NegativeWords.WORD});
+            ArrayList<String> dislikeList = OperationsWithDB.getListFromDB(db, NegativeWords.TABLE_NAME, new String[]{NegativeWords.WORDS});
             return !hasMatch(meal, dislikeList);
         }
 

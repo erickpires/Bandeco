@@ -26,6 +26,12 @@
         revision="21.0.2"
         sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e"/>
     <item
+        dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/classes-b19aad3d519995b755fee3d639b544f82c14f165.jar"
+        jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.nhaarman.listviewanimations/lib-manipulation/3.1.0/classes.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="5660e4bf78904137e90e62a5d4cc2e987258f02c"/>
+    <item
         dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/stickylistheaders_lib-68e2c96528fcd1fac46fd66015f3d1a2bf1e18fb.jar"
         jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/listViewAnimations/unspecified/libs/stickylistheaders_lib.jar"
         jumboMode="false"
@@ -55,6 +61,18 @@
         jumboMode="false"
         revision="21.0.2"
         sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0"/>
+    <item
+        dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/classes-047454b0be18ac90e78d49a50ed07a0cc8fdb8bf.jar"
+        jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.nhaarman.listviewanimations/lib-core-slh/3.1.0/classes.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="49223278ec2ede1d05d00868c5ce3e077b4016f8"/>
+    <item
+        dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/classes-48324deca7544671b331e7b4638f8133835ed476.jar"
+        jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.nhaarman.listviewanimations/lib-core/3.1.0/classes.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="acf66033b1418ccf9e15c8e77750981e4809c4ea"/>
     <item
         dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/classes-4012d6492991bf3c668b1183325238f564e18bac.jar"
         jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/listViewAnimations/unspecified/classes.jar"
