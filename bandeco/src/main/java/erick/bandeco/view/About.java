@@ -34,7 +34,8 @@ public class About extends ActionBarActivity {
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        Utils.changeStatusColor(this);
+        View parentLayout = findViewById(R.id.parent_layout_about);
+        Utils.changeStatusColor(this, parentLayout);
 
         //This should not be here in the final version
         toolbar.setOnClickListener(new View.OnClickListener() {

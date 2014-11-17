@@ -15,10 +15,10 @@
     <string name="versao">Versão: </string>
 
     <string name="developed_by">Desenvolvido por:</string>
-    <string name="developer_name">Erick Pires</string>
+    <string name="developer_name" translatable="false">Erick Pires</string>
 
     <string name="icon_by">Ícone por:</string>
-    <string name="icon_designer_name">Alex Pronsky</string>
+    <string name="icon_designer_name" translatable="false">Alex Pronsky</string>
 
     <string name="manage_meal_items">Gerenciar itens do cardápio</string>
 

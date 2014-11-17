@@ -567,7 +567,7 @@
     <eat-comment/>
     <string name="desc">Description</string>
     <string name="developed_by">Desenvolvido por:</string>
-    <string name="developer_name">Erick Pires</string>
+    <string name="developer_name" translatable="false">Erick Pires</string>
     <string name="dinner_notification">Notificação de jantar</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
@@ -583,7 +583,7 @@
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="icon_by">Ícone por:</string>
-    <string name="icon_designer_name">Alex Pronsky</string>
+    <string name="icon_designer_name" translatable="false">Alex Pronsky</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <string name="item_is_selected">%1$s selected</string>

@@ -98,14 +98,13 @@ public class Settings extends ActionBarActivity {
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        Utils.changeStatusColor(this);
+        View parentLayout = findViewById(R.id.parent_layout_settings);
+        Utils.changeStatusColor(this, parentLayout);
 
         settings = getSharedPreferences(getString(R.string.app_name), 0);
 
         mealsChoices = getResources().getStringArray(R.array.show_options);
-
         notifyWhenChoices = getResources().getStringArray(R.array.notify_when_options);
-
         daysOfTheWeek = getResources().getStringArray(R.array.days_array);
 
         database = new DatabaseHelper(getBaseContext()).getWritableDatabase();
@@ -116,10 +115,11 @@ public class Settings extends ActionBarActivity {
 
     @Override
     protected void onPause() {
+        super.onPause();
+        System.out.println("Saving Settings");
         saveSettings();
         setupNotificationAlarm(MEAL_TYPE_LUNCH);
         setupNotificationAlarm(MEAL_TYPE_DINNER);
-        super.onPause();
     }
 
     @Override
@@ -138,11 +138,10 @@ public class Settings extends ActionBarActivity {
         editor.putInt(DINNER_NOTIFICATION_MINUTE, dinnerNotificationMinute);
         editor.putInt(NOTIFY_WHEN, notifyWhenOption);
         editor.putInt(DAYS_TO_NOTIFY, daysToNotifyCode);
+        editor.apply();
 
         saveListToDB(database, positiveList, DatabaseContract.PositiveWords.TABLE_NAME, DatabaseContract.PositiveWords.WORDS);
         saveListToDB(database, negativeList, DatabaseContract.NegativeWords.TABLE_NAME, DatabaseContract.NegativeWords.WORD);
-
-        editor.apply();
     }
 
     private void getSettings() {

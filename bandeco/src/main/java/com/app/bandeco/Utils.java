@@ -1,7 +1,9 @@
 package com.app.bandeco;
 
+import android.annotation.TargetApi;
 import android.os.Build;
 import android.support.v7.app.ActionBarActivity;
+import android.view.View;
 import android.view.WindowManager;
 
 import com.readystatesoftware.systembartint.SystemBarTintManager;
@@ -12,8 +14,11 @@ import static com.app.bandeco.Constants.DAYS_TO_NOTIFY_CODES;
 
 public class Utils {
 
-    public static void changeStatusColor(ActionBarActivity activity){
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT){
+    @TargetApi(Build.VERSION_CODES.KITKAT)
+    public static void changeStatusColor(ActionBarActivity activity, View parentLayout){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT &&
+           Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP){  // Let Lollipop handle this
+            parentLayout.setFitsSystemWindows(true);
             activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             SystemBarTintManager tintManager = new SystemBarTintManager(activity);
             tintManager.setStatusBarTintEnabled(true);

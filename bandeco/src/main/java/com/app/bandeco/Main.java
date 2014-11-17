@@ -19,6 +19,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 public class Main extends ActionBarActivity {
 
@@ -45,7 +46,9 @@ public class Main extends ActionBarActivity {
         tabsAdapter = new TabsAdapter(getSupportFragmentManager());
         viewPager.setAdapter(tabsAdapter);
 
-        Utils.changeStatusColor(this);
+        View parentLayout = findViewById(R.id.parent_layout_main);
+
+        Utils.changeStatusColor(this, parentLayout);
 
         database.close();
     }
