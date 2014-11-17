@@ -20,11 +20,11 @@
 
     <string name="manage_meal_items">Manage menu entries</string>
 
-    <string name="show">Show</string>
+    <string name="show">Display</string>
     <string-array name="show_options">
         <item name="lunch_only">Only lunch</item>
         <item name="dinner_only">Only dinner</item>
-        <item name="both_meals">Both</item>
+        <item name="both_meals">Both meals</item>
     </string-array>
 
     <string name="negative_words">What I dislike</string>

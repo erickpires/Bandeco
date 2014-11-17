@@ -55,12 +55,6 @@
                     android:text="" />
             </LinearLayout>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/divider"
-                tools:ignore="ContentDescription" />
-
             <LinearLayout
                 android:id="@+id/manage_menu_entries_layout"
                 android:layout_width="match_parent"
@@ -81,12 +75,6 @@
                     android:textColor="@color/primary_text_color"/>
 
             </LinearLayout>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/divider"
-                tools:ignore="ContentDescription" />
 
             <LinearLayout
                 android:id="@+id/negative_words"
@@ -120,12 +108,6 @@
                     android:paddingEnd="@dimen/default_side_padding_identented" />
             </LinearLayout>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/divider"
-                tools:ignore="ContentDescription" />
-
             <LinearLayout
                 android:id="@+id/positive_words"
                 android:layout_width="match_parent"
@@ -158,12 +140,6 @@
                     android:paddingEnd="@dimen/default_side_padding_identented" />
             </LinearLayout>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/divider"
-                tools:ignore="ContentDescription" />
-
             <LinearLayout
                 android:id="@+id/notify_when_layout"
                 android:layout_width="match_parent"
@@ -194,12 +170,6 @@
                     android:paddingEnd="@dimen/default_side_padding_identented" />
             </LinearLayout>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/divider"
-                tools:ignore="ContentDescription" />
-
             <LinearLayout
                 android:id="@+id/days_to_notify_layout"
                 android:layout_width="match_parent"
@@ -220,12 +190,6 @@
                     android:textColor="@color/primary_text_color"/>
 
             </LinearLayout>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/divider"
-                tools:ignore="ContentDescription" />
 
             <LinearLayout
                 android:id="@+id/lunch_notification_time_layout"
@@ -257,12 +221,6 @@
                     android:paddingEnd="@dimen/default_side_padding_identented"
                     android:text="" />
             </LinearLayout>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/divider"
-                tools:ignore="ContentDescription" />
 
             <LinearLayout
                 android:id="@+id/dinner_notification_time_layout"

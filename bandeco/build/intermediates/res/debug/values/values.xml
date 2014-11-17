@@ -294,7 +294,7 @@
     <dimen name="default_minimal_padding">10dp</dimen>
     <dimen name="default_side_padding">20dp</dimen>
     <dimen name="default_side_padding_identented">30dp</dimen>
-    <dimen name="default_top_padding">15dp</dimen>
+    <dimen name="default_top_padding">10dp</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
     <eat-comment/>
     <dimen name="dialog_corner_radius">8.0px</dimen>
@@ -323,7 +323,7 @@
     <dimen name="done_label_size">14sp</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
     <eat-comment/>
-    <dimen name="double_top_padding">25dp</dimen>
+    <dimen name="double_top_padding">15dp</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
     <eat-comment/>
     <dimen name="extra_height_to_account_for_system_space_in_landscape">0.0dip</dimen>
