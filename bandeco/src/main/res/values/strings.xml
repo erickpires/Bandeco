@@ -68,6 +68,8 @@
         <item>Sexta-feira</item>
         <item>Sábado</item>
     </string-array>
+    
+    <string name="share">Convidar alguém</string>
 
     <string-array name="meals_array">
         <item>Lunch</item>

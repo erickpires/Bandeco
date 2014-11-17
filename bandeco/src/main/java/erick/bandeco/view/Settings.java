@@ -146,7 +146,7 @@ public class Settings extends ActionBarActivity {
         editor.putInt(DAYS_TO_NOTIFY, daysToNotifyCode);
         editor.apply();
 
-        if(shouldUpdateDB) {
+        if (shouldUpdateDB) {
             saveListToDB(database, positiveList, DatabaseContract.PositiveWords.TABLE_NAME, DatabaseContract.PositiveWords.WORDS);
             saveListToDB(database, negativeList, DatabaseContract.NegativeWords.TABLE_NAME, DatabaseContract.NegativeWords.WORDS);
         }
@@ -197,7 +197,6 @@ public class Settings extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(Settings.this);
-
 
                 builder.setSingleChoiceItems(mealsChoices, mealOption, new DialogInterface.OnClickListener() {
                     @Override
@@ -314,12 +313,12 @@ public class Settings extends ActionBarActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(Settings.this);
                 boolean[] checked = Utils.getBooleansFromDaysCode(daysToNotifyCode);
 
-               builder.setMultiChoiceItems(daysOfTheWeek, checked, new DialogInterface.OnMultiChoiceClickListener() {
-                   @Override
-                   public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-                       daysToNotifyCode ^= DAYS_TO_NOTIFY_CODES[which];
-                   }
-               });
+                builder.setMultiChoiceItems(daysOfTheWeek, checked, new DialogInterface.OnMultiChoiceClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+                        daysToNotifyCode ^= DAYS_TO_NOTIFY_CODES[which];
+                    }
+                });
 
                 AlertDialog alert = builder.create();
                 alert.show();
@@ -426,7 +425,7 @@ public class Settings extends ActionBarActivity {
 
         alarmManager.cancel(pendingIntent);
 
-        if(notifyWhenOption == NEVER_NOTIFY)
+        if (notifyWhenOption == NEVER_NOTIFY)
             return;
 
         if (mealType == MEAL_TYPE_LUNCH && mealOption == DINNER_ONLY)

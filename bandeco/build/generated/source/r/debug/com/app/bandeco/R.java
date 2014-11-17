@@ -1831,17 +1831,18 @@ containing a value of this type.
         public static final int select_year=0x7f0b0035;
         public static final int selection_radius_multiplier=0x7f0b0036;
         public static final int semana=0x7f0b0037;
-        public static final int show=0x7f0b0038;
-        public static final int text_size_multiplier_inner=0x7f0b0039;
-        public static final int text_size_multiplier_normal=0x7f0b003a;
-        public static final int text_size_multiplier_outer=0x7f0b003b;
-        public static final int time_placeholder=0x7f0b003c;
-        public static final int time_separator=0x7f0b003d;
-        public static final int title=0x7f0b003e;
-        public static final int title_activity_about=0x7f0b003f;
-        public static final int title_activity_settings=0x7f0b0040;
-        public static final int versao=0x7f0b0041;
-        public static final int year_picker_description=0x7f0b0042;
+        public static final int share=0x7f0b0038;
+        public static final int show=0x7f0b0039;
+        public static final int text_size_multiplier_inner=0x7f0b003a;
+        public static final int text_size_multiplier_normal=0x7f0b003b;
+        public static final int text_size_multiplier_outer=0x7f0b003c;
+        public static final int time_placeholder=0x7f0b003d;
+        public static final int time_separator=0x7f0b003e;
+        public static final int title=0x7f0b003f;
+        public static final int title_activity_about=0x7f0b0040;
+        public static final int title_activity_settings=0x7f0b0041;
+        public static final int versao=0x7f0b0042;
+        public static final int year_picker_description=0x7f0b0043;
     }
     public static final class style {
         /** 
