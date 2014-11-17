@@ -10,6 +10,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
@@ -17,12 +18,15 @@ import android.support.v7.widget.Toolbar;
 import com.app.bandeco.NotificationService;
 import com.app.bandeco.R;
 import com.app.bandeco.Utils;
+import com.nhaarman.listviewanimations.itemmanipulation.DynamicListView;
+import com.nhaarman.listviewanimations.itemmanipulation.dragdrop.TouchViewDraggableManager;
 import com.sleepbot.datetimepicker.time.RadialPickerLayout;
 import com.sleepbot.datetimepicker.time.TimePickerDialog;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import erick.bandeco.adapters.MenuEntriesListAdapter;
 import erick.bandeco.database.DatabaseContract;
 import erick.bandeco.database.DatabaseHelper;
 
@@ -69,7 +73,7 @@ public class Settings extends ActionBarActivity {
     private int notifyWhenOption;
     private int daysToNotifyCode;
 
-    private boolean shouldUpdateBD = false;
+    private boolean shouldUpdateDB = false;
 
     private SharedPreferences settings;
     private TextView mealType;
@@ -142,7 +146,7 @@ public class Settings extends ActionBarActivity {
         editor.putInt(DAYS_TO_NOTIFY, daysToNotifyCode);
         editor.apply();
 
-        if(shouldUpdateBD) {
+        if(shouldUpdateDB) {
             saveListToDB(database, positiveList, DatabaseContract.PositiveWords.TABLE_NAME, DatabaseContract.PositiveWords.WORDS);
             saveListToDB(database, negativeList, DatabaseContract.NegativeWords.TABLE_NAME, DatabaseContract.NegativeWords.WORDS);
         }
@@ -164,6 +168,8 @@ public class Settings extends ActionBarActivity {
     private void createUI() {
         View showMeals = findViewById(R.id.show_meals);
         mealType = (TextView) findViewById(R.id.meal_type);
+
+        View manageMenuEntries = findViewById(R.id.manage_menu_entries_layout);
 
         View negativeWordsLayout = findViewById(R.id.negative_words);
         negativeWordsList = (TextView) findViewById(R.id.negative_words_list);
@@ -210,6 +216,29 @@ public class Settings extends ActionBarActivity {
             }
         });
 
+        //Manage menu entries
+        manageMenuEntries.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(Settings.this);
+
+                LayoutInflater inflater = getLayoutInflater();
+                View view = inflater.inflate(R.layout.menu_entries_list, null);
+                DynamicListView dynamicListView = (DynamicListView) view.findViewById(R.id.menu_entries_dynamic_listview);
+
+                MenuEntriesListAdapter adapter = new MenuEntriesListAdapter(Settings.this);
+                dynamicListView.setAdapter(adapter);
+
+                dynamicListView.enableDragAndDrop();
+                dynamicListView.setDraggableManager(new TouchViewDraggableManager(R.id.drag_and_drop));
+
+                builder.setView(view);
+
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
 
         //Negative words
         updateNegativeWords();
@@ -217,7 +246,7 @@ public class Settings extends ActionBarActivity {
         negativeWordsLayout.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                shouldUpdateBD = true;
+                shouldUpdateDB = true;
 
                 ListDialogFragment dialogFragment = new ListDialogFragment(negativeList);
                 dialogFragment.setOnDismissListener(new DialogInterface.OnDismissListener() {
@@ -237,7 +266,7 @@ public class Settings extends ActionBarActivity {
         positiveWordsLayout.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                shouldUpdateBD = true;
+                shouldUpdateDB = true;
 
                 ListDialogFragment dialogFragment = new ListDialogFragment(positiveList);
                 dialogFragment.setOnDismissListener(new DialogInterface.OnDismissListener() {

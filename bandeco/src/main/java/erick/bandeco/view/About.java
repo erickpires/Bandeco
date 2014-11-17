@@ -37,7 +37,7 @@ public class About extends ActionBarActivity {
         View parentLayout = findViewById(R.id.parent_layout_about);
         Utils.changeStatusColor(this, parentLayout);
 
-        //This should not be here in the final version
+        //TODO This should not be here in the final version
         toolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

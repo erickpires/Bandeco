@@ -31,10 +31,10 @@
 
     <string name="negative_words">O que não gosto</string>
     <string name="positive_words">O que gosto</string>
-    
+
     <string name="lunch_notification">Notificação de almoço</string>
     <string name="dinner_notification">Notificação de jantar</string>
-    
+
     <string name="notify">Notificar</string>
     <string-array name="notify_when_options">
         <item name="always">Sempre</item>
@@ -47,14 +47,15 @@
 
     <string name="new_word">Nova palavra</string>
 
-    <string name="entrada">Entrada: </string>
-    <string name="guarnicao">Guarnição: </string>
-    <string name="prato_principal">Prato Principal: </string>
-    <string name="vegetariano">Prato Vegetariano: </string>
-    <string name="acompanhamento">Acompanhamento: </string>
-    <string name="sobremesa">Sobremesa: </string>
-    <string name="refresco">Refresco: </string>
-
+    <string-array name="menu_entries">
+        <item name="prato_principal">Prato Principal</item>
+        <item name="vegetariano">Prato Vegetariano</item>
+        <item name="acompanhamento">Acompanhamento</item>
+        <item name="guarnicao">Guarnição</item>
+        <item name="entrada">Entrada</item>
+        <item name="sobremesa">Sobremesa</item>
+        <item name="refresco">Refresco</item>
+    </string-array>
 
     <string name="no_connection">Não conectado!</string>
 
