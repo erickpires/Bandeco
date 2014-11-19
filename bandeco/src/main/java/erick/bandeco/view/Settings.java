@@ -7,6 +7,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Vibrator;
+import android.support.annotation.NonNull;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
 
+import com.app.bandeco.Constants;
 import com.app.bandeco.NotificationService;
 import com.app.bandeco.R;
 import com.app.bandeco.Utils;
@@ -55,6 +58,8 @@ public class Settings extends ActionBarActivity {
     private String[] daysOfTheWeek;
 
     public static final String SHOW_MEALS = "ShowMeals";
+    private static final String MENU_ENTRIES_ORDER = "MenuEntriesOrder";
+    private static final String ENABLED_MENU_ENTRIES = "EnabledMenuEntries";
     public static final String LUNCH_NOTIFICATION_HOUR = "LunchNotificationTime";
     public static final String LUNCH_NOTIFICATION_MINUTE = "LunchNotificationMinute";
     public static final String DINNER_NOTIFICATION_HOUR = "DinnerNotificationTime";
@@ -72,6 +77,8 @@ public class Settings extends ActionBarActivity {
     private int dinnerNotificationMinute;
     private int notifyWhenOption;
     private int daysToNotifyCode;
+    private Integer[] menuEntriesOrder;
+    private Boolean[] enabledMenuEntries;
 
     private boolean shouldUpdateDB = false;
 
@@ -138,6 +145,8 @@ public class Settings extends ActionBarActivity {
         Editor editor = settings.edit();
 
         editor.putInt(SHOW_MEALS, mealOption);
+        editor.putInt(MENU_ENTRIES_ORDER, Utils.codifyMenuCodesFromArray(menuEntriesOrder));
+        editor.putInt(ENABLED_MENU_ENTRIES, Utils.codifyEnabledMenuEntriesFromArray(enabledMenuEntries, menuEntriesOrder));
         editor.putInt(LUNCH_NOTIFICATION_HOUR, lunchNotificationHour);
         editor.putInt(LUNCH_NOTIFICATION_MINUTE, lunchNotificationMinute);
         editor.putInt(DINNER_NOTIFICATION_HOUR, dinnerNotificationHour);
@@ -160,6 +169,12 @@ public class Settings extends ActionBarActivity {
         dinnerNotificationMinute = settings.getInt(DINNER_NOTIFICATION_MINUTE, 0);
         notifyWhenOption = settings.getInt(NOTIFY_WHEN, NOTIFY_ALWAYS);
         daysToNotifyCode = settings.getInt(DAYS_TO_NOTIFY, DEFAULT_DAYS_TO_NOTIFY_CODE);
+
+        int menuEntriesOrderCoded = settings.getInt(MENU_ENTRIES_ORDER, Constants.DEFAULT_MENU_ENTRIES_CODE);
+        menuEntriesOrder = Utils.extractMenuCodesFromInt(menuEntriesOrderCoded);
+
+        int enabledMenuEntriesCoded = settings.getInt(ENABLED_MENU_ENTRIES, Constants.ALL_MENU_ENTRIES_CODE);
+        enabledMenuEntries = Utils.extractEnabledMenuEntriesFromInt(enabledMenuEntriesCoded, menuEntriesOrder);
 
         positiveList = getListFromDB(database, DatabaseContract.PositiveWords.TABLE_NAME, new String[]{DatabaseContract.PositiveWords.WORDS});
         negativeList = getListFromDB(database, DatabaseContract.NegativeWords.TABLE_NAME, new String[]{DatabaseContract.NegativeWords.WORDS});
@@ -225,11 +240,11 @@ public class Settings extends ActionBarActivity {
                 View view = inflater.inflate(R.layout.menu_entries_list, null);
                 DynamicListView dynamicListView = (DynamicListView) view.findViewById(R.id.menu_entries_dynamic_listview);
 
-                MenuEntriesListAdapter adapter = new MenuEntriesListAdapter(Settings.this);
+                MenuEntriesListAdapter adapter = new MenuEntriesListAdapter(Settings.this, menuEntriesOrder, enabledMenuEntries);
                 dynamicListView.setAdapter(adapter);
 
                 dynamicListView.enableDragAndDrop();
-                dynamicListView.setDraggableManager(new TouchViewDraggableManager(R.id.drag_and_drop));
+                dynamicListView.setDraggableManager(new mTouchViewDraggableManager(R.id.drag_and_drop));
 
                 builder.setView(view);
 
@@ -457,5 +472,23 @@ public class Settings extends ActionBarActivity {
             calendar.add(DATE, 1);
 
         return calendar;
+    }
+
+    private class mTouchViewDraggableManager extends TouchViewDraggableManager {
+        final long[] magicVibrationPattern = { 0, 7, 14, 7 };
+        public mTouchViewDraggableManager(int drag_and_drop) {
+            super(drag_and_drop);
+        }
+         @Override
+         public boolean isDraggable(@NonNull View view, int position, float x, float y) {
+            boolean result = super.isDraggable(view, position, x, y);
+
+             if(result){
+                 Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                 vibrator.vibrate(magicVibrationPattern , -1);
+             }
+
+             return result;
+        }
     }
 }

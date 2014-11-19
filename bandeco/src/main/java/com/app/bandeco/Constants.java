@@ -22,6 +22,17 @@ public abstract class Constants {
     public static final int[] DAYS_TO_NOTIFY_CODES  = new int[] {1,2,4,8,16,32,64};
     public static final int DEFAULT_DAYS_TO_NOTIFY_CODE = 2 | 4 | 8 | 16 | 32;
 
+    public static final int CODE_OF_PRATO_PRINCIPAL = 0;
+    public static final int CODE_OF_PRATO_VEGETARIANO = 1;
+    public static final int CODE_OF_ACOMPANHAMENTO = 2;
+    public static final int CODE_OF_GUARNICAO = 3;
+    public static final int CODE_OF_ENTRADA = 4;
+    public static final int CODE_OF_SOBREMESA = 5;
+    public static final int CODE_OF_REFRESCO = 6;
+
+    public static final int ALL_MENU_ENTRIES_CODE = 0x7F;
+    public static final int DEFAULT_MENU_ENTRIES_CODE = 0x1AC688;
+
     public static final String[] mealProjection = new String[]{DatabaseContract.Meals.MEAL_TYPE,
             DatabaseContract.Meals.DAY,
             DatabaseContract.Meals.ENTRADA,

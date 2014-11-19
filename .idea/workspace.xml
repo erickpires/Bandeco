@@ -74,57 +74,60 @@
       <file leaf-file-name="NotificationService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/NotificationService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
-              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="339" max-vertical-offset="1140">
+              <caret line="63" column="95" selection-start-line="63" selection-start-column="95" selection-end-line="63" selection-end-column="95" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuEntriesListAdapter.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MenuEntriesListAdapter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/adapters/MenuEntriesListAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1050">
-              <caret line="67" column="36" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
+            <state vertical-scroll-proportion="-0.328125" vertical-offset="609" max-vertical-offset="1185">
+              <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#872#873#0" expanded="true" />
-                <element signature="e#912#913#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MealNotification.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/MealNotification.java">
+      <file leaf-file-name="Settings.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/Settings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49479166" vertical-offset="315" max-vertical-offset="1140">
-              <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
-              <folding>
-                <element signature="e#1859#1892#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu_entries_list.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/layout/menu_entries_list.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.6153846" vertical-offset="0" max-vertical-offset="240">
-              <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2478" max-vertical-offset="6210">
+              <caret line="242" column="127" selection-start-line="242" selection-start-column="127" selection-end-line="242" selection-end-column="127" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="android-designer">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="Constants.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="750">
+              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dimens.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/values/dimens.xml">
+      <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="759" max-vertical-offset="1455">
+              <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MealNotification.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/MealNotification.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1335">
+              <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -1861,7 +1864,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/bandeco/src/main/java/model/Day.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Settings.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/model/Week.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/database/html/Indexer.java" />
@@ -1892,11 +1894,9 @@
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/adapters/TabsAdapter.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/model/Meal.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/values/color.xml" />
-        <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Constants.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/NotificationService.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Main.java" />
-        <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Utils.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/layout/activity_about.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/adapters/MyExpandableListViewAdapter.java" />
         <option value="$PROJECT_DIR$/bandeco/build.gradle" />
@@ -1904,14 +1904,17 @@
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/adapters/MealEntriesListAdapter.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/About.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/layout/menu_entries_list.xml" />
-        <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/adapters/MenuEntriesListAdapter.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/layout/menu_entry_element.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/layout/activity_settings.xml" />
-        <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/Settings.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/values-en/strings.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/MealNotification.java" />
+        <option value="$USER_HOME$/android-sdk/sources/android-21/android/os/MessageQueue.java" />
+        <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Constants.java" />
+        <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Utils.java" />
+        <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/Settings.java" />
+        <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/adapters/MenuEntriesListAdapter.java" />
       </list>
     </option>
   </component>
@@ -1965,6 +1968,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2256,46 +2260,11 @@
               <option name="myItemId" value="bandeco" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="adapters" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bandeco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bandeco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bandeco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bandeco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2316,6 +2285,9 @@
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
+    <property name="DEBUGGABLE_DEVICE" value="motorola-xt1058-0424126098" />
+    <property name="DEBUGGABLE_PROCESS" value="com.app.bandeco" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -2497,22 +2469,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.38859275" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30957684" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32850778" sideWeight="0.6114072" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32850778" sideWeight="0.6114072" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2525,6 +2496,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297062" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2548,55 +2520,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/layout/list_layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.95914745" vertical-offset="0" max-vertical-offset="630">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/values-w820dp/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listViewAnimations/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20833333" vertical-offset="0" max-vertical-offset="576">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cardsUILib/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="420">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="593">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bandeco/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="73" max-vertical-offset="870">
@@ -2622,7 +2549,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2635,7 +2561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13020833" vertical-offset="0" max-vertical-offset="576">
           <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2643,7 +2568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.052083332" vertical-offset="0" max-vertical-offset="576">
           <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2651,7 +2575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18229167" vertical-offset="0" max-vertical-offset="576">
           <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2659,7 +2582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2689,7 +2611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1380">
           <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2739,7 +2660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="960">
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2778,14 +2698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
-          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.1538461" vertical-offset="0" max-vertical-offset="435">
@@ -2804,7 +2716,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
           <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2828,9 +2739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49479166" vertical-offset="0" max-vertical-offset="2040">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2871,21 +2779,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34895834" vertical-offset="189" max-vertical-offset="960">
           <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15625" vertical-offset="0" max-vertical-offset="585">
-          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/layout/menu_entries_list.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6153846" vertical-offset="0" max-vertical-offset="240">
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="240">
           <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
           <folding />
         </state>
@@ -2899,7 +2798,7 @@
         <state vertical-scroll-proportion="0.24545455" vertical-offset="0" max-vertical-offset="550">
           <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
           <folding>
-            <element signature="e#705#737#0" expanded="true" />
+            <element signature="e#705#737#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2920,79 +2819,43 @@
         <state vertical-scroll-proportion="-0.09090909" vertical-offset="3395" max-vertical-offset="3945">
           <caret line="223" column="0" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
           <folding>
-            <element signature="e#3124#3153#0" expanded="true" />
-            <element signature="e#3195#3224#0" expanded="true" />
-            <element signature="e#3266#3295#0" expanded="true" />
-            <element signature="e#3869#3897#0" expanded="true" />
-            <element signature="e#3933#3961#0" expanded="true" />
-            <element signature="e#4966#5006#0" expanded="true" />
-            <element signature="e#5048#5088#0" expanded="true" />
-            <element signature="e#5130#5170#0" expanded="true" />
-            <element signature="e#5210#5250#0" expanded="true" />
-            <element signature="e#5870#5899#0" expanded="true" />
-            <element signature="e#5941#5970#0" expanded="true" />
-            <element signature="e#6012#6041#0" expanded="true" />
-            <element signature="e#6081#6110#0" expanded="true" />
-            <element signature="e#6144#6168#0" expanded="true" />
-            <element signature="e#7231#7259#0" expanded="true" />
-            <element signature="e#7295#7323#0" expanded="true" />
-            <element signature="e#7564#7593#0" expanded="true" />
-            <element signature="e#7635#7664#0" expanded="true" />
-            <element signature="e#7706#7735#0" expanded="true" />
-            <element signature="e#7775#7804#0" expanded="true" />
-            <element signature="e#7838#7854#0" expanded="true" />
-            <element signature="e#8249#8289#0" expanded="true" />
-            <element signature="e#8331#8371#0" expanded="true" />
-            <element signature="e#8413#8453#0" expanded="true" />
-            <element signature="e#8493#8533#0" expanded="true" />
-            <element signature="e#9110#9139#0" expanded="true" />
-            <element signature="e#9868#9896#0" expanded="true" />
-            <element signature="e#9932#9960#0" expanded="true" />
-            <element signature="e#10910#10950#0" expanded="true" />
-            <element signature="e#10992#11032#0" expanded="true" />
-            <element signature="e#11074#11114#0" expanded="true" />
-            <element signature="e#11154#11194#0" expanded="true" />
+            <element signature="e#3124#3153#0" expanded="false" />
+            <element signature="e#3195#3224#0" expanded="false" />
+            <element signature="e#3266#3295#0" expanded="false" />
+            <element signature="e#3869#3897#0" expanded="false" />
+            <element signature="e#3933#3961#0" expanded="false" />
+            <element signature="e#4966#5006#0" expanded="false" />
+            <element signature="e#5048#5088#0" expanded="false" />
+            <element signature="e#5130#5170#0" expanded="false" />
+            <element signature="e#5210#5250#0" expanded="false" />
+            <element signature="e#5870#5899#0" expanded="false" />
+            <element signature="e#5941#5970#0" expanded="false" />
+            <element signature="e#6012#6041#0" expanded="false" />
+            <element signature="e#6081#6110#0" expanded="false" />
+            <element signature="e#6144#6168#0" expanded="false" />
+            <element signature="e#7231#7259#0" expanded="false" />
+            <element signature="e#7295#7323#0" expanded="false" />
+            <element signature="e#7564#7593#0" expanded="false" />
+            <element signature="e#7635#7664#0" expanded="false" />
+            <element signature="e#7706#7735#0" expanded="false" />
+            <element signature="e#7775#7804#0" expanded="false" />
+            <element signature="e#7838#7854#0" expanded="false" />
+            <element signature="e#8249#8289#0" expanded="false" />
+            <element signature="e#8331#8371#0" expanded="false" />
+            <element signature="e#8413#8453#0" expanded="false" />
+            <element signature="e#8493#8533#0" expanded="false" />
+            <element signature="e#9110#9139#0" expanded="false" />
+            <element signature="e#9868#9896#0" expanded="false" />
+            <element signature="e#9932#9960#0" expanded="false" />
+            <element signature="e#10910#10950#0" expanded="false" />
+            <element signature="e#10992#11032#0" expanded="false" />
+            <element signature="e#11074#11114#0" expanded="false" />
+            <element signature="e#11154#11194#0" expanded="false" />
           </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33854166" vertical-offset="2805" max-vertical-offset="6465">
-          <caret line="200" column="71" selection-start-line="200" selection-start-column="71" selection-end-line="200" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8078#8896#0" expanded="true" />
-            <element signature="e#8329#8786#0" expanded="true" />
-            <element signature="e#8767#8768#0" expanded="true" />
-            <element signature="e#8885#8886#0" expanded="true" />
-            <element signature="e#8975#9880#0" expanded="true" />
-            <element signature="e#9869#9870#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/NotificationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/adapters/MenuEntriesListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1050">
-          <caret line="67" column="36" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#872#873#0" expanded="true" />
-            <element signature="e#912#913#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/values-en/strings.xml">
@@ -3013,10 +2876,100 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/MealNotification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49479166" vertical-offset="315" max-vertical-offset="1140">
+        <state vertical-scroll-proportion="0.0" vertical-offset="248" max-vertical-offset="1140">
           <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/android-sdk/sources/android-21/android/os/MessageQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33203125" vertical-offset="2965" max-vertical-offset="8535">
+          <caret line="212" column="26" selection-start-line="212" selection-start-column="26" selection-end-line="212" selection-end-column="26" />
           <folding>
-            <element signature="e#1859#1892#0" expanded="true" />
+            <element signature="e#0#19050#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/android-sdk/sources/android-21/android/view/ViewRootImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33203125" vertical-offset="50260" max-vertical-offset="100395">
+          <caret line="3470" column="0" selection-start-line="3470" selection-start-column="0" selection-end-line="3470" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/bandeco/build/intermediates/exploded-aar/com.nhaarman.listviewanimations/lib-manipulation/3.1.0/classes.jar!/com/nhaarman/listviewanimations/itemmanipulation/DynamicListView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.71097046" vertical-offset="1012" max-vertical-offset="1530">
+          <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/bandeco/build/intermediates/exploded-aar/com.nhaarman.listviewanimations/lib-manipulation/3.1.0/classes.jar!/com/nhaarman/listviewanimations/itemmanipulation/dragdrop/DragAndDropHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="787" max-vertical-offset="2340">
+          <caret line="64" column="17" selection-start-line="64" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/android-sdk/sources/android-21/com/android/internal/os/ZygoteInit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.859375" vertical-offset="7825" max-vertical-offset="13050">
+          <caret line="600" column="0" selection-start-line="600" selection-start-column="0" selection-end-line="600" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/android-sdk/sources/android-21/android/view/Choreographer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.265625" vertical-offset="6430" max-vertical-offset="12045">
+          <caret line="541" column="0" selection-start-line="541" selection-start-column="0" selection-end-line="541" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/NotificationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="339" max-vertical-offset="1140">
+          <caret line="63" column="95" selection-start-line="63" selection-start-column="95" selection-end-line="63" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="750">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="759" max-vertical-offset="1455">
+          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2478" max-vertical-offset="6210">
+          <caret line="242" column="127" selection-start-line="242" selection-start-column="127" selection-end-line="242" selection-end-column="127" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/adapters/MenuEntriesListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.328125" vertical-offset="609" max-vertical-offset="1185">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -40,4 +40,62 @@ public class Utils {
 
         return (daysToNotifyCode & DAYS_TO_NOTIFY_CODES[todayNumber]) != 0;
     }
+
+    public static final  <T> void arraySwap(T[] array, int pos1, int pos2){
+        T tmp = array[pos1];
+        array[pos1] = array[pos2];
+        array[pos2] = tmp;
+    }
+
+    public static final Integer[] extractMenuCodesFromInt(int coded){
+        Integer[] result = new Integer[7];
+
+        for(int i = 0; i < result.length; i++){
+            result[i] = coded & 0x07;
+            coded = coded >> 3;
+        }
+
+        return result;
+    }
+
+    public static final int codifyMenuCodesFromArray(Integer[] array){
+        int result = 0;
+
+        for (int i = 0; i < array.length; i++)
+            result |= array[i] << (3 * i);
+
+        return result;
+    }
+
+    public static final String[] sortMenuEntries(String[] stringArray, Integer[] menuEntriesOrder) {
+        String[] result = new String[stringArray.length];
+
+        for(Integer i : menuEntriesOrder)
+            result[i] = stringArray[menuEntriesOrder[i]];
+
+        return result;
+    }
+
+    public static final Boolean[] extractEnabledMenuEntriesFromInt(int coded, Integer[] menuEntriesOrder) {
+        Boolean[] result = new Boolean[menuEntriesOrder.length];
+
+        for(int i = 0; i < menuEntriesOrder.length; i++ ) {
+            int pos = menuEntriesOrder[i];
+            result[i] = (coded & (1 << pos)) != 0;
+        }
+
+        return result;
+    }
+
+    public static final int codifyEnabledMenuEntriesFromArray(Boolean[] enabledMenuEntries, Integer[] menuEntriesOrder) {
+        int code = 0;
+
+        for(int i = 0; i < menuEntriesOrder.length; i++){
+            int pos = menuEntriesOrder[i];
+            if(enabledMenuEntries[i])
+                code |= 1 << pos;
+        }
+
+        return code;
+    }
 }

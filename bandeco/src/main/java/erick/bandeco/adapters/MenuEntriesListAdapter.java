@@ -1,30 +1,34 @@
 package erick.bandeco.adapters;
 
 import android.content.Context;
+import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
-import android.widget.TextView;
 
 import com.app.bandeco.R;
+import com.app.bandeco.Utils;
 import com.nhaarman.listviewanimations.util.Swappable;
 
-import org.w3c.dom.Text;
 
-import erick.bandeco.view.Settings;
-
-/**
- * Created by erick on 17/11/14.
- */
 public class MenuEntriesListAdapter extends BaseAdapter implements Swappable {
-    Context context;
-    String[] entries;
+    final long[] magicVibrationPattern = { 0, 12, 10, 12 };
 
-    public MenuEntriesListAdapter(Context context) {
+    Context context;
+    private Integer[] menuEntriesOrder;
+    String[] entries;
+    Boolean[] checked;
+
+
+
+    public MenuEntriesListAdapter(Context context, Integer[] menuEntriesOrder, Boolean[] checked) {
         this.context = context;
-        entries = context.getResources().getStringArray(R.array.menu_entries);
+        this.menuEntriesOrder = menuEntriesOrder;
+        this.checked = checked;
+
+        entries = Utils.sortMenuEntries(context.getResources().getStringArray(R.array.menu_entries), menuEntriesOrder);
     }
 
     @Override
@@ -43,15 +47,22 @@ public class MenuEntriesListAdapter extends BaseAdapter implements Swappable {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         if(convertView == null){
             LayoutInflater inflater = LayoutInflater.from(context);
-            convertView = inflater.inflate(R.layout.menu_entry_element, null);
+            convertView = inflater.inflate(R.layout.menu_entry_element, parent, false);
         }
 
-        CheckBox checkBox = (CheckBox) convertView.findViewById(R.id.menu_entry_checkbox);
+        final CheckBox checkBox = (CheckBox) convertView.findViewById(R.id.menu_entry_checkbox);
 
         checkBox.setText(entries[position]);
+        checkBox.setChecked(checked[position]);
+        checkBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checked[position] = !checked[position];
+            }
+        });
 
         return convertView;
     }
@@ -63,8 +74,11 @@ public class MenuEntriesListAdapter extends BaseAdapter implements Swappable {
 
     @Override
     public void swapItems(int positionOne, int positionTwo) {
-        String str1 = entries[positionOne];
-        entries[positionOne] = entries[positionTwo];
-        entries[positionTwo] = str1;
+        Utils.arraySwap(entries, positionOne, positionTwo);
+        Utils.arraySwap(menuEntriesOrder, positionOne, positionTwo);
+        Utils.arraySwap(checked, positionOne, positionTwo);
+
+        Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+        vibrator.vibrate(magicVibrationPattern , -1);
     }
 }
