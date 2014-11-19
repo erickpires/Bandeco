@@ -1,6 +1,8 @@
 package com.app.bandeco;
 
 import android.annotation.TargetApi;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -10,9 +12,13 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import java.util.Calendar;
 
+import erick.bandeco.model.Meal;
+import erick.bandeco.view.Settings;
+
+import static com.app.bandeco.Constants.CODE_OF_PRATO_PRINCIPAL;
 import static com.app.bandeco.Constants.DAYS_TO_NOTIFY_CODES;
 
-public class Utils {
+public final class Utils {
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
     public static void changeStatusColor(ActionBarActivity activity, View parentLayout){
@@ -41,13 +47,13 @@ public class Utils {
         return (daysToNotifyCode & DAYS_TO_NOTIFY_CODES[todayNumber]) != 0;
     }
 
-    public static final  <T> void arraySwap(T[] array, int pos1, int pos2){
+    public static  <T> void arraySwap(T[] array, int pos1, int pos2){
         T tmp = array[pos1];
         array[pos1] = array[pos2];
         array[pos2] = tmp;
     }
 
-    public static final Integer[] extractMenuCodesFromInt(int coded){
+    public static Integer[] extractMenuCodesFromInt(int coded){
         Integer[] result = new Integer[7];
 
         for(int i = 0; i < result.length; i++){
@@ -58,7 +64,7 @@ public class Utils {
         return result;
     }
 
-    public static final int codifyMenuCodesFromArray(Integer[] array){
+    public static int codifyMenuCodesFromArray(Integer[] array){
         int result = 0;
 
         for (int i = 0; i < array.length; i++)
@@ -67,7 +73,7 @@ public class Utils {
         return result;
     }
 
-    public static final String[] sortMenuEntries(String[] stringArray, Integer[] menuEntriesOrder) {
+    public static String[] sortMenuEntries(String[] stringArray, Integer[] menuEntriesOrder) {
         String[] result = new String[stringArray.length];
 
         for(Integer i : menuEntriesOrder)
@@ -76,7 +82,7 @@ public class Utils {
         return result;
     }
 
-    public static final Boolean[] extractEnabledMenuEntriesFromInt(int coded, Integer[] menuEntriesOrder) {
+    public static Boolean[] extractEnabledMenuEntriesFromInt(int coded, Integer[] menuEntriesOrder) {
         Boolean[] result = new Boolean[menuEntriesOrder.length];
 
         for(int i = 0; i < menuEntriesOrder.length; i++ ) {
@@ -87,7 +93,7 @@ public class Utils {
         return result;
     }
 
-    public static final int codifyEnabledMenuEntriesFromArray(Boolean[] enabledMenuEntries, Integer[] menuEntriesOrder) {
+    public static int codifyEnabledMenuEntriesFromArray(Boolean[] enabledMenuEntries, Integer[] menuEntriesOrder) {
         int code = 0;
 
         for(int i = 0; i < menuEntriesOrder.length; i++){
@@ -97,5 +103,50 @@ public class Utils {
         }
 
         return code;
+    }
+
+    public static String getTextFromMeal(Meal meal, Context context) {
+        SharedPreferences preferences = context.getSharedPreferences(context.getString(R.string.app_name), 0);
+
+        int menuEntriesOrderCoded = preferences.getInt(Settings.MENU_ENTRIES_ORDER, Constants.DEFAULT_MENU_ENTRIES_CODE);
+        Integer[] menuEntriesOrder = Utils.extractMenuCodesFromInt(menuEntriesOrderCoded);
+
+        int enabledMenuEntriesCoded = preferences.getInt(Settings.ENABLED_MENU_ENTRIES, Constants.ALL_MENU_ENTRIES_CODE);
+        Boolean[] enabledMenuEntries = Utils.extractEnabledMenuEntriesFromInt(enabledMenuEntriesCoded, menuEntriesOrder);
+
+        String text = "";
+        String[] menuEntries = context.getResources().getStringArray(R.array.menu_entries);
+
+        for(int i = 0; i < menuEntriesOrder.length; i++){
+            if (!enabledMenuEntries[i])
+                continue;
+
+            text += menuEntries[menuEntriesOrder[i]] + ": ";
+            switch (menuEntriesOrder[i]){
+                case Constants.CODE_OF_PRATO_PRINCIPAL :
+                    text += meal.getPratoPrincipal() + "\n";
+                    break;
+                case Constants.CODE_OF_PRATO_VEGETARIANO :
+                    text += meal.getPratoVegetariano() + "\n";
+                    break;
+                case Constants.CODE_OF_ACOMPANHAMENTO :
+                    text += meal.getAcompanhamento() + "\n";
+                    break;
+                case Constants.CODE_OF_GUARNICAO :
+                    text += meal.getGuarnicao() + "\n";
+                    break;
+                case Constants.CODE_OF_ENTRADA :
+                    text += meal.getEntrada() + "\n";
+                    break;
+                case Constants.CODE_OF_SOBREMESA :
+                    text += meal.getSobremesa() + "\n";
+                    break;
+                case Constants.CODE_OF_REFRESCO :
+                    text += meal.getRefresco() + "\n";
+                    break;
+            }
+        }
+
+        return text;
     }
 }

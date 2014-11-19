@@ -165,12 +165,6 @@ public class Meal {
     public void setAcompanhamento(String acompanhamento) {
         this.acompanhamento = acompanhamento;
     }
-
-	public Card createCard() {
-		
-		
-		return new Card(type, this.toString(), "#424242", "#0000e4", false);
-	}
 	
 	@Override
 	public String toString(){

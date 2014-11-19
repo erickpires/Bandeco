@@ -15,6 +15,7 @@ import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
 import com.app.bandeco.R;
+import com.app.bandeco.Utils;
 import com.haarman.listviewanimations.itemmanipulation.ExpandableListItemAdapter;
 
 public class MyExpandableListViewAdapter extends
@@ -41,7 +42,7 @@ public class MyExpandableListViewAdapter extends
 		
 		TextView tv = new TextView(context);
 
-		tv.setText("" + meal );
+		tv.setText(Utils.getTextFromMeal(meal, context));
 
 		tv.setBackgroundResource(com.app.bandeco.R.drawable.card_bg);
 

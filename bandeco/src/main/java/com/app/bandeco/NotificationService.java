@@ -47,8 +47,10 @@ public class NotificationService extends Service {
 
         Meal meal = OperationsWithDB.getMealFromDatabase(database, dayOfTheWeek, mealType);
 
+        String notificationMessage = Utils.getTextFromMeal(meal, getApplicationContext());
+
         if(shouldNotify(notifyWhenOption, meal, database)) {
-            MealNotification.notify(getApplicationContext(), meal.getType(), meal.toString());
+            MealNotification.notify(getApplicationContext(), meal.getType(), notificationMessage);
         }
 
         database.close();

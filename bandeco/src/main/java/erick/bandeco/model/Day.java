@@ -55,15 +55,6 @@ public class Day {
 		}
 	}
 
-	public void generateCards(CardUI cardUI) {
-		Card lunchCard = lunch.createCard();
-		Card dinnerCard = dinner.createCard();
-		
-		cardUI.addCardToLastStack(dinnerCard);
-		cardUI.addCardToLastStack(lunchCard);
-		
-	}
-
 	public static int adaptDayOfWeek(int day) {
 		return (day + 5) % 7;
 	}

@@ -58,8 +58,8 @@ public class Settings extends ActionBarActivity {
     private String[] daysOfTheWeek;
 
     public static final String SHOW_MEALS = "ShowMeals";
-    private static final String MENU_ENTRIES_ORDER = "MenuEntriesOrder";
-    private static final String ENABLED_MENU_ENTRIES = "EnabledMenuEntries";
+    public static final String MENU_ENTRIES_ORDER = "MenuEntriesOrder";
+    public static final String ENABLED_MENU_ENTRIES = "EnabledMenuEntries";
     public static final String LUNCH_NOTIFICATION_HOUR = "LunchNotificationTime";
     public static final String LUNCH_NOTIFICATION_MINUTE = "LunchNotificationMinute";
     public static final String DINNER_NOTIFICATION_HOUR = "DinnerNotificationTime";

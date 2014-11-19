@@ -13,7 +13,7 @@ import erick.bandeco.model.Week;
 import static erick.bandeco.database.DatabaseContract.*;
 
 
-public abstract class OperationsWithDB {
+public final class OperationsWithDB {
 
     public static void insertMealInDatabase(SQLiteDatabase db, Meal meal, int day, int mealType){
         ContentValues values = new ContentValues();
