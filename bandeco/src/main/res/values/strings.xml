@@ -76,6 +76,9 @@
         <item>Dinner</item>
     </string-array>
 
+    <string name="lunch">Almoço</string>
+    <string name="dinner">Jantar</string>
+
     <string name="title_activity_about">Sobre</string>
     <string name="title_activity_settings">Configurações</string>
 

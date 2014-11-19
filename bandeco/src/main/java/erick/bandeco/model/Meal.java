@@ -2,8 +2,6 @@ package erick.bandeco.model;
 
 import java.util.List;
 
-import erick.bandeco.view.Card;
-
 import com.app.bandeco.Constants;
 import erick.bandeco.html.Indexer;
 
@@ -20,10 +18,10 @@ public class Meal {
 	private String sobremesa;
 	private String refresco;
 	private String acompanhamento;
-	private String type;
+	private int type;
 	private Day day;
 
-    public Meal(String mealType){
+    public Meal(int mealType){
         this.type = mealType;
 
         // Ensures that the important fields are filled
@@ -36,11 +34,7 @@ public class Meal {
         acompanhamento = "";
     }
 
-    public Meal(int mealType){
-        this(mealTypeFromInt(mealType));
-    }
-
-	public Meal(List<String> tableColumn, Indexer indexer, String type) {
+	public Meal(List<String> tableColumn, Indexer indexer, int type) {
 		String tmp;
 
 		this.type = type;
@@ -134,7 +128,7 @@ public class Meal {
 		return acompanhamento;
 	}
 
-	public String getType() {
+	public int getType() {
 		return type;
 	}
 
@@ -165,37 +159,12 @@ public class Meal {
     public void setAcompanhamento(String acompanhamento) {
         this.acompanhamento = acompanhamento;
     }
-	
-	@Override
-	public String toString(){
-		String text = "";
-		text += "Prato Principal: " + pratoPrincipal + "\n";
-		text += "Prato Vegetariano: " + vegetariana + "\n";
-		text += "Acompanhamento: " + acompanhamento + "\n";
-        text += "Guarnição: " + guarnicao + "\n";
-        text += "Entrada: " + entrada + "\n";
-		text += "Sobremesa: " + sobremesa + "\n";
-		text += "Refresco: " + refresco + "\n";
-		
-		return text;
-	}
 
-	public String getDay() {
-		return "" + day;
+	public Day getDay() {
+		return day;
 	}
 
 	public void setDay(Day day) {
 		this.day = day;	
 	}
-
-    public static String mealTypeFromInt(int mealType){
-        switch (mealType){
-            case Constants.MEAL_TYPE_LUNCH:
-                return "Almoço";
-            case Constants.MEAL_TYPE_DINNER:
-                return "Jantar";
-            default:
-                return null;
-        }
-    }
 }

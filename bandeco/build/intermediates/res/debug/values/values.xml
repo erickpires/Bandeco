@@ -581,6 +581,7 @@
     <string name="desc">Description</string>
     <string name="developed_by">Desenvolvido por:</string>
     <string name="developer_name" translatable="false">Erick Pires</string>
+    <string name="dinner">Jantar</string>
     <string name="dinner_notification">Notificação de jantar</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
@@ -600,6 +601,7 @@
     <string name="item_is_selected">%1$s selected</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="lunch">Almoço</string>
     <string name="lunch_notification">Notificação de almoço</string>
     <string name="manage_meal_items">Gerenciar itens do cardápio</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->

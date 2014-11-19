@@ -41,8 +41,8 @@ public class Week {
 
 	private void createWeek() {
 		for(int i = 0; i < 7; i++){
-			Meal lunch = new Meal(lunchTable.getColumn(i + columnsOffset, startingRow), lunchIndexer, "Almoço");
-			Meal dinner = new Meal(dinnerTable.getColumn(i + columnsOffset, startingRow), dinnerIndexer, "Jantar");
+			Meal lunch = new Meal(lunchTable.getColumn(i + columnsOffset, startingRow), lunchIndexer, Constants.MEAL_TYPE_LUNCH);
+			Meal dinner = new Meal(dinnerTable.getColumn(i + columnsOffset, startingRow), dinnerIndexer, Constants.MEAL_TYPE_DINNER);
 			
 			days[i] = new Day(lunch, dinner, i);
 		}

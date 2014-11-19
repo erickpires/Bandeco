@@ -12,10 +12,10 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import java.util.Calendar;
 
+import erick.bandeco.model.Day;
 import erick.bandeco.model.Meal;
 import erick.bandeco.view.Settings;
 
-import static com.app.bandeco.Constants.CODE_OF_PRATO_PRINCIPAL;
 import static com.app.bandeco.Constants.DAYS_TO_NOTIFY_CODES;
 
 public final class Utils {
@@ -105,6 +105,13 @@ public final class Utils {
         return code;
     }
 
+    public static String getMealType(Meal meal, Context context){
+        if(meal.getType() == Constants.MEAL_TYPE_LUNCH)
+            return context.getResources().getString(R.string.lunch);
+        else
+            return context.getResources().getString(R.string.dinner);
+    }
+
     public static String getTextFromMeal(Meal meal, Context context) {
         SharedPreferences preferences = context.getSharedPreferences(context.getString(R.string.app_name), 0);
 
@@ -148,5 +155,13 @@ public final class Utils {
         }
 
         return text;
+    }
+
+    //TODO use a calendar instead of day
+    public static String getDayOfTheWeek(Day day, Context context) {
+        String[] daysOfTheWeek = context.getResources().getStringArray(R.array.days_array);
+        int weekDay = (day.getWeekDay() + 1) % 7;
+
+        return daysOfTheWeek[weekDay];
     }
 }

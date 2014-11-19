@@ -2,17 +2,17 @@
 <pre-dex-items>
 
     <item
-        dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/classes-e2f551a45debaf48fa80868e961ca9b85e236619.jar"
-        jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/classes.jar"
-        jumboMode="false"
-        revision="21.0.2"
-        sha1="2fc859b7abb78d29169f6a582b45cbe1f3f1a4cc"/>
-    <item
         dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/systembartint-1.0.3-63adeead74e7b2f2519d6cb6f1ef0fe75cff1d91.jar"
         jar="/home/erick/.gradle/caches/modules-2/files-2.1/com.readystatesoftware.systembartint/systembartint/1.0.3/de4f7404e2f58d8f6e83cb1e85d0c2d6c2987287/systembartint-1.0.3.jar"
         jumboMode="false"
         revision="21.0.2"
         sha1="de4f7404e2f58d8f6e83cb1e85d0c2d6c2987287"/>
+    <item
+        dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/classes-e2f551a45debaf48fa80868e961ca9b85e236619.jar"
+        jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/classes.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="2fc859b7abb78d29169f6a582b45cbe1f3f1a4cc"/>
     <item
         dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/classes-663a8429207e914702fb5d4e4274fc9107a89246.jar"
         jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/classes.jar"
@@ -26,29 +26,17 @@
         revision="21.0.2"
         sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e"/>
     <item
-        dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/classes-b19aad3d519995b755fee3d639b544f82c14f165.jar"
-        jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.nhaarman.listviewanimations/lib-manipulation/3.1.0/classes.jar"
-        jumboMode="false"
-        revision="21.0.2"
-        sha1="5660e4bf78904137e90e62a5d4cc2e987258f02c"/>
-    <item
         dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/stickylistheaders_lib-68e2c96528fcd1fac46fd66015f3d1a2bf1e18fb.jar"
         jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/listViewAnimations/unspecified/libs/stickylistheaders_lib.jar"
         jumboMode="false"
         revision="21.0.2"
         sha1="33ad2d9e9065ee528d81cb8de94eaab220022bfc"/>
     <item
-        dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/classes-515cbf20695572f9b5f89f8c31b11195f46f7330.jar"
-        jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
+        dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/classes-b19aad3d519995b755fee3d639b544f82c14f165.jar"
+        jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.nhaarman.listviewanimations/lib-manipulation/3.1.0/classes.jar"
         jumboMode="false"
         revision="21.0.2"
-        sha1="686344a780033e4ba22b926cd225f8d4941247e6"/>
-    <item
-        dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/classes-9ded3415fd9b359282d26ecd771866fb9e2ee5d4.jar"
-        jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.0.2"
-        sha1="95fd37732ec852e99f07eeb516a3650172f1d136"/>
+        sha1="5660e4bf78904137e90e62a5d4cc2e987258f02c"/>
     <item
         dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/library-2.4.0-14e66997d6f75b41efd32d6af6252abda37d6793.jar"
         jar="/home/erick/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
@@ -56,17 +44,29 @@
         revision="21.0.2"
         sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb"/>
     <item
+        dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/classes-9ded3415fd9b359282d26ecd771866fb9e2ee5d4.jar"
+        jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="95fd37732ec852e99f07eeb516a3650172f1d136"/>
+    <item
+        dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/classes-515cbf20695572f9b5f89f8c31b11195f46f7330.jar"
+        jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6"/>
+    <item
         dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-e5a964a419bb1aa8c3731c8266318882e71d847e.jar"
         jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/libs/internal_impl-21.0.0.jar"
         jumboMode="false"
         revision="21.0.2"
         sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0"/>
     <item
-        dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/classes-047454b0be18ac90e78d49a50ed07a0cc8fdb8bf.jar"
-        jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.nhaarman.listviewanimations/lib-core-slh/3.1.0/classes.jar"
+        dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/classes-4012d6492991bf3c668b1183325238f564e18bac.jar"
+        jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/listViewAnimations/unspecified/classes.jar"
         jumboMode="false"
         revision="21.0.2"
-        sha1="49223278ec2ede1d05d00868c5ce3e077b4016f8"/>
+        sha1="2af77d2c2936d5372415fa7d93cda87a866ec990"/>
     <item
         dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/classes-48324deca7544671b331e7b4638f8133835ed476.jar"
         jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.nhaarman.listviewanimations/lib-core/3.1.0/classes.jar"
@@ -74,10 +74,10 @@
         revision="21.0.2"
         sha1="acf66033b1418ccf9e15c8e77750981e4809c4ea"/>
     <item
-        dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/classes-4012d6492991bf3c668b1183325238f564e18bac.jar"
-        jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/listViewAnimations/unspecified/classes.jar"
+        dex="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/pre-dexed/debug/classes-047454b0be18ac90e78d49a50ed07a0cc8fdb8bf.jar"
+        jar="/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.nhaarman.listviewanimations/lib-core-slh/3.1.0/classes.jar"
         jumboMode="false"
         revision="21.0.2"
-        sha1="2af77d2c2936d5372415fa7d93cda87a866ec990"/>
+        sha1="49223278ec2ede1d05d00868c5ce3e077b4016f8"/>
 
 </pre-dex-items>

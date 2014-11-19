@@ -5,6 +5,7 @@ import java.util.Calendar;
 import erick.bandeco.model.Day;
 import erick.bandeco.model.Meal;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -47,9 +48,9 @@ public class DayFragment extends Fragment {
     private void createCards(Day today) {
         Meal lunch = today.getLunch();
         Meal dinner = today.getDinner();
-
-        Card lunchCard = new Card(lunch.getType(), Utils.getTextFromMeal(lunch, getActivity().getApplicationContext()), "#424242", "#0000e4", false);
-        Card dinnerCard = new Card(dinner.getType(), Utils.getTextFromMeal(dinner, getActivity().getApplicationContext()), "#424242", "#0000e4", false);
+        Context context = getActivity().getApplicationContext();
+        Card lunchCard = new Card(Utils.getMealType(lunch, context), Utils.getTextFromMeal(lunch, context), "#424242", "#0000e4", false);
+        Card dinnerCard = new Card(Utils.getMealType(dinner, context), Utils.getTextFromMeal(dinner, context), "#424242", "#0000e4", false);
 
         cardUI.addCardToLastStack(dinnerCard);
         cardUI.addCardToLastStack(lunchCard);

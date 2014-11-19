@@ -12,15 +12,14 @@ import com.app.bandeco.Main;
 
 public class WeekFragment extends Fragment {
 
-	private MyExpandableListViewAdapter adapter;
-	@Override
+    @Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		ListView listView = (ListView) inflater.inflate(com.app.bandeco.R.layout.week_layout, container, false);
 		
 		listView.setPadding(0, 15, 0, 0);
-		
-		adapter = new MyExpandableListViewAdapter(getActivity());
+
+        MyExpandableListViewAdapter adapter = new MyExpandableListViewAdapter(getActivity());
 		
 		for(int i = 0; i < 7; i++){
 			adapter.add(2 * i, Main.week.getDayAt(i).getLunch());

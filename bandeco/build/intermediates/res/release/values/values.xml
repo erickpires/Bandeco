@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:ns1="http://schemas.android.com/apk/res/android">
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="days_array">
@@ -14,6 +14,26 @@
     <string-array name="meals_array">
         <item>Lunch</item>
         <item>Dinner</item>
+    </string-array>
+    <string-array name="menu_entries">
+        <item name="prato_principal">Prato Principal</item>
+        <item name="vegetariano">Prato Vegetariano</item>
+        <item name="acompanhamento">Acompanhamento</item>
+        <item name="guarnicao">Guarnição</item>
+        <item name="entrada">Entrada</item>
+        <item name="sobremesa">Sobremesa</item>
+        <item name="refresco">Refresco</item>
+    </string-array>
+    <string-array name="notify_when_options">
+        <item name="always">Sempre</item>
+        <item name="only_if_I_like">Se houver algo que gosto</item>
+        <item name="only_if_not_dislike">Se não houver algo que não gosto</item>
+        <item name="never">Nunca</item>
+    </string-array>
+    <string-array name="show_options">
+        <item name="lunch_only">Apenas almoço</item>
+        <item name="dinner_only">Apenas jantar</item>
+        <item name="both_meals">Ambas refeições</item>
     </string-array>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment/>
@@ -274,7 +294,7 @@
     <dimen name="default_minimal_padding">10dp</dimen>
     <dimen name="default_side_padding">20dp</dimen>
     <dimen name="default_side_padding_identented">30dp</dimen>
-    <dimen name="default_top_padding">15dp</dimen>
+    <dimen name="default_top_padding">10dp</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
     <eat-comment/>
     <dimen name="dialog_corner_radius">8.0px</dimen>
@@ -303,7 +323,7 @@
     <dimen name="done_label_size">14sp</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
     <eat-comment/>
-    <dimen name="double_top_padding">25dp</dimen>
+    <dimen name="double_top_padding">15dp</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
     <eat-comment/>
     <dimen name="extra_height_to_account_for_system_space_in_landscape">0.0dip</dimen>
@@ -369,6 +389,11 @@
     <eat-comment/>
     <dimen name="minimum_margin_sides">48dip</dimen>
     <dimen name="minimum_margin_top_bottom">24dip</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="minimum_top_padding">7dp</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
+    <eat-comment/>
     <dimen name="month_day_label_text_size">10sp</dimen>
     <dimen name="month_label_size">16sp</dimen>
     <dimen name="month_list_item_header_height">50dip</dimen>
@@ -529,18 +554,15 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="acompanhamento">Acompanhamento: </string>
     <string name="action_about">Sobre</string>
     <string name="action_settings">Configurações</string>
     <string name="action_update">Atualizar</string>
-    <string name="always">Sempre</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <item format="float" name="ampm_circle_radius_multiplier" type="string">0.19</item>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">É Peixe Hoje?</string>
-    <string name="both_meals">Ambas refeições</string>
     <string name="cardapio_atualizado">Cardápio Atualizado</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
@@ -558,16 +580,14 @@
     <eat-comment/>
     <string name="desc">Description</string>
     <string name="developed_by">Desenvolvido por:</string>
-    <string name="developer_name">Erick Pires</string>
+    <string name="developer_name" translatable="false">Erick Pires</string>
+    <string name="dinner">Jantar</string>
     <string name="dinner_notification">Notificação de jantar</string>
-    <string name="dinner_only">Apenas jantar</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <string name="done_label">Done</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="entrada">Entrada: </string>
-    <string name="guarnicao">Guarnição: </string>
     <string name="hoje">Hoje</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
@@ -575,14 +595,14 @@
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="icon_by">Ícone por:</string>
-    <string name="icon_designer_name">Alex Pronsky</string>
+    <string name="icon_designer_name" translatable="false">Alex Pronsky</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <string name="item_is_selected">%1$s selected</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="lunch">Almoço</string>
     <string name="lunch_notification">Notificação de almoço</string>
-    <string name="lunch_only">Apenas almoço</string>
     <string name="manage_meal_items">Gerenciar itens do cardápio</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
@@ -590,7 +610,6 @@
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="negative_words">O que não gosto</string>
-    <string name="never">Nunca</string>
     <string name="new_word">Nova palavra</string>
     <string name="no_connection">Não conectado!</string>
     <string name="notify">Notificar</string>
@@ -601,18 +620,10 @@
     <item format="float" name="numbers_radius_multiplier_outer" type="string">0.83</item>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="only_if_I_like">Se houver algo que gosto</string>
-    <string name="only_if_not_dislike">Se não houver algo que não gosto</string>
     <string name="positive_words">O que gosto</string>
-    <string name="prato_principal">Prato Principal: </string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <string name="radial_numbers_typeface" translatable="false">sans-serif</string>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
-    <eat-comment/>
-    <string name="refresco">Refresco: </string>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
-    <eat-comment/>
     <string name="sans_serif" translatable="false">sans-serif</string>
     <string name="select_day">Select month and day</string>
     <string name="select_hours">Select hours</string>
@@ -622,8 +633,8 @@
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="semana">Semana</string>
+    <string name="share">Convidar alguém</string>
     <string name="show">Exibir</string>
-    <string name="sobremesa">Sobremesa: </string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <item format="float" name="text_size_multiplier_inner" type="string">0.14</item>
@@ -636,7 +647,6 @@
     <string name="title">Title</string>
     <string name="title_activity_about">Sobre</string>
     <string name="title_activity_settings">Configurações</string>
-    <string name="vegetariano">Prato Vegetariano: </string>
     <string name="versao">Versão: </string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>

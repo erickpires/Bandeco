@@ -86,7 +86,7 @@ public class MyExpandableListViewAdapter extends
 
 		TextView tv = new TextView(context);
 
-		tv.setText(meal.getType() + ", " + meal.getDay());
+		tv.setText(Utils.getMealType(meal, context) + ", " + Utils.getDayOfTheWeek(meal.getDay(), context));
 		tv.setClickable(false);
 
 		tv.setTextSize(18);

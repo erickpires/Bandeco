@@ -50,7 +50,7 @@ public class NotificationService extends Service {
         String notificationMessage = Utils.getTextFromMeal(meal, getApplicationContext());
 
         if(shouldNotify(notifyWhenOption, meal, database)) {
-            MealNotification.notify(getApplicationContext(), meal.getType(), notificationMessage);
+            MealNotification.notify(getApplicationContext(), Utils.getMealType(meal, getApplicationContext()), notificationMessage);
         }
 
         database.close();
