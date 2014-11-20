@@ -70,6 +70,7 @@
     </string-array>
     
     <string name="share">Convidar alguém</string>
+    <string name="inviting_you">Estou te convidando para o %1$s de hoje</string>
 
     <string-array name="meals_array">
         <item>Lunch</item>

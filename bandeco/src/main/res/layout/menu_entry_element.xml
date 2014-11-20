@@ -11,8 +11,8 @@
 
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:src="@drawable/ic_drag"
         android:id="@+id/drag_and_drop"
         android:paddingRight="@dimen/default_minimal_padding"/>

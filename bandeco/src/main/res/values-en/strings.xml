@@ -76,6 +76,7 @@
     <string name="dinner">Dinner</string>
 
     <string name="share">Invite someone</string>
+    <string name="inviting_you">Hey, I\'m inviting you for today\'s %1$s</string>
 
     <string name="title_activity_about">About</string>
     <string name="title_activity_settings">Settings</string>

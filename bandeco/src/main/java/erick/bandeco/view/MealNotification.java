@@ -50,7 +50,7 @@ public class MealNotification {
         String share = context.getString(R.string.share);
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("text/plain");
-        String msg = "Estou te convidando para o " + title + " de hoje\n" + text;
+        String msg = String.format(context.getString(R.string.inviting_you), title.toLowerCase()) + "\n" + text;
         shareIntent.putExtra(Intent.EXTRA_TEXT, msg);
         PendingIntent pendingShareIntent = PendingIntent.getActivity(context, 0, Intent.createChooser(shareIntent, share),
                 PendingIntent.FLAG_UPDATE_CURRENT);

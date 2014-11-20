@@ -47,6 +47,7 @@
     <string name="dinner_notification">Dinner notification</string>
     <string name="hoje">Today</string>
     <string name="icon_by">Icon by:</string>
+    <string name="inviting_you">Hey, I\'m inviting you for today\'s %1$s</string>
     <string name="lunch">Lunch</string>
     <string name="lunch_notification">Lunch notification</string>
     <string name="manage_meal_items">Manage menu entries</string>

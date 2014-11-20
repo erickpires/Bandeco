@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="gray_text">#FFbfbfbf</color>
+    <color name="bg_gray">#FFbfbfbf</color>
     <color name="bg_color">#FFE3E3E3</color>
     <color name="primary_text_color">#FF000000</color>
     <color name="toolbar_color">#FFe67e22</color>

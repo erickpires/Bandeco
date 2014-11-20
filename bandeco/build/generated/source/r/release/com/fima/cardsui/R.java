@@ -8,14 +8,14 @@ package com.fima.cardsui;
 
 public final class R {
 	public static final class color {
-		public static final int card_border = 0x7f070016;
-		public static final int card_grid_text = 0x7f070017;
-		public static final int card_light_text = 0x7f070018;
-		public static final int card_separator = 0x7f070019;
-		public static final int card_text = 0x7f07001a;
-		public static final int card_title_text = 0x7f07001b;
-		public static final int stroke = 0x7f070044;
-		public static final int text_light = 0x7f070047;
+		public static final int card_border = 0x7f070017;
+		public static final int card_grid_text = 0x7f070018;
+		public static final int card_light_text = 0x7f070019;
+		public static final int card_separator = 0x7f07001a;
+		public static final int card_text = 0x7f07001b;
+		public static final int card_title_text = 0x7f07001c;
+		public static final int stroke = 0x7f070045;
+		public static final int text_light = 0x7f070048;
 	}
 	public static final class dimen {
 		public static final int action_bar_switch_padding = 0x7f080025;
@@ -196,7 +196,7 @@ public final class R {
 		public static final int card_background = 0x7f020034;
 		public static final int card_background_shadow = 0x7f020035;
 		public static final int card_shadow = 0x7f020039;
-		public static final int top_shadow = 0x7f020043;
+		public static final int top_shadow = 0x7f020044;
 	}
 	public static final class id {
 		public static final int ScrollView1 = 0x7f090071;

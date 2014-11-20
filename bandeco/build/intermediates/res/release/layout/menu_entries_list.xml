@@ -6,6 +6,6 @@
     android:layout_height="match_parent"
     android:dividerHeight="0dp"
     android:divider="@null"
-    android:background="@color/gray_text">
+    android:background="@color/bg_gray">
 
 </com.nhaarman.listviewanimations.itemmanipulation.DynamicListView><!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/layout/menu_entries_list.xml -->
