@@ -60,13 +60,13 @@
     <string name="no_connection">Não conectado!</string>
 
     <string-array name="days_array">
-        <item>Domingo</item>
         <item>Segunda-feira</item>
         <item>Terça-feira</item>
         <item>Quarta-feira</item>
         <item>Quinta-feira</item>
         <item>Sexta-feira</item>
         <item>Sábado</item>
+        <item>Domingo</item>
     </string-array>
     
     <string name="share">Convidar alguém</string>

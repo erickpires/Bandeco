@@ -20,7 +20,7 @@ public final class Constants {
     public static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     public static final int[] DAYS_TO_NOTIFY_CODES  = new int[] {1,2,4,8,16,32,64};
-    public static final int DEFAULT_DAYS_TO_NOTIFY_CODE = 2 | 4 | 8 | 16 | 32;
+    public static final int DEFAULT_DAYS_TO_NOTIFY_CODE = 1 | 2 | 4 | 8 | 16 ;
 
     public static final int CODE_OF_PRATO_PRINCIPAL = 0;
     public static final int CODE_OF_PRATO_VEGETARIANO = 1;

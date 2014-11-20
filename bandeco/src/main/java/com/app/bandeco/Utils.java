@@ -42,7 +42,7 @@ public final class Utils {
     }
 
     public static boolean shouldNotifyToday(int daysToNotifyCode, Calendar today) {
-        int todayNumber = today.get(Calendar.DAY_OF_WEEK) - 1;
+        int todayNumber = Day.adaptDayOfWeek(today.get(Calendar.DAY_OF_WEEK));
 
         return (daysToNotifyCode & DAYS_TO_NOTIFY_CODES[todayNumber]) != 0;
     }

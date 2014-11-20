@@ -26,8 +26,7 @@ public class ListWrapper {
         this.wordsList = list;
         this.viewsList = new ArrayList<View>();
 
-       for(int i = 0; i < list.size(); i++)
-           createListViewElement();
+        for (String ignored : list) createListViewElement();
     }
 
     private void createListViewElement(){

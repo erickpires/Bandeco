@@ -189,6 +189,15 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/primary_text_color"/>
 
+                <TextView
+                    android:id="@+id/days_to_notify_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/default_side_padding_identented"
+                    android:paddingStart="@dimen/default_side_padding_identented"
+                    android:paddingRight="@dimen/default_side_padding_identented"
+                    android:paddingEnd="@dimen/default_side_padding_identented" />
+
             </LinearLayout>
 
             <LinearLayout

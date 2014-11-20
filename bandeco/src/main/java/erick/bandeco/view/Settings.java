@@ -86,6 +86,7 @@ public class Settings extends ActionBarActivity {
     private TextView mealType;
     private TextView negativeWordsList;
     private TextView positiveWordsList;
+    private TextView daysToNotifyTextView;
     private View lunchNotificationLayout;
     private TextView lunchNotificationTimeTextView;
     private View dinnerNotificationLayout;
@@ -204,6 +205,7 @@ public class Settings extends ActionBarActivity {
         notifyWhenOptionTextView = (TextView) findViewById(R.id.notify_when_option_textView);
 
         final View daysToNotifyLayout = findViewById(R.id.days_to_notify_layout);
+        daysToNotifyTextView = (TextView) findViewById(R.id.days_to_notify_textView);
 
         //Meals to show
         mealType.setText(mealsChoices[mealOption]);
@@ -336,9 +338,17 @@ public class Settings extends ActionBarActivity {
                 });
 
                 AlertDialog alert = builder.create();
+                alert.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                    @Override
+                    public void onDismiss(DialogInterface dialog) {
+                        updateDaysTextView();
+                    }
+                });
                 alert.show();
             }
         });
+
+        updateDaysTextView();
 
         //Lunch notification time
         updateLunchNotificationTime();
@@ -379,6 +389,19 @@ public class Settings extends ActionBarActivity {
                 timePicker.show(getSupportFragmentManager(), TIMEPICKER_TAG);
             }
         });
+    }
+
+    private void updateDaysTextView() {
+        String days = "";
+
+        for (int i = 0; i < daysOfTheWeek.length; i++)
+            if((daysToNotifyCode & (1 << i)) != 0) {
+                if(!days.equals(""))
+                    days += ", ";
+                days += daysOfTheWeek[i].substring(0, 3);
+            }
+
+        daysToNotifyTextView.setText(days);
     }
 
     private void updateLunchNotificationLayout() {
