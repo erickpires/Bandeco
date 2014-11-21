@@ -3,6 +3,7 @@ package com.app.bandeco;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.res.AssetManager;
 import android.os.Build;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -10,6 +11,9 @@ import android.view.WindowManager;
 
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Calendar;
 
 import erick.bandeco.model.Day;
@@ -163,5 +167,21 @@ public final class Utils {
         int weekDay = (day.getWeekDay() + 1) % 7;
 
         return daysOfTheWeek[weekDay];
+    }
+
+    public static String readAssetAndClose(AssetManager assetManager, String assetName){
+        String assetData = "";
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(assetManager.open(assetName)));
+            String line;
+            while ((line = bufferedReader.readLine()) != null)
+                assetData += line;
+
+            bufferedReader.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return assetData;
     }
 }

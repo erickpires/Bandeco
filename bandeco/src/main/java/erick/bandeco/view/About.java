@@ -18,6 +18,10 @@ import com.app.bandeco.Constants;
 import com.app.bandeco.R;
 import com.app.bandeco.Utils;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 
 public class About extends ActionBarActivity {
 
@@ -88,8 +92,9 @@ public class About extends ActionBarActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(About.this);
                 LayoutInflater inflater = getLayoutInflater();
                 WebView openSourceLicensesWebView = (WebView) inflater.inflate(R.layout.open_source_view, null);
-                openSourceLicensesWebView.loadDataWithBaseURL(null, Constants.licenses, "text/html", "utf-8", null);
+                String licensesData = Utils.readAssetAndClose(getAssets(), "licenses.html");
 
+                openSourceLicensesWebView.loadDataWithBaseURL(Constants.ASSETS_FOLDER, licensesData, "text/html", "utf-8", null);
                 builder.setTitle(getString(R.string.open_source_licenses));
                 builder.setView(openSourceLicensesWebView);
 
