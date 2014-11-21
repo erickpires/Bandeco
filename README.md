@@ -12,7 +12,7 @@ This aplication uses the following libraries:
 * [DateTimePicker][3]
 * [System Bar Tint][4]
 
-The latter three licensed under the [Apache 2.0][5] license.
+All of them licensed under the [Apache 2.0][5] license.
 
 
 [1]: https://github.com/Androguide/cardsui-for-android
