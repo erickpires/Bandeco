@@ -1563,10 +1563,14 @@ containing a value of this type.
         public static final int ic_launcher=0x7f02003e;
         public static final int ic_logo=0x7f02003f;
         public static final int ic_menu_moreoverflow_normal_holo_light=0x7f020040;
-        public static final int ic_stat_fork_knife=0x7f020041;
-        public static final int icon_about=0x7f020042;
-        public static final int selectable_background_cardbank=0x7f020043;
-        public static final int top_shadow=0x7f020044;
+        public static final int ic_person_add_grey=0x7f020041;
+        public static final int ic_person_add_grey600_36dp=0x7f020042;
+        public static final int ic_person_add_white=0x7f020043;
+        public static final int ic_refresh_white=0x7f020044;
+        public static final int ic_stat_fork_knife=0x7f020045;
+        public static final int icon_about=0x7f020046;
+        public static final int selectable_background_cardbank=0x7f020047;
+        public static final int top_shadow=0x7f020048;
     }
     public static final class id {
         public static final int ListView1=0x7f09008e;

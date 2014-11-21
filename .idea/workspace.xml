@@ -74,7 +74,7 @@
       <file leaf-file-name="color.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/values/color.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+            <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="210">
               <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
               <folding />
             </state>
@@ -84,7 +84,7 @@
       <file leaf-file-name="menu_entries_list.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/layout/menu_entries_list.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.769231" vertical-offset="0" max-vertical-offset="240">
+            <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="240">
               <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
               <folding />
             </state>
@@ -97,12 +97,9 @@
       <file leaf-file-name="Settings.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/Settings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="873" max-vertical-offset="6555">
+            <state vertical-scroll-proportion="0.0" vertical-offset="5970" max-vertical-offset="7845">
               <caret line="398" column="24" selection-start-line="398" selection-start-column="24" selection-end-line="398" selection-end-column="24" />
-              <folding>
-                <element signature="e#14214#14439#0" expanded="true" />
-                <element signature="e#14420#14421#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -110,19 +107,66 @@
       <file leaf-file-name="NotificationService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/NotificationService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1170">
+            <state vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="1395">
               <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Utils.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7291667" vertical-offset="0" max-vertical-offset="2355">
+            <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="2355">
               <caret line="44" column="77" selection-start-line="44" selection-start-column="77" selection-end-line="44" selection-end-column="77" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/menu/settings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/menu/about.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/menu/main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+              <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+              <folding>
+                <element signature="e#317#340#0" expanded="true" />
+                <element signature="e#487#512#0" expanded="true" />
+                <element signature="e#656#678#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MealNotification.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/MealNotification.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6510417" vertical-offset="225" max-vertical-offset="1140">
+              <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+              <folding>
+                <element signature="e#1859#1892#0" expanded="true" />
+                <element signature="e#2033#2073#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1858,7 +1902,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/database/html/Indexer.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/html/Indexer.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/html/Indexer.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/ApplicationHelper.java" />
@@ -1900,7 +1943,6 @@
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/Card.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/values/color.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/layout/menu_entries_list.xml" />
-        <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/MealNotification.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/layout/menu_entry_element.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/ListWrapper.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Utils.java" />
@@ -1909,6 +1951,8 @@
         <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Constants.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/layout/activity_settings.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/Settings.java" />
+        <option value="$PROJECT_DIR$/bandeco/src/main/res/menu/main.xml" />
+        <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/MealNotification.java" />
       </list>
     </option>
   </component>
@@ -1963,6 +2007,8 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2157,7 +2203,187 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bandeco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bandeco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bandeco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bandeco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bandeco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bandeco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-xxxhdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bandeco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bandeco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bandeco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-xxhdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bandeco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bandeco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bandeco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-xhdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bandeco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bandeco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bandeco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-mdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bandeco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bandeco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bandeco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-hdpi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2257,8 +2483,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2485,7 +2709,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2500,7 +2724,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30957684" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32850778" sideWeight="0.6114072" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32850778" sideWeight="0.6114072" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2540,26 +2764,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/values-v21/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/drawable/divider.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/drawable/ic_launcher.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/drawable/card_bg.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13020833" vertical-offset="0" max-vertical-offset="576">
@@ -2768,7 +2972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12647554" vertical-offset="0" max-vertical-offset="1665">
           <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2777,7 +2980,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1185">
           <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2793,12 +2996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7395833" vertical-offset="1539" max-vertical-offset="2115">
           <caret line="163" column="14" selection-start-line="163" selection-start-column="14" selection-end-line="163" selection-end-column="14" />
-          <folding>
-            <element signature="e#2888#2889#0" expanded="true" />
-            <element signature="e#2911#2912#0" expanded="true" />
-            <element signature="e#3112#3113#0" expanded="true" />
-            <element signature="e#3130#3131#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2851,17 +3048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="108" max-vertical-offset="1155">
           <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/MealNotification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.859375" vertical-offset="90" max-vertical-offset="1140">
-          <caret line="52" column="100" selection-start-line="52" selection-start-column="100" selection-end-line="52" selection-end-column="100" />
-          <folding>
-            <element signature="e#2033#2073#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2869,7 +3055,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5989583" vertical-offset="0" max-vertical-offset="960">
           <caret line="38" column="67" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2909,10 +3094,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="873" max-vertical-offset="6555">
           <caret line="398" column="24" selection-start-line="398" selection-start-column="24" selection-end-line="398" selection-end-column="24" />
-          <folding>
-            <element signature="e#14214#14439#0" expanded="true" />
-            <element signature="e#14420#14421#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2921,11 +3103,11 @@
         <state vertical-scroll-proportion="0.35454544" vertical-offset="0" max-vertical-offset="550">
           <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
           <folding>
-            <element signature="e#254#286#0" expanded="true" />
-            <element signature="e#312#344#0" expanded="true" />
-            <element signature="e#371#399#0" expanded="true" />
-            <element signature="e#423#451#0" expanded="true" />
-            <element signature="e#690#722#0" expanded="true" />
+            <element signature="e#254#286#0" expanded="false" />
+            <element signature="e#312#344#0" expanded="false" />
+            <element signature="e#371#399#0" expanded="false" />
+            <element signature="e#423#451#0" expanded="false" />
+            <element signature="e#690#722#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2935,7 +3117,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/layout/menu_entries_list.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.769231" vertical-offset="0" max-vertical-offset="240">
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="240">
           <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
           <folding />
         </state>
@@ -2949,90 +3131,90 @@
         <state vertical-scroll-proportion="0.63272727" vertical-offset="2532" max-vertical-offset="4080">
           <caret line="192" column="51" selection-start-line="192" selection-start-column="51" selection-end-line="192" selection-end-column="51" />
           <folding>
-            <element signature="e#1234#1262#0" expanded="true" />
-            <element signature="e#1298#1326#0" expanded="true" />
-            <element signature="e#1556#1585#0" expanded="true" />
-            <element signature="e#1627#1656#0" expanded="true" />
-            <element signature="e#1698#1727#0" expanded="true" />
-            <element signature="e#1767#1796#0" expanded="true" />
-            <element signature="e#1830#1844#0" expanded="true" />
-            <element signature="e#2222#2262#0" expanded="true" />
-            <element signature="e#2304#2344#0" expanded="true" />
-            <element signature="e#2386#2426#0" expanded="true" />
-            <element signature="e#2466#2506#0" expanded="true" />
-            <element signature="e#2852#2879#0" expanded="true" />
-            <element signature="e#2915#2942#0" expanded="true" />
-            <element signature="e#3124#3153#0" expanded="true" />
-            <element signature="e#3195#3224#0" expanded="true" />
-            <element signature="e#3266#3295#0" expanded="true" />
-            <element signature="e#3335#3364#0" expanded="true" />
-            <element signature="e#3398#3425#0" expanded="true" />
-            <element signature="e#3869#3897#0" expanded="true" />
-            <element signature="e#3933#3961#0" expanded="true" />
-            <element signature="e#4191#4220#0" expanded="true" />
-            <element signature="e#4262#4291#0" expanded="true" />
-            <element signature="e#4333#4362#0" expanded="true" />
-            <element signature="e#4402#4431#0" expanded="true" />
-            <element signature="e#4465#4489#0" expanded="true" />
-            <element signature="e#4966#5006#0" expanded="true" />
-            <element signature="e#5048#5088#0" expanded="true" />
-            <element signature="e#5130#5170#0" expanded="true" />
-            <element signature="e#5210#5250#0" expanded="true" />
-            <element signature="e#5548#5576#0" expanded="true" />
-            <element signature="e#5612#5640#0" expanded="true" />
-            <element signature="e#5870#5899#0" expanded="true" />
-            <element signature="e#5941#5970#0" expanded="true" />
-            <element signature="e#6012#6041#0" expanded="true" />
-            <element signature="e#6081#6110#0" expanded="true" />
-            <element signature="e#6144#6168#0" expanded="true" />
-            <element signature="e#6645#6685#0" expanded="true" />
-            <element signature="e#6727#6767#0" expanded="true" />
-            <element signature="e#6809#6849#0" expanded="true" />
-            <element signature="e#6889#6929#0" expanded="true" />
-            <element signature="e#7231#7259#0" expanded="true" />
-            <element signature="e#7295#7323#0" expanded="true" />
-            <element signature="e#7564#7593#0" expanded="true" />
-            <element signature="e#7635#7664#0" expanded="true" />
-            <element signature="e#7706#7735#0" expanded="true" />
-            <element signature="e#7775#7804#0" expanded="true" />
-            <element signature="e#7838#7854#0" expanded="true" />
-            <element signature="e#8249#8289#0" expanded="true" />
-            <element signature="e#8331#8371#0" expanded="true" />
-            <element signature="e#8413#8453#0" expanded="true" />
-            <element signature="e#8493#8533#0" expanded="true" />
-            <element signature="e#8838#8865#0" expanded="true" />
-            <element signature="e#8901#8928#0" expanded="true" />
-            <element signature="e#9110#9139#0" expanded="true" />
-            <element signature="e#9181#9210#0" expanded="true" />
-            <element signature="e#9252#9281#0" expanded="true" />
-            <element signature="e#9321#9350#0" expanded="true" />
-            <element signature="e#9384#9408#0" expanded="true" />
-            <element signature="e#9799#9839#0" expanded="true" />
-            <element signature="e#9881#9921#0" expanded="true" />
-            <element signature="e#9963#10003#0" expanded="true" />
-            <element signature="e#10043#10083#0" expanded="true" />
-            <element signature="e#10398#10426#0" expanded="true" />
-            <element signature="e#10462#10490#0" expanded="true" />
-            <element signature="e#10738#10767#0" expanded="true" />
-            <element signature="e#10809#10838#0" expanded="true" />
-            <element signature="e#10880#10909#0" expanded="true" />
-            <element signature="e#10949#10978#0" expanded="true" />
-            <element signature="e#11012#11040#0" expanded="true" />
-            <element signature="e#11440#11480#0" expanded="true" />
-            <element signature="e#11522#11562#0" expanded="true" />
-            <element signature="e#11604#11644#0" expanded="true" />
-            <element signature="e#11684#11724#0" expanded="true" />
-            <element signature="e#12075#12103#0" expanded="true" />
-            <element signature="e#12139#12167#0" expanded="true" />
-            <element signature="e#12416#12445#0" expanded="true" />
-            <element signature="e#12487#12516#0" expanded="true" />
-            <element signature="e#12558#12587#0" expanded="true" />
-            <element signature="e#12627#12656#0" expanded="true" />
-            <element signature="e#12690#12719#0" expanded="true" />
-            <element signature="e#13120#13160#0" expanded="true" />
-            <element signature="e#13202#13242#0" expanded="true" />
-            <element signature="e#13284#13324#0" expanded="true" />
-            <element signature="e#13364#13404#0" expanded="true" />
+            <element signature="e#1234#1262#0" expanded="false" />
+            <element signature="e#1298#1326#0" expanded="false" />
+            <element signature="e#1556#1585#0" expanded="false" />
+            <element signature="e#1627#1656#0" expanded="false" />
+            <element signature="e#1698#1727#0" expanded="false" />
+            <element signature="e#1767#1796#0" expanded="false" />
+            <element signature="e#1830#1844#0" expanded="false" />
+            <element signature="e#2222#2262#0" expanded="false" />
+            <element signature="e#2304#2344#0" expanded="false" />
+            <element signature="e#2386#2426#0" expanded="false" />
+            <element signature="e#2466#2506#0" expanded="false" />
+            <element signature="e#2852#2879#0" expanded="false" />
+            <element signature="e#2915#2942#0" expanded="false" />
+            <element signature="e#3124#3153#0" expanded="false" />
+            <element signature="e#3195#3224#0" expanded="false" />
+            <element signature="e#3266#3295#0" expanded="false" />
+            <element signature="e#3335#3364#0" expanded="false" />
+            <element signature="e#3398#3425#0" expanded="false" />
+            <element signature="e#3869#3897#0" expanded="false" />
+            <element signature="e#3933#3961#0" expanded="false" />
+            <element signature="e#4191#4220#0" expanded="false" />
+            <element signature="e#4262#4291#0" expanded="false" />
+            <element signature="e#4333#4362#0" expanded="false" />
+            <element signature="e#4402#4431#0" expanded="false" />
+            <element signature="e#4465#4489#0" expanded="false" />
+            <element signature="e#4966#5006#0" expanded="false" />
+            <element signature="e#5048#5088#0" expanded="false" />
+            <element signature="e#5130#5170#0" expanded="false" />
+            <element signature="e#5210#5250#0" expanded="false" />
+            <element signature="e#5548#5576#0" expanded="false" />
+            <element signature="e#5612#5640#0" expanded="false" />
+            <element signature="e#5870#5899#0" expanded="false" />
+            <element signature="e#5941#5970#0" expanded="false" />
+            <element signature="e#6012#6041#0" expanded="false" />
+            <element signature="e#6081#6110#0" expanded="false" />
+            <element signature="e#6144#6168#0" expanded="false" />
+            <element signature="e#6645#6685#0" expanded="false" />
+            <element signature="e#6727#6767#0" expanded="false" />
+            <element signature="e#6809#6849#0" expanded="false" />
+            <element signature="e#6889#6929#0" expanded="false" />
+            <element signature="e#7231#7259#0" expanded="false" />
+            <element signature="e#7295#7323#0" expanded="false" />
+            <element signature="e#7564#7593#0" expanded="false" />
+            <element signature="e#7635#7664#0" expanded="false" />
+            <element signature="e#7706#7735#0" expanded="false" />
+            <element signature="e#7775#7804#0" expanded="false" />
+            <element signature="e#7838#7854#0" expanded="false" />
+            <element signature="e#8249#8289#0" expanded="false" />
+            <element signature="e#8331#8371#0" expanded="false" />
+            <element signature="e#8413#8453#0" expanded="false" />
+            <element signature="e#8493#8533#0" expanded="false" />
+            <element signature="e#8838#8865#0" expanded="false" />
+            <element signature="e#8901#8928#0" expanded="false" />
+            <element signature="e#9110#9139#0" expanded="false" />
+            <element signature="e#9181#9210#0" expanded="false" />
+            <element signature="e#9252#9281#0" expanded="false" />
+            <element signature="e#9321#9350#0" expanded="false" />
+            <element signature="e#9384#9408#0" expanded="false" />
+            <element signature="e#9799#9839#0" expanded="false" />
+            <element signature="e#9881#9921#0" expanded="false" />
+            <element signature="e#9963#10003#0" expanded="false" />
+            <element signature="e#10043#10083#0" expanded="false" />
+            <element signature="e#10398#10426#0" expanded="false" />
+            <element signature="e#10462#10490#0" expanded="false" />
+            <element signature="e#10738#10767#0" expanded="false" />
+            <element signature="e#10809#10838#0" expanded="false" />
+            <element signature="e#10880#10909#0" expanded="false" />
+            <element signature="e#10949#10978#0" expanded="false" />
+            <element signature="e#11012#11040#0" expanded="false" />
+            <element signature="e#11440#11480#0" expanded="false" />
+            <element signature="e#11522#11562#0" expanded="false" />
+            <element signature="e#11604#11644#0" expanded="false" />
+            <element signature="e#11684#11724#0" expanded="false" />
+            <element signature="e#12075#12103#0" expanded="false" />
+            <element signature="e#12139#12167#0" expanded="false" />
+            <element signature="e#12416#12445#0" expanded="false" />
+            <element signature="e#12487#12516#0" expanded="false" />
+            <element signature="e#12558#12587#0" expanded="false" />
+            <element signature="e#12627#12656#0" expanded="false" />
+            <element signature="e#12690#12719#0" expanded="false" />
+            <element signature="e#13120#13160#0" expanded="false" />
+            <element signature="e#13202#13242#0" expanded="false" />
+            <element signature="e#13284#13324#0" expanded="false" />
+            <element signature="e#13364#13404#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3042,9 +3224,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7291667" vertical-offset="0" max-vertical-offset="2355">
+        <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="2355">
           <caret line="44" column="77" selection-start-line="44" selection-start-column="77" selection-end-line="44" selection-end-column="77" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/menu/settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/menu/about.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/menu/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding>
+            <element signature="e#317#340#0" expanded="true" />
+            <element signature="e#487#512#0" expanded="true" />
+            <element signature="e#656#678#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/MealNotification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6510417" vertical-offset="225" max-vertical-offset="1140">
+          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+          <folding>
+            <element signature="e#1859#1892#0" expanded="true" />
+            <element signature="e#2033#2073#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

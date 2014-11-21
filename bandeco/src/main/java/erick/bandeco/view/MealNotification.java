@@ -55,7 +55,7 @@ public class MealNotification {
         PendingIntent pendingShareIntent = PendingIntent.getActivity(context, 0, Intent.createChooser(shareIntent, share),
                 PendingIntent.FLAG_UPDATE_CURRENT);
 
-        builder.addAction(android.R.drawable.ic_menu_share, share, pendingShareIntent);
+        builder.addAction(R.drawable.ic_person_add_white, share, pendingShareIntent);
 
         notify(context, builder.build());
     }
