@@ -622,6 +622,7 @@
     <item format="float" name="numbers_radius_multiplier_outer" type="string">0.83</item>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="open_source_licenses">Licenças de código aberto</string>
     <string name="positive_words">O que gosto</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>

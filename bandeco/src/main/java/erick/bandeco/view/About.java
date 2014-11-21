@@ -1,5 +1,6 @@
 package erick.bandeco.view;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -7,7 +8,9 @@ import android.net.Uri;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
 
@@ -74,6 +77,24 @@ public class About extends ActionBarActivity {
             public void onClick(View v) {
                 Intent openUrl = new Intent(Intent.ACTION_VIEW, designerDribbble);
                 startActivity(openUrl);
+            }
+        });
+
+        TextView textViewOpenSourceLicenses = (TextView) findViewById(R.id.textViewopenSourceLicenses);
+
+        textViewOpenSourceLicenses.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(About.this);
+                LayoutInflater inflater = getLayoutInflater();
+                WebView openSourceLicensesWebView = (WebView) inflater.inflate(R.layout.open_source_view, null);
+                openSourceLicensesWebView.loadDataWithBaseURL(null, Constants.licenses, "text/html", "utf-8", null);
+
+                builder.setTitle(getString(R.string.open_source_licenses));
+                builder.setView(openSourceLicensesWebView);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
             }
         });
     }

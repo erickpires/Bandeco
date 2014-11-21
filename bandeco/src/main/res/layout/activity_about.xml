@@ -109,6 +109,16 @@
                 android:text="@string/icon_designer_name"
                 android:textColor="#3887CF"
                 android:layout_marginBottom="@dimen/default_side_padding"/>
+            <TextView
+                android:id="@+id/textViewopenSourceLicenses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewIconDesigner"
+                android:layout_centerHorizontal="true"
+                android:text="@string/open_source_licenses"
+                android:textColor="#3887CF"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="@dimen/default_side_padding"/>
         </RelativeLayout>
     </ScrollView>
 

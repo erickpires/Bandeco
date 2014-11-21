@@ -20,6 +20,8 @@
     <string name="icon_by">Ícone por:</string>
     <string name="icon_designer_name" translatable="false">Alex Pronsky</string>
 
+    <string name="open_source_licenses">Licenças de código aberto</string>
+
     <string name="manage_meal_items">Gerenciar itens do cardápio</string>
 
     <string name="show">Exibir</string>
