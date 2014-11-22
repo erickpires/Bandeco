@@ -52,8 +52,6 @@ public class ListDialogFragment extends DialogFragment {
             }
         });
 
-        button.setBackgroundColor(layout.getDrawingCacheBackgroundColor());
-
         builder.setView(layout);
 
         Dialog result = builder.create();

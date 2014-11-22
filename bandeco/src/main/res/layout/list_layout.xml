@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
+    android:background="@color/white"
     android:paddingTop="@dimen/default_minimal_padding">
 
     <LinearLayout
@@ -32,6 +33,7 @@
             android:id="@+id/new_element_button"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/dialog_selector"
             android:text="@string/new_word" />
     </LinearLayout>
 </ScrollView>

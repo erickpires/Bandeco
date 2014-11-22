@@ -47,8 +47,6 @@ public class ListWrapper {
             }
         });
 
-        deleteButton.setBackgroundColor(elementLayout.getDrawingCacheBackgroundColor());
-
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
