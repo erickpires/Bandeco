@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/parent_layout_settings"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
@@ -184,6 +185,7 @@
                 android:paddingTop="@dimen/double_top_padding">
 
                 <TextView
+                    android:id="@+id/days_to_notify_title_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="@dimen/default_side_padding"
@@ -195,7 +197,7 @@
                     android:textColor="@color/primary_text_color"/>
 
                 <TextView
-                    android:id="@+id/days_to_notify_textView"
+                    android:id="@+id/days_to_notify_content_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="@dimen/default_side_padding_identented"

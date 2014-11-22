@@ -8,14 +8,14 @@ package com.fima.cardsui;
 
 public final class R {
 	public static final class color {
-		public static final int card_border = 0x7f070017;
-		public static final int card_grid_text = 0x7f070018;
-		public static final int card_light_text = 0x7f070019;
-		public static final int card_separator = 0x7f07001a;
-		public static final int card_text = 0x7f07001b;
-		public static final int card_title_text = 0x7f07001c;
-		public static final int stroke = 0x7f070045;
-		public static final int text_light = 0x7f070048;
+		public static final int card_border = 0x7f070018;
+		public static final int card_grid_text = 0x7f070019;
+		public static final int card_light_text = 0x7f07001a;
+		public static final int card_separator = 0x7f07001b;
+		public static final int card_text = 0x7f07001c;
+		public static final int card_title_text = 0x7f07001d;
+		public static final int stroke = 0x7f070046;
+		public static final int text_light = 0x7f070049;
 	}
 	public static final class dimen {
 		public static final int action_bar_switch_padding = 0x7f080025;
@@ -199,16 +199,16 @@ public final class R {
 		public static final int top_shadow = 0x7f02004a;
 	}
 	public static final class id {
-		public static final int ScrollView1 = 0x7f090073;
-		public static final int cardContent = 0x7f090078;
-		public static final int footer = 0x7f090076;
-		public static final int listView = 0x7f090071;
-		public static final int placeholder = 0x7f090077;
-		public static final int stackContainer = 0x7f09007b;
-		public static final int stackRoot = 0x7f090079;
-		public static final int stackTitle = 0x7f09007a;
-		public static final int sticky = 0x7f090072;
-		public static final int tableLayout = 0x7f090074;
+		public static final int ScrollView1 = 0x7f090074;
+		public static final int cardContent = 0x7f090079;
+		public static final int footer = 0x7f090077;
+		public static final int listView = 0x7f090072;
+		public static final int placeholder = 0x7f090078;
+		public static final int stackContainer = 0x7f09007c;
+		public static final int stackRoot = 0x7f09007a;
+		public static final int stackTitle = 0x7f09007b;
+		public static final int sticky = 0x7f090073;
+		public static final int tableLayout = 0x7f090075;
 	}
 	public static final class layout {
 		public static final int cards_view = 0x7f03001b;

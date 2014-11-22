@@ -23,5 +23,4 @@
         android:background="@drawable/dialog_selector"
         android:src="@drawable/ic_action_remove"/>
 
-
 </LinearLayout><!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/layout/list_element.xml -->

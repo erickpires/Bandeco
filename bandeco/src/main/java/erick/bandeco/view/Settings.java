@@ -86,7 +86,9 @@ public class Settings extends ActionBarActivity {
     private TextView mealType;
     private TextView negativeWordsList;
     private TextView positiveWordsList;
-    private TextView daysToNotifyTextView;
+    private View daysToNotifyLayout;
+    private TextView daysToNotifyTitleTextView;
+    private TextView daysToNotifyContentTextView;
     private View lunchNotificationLayout;
     private TextView lunchNotificationTimeTextView;
     private View dinnerNotificationLayout;
@@ -204,8 +206,9 @@ public class Settings extends ActionBarActivity {
         View notifyWhenLayout = findViewById(R.id.notify_when_layout);
         notifyWhenOptionTextView = (TextView) findViewById(R.id.notify_when_option_textView);
 
-        final View daysToNotifyLayout = findViewById(R.id.days_to_notify_layout);
-        daysToNotifyTextView = (TextView) findViewById(R.id.days_to_notify_textView);
+        daysToNotifyLayout = findViewById(R.id.days_to_notify_layout);
+        daysToNotifyTitleTextView = (TextView) findViewById(R.id.days_to_notify_title_textView);
+        daysToNotifyContentTextView = (TextView) findViewById(R.id.days_to_notify_content_textView);
 
         //Meals to show
         mealType.setText(mealsChoices[mealOption]);
@@ -221,13 +224,18 @@ public class Settings extends ActionBarActivity {
                         mealOption = which;
                         mealType.setText(mealsChoices[mealOption]);
 
-                        updateLunchNotificationLayout();
-                        updateDinnerNotificationLayout();
-
                         dialog.dismiss();
                     }
                 });
                 AlertDialog alert = builder.create();
+
+                alert.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                    @Override
+                    public void onDismiss(DialogInterface dialog) {
+                        updateLunchNotificationLayout();
+                        updateDinnerNotificationLayout();
+                    }
+                });
                 alert.show();
             }
         });
@@ -311,18 +319,28 @@ public class Settings extends ActionBarActivity {
                         notifyWhenOption = which;
                         notifyWhenOptionTextView.setText(notifyWhenChoices[which]);
 
-                        updateLunchNotificationLayout();
-                        updateDinnerNotificationLayout();
-
                         dialog.dismiss();
                     }
                 });
                 AlertDialog alert = builder.create();
+
+                alert.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                    @Override
+                    public void onDismiss(DialogInterface dialog) {
+                        updateLunchNotificationLayout();
+                        updateDinnerNotificationLayout();
+                        updateDaysToNotifyLayout();
+                    }
+                });
+
                 alert.show();
             }
         });
 
         //Days to notify
+        updateDaysTextView();
+        updateDaysToNotifyLayout();
+
         daysToNotifyLayout.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -348,10 +366,9 @@ public class Settings extends ActionBarActivity {
             }
         });
 
-        updateDaysTextView();
-
         //Lunch notification time
         updateLunchNotificationTime();
+        updateLunchNotificationLayout();
 
         lunchNotificationLayout.setOnClickListener(new OnClickListener() {
             @Override
@@ -372,6 +389,7 @@ public class Settings extends ActionBarActivity {
 
         //Dinner notification time
         updateDinnerNotificationTime();
+        updateDinnerNotificationLayout();
 
         dinnerNotificationLayout.setOnClickListener(new OnClickListener() {
             @Override
@@ -401,23 +419,41 @@ public class Settings extends ActionBarActivity {
                 days += daysOfTheWeek[i].substring(0, 3);
             }
 
-        daysToNotifyTextView.setText(days);
+        daysToNotifyContentTextView.setText(days);
+    }
+
+    private void updateDaysToNotifyLayout(){
+        changeOptionDisplayState(daysToNotifyLayout, daysToNotifyTitleTextView, daysToNotifyContentTextView, (notifyWhenOption != NEVER_NOTIFY));
     }
 
     private void updateLunchNotificationLayout() {
         boolean enabled = notifyWhenOption != NEVER_NOTIFY && mealOption != DINNER_ONLY;
 
-        lunchNotificationLayout.setEnabled(enabled);
-        lunchNotificationTextView.setEnabled(enabled);
-        lunchNotificationTimeTextView.setEnabled(enabled);
+        changeOptionDisplayState(lunchNotificationLayout, lunchNotificationTextView, lunchNotificationTimeTextView, enabled);
     }
 
     private void updateDinnerNotificationLayout() {
         boolean enabled = notifyWhenOption != NEVER_NOTIFY && mealOption != LUNCH_ONLY;
 
-        dinnerNotificationLayout.setEnabled(enabled);
-        dinnerNotificationTextView.setEnabled(enabled);
-        dinnerNotificationTimeTextView.setEnabled(enabled);
+        changeOptionDisplayState(dinnerNotificationLayout, dinnerNotificationTextView, dinnerNotificationTimeTextView, enabled);
+    }
+
+    private int getColor(boolean enabled) {
+        int color;
+        if(enabled)
+            color = getResources().getColor(R.color.primary_text_color);
+        else
+            color = getResources().getColor(R.color.grey_text);
+        return color;
+    }
+
+    private void changeOptionDisplayState(View parentLayout, TextView titleTextView, TextView contentTextView, boolean enabled) {
+        int color = getColor(enabled);
+
+        parentLayout.setEnabled(enabled);
+        titleTextView.setEnabled(enabled);
+        titleTextView.setTextColor(color);
+        contentTextView.setEnabled(enabled);
     }
 
     private void updateLunchNotificationTime() {
