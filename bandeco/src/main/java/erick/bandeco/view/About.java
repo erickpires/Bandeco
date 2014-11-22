@@ -1,10 +1,13 @@
 package erick.bandeco.view;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.support.annotation.NonNull;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -17,11 +20,6 @@ import android.support.v7.widget.Toolbar;
 import com.app.bandeco.Constants;
 import com.app.bandeco.R;
 import com.app.bandeco.Utils;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 
 public class About extends ActionBarActivity {
 
@@ -89,18 +87,34 @@ public class About extends ActionBarActivity {
         textViewOpenSourceLicenses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(About.this);
-                LayoutInflater inflater = getLayoutInflater();
-                WebView openSourceLicensesWebView = (WebView) inflater.inflate(R.layout.open_source_view, null);
-                String licensesData = Utils.readAssetAndClose(getAssets(), "licenses.html");
-
-                openSourceLicensesWebView.loadDataWithBaseURL(Constants.ASSETS_FOLDER, licensesData, "text/html", "utf-8", null);
-                builder.setTitle(getString(R.string.open_source_licenses));
-                builder.setView(openSourceLicensesWebView);
-
-                AlertDialog dialog = builder.create();
-                dialog.show();
+                (new LicensesDialogFragment()).show(getSupportFragmentManager(), "licenses");
             }
         });
+    }
+
+    private class LicensesDialogFragment extends DialogFragment {
+        @NonNull
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            setRetainInstance(true);
+            AlertDialog.Builder builder = new AlertDialog.Builder(About.this);
+            LayoutInflater inflater = getActivity().getLayoutInflater();
+
+            WebView openSourceLicensesWebView = (WebView) inflater.inflate(R.layout.open_source_view, null);
+            String licensesData = Utils.readAssetAndClose(getAssets(), "licenses.html");
+
+            openSourceLicensesWebView.loadDataWithBaseURL(Constants.ASSETS_FOLDER, licensesData, "text/html", "utf-8", null);
+            builder.setTitle(getString(R.string.open_source_licenses));
+            builder.setView(openSourceLicensesWebView);
+
+            return builder.create();
+        }
+
+        @Override
+        public void onDestroyView() {
+            if (getDialog() != null && getRetainInstance())
+                getDialog().setOnDismissListener(null);
+            super.onDestroyView();
+        }
     }
 }

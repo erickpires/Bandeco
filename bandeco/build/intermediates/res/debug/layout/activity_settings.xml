@@ -193,8 +193,7 @@
                     android:paddingRight="@dimen/default_side_padding"
                     android:paddingEnd="@dimen/default_side_padding"
                     android:text="@string/days_to_notify"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/primary_text_color"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
                     android:id="@+id/days_to_notify_content_textView"
@@ -225,8 +224,7 @@
                     android:paddingRight="@dimen/default_side_padding"
                     android:paddingEnd="@dimen/default_side_padding"
                     android:text="@string/lunch_notification"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/primary_text_color"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
                     android:id="@+id/lunch_notification_time_textview"
@@ -257,8 +255,7 @@
                     android:paddingRight="@dimen/default_side_padding"
                     android:paddingEnd="@dimen/default_side_padding"
                     android:text="@string/dinner_notification"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/primary_text_color"/>
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
                     android:id="@+id/dinner_notification_time_textview"

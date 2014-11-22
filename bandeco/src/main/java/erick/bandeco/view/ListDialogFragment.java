@@ -4,6 +4,8 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
@@ -17,18 +19,19 @@ import java.util.ArrayList;
 
 import static android.content.DialogInterface.*;
 
-public class ListDialogFragment extends DialogFragment {
+public class ListDialogFragment extends DialogFragment{
 
     private ArrayList<String> list;
     private OnDismissListener onDismissListener;
     private LinearLayout listLinearLayout;
+    private ListWrapper wrapper;
 
     public ListDialogFragment(ArrayList<String> list){
         super();
         
         this.list = list;
     }
-    
+
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -40,7 +43,7 @@ public class ListDialogFragment extends DialogFragment {
 
         listLinearLayout = (LinearLayout) layout.findViewById(R.id.list);
 
-        final ListWrapper wrapper = new ListWrapper(listLinearLayout, inflater, this.list);
+        wrapper = new ListWrapper(listLinearLayout, inflater, this.list);
 
         final Button button = (Button) layout.findViewById(R.id.new_element_button);
 
@@ -57,8 +60,16 @@ public class ListDialogFragment extends DialogFragment {
         Dialog result = builder.create();
 
         result.setOnDismissListener(onDismissListener);
+        setRetainInstance(true);
 
         return result;
+    }
+
+    @Override
+    public void onDestroyView() {
+        if (getDialog() != null && getRetainInstance())
+            getDialog().setOnDismissListener(null);
+        super.onDestroyView();
     }
 
     public void setOnDismissListener(OnDismissListener onDismissListener){
@@ -67,8 +78,10 @@ public class ListDialogFragment extends DialogFragment {
 
     @Override
     public void onDismiss(DialogInterface dialog){
-        listLinearLayout.clearFocus();
-        onDismissListener.onDismiss(dialog);
+        if(listLinearLayout != null && onDismissListener != null) {
+            listLinearLayout.clearFocus();
+            onDismissListener.onDismiss(dialog);
+        }
         super.onDismiss(dialog);
     }
 }

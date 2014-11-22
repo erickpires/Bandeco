@@ -23,10 +23,10 @@ public class ListWrapper {
     public ListWrapper(LinearLayout view, LayoutInflater inflater, ArrayList<String> list) {
         this.view = view;
         this.inflater = inflater;
-        this.wordsList = list;
         this.viewsList = new ArrayList<View>();
 
-        for (String ignored : list) createListViewElement();
+        this.wordsList = list;
+        for (String ignored : wordsList) createListViewElement();
     }
 
     private void createListViewElement(){

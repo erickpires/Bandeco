@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Vibrator;
 import android.support.annotation.NonNull;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -100,6 +101,7 @@ public class Settings extends ActionBarActivity {
     private ArrayList<String> negativeList;
     private ArrayList<String> positiveList;
     private SQLiteDatabase database;
+    private DialogFragment currentDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,8 +133,10 @@ public class Settings extends ActionBarActivity {
 
     @Override
     protected void onPause() {
+        if(currentDialog != null)
+            currentDialog.dismiss();
+
         super.onPause();
-        System.out.println("Saving Settings");
         saveSettings();
         setupNotificationAlarm(MEAL_TYPE_LUNCH);
         setupNotificationAlarm(MEAL_TYPE_DINNER);
@@ -189,7 +193,7 @@ public class Settings extends ActionBarActivity {
 
         View manageMenuEntries = findViewById(R.id.manage_menu_entries_layout);
 
-        View negativeWordsLayout = findViewById(R.id.negative_words);
+        final View negativeWordsLayout = findViewById(R.id.negative_words);
         negativeWordsList = (TextView) findViewById(R.id.negative_words_list);
 
         View positiveWordsLayout = findViewById(R.id.positive_words);
@@ -277,10 +281,12 @@ public class Settings extends ActionBarActivity {
                     @Override
                     public void onDismiss(DialogInterface dialog) {
                         updateNegativeWords();
+                        currentDialog = null;
                     }
                 });
 
-                dialogFragment.show(getSupportFragmentManager(), "");
+                dialogFragment.show(getSupportFragmentManager(), "negative_dialog");
+                currentDialog = dialogFragment;
             }
         });
 
@@ -297,11 +303,12 @@ public class Settings extends ActionBarActivity {
                     @Override
                     public void onDismiss(DialogInterface dialog) {
                         updatePositiveWords();
+                        currentDialog = null;
                     }
                 });
 
-                dialogFragment.show(getSupportFragmentManager(), "");
-
+                dialogFragment.show(getSupportFragmentManager(), "positive_dialog");
+                currentDialog = dialogFragment;
             }
         });
 
@@ -379,11 +386,13 @@ public class Settings extends ActionBarActivity {
                         lunchNotificationHour = hour;
                         lunchNotificationMinute = minute;
                         updateLunchNotificationTime();
+                        currentDialog = null;
                     }
                 };
 
                 TimePickerDialog timePicker = TimePickerDialog.newInstance(onTimeSetListener, lunchNotificationHour, lunchNotificationMinute, true);
                 timePicker.show(getSupportFragmentManager(), TIMEPICKER_TAG);
+                currentDialog = timePicker;
             }
         });
 
@@ -400,11 +409,13 @@ public class Settings extends ActionBarActivity {
                         dinnerNotificationHour = hour;
                         dinnerNotificationMinute = minute;
                         updateDinnerNotificationTime();
+                        currentDialog = null;
                     }
                 };
 
                 TimePickerDialog timePicker = TimePickerDialog.newInstance(onTimeSetListener, dinnerNotificationHour, dinnerNotificationMinute, true);
                 timePicker.show(getSupportFragmentManager(), TIMEPICKER_TAG);
+                currentDialog = timePicker;
             }
         });
     }
