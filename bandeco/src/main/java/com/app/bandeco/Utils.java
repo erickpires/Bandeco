@@ -164,7 +164,7 @@ public final class Utils {
     //TODO use a calendar instead of day
     public static String getDayOfTheWeek(Day day, Context context) {
         String[] daysOfTheWeek = context.getResources().getStringArray(R.array.days_array);
-        int weekDay = (day.getWeekDay() + 1) % 7;
+        int weekDay = day.getWeekDay() % 7;
 
         return daysOfTheWeek[weekDay];
     }

@@ -88,7 +88,8 @@
                 android:layout_below="@+id/textView3"
                 android:layout_centerHorizontal="true"
                 android:text="@string/developer_name"
-                android:textColor="#3887CF" />
+                android:textColor="@color/link_text_material_light"
+                android:background="@drawable/about_links_selector" />
 
 
             <TextView
@@ -107,7 +108,8 @@
                 android:layout_below="@+id/textView4"
                 android:layout_centerHorizontal="true"
                 android:text="@string/icon_designer_name"
-                android:textColor="#3887CF"
+                android:textColor="@color/link_text_material_light"
+                android:background="@drawable/about_links_selector"
                 android:layout_marginBottom="@dimen/default_side_padding"/>
             <TextView
                 android:id="@+id/textViewopenSourceLicenses"
@@ -116,7 +118,8 @@
                 android:layout_below="@+id/textViewIconDesigner"
                 android:layout_centerHorizontal="true"
                 android:text="@string/open_source_licenses"
-                android:textColor="#3887CF"
+                android:textColor="@color/link_text_material_light"
+                android:background="@drawable/about_links_selector"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="@dimen/default_side_padding"/>
         </RelativeLayout>

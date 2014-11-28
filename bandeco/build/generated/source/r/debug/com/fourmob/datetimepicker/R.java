@@ -9,21 +9,21 @@ package com.fourmob.datetimepicker;
 public final class R {
 	public static final class color {
 		public static final int ampm_text_color = 0x7f070006;
-		public static final int blue = 0x7f07000e;
-		public static final int calendar_header = 0x7f070017;
-		public static final int circle_background = 0x7f07001e;
-		public static final int darker_blue = 0x7f07001f;
-		public static final int date_picker_selector = 0x7f070056;
-		public static final int date_picker_text_normal = 0x7f070020;
-		public static final int date_picker_view_animator = 0x7f070021;
-		public static final int date_picker_year_selector = 0x7f070057;
-		public static final int done_text_color = 0x7f070058;
-		public static final int done_text_color_disabled = 0x7f070026;
-		public static final int done_text_color_normal = 0x7f070027;
-		public static final int line_background = 0x7f07002d;
-		public static final int numbers_text_color = 0x7f070035;
-		public static final int transparent_black = 0x7f07004b;
-		public static final int white = 0x7f07004c;
+		public static final int blue = 0x7f07000f;
+		public static final int calendar_header = 0x7f070018;
+		public static final int circle_background = 0x7f07001f;
+		public static final int darker_blue = 0x7f070020;
+		public static final int date_picker_selector = 0x7f070057;
+		public static final int date_picker_text_normal = 0x7f070021;
+		public static final int date_picker_view_animator = 0x7f070022;
+		public static final int date_picker_year_selector = 0x7f070058;
+		public static final int done_text_color = 0x7f070059;
+		public static final int done_text_color_disabled = 0x7f070027;
+		public static final int done_text_color_normal = 0x7f070028;
+		public static final int line_background = 0x7f07002e;
+		public static final int numbers_text_color = 0x7f070036;
+		public static final int transparent_black = 0x7f07004c;
+		public static final int white = 0x7f07004d;
 	}
 	public static final class dimen {
 		public static final int ampm_label_size = 0x7f080029;

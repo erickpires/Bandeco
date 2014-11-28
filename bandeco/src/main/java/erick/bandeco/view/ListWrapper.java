@@ -10,9 +10,6 @@ import com.app.bandeco.R;
 
 import java.util.ArrayList;
 
-/**
- * Created by erick on 9/4/14.
- */
 public class ListWrapper {
 
     private ArrayList<String> wordsList;
@@ -30,7 +27,7 @@ public class ListWrapper {
     }
 
     private void createListViewElement(){
-        final View elementLayout = inflater.inflate(R.layout.list_element, null);
+        final View elementLayout = inflater.inflate(R.layout.list_element, view, false);
 
         final EditText editText = (EditText) elementLayout.findViewById(R.id.list_element_text);
         final ImageButton deleteButton = (ImageButton) elementLayout.findViewById(R.id.delete_button);

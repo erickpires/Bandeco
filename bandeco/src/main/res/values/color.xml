@@ -3,8 +3,10 @@
     <color name="grey_text">#FFbfbfbf</color>
     <color name="bg_grey">#FFbfbfbf</color>
     <color name="bg_light_grey">#ffe0e0e0</color>
+    <color name="bg_dark_grey">#ff9b9b9b</color>
     <color name="bg_color">#FFE3E3E3</color>
     <color name="primary_text_color">#FF000000</color>
     <color name="toolbar_color">#FFe67e22</color>
     <color name="status_color">#FFc26a1d</color>
+    <!-- <color name="link_blue">#FF3887CF</color> -->
 </resources>
