@@ -23,98 +23,98 @@ import com.app.bandeco.Utils;
 
 public class About extends ActionBarActivity {
 
-    private static final Uri myTwitter = Uri.parse("https://twitter.com/ericktpires");
-    private static final Uri designerDribbble = Uri.parse("https://dribbble.com/aPronsky");
+	private static final Uri myTwitter = Uri.parse("https://twitter.com/ericktpires");
+	private static final Uri designerDribbble = Uri.parse("https://dribbble.com/aPronsky");
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_about);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.about_toolbar);
-        setSupportActionBar(toolbar);
+		Toolbar toolbar = (Toolbar) findViewById(R.id.about_toolbar);
+		setSupportActionBar(toolbar);
 
-        ActionBar actionBar = getSupportActionBar();
+		ActionBar actionBar = getSupportActionBar();
 
-        actionBar.setHomeButtonEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.setHomeButtonEnabled(true);
+		actionBar.setDisplayHomeAsUpEnabled(true);
 
-        View parentLayout = findViewById(R.id.parent_layout_about);
-        Utils.changeStatusColor(this, parentLayout);
+		View parentLayout = findViewById(R.id.parent_layout_about);
+		Utils.changeStatusColor(this, parentLayout);
 
-        //TODO This should not be here in the final version
-        toolbar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(Constants.SITE_URL == Constants.SITE_URL_OFICIAL)
-                    Constants.SITE_URL = Constants.SITE_URL_BACKUP;
-                else
-                    Constants.SITE_URL = Constants.SITE_URL_OFICIAL;
-            }
-        });
+		//TODO This should not be here in the final version
+		toolbar.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if(Constants.SITE_URL == Constants.SITE_URL_OFICIAL)
+					Constants.SITE_URL = Constants.SITE_URL_BACKUP;
+				else
+					Constants.SITE_URL = Constants.SITE_URL_OFICIAL;
+			}
+		});
 
-        TextView textViewVersionName = (TextView) findViewById(R.id.textVersionName);
+		TextView textViewVersionName = (TextView) findViewById(R.id.textVersionName);
 
-        try {
-            PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_META_DATA);
-            textViewVersionName.setText(pInfo.versionName);
-        } catch (PackageManager.NameNotFoundException ignored) {
+		try {
+			PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_META_DATA);
+			textViewVersionName.setText(pInfo.versionName);
+		} catch (PackageManager.NameNotFoundException ignored) {
 
-        }
+		}
 
-        TextView textViewAuthor = (TextView) findViewById(R.id.textViewAuthor);
+		TextView textViewAuthor = (TextView) findViewById(R.id.textViewAuthor);
 
-        textViewAuthor.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent openUrl = new Intent(Intent.ACTION_VIEW, myTwitter);
-                startActivity(openUrl);
-            }
-        });
+		textViewAuthor.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent openUrl = new Intent(Intent.ACTION_VIEW, myTwitter);
+				startActivity(openUrl);
+			}
+		});
 
-        TextView textViewIconDesigner = (TextView) findViewById(R.id.textViewIconDesigner);
+		TextView textViewIconDesigner = (TextView) findViewById(R.id.textViewIconDesigner);
 
-        textViewIconDesigner.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent openUrl = new Intent(Intent.ACTION_VIEW, designerDribbble);
-                startActivity(openUrl);
-            }
-        });
+		textViewIconDesigner.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent openUrl = new Intent(Intent.ACTION_VIEW, designerDribbble);
+				startActivity(openUrl);
+			}
+		});
 
-        TextView textViewOpenSourceLicenses = (TextView) findViewById(R.id.textViewopenSourceLicenses);
+		TextView textViewOpenSourceLicenses = (TextView) findViewById(R.id.textViewopenSourceLicenses);
 
-        textViewOpenSourceLicenses.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                (new LicensesDialogFragment()).show(getSupportFragmentManager(), "licenses");
-            }
-        });
-    }
+		textViewOpenSourceLicenses.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				(new LicensesDialogFragment()).show(getSupportFragmentManager(), "licenses");
+			}
+		});
+	}
 
-    private class LicensesDialogFragment extends DialogFragment {
-        @NonNull
-        @Override
-        public Dialog onCreateDialog(Bundle savedInstanceState) {
-            setRetainInstance(true);
-            AlertDialog.Builder builder = new AlertDialog.Builder(About.this);
-            LayoutInflater inflater = getActivity().getLayoutInflater();
+	private class LicensesDialogFragment extends DialogFragment {
+		@NonNull
+		@Override
+		public Dialog onCreateDialog(Bundle savedInstanceState) {
+			setRetainInstance(true);
+			AlertDialog.Builder builder = new AlertDialog.Builder(About.this);
+			LayoutInflater inflater = getActivity().getLayoutInflater();
 
-            WebView openSourceLicensesWebView = (WebView) inflater.inflate(R.layout.open_source_view, null);
-            String licensesData = Utils.readAssetAndClose(getAssets(), "licenses.html");
+			WebView openSourceLicensesWebView = (WebView) inflater.inflate(R.layout.open_source_view, null);
+			String licensesData = Utils.readAssetAndClose(getAssets(), "licenses.html");
 
-            openSourceLicensesWebView.loadDataWithBaseURL(Constants.ASSETS_FOLDER, licensesData, "text/html", "utf-8", null);
-            builder.setTitle(getString(R.string.open_source_licenses));
-            builder.setView(openSourceLicensesWebView);
+			openSourceLicensesWebView.loadDataWithBaseURL(Constants.ASSETS_FOLDER, licensesData, "text/html", "utf-8", null);
+			builder.setTitle(getString(R.string.open_source_licenses));
+			builder.setView(openSourceLicensesWebView);
 
-            return builder.create();
-        }
+			return builder.create();
+		}
 
-        @Override
-        public void onDestroyView() {
-            if (getDialog() != null && getRetainInstance())
-                getDialog().setOnDismissListener(null);
-            super.onDestroyView();
-        }
-    }
+		@Override
+		public void onDestroyView() {
+			if (getDialog() != null && getRetainInstance())
+				getDialog().setOnDismissListener(null);
+			super.onDestroyView();
+		}
+	}
 }

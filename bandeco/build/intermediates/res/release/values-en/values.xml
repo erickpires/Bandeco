@@ -3,13 +3,13 @@
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values-en/strings.xml -->
     <eat-comment/>
     <string-array name="days_array">
-        <item>Sunday</item>
         <item>Monday</item>
         <item>Tuesday</item>
         <item>Wednesday</item>
         <item>Thursday</item>
         <item>Friday</item>
         <item>Saturday</item>
+        <item>Sunday</item>
     </string-array>
     <string-array name="meals_array">
         <item>Lunch</item>
@@ -55,6 +55,7 @@
     <string name="new_word">New word</string>
     <string name="no_connection">No connection!</string>
     <string name="notify">Notify</string>
+    <string name="open_source_licenses">Open source licenses</string>
     <string name="positive_words">What I like</string>
     <string name="semana">Week</string>
     <string name="share">Invite someone</string>

@@ -3,13 +3,13 @@
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="days_array">
-        <item>Domingo</item>
         <item>Segunda-feira</item>
         <item>Terça-feira</item>
         <item>Quarta-feira</item>
         <item>Quinta-feira</item>
         <item>Sexta-feira</item>
         <item>Sábado</item>
+        <item>Domingo</item>
     </string-array>
     <string-array name="meals_array">
         <item>Lunch</item>
@@ -65,7 +65,9 @@
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="bg_color">#FFE3E3E3</color>
-    <color name="bg_gray">#FFbfbfbf</color>
+    <color name="bg_dark_grey">#ff9b9b9b</color>
+    <color name="bg_grey">#FFbfbfbf</color>
+    <color name="bg_light_grey">#ffe0e0e0</color>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <color name="blue">#ff33b5e5</color>
@@ -108,7 +110,7 @@
     <color name="done_text_color_normal">#ff333333</color>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/color.xml -->
     <eat-comment/>
-    <color name="gray_text">#FFbfbfbf</color>
+    <color name="grey_text">#FFbfbfbf</color>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment/>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
@@ -622,6 +624,7 @@
     <item format="float" name="numbers_radius_multiplier_outer" type="string">0.83</item>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="open_source_licenses">Licenças de código aberto</string>
     <string name="positive_words">O que gosto</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>

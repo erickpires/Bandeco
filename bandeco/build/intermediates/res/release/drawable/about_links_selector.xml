@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/bg_dark_grey" android:state_pressed="true" />
+    <!-- pressed -->
+    <item android:drawable="@color/bg_dark_grey" android:state_focused="true" />
+    <!-- focused -->
+</selector><!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/drawable/about_links_selector.xml -->
