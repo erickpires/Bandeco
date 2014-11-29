@@ -9,7 +9,7 @@
     <item android:bottom="1dp">
         <shape android:shape="rectangle">
             <solid android:color="#FF3D3D" />
-            
+
         </shape>
     </item>
 </layer-list><!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/drawable/card_bg_fish.xml -->

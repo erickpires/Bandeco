@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <resources>
-        <style name="AppTheme" parent="AppTheme.Base">
-            <item name="android:windowBackground">@color/bg_color</item>
+<resources>
+
+    <style name="AppTheme" parent="AppTheme.Base">
+        <item name="android:windowBackground">@color/bg_color</item>
     </style>
 
     <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
-            <item name="colorPrimary">@color/toolbar_color</item>
-            <item name="colorPrimaryDark">@color/toolbar_color</item>
-            <item name="android:windowNoTitle">true</item>
-            <item name="windowActionBar">false</item>
-        </style>
+        <item name="colorPrimary">@color/toolbar_color</item>
+        <item name="colorPrimaryDark">@color/toolbar_color</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
 
     <style name="AppThemeToolbar" parent="Theme.AppCompat">
         <item name="colorPrimary">@color/toolbar_color</item>

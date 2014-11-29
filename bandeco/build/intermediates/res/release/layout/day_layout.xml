@@ -7,6 +7,6 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Main" >
+    tools:context=".Main">
 
 </RelativeLayout><!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/layout/day_layout.xml -->

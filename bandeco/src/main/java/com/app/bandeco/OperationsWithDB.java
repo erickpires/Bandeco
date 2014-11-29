@@ -10,12 +10,13 @@ import java.util.Date;
 import erick.bandeco.model.Meal;
 import erick.bandeco.model.Week;
 
-import static erick.bandeco.database.DatabaseContract.*;
+import static erick.bandeco.database.DatabaseContract.LastUpdate;
+import static erick.bandeco.database.DatabaseContract.Meals;
 
 
 public final class OperationsWithDB {
 
-	public static void insertMealInDatabase(SQLiteDatabase db, Meal meal, int day, int mealType){
+	public static void insertMealInDatabase(SQLiteDatabase db, Meal meal, int day, int mealType) {
 		ContentValues values = new ContentValues();
 
 		values.put(Meals.MEAL_TYPE, mealType);
@@ -31,7 +32,7 @@ public final class OperationsWithDB {
 		db.insertWithOnConflict(Meals.TABLE_NAME, null, values, SQLiteDatabase.CONFLICT_REPLACE);
 	}
 
-	public static void updateLastModifiedInDatabase(SQLiteDatabase db, Date date){
+	public static void updateLastModifiedInDatabase(SQLiteDatabase db, Date date) {
 		ContentValues values = new ContentValues();
 
 		values.put(LastUpdate.TABLE_ID, 0);
@@ -46,11 +47,11 @@ public final class OperationsWithDB {
 		String selection = Meals.MEAL_TYPE + "=? AND " + Meals.DAY + "=?";
 
 		String[] selectionValues = {String.valueOf(mealType),
-									String.valueOf(dayOfTheWeek)};
+										   String.valueOf(dayOfTheWeek)};
 
 		Cursor cursor = database.query(Meals.TABLE_NAME, Constants.mealProjection, selection, selectionValues, null, null, null);
 
-		if(cursor.moveToFirst()){
+		if (cursor.moveToFirst()) {
 			setMealWithCursor(meal, cursor);
 		}
 
@@ -72,15 +73,15 @@ public final class OperationsWithDB {
 
 		Cursor cursor = database.query(Meals.TABLE_NAME, Constants.mealProjection, null, null, null, null, null);
 
-		if(cursor.moveToFirst())
-			do{
+		if (cursor.moveToFirst())
+			do {
 				int mealType = cursor.getInt(cursor.getColumnIndex(Meals.MEAL_TYPE));
 				int day = cursor.getInt(cursor.getColumnIndex(Meals.DAY));
 
 				Meal meal = week.getDayAt(day).getMeal(mealType);
 				setMealWithCursor(meal, cursor);
 
-			}while (cursor.moveToNext());
+			} while (cursor.moveToNext());
 
 		return week;
 	}
@@ -90,7 +91,7 @@ public final class OperationsWithDB {
 		database.delete(table, null, null);
 
 		for (String s : list) {
-			if(s.length() == 0) continue;
+			if (s.length() == 0) continue;
 
 			ContentValues values = new ContentValues();
 			values.put(column, s);
@@ -110,8 +111,10 @@ public final class OperationsWithDB {
 			do
 				list.add(cursor.getString(column));
 
-			 while (cursor.moveToNext());
+			while (cursor.moveToNext());
 
 		return list;
 	}
+
+	private OperationsWithDB(){}
 }

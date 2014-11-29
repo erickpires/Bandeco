@@ -1,8 +1,9 @@
 package erick.bandeco.model;
 
+import com.app.bandeco.Constants;
+
 import java.util.List;
 
-import com.app.bandeco.Constants;
 import erick.bandeco.html.Indexer;
 
 import static com.app.bandeco.Constants.BREAK_LINE;
@@ -21,18 +22,18 @@ public class Meal {
 	private int type;
 	private Day day;
 
-    public Meal(int mealType){
-        this.type = mealType;
+	public Meal(int mealType) {
+		this.type = mealType;
 
-        // Ensures that the important fields are filled
-        entrada = "";
-        pratoPrincipal = "";
-        vegetariana = "";
-        guarnicao = "";
-        sobremesa = "";
-        refresco = "";
-        acompanhamento = "";
-    }
+		// Ensures that the important fields are filled
+		entrada = "";
+		pratoPrincipal = "";
+		vegetariana = "";
+		guarnicao = "";
+		sobremesa = "";
+		refresco = "";
+		acompanhamento = "";
+	}
 
 	public Meal(List<String> tableColumn, Indexer indexer, int type) {
 		String tmp;
@@ -49,32 +50,32 @@ public class Meal {
 		String[] acomp = tmp.split(BREAK_LINE);
 
 		arroz = acomp[0];
-		if(acomp.length > 1)
+		if (acomp.length > 1)
 			feijao = acomp[1];
 		else
 			feijao = "";
 
 		tmp = tableColumn.get(indexer.getIndexOfSobremesa());
 
-        if(indexer.getIndexOfRefresco() == indexer.getIndexOfSobremesa()) {
+		if (indexer.getIndexOfRefresco() == indexer.getIndexOfSobremesa()) {
 
-            String[] sobremesaRefresco = tmp.split(Constants.SOBREMESA_REFRESCO_SEPARATOR);
+			String[] sobremesaRefresco = tmp.split(Constants.SOBREMESA_REFRESCO_SEPARATOR);
 
-            sobremesa = sobremesaRefresco[0];
-            if (sobremesaRefresco.length > 1)
-                refresco = sobremesaRefresco[1];
-            else
-                refresco = "";
-        }else
-            refresco = tableColumn.get(indexer.getIndexOfRefresco());
+			sobremesa = sobremesaRefresco[0];
+			if (sobremesaRefresco.length > 1)
+				refresco = sobremesaRefresco[1];
+			else
+				refresco = "";
+		} else
+			refresco = tableColumn.get(indexer.getIndexOfRefresco());
 
 
 		formatText();
 
 		acompanhamento = arroz;
-		
-		if(feijao.length() > 0)
-			 acompanhamento += " e " + feijao;
+
+		if (feijao.length() > 0)
+			acompanhamento += " e " + feijao;
 	}
 
 	private void formatText() {
@@ -86,7 +87,7 @@ public class Meal {
 		sobremesa = sobremesa.trim();
 		refresco = refresco.trim();
 		arroz = arroz.trim();
-		
+
 		entrada = entrada.replace(BREAK_LINE, "");
 		pratoPrincipal = pratoPrincipal.replace(BREAK_LINE, "");
 		vegetariana = vegetariana.replace(BREAK_LINE, "");
@@ -132,39 +133,39 @@ public class Meal {
 		return type;
 	}
 
-    public void setEntrada(String entrada) {
-        this.entrada = entrada;
-    }
+	public void setEntrada(String entrada) {
+		this.entrada = entrada;
+	}
 
-    public void setPratoPrincipal(String pratoPrincipal) {
-        this.pratoPrincipal = pratoPrincipal;
-    }
+	public void setPratoPrincipal(String pratoPrincipal) {
+		this.pratoPrincipal = pratoPrincipal;
+	}
 
-    public void setPratoVegetariano(String vegetariana) {
-        this.vegetariana = vegetariana;
-    }
+	public void setPratoVegetariano(String vegetariana) {
+		this.vegetariana = vegetariana;
+	}
 
-    public void setGuarnicao(String guarnicao) {
-        this.guarnicao = guarnicao;
-    }
+	public void setGuarnicao(String guarnicao) {
+		this.guarnicao = guarnicao;
+	}
 
-    public void setSobremesa(String sobremesa) {
-        this.sobremesa = sobremesa;
-    }
+	public void setSobremesa(String sobremesa) {
+		this.sobremesa = sobremesa;
+	}
 
-    public void setRefresco(String refresco) {
-        this.refresco = refresco;
-    }
+	public void setRefresco(String refresco) {
+		this.refresco = refresco;
+	}
 
-    public void setAcompanhamento(String acompanhamento) {
-        this.acompanhamento = acompanhamento;
-    }
+	public void setAcompanhamento(String acompanhamento) {
+		this.acompanhamento = acompanhamento;
+	}
 
 	public Day getDay() {
 		return day;
 	}
 
 	public void setDay(Day day) {
-		this.day = day;	
+		this.day = day;
 	}
 }

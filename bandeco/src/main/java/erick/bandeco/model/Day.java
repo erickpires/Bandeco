@@ -1,6 +1,7 @@
 package erick.bandeco.model;
 
-import static com.app.bandeco.Constants.*;
+import static com.app.bandeco.Constants.MEAL_TYPE_DINNER;
+import static com.app.bandeco.Constants.MEAL_TYPE_LUNCH;
 
 public class Day {
 	private Meal lunch;
@@ -11,7 +12,7 @@ public class Day {
 		this.lunch = lunch;
 		this.dinner = dinner;
 		this.weekDay = weekDay;
-		
+
 		lunch.setDay(this);
 		dinner.setDay(this);
 	}
@@ -28,18 +29,18 @@ public class Day {
 		return (day + 5) % 7;
 	}
 
-    public Meal getMeal(int mealType) {
-        switch (mealType){
-            case MEAL_TYPE_LUNCH:
-                return lunch;
-            case MEAL_TYPE_DINNER:
-                return dinner;
-            default:
-                return null;
-        }
-    }
+	public Meal getMeal(int mealType) {
+		switch (mealType) {
+			case MEAL_TYPE_LUNCH:
+				return lunch;
+			case MEAL_TYPE_DINNER:
+				return dinner;
+			default:
+				return null;
+		}
+	}
 
-    public int getWeekDay() {
-        return weekDay;
-    }
+	public int getWeekDay() {
+		return weekDay;
+	}
 }

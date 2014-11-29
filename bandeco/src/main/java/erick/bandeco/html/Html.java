@@ -17,10 +17,10 @@ public class Html {
 
 	private List<Table> tables = new ArrayList<Table>();
 
-	public Html(URLConnection connection) throws IOException{
-		
+	public Html(URLConnection connection) throws IOException {
+
 		InputStreamReader reader = new InputStreamReader(connection.getInputStream());
-		
+
 		createTables(reader);
 	}
 
@@ -31,7 +31,7 @@ public class Html {
 
 		String tmp = "";
 		int currentRow = 0;
-        int currentTable = 0;
+		int currentTable = 0;
 
 		while ((inputLine = in.readLine()) != null) {
 
@@ -61,35 +61,35 @@ public class Html {
 				tables.get(currentTable).add(currentRow, data);
 
 				tmp = "";
-            }
+			}
 
 			if (inputLine.contains("</tr") && estado == Estado.lendoLinha) {
 				estado = Estado.lendoTabela;
 
 				currentRow++;
-            }
+			}
 
 			if (inputLine.contains("</table") && estado == Estado.lendoTabela) {
 				estado = Estado.ignorando;
 
 				currentTable++;
 				currentRow = 0;
-            }
+			}
 		}
 	}
-	
-	public List<Table> getTables(){
+
+	public List<Table> getTables() {
 		return tables;
 	}
 
 	private static String getDataFromLine(String str) {
-        str = str.replaceAll("<br />", Constants.BREAK_LINE);
+		str = str.replaceAll("<br />", Constants.BREAK_LINE);
 		str = str.replaceAll("<[^>]*>", "");
 		str = str.replaceAll("&nbsp;", "");
-        str = str.replaceAll("[\t]+", " ");
-        str = str.replaceAll("[ ]+", " ");
+		str = str.replaceAll("[\t]+", " ");
+		str = str.replaceAll("[ ]+", " ");
 		str = str.replaceAll(" [ ]+", " ");
-        str = str.replaceAll("(c|C)( )?/", "com");
+		str = str.replaceAll("(c|C)( )?/", "com");
 
 		return str;
 	}

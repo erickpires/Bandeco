@@ -20,82 +20,86 @@ import erick.bandeco.html.Html;
 import erick.bandeco.model.Day;
 import erick.bandeco.model.Week;
 
-import static com.app.bandeco.OperationsWithDB.*;
-import static com.app.bandeco.Constants.*;
+import static com.app.bandeco.Constants.DAYS_IN_THE_WEEK;
+import static com.app.bandeco.Constants.MEAL_TYPE_DINNER;
+import static com.app.bandeco.Constants.MEAL_TYPE_LUNCH;
+import static com.app.bandeco.Constants.SITE_URL;
+import static com.app.bandeco.OperationsWithDB.insertMealInDatabase;
+import static com.app.bandeco.OperationsWithDB.updateLastModifiedInDatabase;
 
 public class UpdateService extends Service {
 
-    @Override
-    public IBinder onBind(Intent intent) {
-        throw new UnsupportedOperationException("Not yet implemented");
-    }
+	@Override
+	public IBinder onBind(Intent intent) {
+		throw new UnsupportedOperationException("Not yet implemented");
+	}
 
-    @Override
-    public int onStartCommand(Intent intent, int flags, int startId) {
-        if (!checkConnection()) {
-            Toast.makeText(getBaseContext(), R.string.no_connection, Toast.LENGTH_SHORT).show();
-            stopSelf();
+	@Override
+	public int onStartCommand(Intent intent, int flags, int startId) {
+		if (!checkConnection()) {
+			Toast.makeText(getBaseContext(), R.string.no_connection, Toast.LENGTH_SHORT).show();
+			stopSelf();
 
-            return START_NOT_STICKY;
-        }
+			return START_NOT_STICKY;
+		}
 
-        Thread t = new Thread() {
-            public void run() {
-                try {
-                    URL url = new URL(SITE_URL);
+		Thread t = new Thread() {
+			public void run() {
+				try {
+					URL url = new URL(SITE_URL);
 
-                    URLConnection connection = url.openConnection();
+					URLConnection connection = url.openConnection();
 
-                    Date date = new Date(connection.getLastModified());
+					Date date = new Date(connection.getLastModified());
 
-                    Html html = new Html(connection);
+					Html html = new Html(connection);
 
-                    updateDatabaseInfo(html, date);
+					updateDatabaseInfo(html, date);
 
-                    LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(new Intent("update_event"));
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }finally {
-                    stopSelf();
-                }
-            }
-        };
+					LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(new Intent("update_event"));
+				} catch (MalformedURLException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
+					e.printStackTrace();
+				} finally {
+					stopSelf();
+				}
+			}
+		};
 
-        t.start();
+		t.start();
 
 
-        return START_NOT_STICKY;
-    }
+		return START_NOT_STICKY;
+	}
 
-    private void updateDatabaseInfo(Html html, Date date) {
-        DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext());
-        SQLiteDatabase database = databaseHelper.getWritableDatabase();
+	private void updateDatabaseInfo(Html html, Date date) {
+		DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext());
+		SQLiteDatabase database = databaseHelper.getWritableDatabase();
 
-        Week week = new Week(html.getTables());
+		Week week = new Week(html.getTables());
 
-        for (int i = 0; i < DAYS_IN_THE_WEEK; i++) {
-            Day day = week.getDayAt(i);
+		for (int i = 0; i < DAYS_IN_THE_WEEK; i++) {
+			Day day = week.getDayAt(i);
 
-            day.getLunch();
+			day.getLunch();
 
-            insertMealInDatabase(database, day.getLunch(), i, MEAL_TYPE_LUNCH);
-            insertMealInDatabase(database, day.getDinner(), i, MEAL_TYPE_DINNER);
+			insertMealInDatabase(database, day.getLunch(), i, MEAL_TYPE_LUNCH);
+			insertMealInDatabase(database, day.getDinner(), i, MEAL_TYPE_DINNER);
 
-            updateLastModifiedInDatabase(database, date);
-        }
+			updateLastModifiedInDatabase(database, date);
+		}
 
-        database.close();
-    }
+		database.close();
+	}
 
-    private boolean checkConnection() {
-        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+	private boolean checkConnection() {
+		ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+		NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
 
-        return (networkInfo != null &&
-                networkInfo.isConnected() &&
-                networkInfo.isAvailable());
+		return (networkInfo != null &&
+						networkInfo.isConnected() &&
+						networkInfo.isAvailable());
 
-    }
+	}
 }

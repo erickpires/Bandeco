@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimaryDark"
         app:theme="@style/AppThemeToolbar"
-        app:popupTheme="@style/Theme.AppCompat.Light"/>
+        app:popupTheme="@style/Theme.AppCompat.Light" />
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -74,7 +74,7 @@
                     android:paddingEnd="@dimen/default_side_padding"
                     android:text="@string/manage_meal_items"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/primary_text_color"/>
+                    android:textColor="@color/primary_text_color" />
 
             </LinearLayout>
 
@@ -97,7 +97,7 @@
                     android:paddingEnd="@dimen/default_side_padding"
                     android:text="@string/negative_words"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/primary_text_color"/>
+                    android:textColor="@color/primary_text_color" />
 
                 <TextView
                     android:id="@+id/negative_words_list"
@@ -130,7 +130,7 @@
                     android:paddingEnd="@dimen/default_side_padding"
                     android:text="@string/positive_words"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/primary_text_color"/>
+                    android:textColor="@color/primary_text_color" />
 
                 <TextView
                     android:id="@+id/positive_words_list"
@@ -163,7 +163,7 @@
                     android:paddingEnd="@dimen/default_side_padding"
                     android:text="@string/notify"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/primary_text_color"/>
+                    android:textColor="@color/primary_text_color" />
 
                 <TextView
                     android:id="@+id/notify_when_option_textView"

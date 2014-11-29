@@ -15,73 +15,72 @@ import erick.bandeco.model.Meal;
 import erick.bandeco.view.MealNotification;
 import erick.bandeco.view.Settings;
 
-import static erick.bandeco.database.DatabaseContract.*;
+import static erick.bandeco.database.DatabaseContract.NegativeWords;
+import static erick.bandeco.database.DatabaseContract.PositiveWords;
 
 public class NotificationService extends Service {
 
-    public NotificationService() {
-    }
+	public NotificationService() {
+	}
 
-    @Override
-    public IBinder onBind(Intent intent) {
-        throw new UnsupportedOperationException("Not yet implemented");
-    }
+	@Override
+	public IBinder onBind(Intent intent) {
+		throw new UnsupportedOperationException("Not yet implemented");
+	}
 
-    @Override
-    public int onStartCommand(Intent intent, int flags, int startId) {
+	@Override
+	public int onStartCommand(Intent intent, int flags, int startId) {
 
-        SharedPreferences preferences = getSharedPreferences(getString(R.string.app_name), 0);
-        int notifyWhenOption = preferences.getInt(Settings.NOTIFY_WHEN, Settings.NOTIFY_ALWAYS);
-        int daysToNotifyCode = preferences.getInt(Settings.DAYS_TO_NOTIFY, Constants.DEFAULT_DAYS_TO_NOTIFY_CODE);
-        int mealType = intent.getExtras().getInt(Settings.MEAL_TYPE);
+		SharedPreferences preferences = getSharedPreferences(getString(R.string.app_name), 0);
+		int notifyWhenOption = preferences.getInt(Settings.NOTIFY_WHEN, Settings.NOTIFY_ALWAYS);
+		int daysToNotifyCode = preferences.getInt(Settings.DAYS_TO_NOTIFY, Constants.DEFAULT_DAYS_TO_NOTIFY_CODE);
+		int mealType = intent.getExtras().getInt(Settings.MEAL_TYPE);
 
-        Calendar today = Calendar.getInstance();
+		Calendar today = Calendar.getInstance();
 
-        if(!Utils.shouldNotifyToday(daysToNotifyCode, today))
-            return START_NOT_STICKY;
+		if (!Utils.shouldNotifyToday(daysToNotifyCode, today))
+			return START_NOT_STICKY;
 
-        DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext());
-        SQLiteDatabase database = databaseHelper.getReadableDatabase();
+		DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext());
+		SQLiteDatabase database = databaseHelper.getReadableDatabase();
 
-        int dayOfTheWeek = Day.adaptDayOfWeek(today.get(Calendar.DAY_OF_WEEK));
+		int dayOfTheWeek = Day.adaptDayOfWeek(today.get(Calendar.DAY_OF_WEEK));
 
-        Meal meal = OperationsWithDB.getMealFromDatabase(database, dayOfTheWeek, mealType);
+		Meal meal = OperationsWithDB.getMealFromDatabase(database, dayOfTheWeek, mealType);
 
-        String notificationMessage = Utils.getTextFromMeal(meal, getApplicationContext());
+		String notificationMessage = Utils.getTextFromMeal(meal, getApplicationContext());
 
-        if(shouldNotify(notifyWhenOption, meal, database)) {
-            MealNotification.notify(getApplicationContext(), Utils.getMealType(meal, getApplicationContext()), notificationMessage);
-        }
+		if (shouldNotify(notifyWhenOption, meal, database)) {
+			MealNotification.notify(getApplicationContext(), Utils.getMealType(meal, getApplicationContext()), notificationMessage);
+		}
 
-        database.close();
-        stopSelf();
-        return START_NOT_STICKY;
-    }
+		database.close();
+		stopSelf();
+		return START_NOT_STICKY;
+	}
 
-    private static boolean shouldNotify(int notifyWhenOption, Meal meal, SQLiteDatabase db) {
-        if(notifyWhenOption == Settings.NOTIFY_ALWAYS)
-            return true;
+	private static boolean shouldNotify(int notifyWhenOption, Meal meal, SQLiteDatabase db) {
+		if (notifyWhenOption == Settings.NOTIFY_ALWAYS)
+			return true;
 
-        if(notifyWhenOption == Settings.NOTIFY_IF_LIKE) {
-            ArrayList<String> likeList = OperationsWithDB.getListFromDB(db, PositiveWords.TABLE_NAME, new String[]{PositiveWords.WORDS});
-            return hasMatch(meal, likeList);
-        }
+		if (notifyWhenOption == Settings.NOTIFY_IF_LIKE) {
+			ArrayList<String> likeList = OperationsWithDB.getListFromDB(db, PositiveWords.TABLE_NAME, new String[]{PositiveWords.WORDS});
+			return hasMatch(meal, likeList);
+		} else if (notifyWhenOption == Settings.NOTIFY_IF_NOT_DISLIKE) {
+			ArrayList<String> dislikeList = OperationsWithDB.getListFromDB(db, NegativeWords.TABLE_NAME, new String[]{NegativeWords.WORDS});
+			return !hasMatch(meal, dislikeList);
+		}
 
-        else if(notifyWhenOption == Settings.NOTIFY_IF_NOT_DISLIKE) {
-            ArrayList<String> dislikeList = OperationsWithDB.getListFromDB(db, NegativeWords.TABLE_NAME, new String[]{NegativeWords.WORDS});
-            return !hasMatch(meal, dislikeList);
-        }
+		return false;
+	}
 
-        return false;
-    }
+	private static boolean hasMatch(Meal meal, ArrayList<String> list) {
+		String tmp = meal.toString();
 
-    private static boolean hasMatch(Meal meal, ArrayList<String> list) {
-        String tmp = meal.toString();
+		for (String s : list)
+			if (tmp.contains(s))
+				return true;
 
-        for (String s : list)
-            if (tmp.contains(s))
-                return true;
-
-        return false;
-    }
+		return false;
+	}
 }

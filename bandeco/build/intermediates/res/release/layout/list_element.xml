@@ -14,13 +14,13 @@
         android:id="@+id/list_element_text"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:id="@+id/delete_button"
         android:background="@drawable/dialog_selector"
-        android:src="@drawable/ic_action_remove"/>
+        android:src="@drawable/ic_action_remove" />
 
 </LinearLayout><!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/layout/list_element.xml -->

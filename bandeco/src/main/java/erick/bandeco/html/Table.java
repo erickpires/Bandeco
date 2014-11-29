@@ -6,7 +6,7 @@ import java.util.List;
 public class Table {
 
 	/**
-	 * 
+	 *
 	 */
 	List<List<String>> table = new ArrayList<List<String>>();
 
@@ -52,7 +52,7 @@ public class Table {
 		}
 		return -1;
 	}
-	
+
 	public List<String> getColumn(int column, int start) {
 		List<String> l = new ArrayList<String>();
 

@@ -110,7 +110,8 @@
                 android:text="@string/icon_designer_name"
                 android:textColor="@color/link_text_material_light"
                 android:background="@drawable/about_links_selector"
-                android:layout_marginBottom="@dimen/default_side_padding"/>
+                android:layout_marginBottom="@dimen/default_side_padding" />
+
             <TextView
                 android:id="@+id/textViewopenSourceLicenses"
                 android:layout_width="wrap_content"
@@ -121,7 +122,7 @@
                 android:textColor="@color/link_text_material_light"
                 android:background="@drawable/about_links_selector"
                 android:layout_marginTop="15dp"
-                android:layout_marginBottom="@dimen/default_side_padding"/>
+                android:layout_marginBottom="@dimen/default_side_padding" />
         </RelativeLayout>
     </ScrollView>
 

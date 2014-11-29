@@ -70,7 +70,7 @@
         <item>Sábado</item>
         <item>Domingo</item>
     </string-array>
-    
+
     <string name="share">Convidar alguém</string>
     <string name="inviting_you">Estou te convidando para o %1$s de hoje</string>
 

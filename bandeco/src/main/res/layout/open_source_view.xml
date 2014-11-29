@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WebView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/licenses_web_view">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
-</WebView>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="@dimen/double_top_padding"
+        android:paddingBottom="@dimen/default_top_padding" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/back_button"
+            android:src="@drawable/ic_arrow_back_grey"
+            android:background="@drawable/settings_list_selector"
+            android:layout_marginStart="@dimen/default_minimal_padding"
+            android:layout_marginLeft="@dimen/default_minimal_padding"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:gravity="center_vertical"
+            android:textColor="@color/primary_text_color"
+            android:paddingLeft="@dimen/default_minimal_padding"
+            android:paddingStart="@dimen/default_minimal_padding"
+            android:text="@string/open_source_licenses" />
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/licenses_web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </WebView>
+</LinearLayout>

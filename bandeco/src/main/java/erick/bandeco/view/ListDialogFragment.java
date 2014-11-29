@@ -15,71 +15,71 @@ import com.app.bandeco.R;
 
 import java.util.ArrayList;
 
-import static android.content.DialogInterface.*;
+import static android.content.DialogInterface.OnDismissListener;
 
-public class ListDialogFragment extends DialogFragment{
+public class ListDialogFragment extends DialogFragment {
 
-    private ArrayList<String> list;
-    private OnDismissListener onDismissListener;
-    private LinearLayout listLinearLayout;
-    private ListWrapper wrapper;
+	private ArrayList<String> list;
+	private OnDismissListener onDismissListener;
+	private LinearLayout listLinearLayout;
+	private ListWrapper wrapper;
 
-    public ListDialogFragment(ArrayList<String> list){
-        super();
-        
-        this.list = list;
-    }
+	public ListDialogFragment(ArrayList<String> list) {
+		super();
 
-    @NonNull
-    @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
-        LayoutInflater inflater = getActivity().getLayoutInflater();
+		this.list = list;
+	}
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+	@NonNull
+	@Override
+	public Dialog onCreateDialog(Bundle savedInstanceState) {
+		LayoutInflater inflater = getActivity().getLayoutInflater();
 
-        final View layout = inflater.inflate(R.layout.list_layout, null);
+		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-        listLinearLayout = (LinearLayout) layout.findViewById(R.id.list);
+		final View layout = inflater.inflate(R.layout.list_layout, null);
 
-        wrapper = new ListWrapper(listLinearLayout, inflater, this.list);
+		listLinearLayout = (LinearLayout) layout.findViewById(R.id.list);
 
-        final Button button = (Button) layout.findViewById(R.id.new_element_button);
+		wrapper = new ListWrapper(listLinearLayout, inflater, this.list);
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                layout.clearFocus();
-                wrapper.addNewElement();
-            }
-        });
+		final Button button = (Button) layout.findViewById(R.id.new_element_button);
 
-        builder.setView(layout);
+		button.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				layout.clearFocus();
+				wrapper.addNewElement();
+			}
+		});
 
-        Dialog result = builder.create();
+		builder.setView(layout);
 
-        result.setOnDismissListener(onDismissListener);
-        setRetainInstance(true);
+		Dialog result = builder.create();
 
-        return result;
-    }
+		result.setOnDismissListener(onDismissListener);
+		setRetainInstance(true);
 
-    @Override
-    public void onDestroyView() {
-        if (getDialog() != null && getRetainInstance())
-            getDialog().setOnDismissListener(null);
-        super.onDestroyView();
-    }
+		return result;
+	}
 
-    public void setOnDismissListener(OnDismissListener onDismissListener){
-        this.onDismissListener = onDismissListener;
-    }
+	@Override
+	public void onDestroyView() {
+		if (getDialog() != null && getRetainInstance())
+			getDialog().setOnDismissListener(null);
+		super.onDestroyView();
+	}
 
-    @Override
-    public void onDismiss(DialogInterface dialog){
-        if(listLinearLayout != null && onDismissListener != null) {
-            listLinearLayout.clearFocus();
-            onDismissListener.onDismiss(dialog);
-        }
-        super.onDismiss(dialog);
-    }
+	public void setOnDismissListener(OnDismissListener onDismissListener) {
+		this.onDismissListener = onDismissListener;
+	}
+
+	@Override
+	public void onDismiss(DialogInterface dialog) {
+		if (listLinearLayout != null && onDismissListener != null) {
+			listLinearLayout.clearFocus();
+			onDismissListener.onDismiss(dialog);
+		}
+		super.onDismiss(dialog);
+	}
 }

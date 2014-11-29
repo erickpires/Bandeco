@@ -668,14 +668,14 @@
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="AppTheme.Base">
-            <item name="android:windowBackground">@color/bg_color</item>
+        <item name="android:windowBackground">@color/bg_color</item>
     </style>
     <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
-            <item name="colorPrimary">@color/toolbar_color</item>
-            <item name="colorPrimaryDark">@color/toolbar_color</item>
-            <item name="android:windowNoTitle">true</item>
-            <item name="windowActionBar">false</item>
-        </style>
+        <item name="colorPrimary">@color/toolbar_color</item>
+        <item name="colorPrimaryDark">@color/toolbar_color</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
     <style name="AppThemeToolbar" parent="Theme.AppCompat">
         <item name="colorPrimary">@color/toolbar_color</item>
         <item name="colorPrimaryDark">@color/toolbar_color</item>
