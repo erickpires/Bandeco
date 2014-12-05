@@ -15,4 +15,6 @@
     <dimen name="double_top_padding">15dp</dimen>
     <dimen name="minimum_top_padding">7dp</dimen>
 
+    <dimen name="default_elevation">5dp</dimen>
+
 </resources>

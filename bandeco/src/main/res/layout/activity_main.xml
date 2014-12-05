@@ -1,6 +1,7 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
     android:id="@+id/parent_layout_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -20,5 +21,56 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"/>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom">
+
+            <ImageButton
+                android:id="@+id/fab_invite_lunch"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/default_minimal_padding"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/oval"
+                android:contentDescription="@string/share"
+                android:src="@drawable/ic_day"/>
+
+            <ImageButton
+                android:id="@+id/fab_invite_dinner"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="gone"
+                android:layout_below="@+id/fab_invite_lunch"
+                android:layout_marginBottom="@dimen/default_minimal_padding"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/oval"
+                android:contentDescription="@string/share"
+                android:src="@drawable/ic_night"/>
+
+            <ImageButton
+                android:id="@+id/fab_invite"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/fab_invite_dinner"
+                android:layout_marginBottom="@dimen/default_side_padding"
+                android:layout_marginRight="@dimen/default_minimal_padding"
+                android:layout_marginLeft="@dimen/default_minimal_padding"
+                android:background="@drawable/oval"
+                android:contentDescription="@string/share"
+                android:src="@drawable/ic_person_add_white"/>
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+
+</RelativeLayout>

@@ -2,6 +2,7 @@ package erick.bandeco.model;
 
 import com.app.bandeco.Constants;
 
+import java.util.Calendar;
 import java.util.List;
 
 import erick.bandeco.html.Indexer;
@@ -60,6 +61,11 @@ public class Week {
 
 	public Day getDayAt(int index) {
 		return days[index];
+	}
+
+	public Day getToday(){
+		Calendar calendar = Calendar.getInstance();
+		return getDayAt(Day.adaptDayOfWeek(calendar.get(Calendar.DAY_OF_WEEK)));
 	}
 
 	public static Week createEmptyWeek() {

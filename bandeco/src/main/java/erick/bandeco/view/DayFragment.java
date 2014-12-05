@@ -28,12 +28,9 @@ public class DayFragment extends Fragment {
 		final RelativeLayout relativeLayout = (RelativeLayout) inflater.inflate(
 																					   com.app.bandeco.R.layout.day_layout, container, false);
 
-
-		Calendar calendar = Calendar.getInstance();
-
 		relativeLayout.removeView(cardUI);
 		cardUI = new CardUI(getActivity());
-		Day today = Main.week.getDayAt(Day.adaptDayOfWeek(calendar.get(Calendar.DAY_OF_WEEK)));
+		Day today = Main.week.getToday();
 
 		cardUI.addStack(new CardStack(""));
 

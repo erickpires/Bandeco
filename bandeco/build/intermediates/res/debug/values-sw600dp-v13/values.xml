@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values-sw600dp/values.xml -->
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values-sw600dp/values.xml -->
     <eat-comment/>
     <dimen name="abc_action_bar_default_height_material">64dp</dimen>
     <dimen name="abc_action_bar_default_padding_material">4dp</dimen>
@@ -37,7 +37,7 @@
     <dimen name="time_label_size">75sp</dimen>
     <dimen name="year_label_height">96dp</dimen>
     <dimen name="year_label_text_size">33dp</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values-sw600dp/values.xml -->
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values-sw600dp/values.xml -->
     <eat-comment/>
     <integer name="abc_max_action_buttons">5</integer>
 </resources>

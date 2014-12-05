@@ -13,9 +13,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 
 import erick.bandeco.adapters.TabsAdapter;
 import erick.bandeco.database.DatabaseHelper;
+import erick.bandeco.model.Day;
+import erick.bandeco.model.Meal;
 import erick.bandeco.model.Week;
 import erick.bandeco.view.About;
 import erick.bandeco.view.Settings;
@@ -26,6 +29,8 @@ public class Main extends ActionBarActivity {
 
 	private TabsAdapter tabsAdapter;
 	private DatabaseHelper databaseHelper;
+	private ImageButton fab_invite_lunch;
+	private ImageButton fab_invite_dinner;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +51,26 @@ public class Main extends ActionBarActivity {
 		viewPager.setAdapter(tabsAdapter);
 
 		View parentLayout = findViewById(R.id.parent_layout_main);
+
+		ImageButton fab_invite = (ImageButton) findViewById(R.id.fab_invite);
+		fab_invite_lunch = (ImageButton) findViewById(R.id.fab_invite_lunch);
+		fab_invite_dinner = (ImageButton) findViewById(R.id.fab_invite_dinner);
+
+		fab_invite.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if(fab_invite_lunch.getVisibility() == View.GONE){
+					fab_invite_lunch.setVisibility(View.VISIBLE);
+					fab_invite_dinner.setVisibility(View.VISIBLE);
+				}else {
+					fab_invite_lunch.setVisibility(View.GONE);
+					fab_invite_dinner.setVisibility(View.GONE);
+				}
+			}
+		});
+
+		fab_invite_lunch.setOnClickListener(new InvitationOnClickListener(Constants.MEAL_TYPE_LUNCH));
+		fab_invite_dinner.setOnClickListener(new InvitationOnClickListener(Constants.MEAL_TYPE_DINNER));
 
 		Utils.changeStatusColor(this, parentLayout);
 
@@ -103,6 +128,40 @@ public class Main extends ActionBarActivity {
 
 			default:
 				return super.onOptionsItemSelected(item);
+		}
+	}
+
+	private class InvitationOnClickListener implements View.OnClickListener {
+		private int mealType;
+		public InvitationOnClickListener(int mealType) {
+			this.mealType = mealType;
+		}
+
+		@Override
+		public void onClick(View v) {
+			Day today = week.getToday();
+			Meal meal;
+
+			switch (mealType){
+				case Constants.MEAL_TYPE_LUNCH :
+					meal = today.getLunch();
+					break;
+				case Constants.MEAL_TYPE_DINNER :
+					meal = today.getDinner();
+					break;
+				default:
+					return;
+			}
+
+			String mealBody = Utils.getTextFromMeal(meal, getApplicationContext());
+			String mealTypeString = Utils.getMealType(meal, getApplicationContext());
+
+			Intent invitationIntent = Utils.getInvitationIntent(getApplicationContext(), mealTypeString, mealBody);
+			Intent invitationIntentChooser = Intent.createChooser(invitationIntent, getString(R.string.share));
+			startActivity(invitationIntentChooser);
+
+			fab_invite_lunch.setVisibility(View.GONE);
+			fab_invite_dinner.setVisibility(View.GONE);
 		}
 	}
 }

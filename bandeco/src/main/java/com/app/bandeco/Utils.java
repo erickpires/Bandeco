@@ -2,6 +2,7 @@ package com.app.bandeco;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.os.Build;
@@ -183,6 +184,14 @@ public final class Utils {
 			e.printStackTrace();
 		}
 		return assetData;
+	}
+
+	public static Intent getInvitationIntent(Context context, String mealType, String mealBody) {
+		Intent shareIntent = new Intent(Intent.ACTION_SEND);
+		shareIntent.setType("text/plain");
+		String msg = String.format(context.getString(R.string.inviting_you), mealType.toLowerCase()) + "\n" + mealBody;
+		shareIntent.putExtra(Intent.EXTRA_TEXT, msg);
+		return shareIntent;
 	}
 
 	private Utils(){}

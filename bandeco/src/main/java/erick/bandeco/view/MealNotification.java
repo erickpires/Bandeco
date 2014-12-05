@@ -14,6 +14,7 @@ import android.support.v4.app.NotificationCompat;
 
 import com.app.bandeco.Main;
 import com.app.bandeco.R;
+import com.app.bandeco.Utils;
 
 public class MealNotification {
 
@@ -48,10 +49,7 @@ public class MealNotification {
 														   .setAutoCancel(true);
 
 		String share = context.getString(R.string.share);
-		Intent shareIntent = new Intent(Intent.ACTION_SEND);
-		shareIntent.setType("text/plain");
-		String msg = String.format(context.getString(R.string.inviting_you), title.toLowerCase()) + "\n" + text;
-		shareIntent.putExtra(Intent.EXTRA_TEXT, msg);
+		Intent shareIntent = Utils.getInvitationIntent(context, title, text);
 		PendingIntent pendingShareIntent = PendingIntent.getActivity(context, 0, Intent.createChooser(shareIntent, share),
 																			PendingIntent.FLAG_UPDATE_CURRENT);
 
