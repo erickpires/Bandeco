@@ -29,9 +29,11 @@
         android:layout_height="fill_parent">
 
         <RelativeLayout
+            android:id="@+id/fabs_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="end|bottom">
+            android:layout_gravity="end|bottom"
+            android:animateLayoutChanges="true" >
 
             <ImageButton
                 android:id="@+id/fab_invite_lunch"

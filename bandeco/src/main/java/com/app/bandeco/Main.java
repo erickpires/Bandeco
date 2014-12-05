@@ -1,10 +1,13 @@
 package com.app.bandeco;
 
+import android.animation.LayoutTransition;
+import android.annotation.TargetApi;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
@@ -13,7 +16,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.TranslateAnimation;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 
 import erick.bandeco.adapters.TabsAdapter;
 import erick.bandeco.database.DatabaseHelper;
@@ -32,6 +37,7 @@ public class Main extends ActionBarActivity {
 	private ImageButton fab_invite_lunch;
 	private ImageButton fab_invite_dinner;
 
+	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -52,9 +58,16 @@ public class Main extends ActionBarActivity {
 
 		View parentLayout = findViewById(R.id.parent_layout_main);
 
+		RelativeLayout fabs_layout = (RelativeLayout) findViewById(R.id.fabs_layout);
 		ImageButton fab_invite = (ImageButton) findViewById(R.id.fab_invite);
 		fab_invite_lunch = (ImageButton) findViewById(R.id.fab_invite_lunch);
 		fab_invite_dinner = (ImageButton) findViewById(R.id.fab_invite_dinner);
+
+		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+			LayoutTransition layoutTransition = new LayoutTransition();
+			layoutTransition.setDuration(100);
+			fabs_layout.setLayoutTransition(layoutTransition);
+		}
 
 		fab_invite.setOnClickListener(new View.OnClickListener() {
 			@Override
