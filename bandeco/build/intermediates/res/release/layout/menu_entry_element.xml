@@ -5,8 +5,8 @@
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/default_minimal_padding"
     android:paddingRight="@dimen/default_minimal_padding"
-    android:paddingBottom="@dimen/minimum_top_padding"
-    android:paddingTop="@dimen/minimum_top_padding"
+    android:paddingBottom="@dimen/minimum_vertical_padding"
+    android:paddingTop="@dimen/minimum_vertical_padding"
     android:background="@color/white">
 
 

@@ -10,6 +10,7 @@
     <color name="bg_color">#FFE3E3E3</color>
     <color name="primary_text_color">#FF000000</color>
     <color name="toolbar_color">#FFe67e22</color>
+    <color name="fab_bg_selected">#fffe9323</color>
     <color name="status_color">#FFc26a1d</color>
     <!-- <color name="link_blue">#FF3887CF</color> -->
 </resources>

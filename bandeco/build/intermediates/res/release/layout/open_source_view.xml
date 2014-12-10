@@ -10,8 +10,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:paddingTop="@dimen/double_top_padding"
-        android:paddingBottom="@dimen/default_top_padding" >
+        android:paddingTop="@dimen/double_vertical_padding"
+        android:paddingBottom="@dimen/default_vertical_padding" >
 
         <ImageButton
             android:layout_width="wrap_content"

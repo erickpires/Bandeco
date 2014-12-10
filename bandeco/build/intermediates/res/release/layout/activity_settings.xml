@@ -30,8 +30,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/settings_list_selector"
-                android:paddingBottom="@dimen/default_top_padding"
-                android:paddingTop="@dimen/default_top_padding">
+                android:paddingBottom="@dimen/default_vertical_padding"
+                android:paddingTop="@dimen/default_vertical_padding">
 
                 <TextView
                     android:id="@+id/textView1"
@@ -62,8 +62,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/settings_list_selector"
-                android:paddingBottom="@dimen/double_top_padding"
-                android:paddingTop="@dimen/double_top_padding">
+                android:paddingBottom="@dimen/double_vertical_padding"
+                android:paddingTop="@dimen/double_vertical_padding">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -84,8 +84,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/settings_list_selector"
-                android:paddingBottom="@dimen/default_top_padding"
-                android:paddingTop="@dimen/default_top_padding">
+                android:paddingBottom="@dimen/default_vertical_padding"
+                android:paddingTop="@dimen/default_vertical_padding">
 
                 <TextView
                     android:id="@+id/textView2"
@@ -117,8 +117,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/settings_list_selector"
-                android:paddingBottom="@dimen/default_top_padding"
-                android:paddingTop="@dimen/default_top_padding">
+                android:paddingBottom="@dimen/default_vertical_padding"
+                android:paddingTop="@dimen/default_vertical_padding">
 
                 <TextView
                     android:id="@+id/textView3"
@@ -150,8 +150,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/settings_list_selector"
-                android:paddingBottom="@dimen/default_top_padding"
-                android:paddingTop="@dimen/default_top_padding">
+                android:paddingBottom="@dimen/default_vertical_padding"
+                android:paddingTop="@dimen/default_vertical_padding">
 
                 <TextView
                     android:id="@+id/notify_when_textView"
@@ -181,8 +181,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/settings_list_selector"
-                android:paddingBottom="@dimen/double_top_padding"
-                android:paddingTop="@dimen/double_top_padding">
+                android:paddingBottom="@dimen/double_vertical_padding"
+                android:paddingTop="@dimen/double_vertical_padding">
 
                 <TextView
                     android:id="@+id/days_to_notify_title_textView"
@@ -212,8 +212,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/settings_list_selector"
-                android:paddingBottom="@dimen/default_top_padding"
-                android:paddingTop="@dimen/default_top_padding">
+                android:paddingBottom="@dimen/default_vertical_padding"
+                android:paddingTop="@dimen/default_vertical_padding">
 
                 <TextView
                     android:id="@+id/lunch_notification_textview"
@@ -243,8 +243,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/settings_list_selector"
-                android:paddingBottom="@dimen/default_top_padding"
-                android:paddingTop="@dimen/default_top_padding">
+                android:paddingBottom="@dimen/default_vertical_padding"
+                android:paddingTop="@dimen/default_vertical_padding">
 
                 <TextView
                     android:id="@+id/dinner_notification_textview"

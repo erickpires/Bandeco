@@ -1,6 +1,5 @@
 package com.app.bandeco;
 
-import android.animation.LayoutTransition;
 import android.annotation.TargetApi;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -16,10 +15,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.TranslateAnimation;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import erick.bandeco.adapters.TabsAdapter;
 import erick.bandeco.database.DatabaseHelper;
@@ -59,16 +56,16 @@ public class Main extends ActionBarActivity {
 
 		View parentLayout = findViewById(R.id.parent_layout_main);
 
-		LinearLayout fabs_layout = (LinearLayout) findViewById(R.id.fabs_layout);
+		//LinearLayout fabs_layout = (LinearLayout) findViewById(R.id.fabs_layout);
 		ImageButton fab_invite = (ImageButton) findViewById(R.id.fab_invite);
 		fab_invite_lunch = findViewById(R.id.fab_invite_lunch);
 		fab_invite_dinner = findViewById(R.id.fab_invite_dinner);
 
-		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+		/*if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 			LayoutTransition layoutTransition = new LayoutTransition();
 			layoutTransition.setDuration(100);
 			fabs_layout.setLayoutTransition(layoutTransition);
-		}
+		}*/
 
 		fab_invite.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -80,6 +77,14 @@ public class Main extends ActionBarActivity {
 					fab_invite_lunch.setVisibility(View.GONE);
 					fab_invite_dinner.setVisibility(View.GONE);
 				}
+			}
+		});
+
+		fab_invite.setOnLongClickListener(new View.OnLongClickListener() {
+			@Override
+			public boolean onLongClick(View v) {
+				Toast.makeText(getApplicationContext(), R.string.share, Toast.LENGTH_SHORT).show();
+				return true;
 			}
 		});
 

@@ -113,6 +113,7 @@
     <color name="done_text_color_normal">#ff333333</color>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/color.xml -->
     <eat-comment/>
+    <color name="fab_bg_selected">#fffe9323</color>
     <color name="fab_text">#8d0d0d0d</color>
     <color name="grey_text">#FFbfbfbf</color>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
@@ -378,6 +379,11 @@
     <dimen name="indicator_size">88.0dip</dimen>
     <dimen name="indicator_stroke">2.0dip</dimen>
     <dimen name="intent_api_mic_area_size">145.0dip</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="large_fab_diameter">50dp</dimen>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
+    <eat-comment/>
     <dimen name="large_preview_width">800.0dip</dimen>
     <dimen name="load_more_button_margin">40.0dip</dimen>
     <dimen name="local_result_vertical_divider_height">20.0dip</dimen>
@@ -451,6 +457,7 @@
     <dimen name="separator_padding">4dip</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
     <eat-comment/>
+    <dimen name="small_fab_diameter">40dp</dimen>
     <dimen name="small_fab_padding">15dp</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
     <eat-comment/>
@@ -691,7 +698,7 @@
         <item name="windowActionBar">false</item>
     </style>
     <style name="AppThemeToolbar" parent="Theme.AppCompat">
-        <item name="colorPrimary">@color/toolbar_color</item>
+        <item name="colorPrimary">@color/status_color</item>
         <item name="colorPrimaryDark">@color/toolbar_color</item>
         <item name="android:windowNoTitle">true</item>
         <item name="windowActionBar">false</item>

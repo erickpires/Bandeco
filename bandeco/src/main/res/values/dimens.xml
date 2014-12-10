@@ -19,4 +19,7 @@
     <dimen name="padding_vertical_fab_text">5dp</dimen>
     <dimen name="padding_side_fab_text">7dp</dimen>
 
+    <dimen name="large_fab_diameter">50dp</dimen>
+    <dimen name="small_fab_diameter">40dp</dimen>
+
 </resources>
