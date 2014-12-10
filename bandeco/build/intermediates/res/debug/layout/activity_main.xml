@@ -15,7 +15,7 @@
         android:paddingStart="@dimen/default_minimal_padding"
         app:contentInsetStart="5dp"
         app:popupTheme="@style/Theme.AppCompat.Light"
-        app:theme="@style/AppThemeToolbar"></android.support.v7.widget.Toolbar>
+        app:theme="@style/AppThemeToolbar"/>
 
 
     <android.support.v4.view.ViewPager
@@ -28,50 +28,102 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/fabs_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
-            android:animateLayoutChanges="true" >
+            android:orientation="vertical">
 
-            <ImageButton
+            <LinearLayout
                 android:id="@+id/fab_invite_lunch"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/default_minimal_padding"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/oval"
-                android:contentDescription="@string/share"
-                android:src="@drawable/ic_day"/>
+                android:layout_marginRight="@dimen/small_fab_padding"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:visibility="gone">
 
-            <ImageButton
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/default_minimal_padding"
+                    android:background="@drawable/fab_text_bg"
+                    android:paddingBottom="@dimen/padding_vertical_fab_text"
+                    android:paddingLeft="@dimen/padding_side_fab_text"
+                    android:paddingRight="@dimen/padding_side_fab_text"
+                    android:paddingTop="@dimen/padding_vertical_fab_text"
+                    android:text="@string/lunch"
+                    android:textColor="@color/fab_text"
+                    android:textStyle="bold"/>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fab_smaller_circle">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_day"/>
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/fab_invite_dinner"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:visibility="gone"
-                android:layout_below="@+id/fab_invite_lunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
                 android:layout_marginBottom="@dimen/default_minimal_padding"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/oval"
-                android:contentDescription="@string/share"
-                android:src="@drawable/ic_night"/>
+                android:layout_marginRight="@dimen/small_fab_padding"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/default_minimal_padding"
+                    android:background="@drawable/fab_text_bg"
+                    android:paddingBottom="@dimen/padding_vertical_fab_text"
+                    android:paddingLeft="@dimen/padding_side_fab_text"
+                    android:paddingRight="@dimen/padding_side_fab_text"
+                    android:paddingTop="@dimen/padding_vertical_fab_text"
+                    android:text="@string/dinner"
+                    android:textColor="@color/fab_text"
+                    android:textStyle="bold"/>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fab_smaller_circle">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_night"/>
+                </FrameLayout>
+            </LinearLayout>
 
             <ImageButton
                 android:id="@+id/fab_invite"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_below="@+id/fab_invite_dinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
                 android:layout_marginBottom="@dimen/default_side_padding"
-                android:layout_marginRight="@dimen/default_minimal_padding"
                 android:layout_marginLeft="@dimen/default_minimal_padding"
-                android:background="@drawable/oval"
+                android:layout_marginRight="@dimen/default_minimal_padding"
+                android:background="@drawable/fab_larger_circle"
                 android:contentDescription="@string/share"
                 android:src="@drawable/ic_person_add_white"/>
 
 
-        </RelativeLayout>
+        </LinearLayout>
     </FrameLayout>
 
 

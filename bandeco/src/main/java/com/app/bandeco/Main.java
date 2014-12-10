@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import erick.bandeco.adapters.TabsAdapter;
@@ -34,8 +35,8 @@ public class Main extends ActionBarActivity {
 
 	private TabsAdapter tabsAdapter;
 	private DatabaseHelper databaseHelper;
-	private ImageButton fab_invite_lunch;
-	private ImageButton fab_invite_dinner;
+	private View fab_invite_lunch;
+	private View fab_invite_dinner;
 
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	@Override
@@ -58,10 +59,10 @@ public class Main extends ActionBarActivity {
 
 		View parentLayout = findViewById(R.id.parent_layout_main);
 
-		RelativeLayout fabs_layout = (RelativeLayout) findViewById(R.id.fabs_layout);
+		LinearLayout fabs_layout = (LinearLayout) findViewById(R.id.fabs_layout);
 		ImageButton fab_invite = (ImageButton) findViewById(R.id.fab_invite);
-		fab_invite_lunch = (ImageButton) findViewById(R.id.fab_invite_lunch);
-		fab_invite_dinner = (ImageButton) findViewById(R.id.fab_invite_dinner);
+		fab_invite_lunch = findViewById(R.id.fab_invite_lunch);
+		fab_invite_dinner = findViewById(R.id.fab_invite_dinner);
 
 		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 			LayoutTransition layoutTransition = new LayoutTransition();
