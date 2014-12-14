@@ -54,10 +54,6 @@ import static java.util.Calendar.getInstance;
 
 public class Settings extends ActionBarActivity {
 
-	public static final int LUNCH_ONLY = 0;
-	public static final int DINNER_ONLY = 1;
-	public static final int BOTH_MEALS = 2;
-
 	public static final int NOTIFY_ALWAYS = 0;
 	public static final int NOTIFY_IF_LIKE = 1;
 	public static final int NOTIFY_IF_NOT_DISLIKE = 2;
@@ -178,7 +174,7 @@ public class Settings extends ActionBarActivity {
 	}
 
 	private void getSettings() {
-		mealOption = settings.getInt(SHOW_MEALS, BOTH_MEALS);
+		mealOption = settings.getInt(SHOW_MEALS, Constants.MEAL_OPTION_BOTH_MEALS);
 		lunchNotificationHour = settings.getInt(LUNCH_NOTIFICATION_HOUR, 12);
 		lunchNotificationMinute = settings.getInt(LUNCH_NOTIFICATION_MINUTE, 0);
 		dinnerNotificationHour = settings.getInt(DINNER_NOTIFICATION_HOUR, 18);
@@ -447,13 +443,13 @@ public class Settings extends ActionBarActivity {
 	}
 
 	private void updateLunchNotificationLayout() {
-		boolean enabled = notifyWhenOption != NEVER_NOTIFY && mealOption != DINNER_ONLY;
+		boolean enabled = notifyWhenOption != NEVER_NOTIFY && mealOption != Constants.MEAL_OPTION_DINNER_ONLY;
 
 		changeOptionDisplayState(lunchNotificationLayout, lunchNotificationTextView, lunchNotificationTimeTextView, enabled);
 	}
 
 	private void updateDinnerNotificationLayout() {
-		boolean enabled = notifyWhenOption != NEVER_NOTIFY && mealOption != LUNCH_ONLY;
+		boolean enabled = notifyWhenOption != NEVER_NOTIFY && mealOption != Constants.MEAL_OPTION_LUNCH_ONLY;
 
 		changeOptionDisplayState(dinnerNotificationLayout, dinnerNotificationTextView, dinnerNotificationTimeTextView, enabled);
 	}
@@ -522,10 +518,10 @@ public class Settings extends ActionBarActivity {
 		if (notifyWhenOption == NEVER_NOTIFY)
 			return;
 
-		if (mealType == MEAL_TYPE_LUNCH && mealOption == DINNER_ONLY)
+		if (mealType == MEAL_TYPE_LUNCH && mealOption == Constants.MEAL_OPTION_DINNER_ONLY)
 			return;
 
-		if (mealType == MEAL_TYPE_DINNER && mealOption == LUNCH_ONLY)
+		if (mealType == MEAL_TYPE_DINNER && mealOption == Constants.MEAL_OPTION_LUNCH_ONLY)
 			return;
 
 		Calendar calendar = getCalendar(mealType);

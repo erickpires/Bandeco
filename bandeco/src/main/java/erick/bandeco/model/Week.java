@@ -59,6 +59,10 @@ public class Week {
 		dinnerIndexer = new Indexer(tmp);
 	}
 
+	public Day[] getDays(){
+		return days;
+	}
+
 	public Day getDayAt(int index) {
 		return days[index];
 	}

@@ -37,7 +37,7 @@ public class ListDialogFragment extends DialogFragment {
 
 		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-		final View layout = inflater.inflate(R.layout.list_layout, null);
+		final View layout = inflater.inflate(R.layout.words_list_layout, null);
 
 		listLinearLayout = (LinearLayout) layout.findViewById(R.id.list);
 

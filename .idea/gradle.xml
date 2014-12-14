@@ -9,7 +9,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/bandeco" />
-            <option value="$PROJECT_DIR$/cardsUILib" />
             <option value="$PROJECT_DIR$/listViewAnimations" />
           </set>
         </option>

@@ -17,6 +17,12 @@ public final class Constants {
 	public static final int MEAL_TYPE_LUNCH = 0;
 	public static final int MEAL_TYPE_DINNER = 1;
 
+	// Meals to be displayed
+	public static final int MEAL_OPTION_LUNCH_ONLY = 0;
+	public static final int MEAL_OPTION_DINNER_ONLY = 1;
+	public static final int MEAL_OPTION_BOTH_MEALS = 2;
+
+
 	public static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 	public static final int[] DAYS_TO_NOTIFY_CODES = new int[]{1, 2, 4, 8, 16, 32, 64};

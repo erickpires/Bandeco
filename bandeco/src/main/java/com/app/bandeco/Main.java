@@ -9,7 +9,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -18,7 +17,6 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import erick.bandeco.adapters.TabsAdapter;
 import erick.bandeco.database.DatabaseHelper;
 import erick.bandeco.model.Day;
 import erick.bandeco.model.Meal;
@@ -30,7 +28,6 @@ public class Main extends ActionBarActivity {
 
 	public static Week week;
 
-	private TabsAdapter tabsAdapter;
 	private DatabaseHelper databaseHelper;
 	private View fab_invite_lunch;
 	private View fab_invite_dinner;
@@ -39,20 +36,20 @@ public class Main extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
 
+		//TODO: week should not be here
 		databaseHelper = new DatabaseHelper(getBaseContext());
 		SQLiteDatabase database = databaseHelper.getReadableDatabase();
-
 		week = OperationsWithDB.getWeekFromDatabase(database);
+
+		setContentView(R.layout.activity_main);
 
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		toolbar.setLogo(R.drawable.ic_logo);
 		setSupportActionBar(toolbar);
 
-		ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
-		tabsAdapter = new TabsAdapter(getSupportFragmentManager());
-		viewPager.setAdapter(tabsAdapter);
+
+
 
 		View parentLayout = findViewById(R.id.parent_layout_main);
 
@@ -99,7 +96,7 @@ public class Main extends ActionBarActivity {
 	@Override
 	public void onResume() {
 		super.onResume();
-		tabsAdapter.dataChanged();
+		//TODO: dataSetChange
 		LocalBroadcastManager.getInstance(this).registerReceiver(messageReceiver, new IntentFilter("update_event"));
 	}
 
@@ -114,10 +111,10 @@ public class Main extends ActionBarActivity {
 		SQLiteDatabase database = databaseHelper.getReadableDatabase();
 		week = OperationsWithDB.getWeekFromDatabase(database);
 		database.close();
-		try {
-			tabsAdapter.dataChanged();
+		/*try {
+			//TODO: dataSetChange
 		} catch (IllegalStateException ignored) {
-		}
+		}*/
 
 	}
 

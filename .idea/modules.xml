@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Bandeco.iml" filepath="$PROJECT_DIR$/Bandeco.iml" />
       <module fileurl="file://$PROJECT_DIR$/bandeco/bandeco.iml" filepath="$PROJECT_DIR$/bandeco/bandeco.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cardsUILib/cardsUILib.iml" filepath="$PROJECT_DIR$/cardsUILib/cardsUILib.iml" />
       <module fileurl="file://$PROJECT_DIR$/listViewAnimations/listViewAnimations.iml" filepath="$PROJECT_DIR$/listViewAnimations/listViewAnimations.iml" />
     </modules>
   </component>

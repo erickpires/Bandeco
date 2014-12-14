@@ -11,10 +11,6 @@
         <item>Saturday</item>
         <item>Sunday</item>
     </string-array>
-    <string-array name="meals_array">
-        <item>Lunch</item>
-        <item>Dinner</item>
-    </string-array>
     <string-array name="menu_entries">
         <item name="prato_principal">Main dish</item>
         <item name="vegetariano">Vegetarian dish</item>

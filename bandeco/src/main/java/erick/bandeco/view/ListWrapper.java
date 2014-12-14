@@ -27,7 +27,7 @@ public class ListWrapper {
 	}
 
 	private void createListViewElement() {
-		final View elementLayout = inflater.inflate(R.layout.list_element, view, false);
+		final View elementLayout = inflater.inflate(R.layout.words_list_element, view, false);
 
 		final EditText editText = (EditText) elementLayout.findViewById(R.id.list_element_text);
 		final ImageButton deleteButton = (ImageButton) elementLayout.findViewById(R.id.delete_button);

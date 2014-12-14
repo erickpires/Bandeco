@@ -46,6 +46,17 @@ public final class Utils {
 		return result;
 	}
 
+	public static boolean shouldDisplayMeal(int mealType, int mealOption){
+		switch (mealType){
+			case Constants.MEAL_TYPE_LUNCH :
+				return mealOption != Constants.MEAL_OPTION_DINNER_ONLY;
+			case Constants.MEAL_TYPE_DINNER :
+				return mealOption != Constants.MEAL_OPTION_LUNCH_ONLY;
+			default:
+				return false;
+		}
+	}
+
 	public static boolean shouldNotifyToday(int daysToNotifyCode, Calendar today) {
 		int todayNumber = Day.adaptDayOfWeek(today.get(Calendar.DAY_OF_WEEK));
 

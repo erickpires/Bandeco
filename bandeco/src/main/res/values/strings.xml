@@ -74,11 +74,6 @@
     <string name="share">Convidar alguém</string>
     <string name="inviting_you">Estou te convidando para o %1$s de hoje</string>
 
-    <string-array name="meals_array">
-        <item>Lunch</item>
-        <item>Dinner</item>
-    </string-array>
-
     <string name="lunch">Almoço</string>
     <string name="dinner">Jantar</string>
 
