@@ -14,8 +14,8 @@ public final class R {
 		public static final int card_separator = 0x7f07001d;
 		public static final int card_text = 0x7f07001e;
 		public static final int card_title_text = 0x7f07001f;
-		public static final int stroke = 0x7f07004a;
-		public static final int text_light = 0x7f07004d;
+		public static final int stroke = 0x7f07004b;
+		public static final int text_light = 0x7f07004e;
 	}
 	public static final class dimen {
 		public static final int action_bar_switch_padding = 0x7f080025;

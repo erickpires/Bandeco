@@ -13,17 +13,17 @@ public final class R {
 		public static final int calendar_header = 0x7f070019;
 		public static final int circle_background = 0x7f070020;
 		public static final int darker_blue = 0x7f070021;
-		public static final int date_picker_selector = 0x7f07005a;
+		public static final int date_picker_selector = 0x7f07005b;
 		public static final int date_picker_text_normal = 0x7f070022;
 		public static final int date_picker_view_animator = 0x7f070023;
-		public static final int date_picker_year_selector = 0x7f07005b;
-		public static final int done_text_color = 0x7f07005c;
+		public static final int date_picker_year_selector = 0x7f07005c;
+		public static final int done_text_color = 0x7f07005d;
 		public static final int done_text_color_disabled = 0x7f070028;
 		public static final int done_text_color_normal = 0x7f070029;
-		public static final int line_background = 0x7f070031;
-		public static final int numbers_text_color = 0x7f070039;
-		public static final int transparent_black = 0x7f07004f;
-		public static final int white = 0x7f070050;
+		public static final int line_background = 0x7f070032;
+		public static final int numbers_text_color = 0x7f07003a;
+		public static final int transparent_black = 0x7f070050;
+		public static final int white = 0x7f070051;
 	}
 	public static final class dimen {
 		public static final int ampm_label_size = 0x7f080029;
