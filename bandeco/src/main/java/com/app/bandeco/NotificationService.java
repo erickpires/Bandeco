@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.IBinder;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 
 import erick.bandeco.database.DatabaseHelper;
@@ -15,9 +14,6 @@ import erick.bandeco.model.Day;
 import erick.bandeco.model.Meal;
 import erick.bandeco.view.MealNotification;
 import erick.bandeco.view.Settings;
-
-import static erick.bandeco.database.DatabaseContract.NegativeWords;
-import static erick.bandeco.database.DatabaseContract.PositiveWords;
 
 public class NotificationService extends Service {
 

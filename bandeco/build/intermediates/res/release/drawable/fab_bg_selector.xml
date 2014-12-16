@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true" >
-        <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval" >
+        <shape android:shape="oval" >
             <solid
                 android:color="@color/fab_bg_selected"/>
         </shape>
     </item>
     <!-- pressed -->
     <item android:state_focused="true" >
-        <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval" >
+        <shape android:shape="oval" >
             <solid
                 android:color="@color/fab_bg_selected"/>
         </shape>
     </item>
     <!-- focused -->
     <item>
-        <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval" >
+        <shape android:shape="oval" >
             <solid
                 android:color="@color/toolbar_color"/>
         </shape>

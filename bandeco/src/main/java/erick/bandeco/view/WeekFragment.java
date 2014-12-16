@@ -15,6 +15,7 @@ import com.app.bandeco.R;
 import com.app.bandeco.Utils;
 
 import erick.bandeco.adapters.WeekListAdapter;
+import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
 public class WeekFragment extends Fragment {
 
@@ -30,7 +31,7 @@ public class WeekFragment extends Fragment {
 		boolean displayDinner = Utils.shouldDisplayMeal(Constants.MEAL_TYPE_DINNER, mealOption);
 
 		View parentView = inflater.inflate(com.app.bandeco.R.layout.week_fragment, container, false);
-		ListView listView = (ListView) parentView.findViewById(R.id.week_list_view);
+		StickyListHeadersListView listView = (StickyListHeadersListView) parentView.findViewById(R.id.week_list_view);
 
 		final WeekListAdapter weekListAdapter = new WeekListAdapter(getActivity(), Main.week, displayLunch, displayDinner);
 		listView.setAdapter(weekListAdapter);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:ns1="http://schemas.android.com/apk/res/android">
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="days_array">
@@ -10,10 +10,6 @@
         <item>Sexta-feira</item>
         <item>Sábado</item>
         <item>Domingo</item>
-    </string-array>
-    <string-array name="meals_array">
-        <item>Lunch</item>
-        <item>Dinner</item>
     </string-array>
     <string-array name="menu_entries">
         <item name="prato_principal">Prato Principal</item>
@@ -74,6 +70,9 @@
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <color name="blue">#ff33b5e5</color>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="blue_stripe_color">#FF1A8EC5</color>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
@@ -87,16 +86,6 @@
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <color name="calendar_header">#ff999999</color>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <color name="card_border">#ffdedede</color>
-    <color name="card_grid_text">#ff707070</color>
-    <color name="card_light_text">#ffb5b5b5</color>
-    <color name="card_separator">#ffe5e5e5</color>
-    <color name="card_text">#ff8d8d8d</color>
-    <color name="card_title_text">#ff707070</color>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
-    <eat-comment/>
     <color name="circle_background">#fff2f2f2</color>
     <color name="darker_blue">#ff0099cc</color>
     <color name="date_picker_text_normal">#ff999999</color>
@@ -115,6 +104,7 @@
     <eat-comment/>
     <color name="fab_bg_selected">#fffe9323</color>
     <color name="fab_text">#8d0d0d0d</color>
+    <color name="fab_text_shadow">#33555555</color>
     <color name="grey_text">#FFbfbfbf</color>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
@@ -152,6 +142,11 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="red_stripe_color">#FFE05A5C</color>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <eat-comment/>
     <color name="ripple_material_dark">#40ffffff</color>
     <color name="ripple_material_light">#40000000</color>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
@@ -161,16 +156,10 @@
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="status_color">#FFc26a1d</color>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <color name="stroke">#dddddd</color>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <color name="text_light">#66000000</color>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="toolbar_color">#FFe67e22</color>
@@ -196,6 +185,7 @@
     <declare-styleable name="PopupWindowBackgroundState"><attr format="boolean" name="state_above_anchor"/></declare-styleable>
     <declare-styleable name="SearchView"><attr format="reference" name="layout"/><attr format="boolean" name="iconifiedByDefault"/><attr name="android:maxWidth"/><attr format="string" name="queryHint"/><attr name="android:imeOptions"/><attr name="android:inputType"/><attr format="reference" name="closeIcon"/><attr format="reference" name="goIcon"/><attr format="reference" name="searchIcon"/><attr format="reference" name="voiceIcon"/><attr format="reference" name="commitIcon"/><attr format="reference" name="suggestionRowLayout"/><attr format="reference" name="queryBackground"/><attr format="reference" name="submitBackground"/><attr name="android:focusable"/></declare-styleable>
     <declare-styleable name="Spinner"><attr format="reference" name="prompt"/><attr format="enum" name="spinnerMode"><enum name="dialog" value="0"/><enum name="dropdown" value="1"/></attr><attr name="android:dropDownSelector"/><attr name="android:popupBackground"/><attr name="android:dropDownVerticalOffset"/><attr name="android:dropDownHorizontalOffset"/><attr name="android:dropDownWidth"/><attr format="reference" name="popupPromptView"/><attr name="android:gravity"/><attr format="boolean" name="disableChildrenWhenDisabled"/><attr name="android:background"/></declare-styleable>
+    <declare-styleable name="StickyListHeadersListView"><attr name="android:clipToPadding"/><attr name="android:scrollbars"/><attr name="android:overScrollMode"/><attr name="android:padding"/><attr name="android:paddingLeft"/><attr name="android:paddingTop"/><attr name="android:paddingRight"/><attr name="android:paddingBottom"/><attr name="android:fadingEdgeLength"/><attr name="android:requiresFadingEdge"/><attr name="android:cacheColorHint"/><attr name="android:choiceMode"/><attr name="android:drawSelectorOnTop"/><attr name="android:fastScrollEnabled"/><attr name="android:fastScrollAlwaysVisible"/><attr name="android:listSelector"/><attr name="android:scrollingCache"/><attr name="android:scrollbarStyle"/><attr name="android:divider"/><attr name="android:dividerHeight"/><attr name="android:transcriptMode"/><attr format="boolean" name="hasStickyHeaders"/><attr format="boolean" name="isDrawingListUnderStickyHeader"/></declare-styleable>
     <declare-styleable name="SwitchCompat"><attr name="android:thumb"/><attr format="reference" name="track"/><attr name="android:textOn"/><attr name="android:textOff"/><attr format="dimension" name="thumbTextPadding"/><attr format="reference" name="switchTextAppearance"/><attr format="dimension" name="switchMinWidth"/><attr format="dimension" name="switchPadding"/><attr format="boolean" name="splitTrack"/><attr format="boolean" name="showText"/></declare-styleable>
     <declare-styleable name="Theme"><attr format="boolean" name="windowActionBar"/><attr format="boolean" name="windowActionBarOverlay"/><attr format="boolean" name="windowActionModeOverlay"/><attr format="dimension|fraction" name="windowFixedWidthMajor"/><attr format="dimension|fraction" name="windowFixedHeightMinor"/><attr format="dimension|fraction" name="windowFixedWidthMinor"/><attr format="dimension|fraction" name="windowFixedHeightMajor"/><attr name="android:windowIsFloating"/><attr format="reference" name="actionBarTabStyle"/><attr format="reference" name="actionBarTabBarStyle"/><attr format="reference" name="actionBarTabTextStyle"/><attr format="reference" name="actionOverflowButtonStyle"/><attr format="reference" name="actionOverflowMenuStyle"/><attr format="reference" name="actionBarPopupTheme"/><attr format="reference" name="actionBarStyle"/><attr format="reference" name="actionBarSplitStyle"/><attr format="reference" name="actionBarTheme"/><attr format="reference" name="actionBarWidgetTheme"/><attr format="dimension" name="actionBarSize"><enum name="wrap_content" value="0"/></attr><attr format="reference" name="actionBarDivider"/><attr format="reference" name="actionBarItemBackground"/><attr format="reference" name="actionMenuTextAppearance"/><attr format="color|reference" name="actionMenuTextColor"/><attr format="reference" name="actionModeStyle"/><attr format="reference" name="actionModeCloseButtonStyle"/><attr format="reference" name="actionModeBackground"/><attr format="reference" name="actionModeSplitBackground"/><attr format="reference" name="actionModeCloseDrawable"/><attr format="reference" name="actionModeCutDrawable"/><attr format="reference" name="actionModeCopyDrawable"/><attr format="reference" name="actionModePasteDrawable"/><attr format="reference" name="actionModeSelectAllDrawable"/><attr format="reference" name="actionModeShareDrawable"/><attr format="reference" name="actionModeFindDrawable"/><attr format="reference" name="actionModeWebSearchDrawable"/><attr format="reference" name="actionModePopupWindowStyle"/><attr format="reference" name="textAppearanceLargePopupMenu"/><attr format="reference" name="textAppearanceSmallPopupMenu"/><attr format="reference" name="actionDropDownStyle"/><attr format="dimension" name="dropdownListPreferredItemHeight"/><attr format="reference" name="spinnerStyle"/><attr format="reference" name="spinnerDropDownItemStyle"/><attr format="reference" name="homeAsUpIndicator"/><attr format="reference" name="actionButtonStyle"/><attr format="reference" name="buttonBarStyle"/><attr format="reference" name="buttonBarButtonStyle"/><attr format="reference" name="selectableItemBackground"/><attr format="reference" name="selectableItemBackgroundBorderless"/><attr format="reference" name="dividerVertical"/><attr format="reference" name="dividerHorizontal"/><attr format="reference" name="activityChooserViewStyle"/><attr format="reference" name="toolbarStyle"/><attr format="reference" name="toolbarNavigationButtonStyle"/><attr format="reference" name="popupMenuStyle"/><attr format="reference" name="popupWindowStyle"/><attr format="reference|color" name="editTextColor"/><attr format="reference" name="editTextBackground"/><attr format="reference" name="switchStyle"/><attr format="reference" name="textAppearanceSearchResultTitle"/><attr format="reference" name="textAppearanceSearchResultSubtitle"/><attr format="reference|color" name="textColorSearchUrl"/><attr format="reference" name="searchViewStyle"/><attr format="dimension" name="listPreferredItemHeight"/><attr format="dimension" name="listPreferredItemHeightSmall"/><attr format="dimension" name="listPreferredItemHeightLarge"/><attr format="dimension" name="listPreferredItemPaddingLeft"/><attr format="dimension" name="listPreferredItemPaddingRight"/><attr format="reference" name="dropDownListViewStyle"/><attr format="reference" name="listPopupWindowStyle"/><attr format="reference" name="textAppearanceListItem"/><attr format="reference" name="textAppearanceListItemSmall"/><attr format="reference" name="panelBackground"/><attr format="dimension" name="panelMenuListWidth"/><attr format="reference" name="panelMenuListTheme"/><attr format="reference" name="listChoiceBackgroundIndicator"/><attr format="color" name="colorPrimary"/><attr format="color" name="colorPrimaryDark"/><attr format="color" name="colorAccent"/><attr format="color" name="colorControlNormal"/><attr format="color" name="colorControlActivated"/><attr format="color" name="colorControlHighlight"/><attr format="color" name="colorButtonNormal"/><attr format="color" name="colorSwitchThumbNormal"/></declare-styleable>
     <declare-styleable name="Toolbar"><attr format="reference" name="titleTextAppearance"/><attr format="reference" name="subtitleTextAppearance"/><attr name="title"/><attr name="subtitle"/><attr name="android:gravity"/><attr format="dimension" name="titleMargins"/><attr format="dimension" name="titleMarginStart"/><attr format="dimension" name="titleMarginEnd"/><attr format="dimension" name="titleMarginTop"/><attr format="dimension" name="titleMarginBottom"/><attr name="contentInsetStart"/><attr name="contentInsetEnd"/><attr name="contentInsetLeft"/><attr name="contentInsetRight"/><attr format="dimension" name="maxButtonHeight"/><attr format="reference" name="theme"/><attr format="reference" name="collapseIcon"/><attr format="string" name="collapseContentDescription"/><attr name="popupTheme"/><attr format="reference" name="navigationIcon"/><attr format="string" name="navigationContentDescription"/><attr name="android:minHeight"/></declare-styleable>
@@ -240,10 +230,6 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="action_bar_switch_padding">16.0dip</dimen>
-    <dimen name="action_confirm_button_margin">16.0dip</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
@@ -252,45 +238,6 @@
     <eat-comment/>
     <dimen name="ampm_label_size">16sp</dimen>
     <dimen name="ampm_left_padding">6dip</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="app_icon_area_height">120.0dip</dimen>
-    <dimen name="app_icon_area_width">120.0dip</dimen>
-    <dimen name="at_place_card_content_height">150.0dip</dimen>
-    <dimen name="auto_scroll_padding">30.0dip</dimen>
-    <dimen name="card_action_button_height">48.0dip</dimen>
-    <dimen name="card_action_small_text">12.0sp</dimen>
-    <dimen name="card_action_text">16.0sp</dimen>
-    <dimen name="card_grid_font_size">14.0sp</dimen>
-    <dimen name="card_horizontal_map_height">150.0dip</dimen>
-    <dimen name="card_large_text">25.0sp</dimen>
-    <dimen name="card_medium_text">18.0sp</dimen>
-    <dimen name="card_minimum_padding">8.0dip</dimen>
-    <dimen name="card_padding">16.0dip</dimen>
-    <dimen name="card_small_padding">12.0dip</dimen>
-    <dimen name="card_small_text">14.0sp</dimen>
-    <dimen name="card_spacer_margin">8.0dip</dimen>
-    <dimen name="card_temperature_size">90.0dip</dimen>
-    <dimen name="card_xl_text">35.0sp</dimen>
-    <dimen name="cards_max_column_width">446.0dip</dimen>
-    <dimen name="cards_padding_inbetween">10.0dip</dimen>
-    <dimen name="cards_padding_inbetween_adjusted">9.0dip</dimen>
-    <dimen name="contact_avatar_height">148.0dip</dimen>
-    <dimen name="contact_avatar_width">148.0dip</dimen>
-    <dimen name="contact_select_fragment_padding">8.0dip</dimen>
-    <dimen name="context_header_padding">0.0dip</dimen>
-    <dimen name="control_size">48.0dip</dimen>
-    <dimen name="corpus_bar_left_padding">12.0dip</dimen>
-    <dimen name="corpus_bar_more_padding">24.0dip</dimen>
-    <dimen name="corpus_bar_vertical_padding">5.0dip</dimen>
-    <dimen name="corpus_selector_element_margin">5.0dip</dimen>
-    <dimen name="corpus_selector_horizontal_margin">8.0dip</dimen>
-    <dimen name="corpus_selector_text_size">15.0sp</dimen>
-    <dimen name="correction_popup_width_1buttons">60.0dip</dimen>
-    <dimen name="correction_popup_width_2buttons">120.0dip</dimen>
-    <dimen name="correction_popup_width_3buttons">160.0dip</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
-    <eat-comment/>
     <dimen name="date_picker_component_width">270dip</dimen>
     <dimen name="date_picker_header_height">30dip</dimen>
     <dimen name="date_picker_header_text_size">14dip</dimen>
@@ -303,101 +250,27 @@
     <dimen name="default_side_padding">20dp</dimen>
     <dimen name="default_side_padding_identented">30dp</dimen>
     <dimen name="default_vertical_padding">10dp</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="dialog_corner_radius">8.0px</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
     <item name="dialog_fixed_width_major" type="dimen">320dp</item>
     <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="dialog_height">320.0dip</dimen>
-    <dimen name="dialog_pos_left">0.0dip</dimen>
-    <dimen name="dialog_pos_top">0.0dip</dimen>
-    <dimen name="dialog_text_size">18.0sp</dimen>
-    <dimen name="dialog_width">320.0dip</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
-    <eat-comment/>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="divider_height">1.0dip</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <dimen name="done_label_size">14sp</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="double_vertical_padding">15dp</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="extra_height_to_account_for_system_space_in_landscape">0.0dip</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <dimen name="extra_time_label_margin">-30dp</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="first_run_context_image_height">100.0dip</dimen>
-    <dimen name="first_run_padding">24.0dip</dimen>
-    <dimen name="footer_height">50.0dip</dimen>
-    <dimen name="gmail_card_button_height">40.0dip</dimen>
-    <dimen name="google_header_margin_bottom">12.0dip</dimen>
-    <dimen name="google_logo_margin_left">4.0dip</dimen>
-    <dimen name="google_logo_margin_right">4.0dip</dimen>
-    <dimen name="half_unit">8.0dip</dimen>
-    <dimen name="hands_free_padding">12.0dip</dimen>
-    <dimen name="hands_free_small_padding">8.0dip</dimen>
-    <dimen name="header_footer_size">48.0dip</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
-    <eat-comment/>
     <dimen name="header_height">96dip</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="high_confidence_answer_card_image_height">300.0dip</dimen>
-    <dimen name="high_confidence_answer_card_image_width">160.0dip</dimen>
-    <dimen name="high_confidence_answer_card_min_spacing">28.0dip</dimen>
-    <dimen name="hint_bubble_offset">-15.0dip</dimen>
-    <dimen name="histogram_bar_padding">0.0dip</dimen>
-    <dimen name="histogram_bar_size">16.0dip</dimen>
-    <dimen name="histogram_width">100.0dip</dimen>
-    <dimen name="horizontal_static_map_height">150.0dip</dimen>
-    <dimen name="image_result_carousel_height">300.0dip</dimen>
-    <dimen name="image_result_height">100.0dip</dimen>
-    <dimen name="image_view_padding">5.0dip</dimen>
-    <dimen name="ime_button_text_size">14.0sp</dimen>
-    <dimen name="ime_land_height">180.0dip</dimen>
-    <dimen name="ime_mic_size">112.0dip</dimen>
-    <dimen name="ime_padding_bottom">8.0dip</dimen>
-    <dimen name="ime_padding_top">8.0dip</dimen>
-    <dimen name="ime_port_height">240.0dip</dimen>
-    <dimen name="ime_spinner_text">14.0dip</dimen>
-    <dimen name="ime_state_text_size">20.0sp</dimen>
-    <dimen name="ime_title_text_size">14.0sp</dimen>
-    <dimen name="indicator_size">88.0dip</dimen>
-    <dimen name="indicator_stroke">2.0dip</dimen>
-    <dimen name="intent_api_mic_area_size">145.0dip</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="large_fab_diameter">50dp</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="large_preview_width">800.0dip</dimen>
-    <dimen name="load_more_button_margin">40.0dip</dimen>
-    <dimen name="local_result_vertical_divider_height">20.0dip</dimen>
-    <dimen name="local_results_item_margin">@dimen/card_minimum_padding</dimen>
-    <dimen name="local_results_map_height">180.0dip</dimen>
-    <dimen name="main_fragment_top_padding">0.0dip</dimen>
-    <dimen name="map_preview_image_height">180.0dip</dimen>
-    <dimen name="map_preview_image_width">320.0dip</dimen>
-    <dimen name="max_height_for_fullscreen">2.5in</dimen>
-    <dimen name="max_preview_area_width">0.0dip</dimen>
-    <dimen name="max_waveform_height">100.0dip</dimen>
-    <dimen name="mic_height">84.0dip</dimen>
-    <dimen name="min_height_background_image">138.0dip</dimen>
-    <dimen name="min_preview_area_width">0.0dip</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <dimen name="minimum_margin_sides">48dip</dimen>
@@ -414,42 +287,11 @@
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="my_margin">32dp</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="negative_unit">-16.0dip</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
-    <eat-comment/>
     <dimen name="padding_side_fab_text">7dp</dimen>
     <dimen name="padding_vertical_fab_text">5dp</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="photo_crop_stroke_width">1.0dip</dimen>
-    <dimen name="photo_crop_width">280.0dip</dimen>
-    <dimen name="photo_preview_size">200.0dip</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <dimen name="picker_dimen">270dip</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="playpausebutton_size">60.0dip</dimen>
-    <dimen name="preview_image_height">120.0dip</dimen>
-    <dimen name="preview_image_size">250.0dip</dimen>
-    <dimen name="preview_image_width">120.0dip</dimen>
-    <dimen name="recording_popup_size">170.0dip</dimen>
-    <dimen name="retry_button_size">48.0dip</dimen>
-    <dimen name="sample_card_width">375.0dip</dimen>
-    <dimen name="searchResultListItemHeight">58.0dip</dimen>
-    <dimen name="search_bar_padding">8.0dip</dimen>
-    <dimen name="search_bar_text_size">16.0sp</dimen>
-    <dimen name="search_box_width">0.0dip</dimen>
-    <dimen name="search_device_footer_bottom_margin">12.0dip</dimen>
-    <dimen name="search_plate_expand_threshold">360.0dip</dimen>
-    <dimen name="search_plate_height">70.0dip</dimen>
-    <dimen name="search_plate_icon_height">34.0dip</dimen>
-    <dimen name="search_plate_icon_width">32.0dip</dimen>
-    <dimen name="search_plate_minimum_padding">12.0dip</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
-    <eat-comment/>
     <dimen name="selected_calendar_layout_height">155dip</dimen>
     <dimen name="selected_date_day_size">75dip</dimen>
     <dimen name="selected_date_month_size">30dip</dimen>
@@ -459,74 +301,13 @@
     <eat-comment/>
     <dimen name="small_fab_diameter">40dp</dimen>
     <dimen name="small_fab_padding">15dp</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="small_unit">3.0dip</dimen>
-    <dimen name="small_units_2">6.0dip</dimen>
-    <dimen name="small_units_3">9.0dip</dimen>
-    <dimen name="small_units_4">12.0dip</dimen>
-    <dimen name="speak_now_speech_height">200.0dip</dimen>
-    <dimen name="sports_card_image_height">21.0dip</dimen>
-    <dimen name="sports_card_image_width">37.0dip</dimen>
-    <dimen name="sticky_height">120dp</dimen>
-    <dimen name="stock_chart_height">180.0dip</dimen>
-    <dimen name="stock_chart_width">350.0dip</dimen>
-    <dimen name="stock_price_padding">32.0dip</dimen>
-    <dimen name="suggest_summons_area_padding">0.0dip</dimen>
-    <dimen name="suggest_web_height">56.0dip</dimen>
-    <dimen name="suggest_web_padding">2.0dip</dimen>
-    <dimen name="suggestion_footer_view_height">48.0dip</dimen>
-    <dimen name="suggestion_icon1_left_padding">2.0dip</dimen>
-    <dimen name="suggestion_icon_size">64.0dip</dimen>
-    <dimen name="suggestion_large_image_max_height">640.0dip</dimen>
-    <dimen name="suggestion_large_image_max_width">640.0dip</dimen>
-    <dimen name="suggestion_text2_height">26.0dip</dimen>
-    <dimen name="suggestion_text_padding">16.0dip</dimen>
-    <dimen name="suggestion_view_height">64.0dip</dimen>
-    <dimen name="suggestion_view_height_large">191.5dip</dimen>
-    <dimen name="suggestions_divider_margin_left_right">8.0dip</dimen>
-    <dimen name="suggestions_padding">8.0dip</dimen>
-    <dimen name="summons_height">56.0dip</dimen>
-    <dimen name="summons_inter_source_padding">20.0dip</dimen>
-    <dimen name="summons_padding">2.0dip</dimen>
-    <dimen name="summons_width">350.0dip</dimen>
-    <dimen name="suppressed_web_results_min_visible_height">28.0dip</dimen>
-    <dimen name="table_row_vertical_padding">8.0dip</dimen>
-    <dimen name="text_block_bottom_padding">20.0dip</dimen>
-    <dimen name="text_block_side_padding">@dimen/card_padding</dimen>
-    <dimen name="text_block_top_padding">14.0dip</dimen>
-    <dimen name="tidbit_padding">12.0dip</dimen>
+    <dimen name="stripe_width">7dp</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <dimen name="time_label_size">60sp</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="top_padding">10px</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="unit">16.0dip</dimen>
-    <dimen name="unit_small_caps">14.0dip</dimen>
-    <dimen name="units_2">32.0dip</dimen>
-    <dimen name="units_3">48.0dip</dimen>
-    <dimen name="units_4">64.0dip</dimen>
-    <dimen name="voice_popup_margin">40.0dip</dimen>
-    <dimen name="weather_current_icon_height">64.0dip</dimen>
-    <dimen name="weather_forecast_icon_height">24.0dip</dimen>
-    <dimen name="web_snapshots_default_visible_width">300.0dip</dimen>
-    <dimen name="web_snapshots_dismiss_from_offset">150.0dip</dimen>
-    <dimen name="web_snapshots_just_added_extra_height">150.0dip</dimen>
-    <dimen name="web_snapshots_launch_browser_from_offset">300.0dip</dimen>
-    <dimen name="web_snapshots_text_size">30.0dip</dimen>
-    <dimen name="web_snapshots_width">600.0dip</dimen>
-    <dimen name="web_suggestion_icon_size">32.0dip</dimen>
-    <dimen name="web_suggestion_view_height">48.0dip</dimen>
-    <dimen name="websearch_card_top_margin">0.0dip</dimen>
-    <dimen name="websearch_collapse_card_padding_offscreen_leeway">50.0dip</dimen>
-    <dimen name="websearch_fragment_inbetween_padding">12.0dip</dimen>
-    <dimen name="websearch_header_left_padding">16.0dip</dimen>
-    <dimen name="webview_margin_left">60.0dip</dimen>
-    <dimen name="widget_margin_left_right">8.0dip</dimen>
-    <dimen name="widget_margin_top_bottom">8.0dip</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <dimen name="year_label_height">64dip</dimen>
@@ -677,8 +458,6 @@
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <string name="year_picker_description">Year list</string>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/listViewAnimations/unspecified/res/values/values.xml -->
-    <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in
@@ -1457,49 +1236,6 @@
         <item name="android:scaleType">center</item>
         <item name="android:background">?attr/selectableItemBackground</item>
     </style>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <style name="CardLightText" parent="@style/CardText">
-        <item name="android:textColor">@color/card_light_text</item>
-    </style>
-    <style name="CardText">
-        <item name="android:textSize">@dimen/card_small_text</item>
-        <item name="android:textColor">@color/card_text</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:maxLines">2</item>
-    </style>
-    <style name="CardTitle" parent="@style/CardText">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">@dimen/card_large_text</item>
-        <item name="android:textColor">@color/card_title_text</item>
-        <item name="android:fontFamily">sans-serif-light</item>
-    </style>
-    <style name="CardTitleBold" parent="@style/CardText">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">@dimen/card_large_text</item>
-        <item name="android:textColor">@color/card_title_text</item>
-        <item name="android:fontFamily">sans-serif</item>
-    </style>
-    <style name="Item">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">300dp</item>
-    </style>
-    <style name="Item.Sticky">
-        <item name="android:background">#eeeeee</item>
-        <item name="android:layout_height">@dimen/sticky_height</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textAppearance">?android:textAppearanceLarge</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:textColor">#000000</item>
-    </style>
-    <style name="Item.Top">
-        <item name="android:background">#eeeeee</item>
-    </style>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
-    <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
         <item name="buttonBarStyle">@android:style/ButtonBar</item>
@@ -1666,18 +1402,6 @@
     <style name="RtlOverlay.Widget.AppCompat.SearchView.MagIcon" parent="android:Widget">
         <item name="android:layout_marginLeft">@dimen/abc_dropdownitem_text_padding_left</item>
     </style>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/Bandeco/cardsUILib/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <style name="StackTitle" parent="@style/CardText">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">27sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/card_title_text</item>
-        <item name="android:fontFamily">sans-serif</item>
-    </style>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
-    <eat-comment/>
     <style name="TextAppearance.AppCompat" parent="Base.TextAppearance.AppCompat"/>
     <style name="TextAppearance.AppCompat.Body1" parent="Base.TextAppearance.AppCompat.Body1"/>
     <style name="TextAppearance.AppCompat.Body2" parent="Base.TextAppearance.AppCompat.Body2"/>

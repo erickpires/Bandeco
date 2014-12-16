@@ -22,8 +22,9 @@ import erick.bandeco.model.Day;
 import erick.bandeco.model.Meal;
 import erick.bandeco.model.Week;
 import erick.bandeco.view.HeightAnimation;
+import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
 
-public class WeekListAdapter extends BaseAdapter {
+public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAdapter {
 	private Activity activity;
 	private Context context;
 	private Week week;
@@ -168,5 +169,29 @@ public class WeekListAdapter extends BaseAdapter {
 		HeightAnimation heightAnimation = new HeightAnimation(view, startHeight, endHeight);
 		heightAnimation.setDuration(Constants.ANIMATION_DURATION);
 		view.startAnimation(heightAnimation);
+	}
+
+	@Override
+	public View getHeaderView(int position, View convertView, ViewGroup parent) {
+		if(convertView == null){
+			LayoutInflater layoutInflater = activity.getLayoutInflater();
+			convertView = layoutInflater.inflate(R.layout.week_list_header, parent, false);
+		}
+
+		String[] week_days = context.getResources().getStringArray(R.array.days_array);
+		int index = (int) getHeaderId(position);
+
+		TextView headerTextView = (TextView) convertView.findViewById(R.id.header_text_view);
+		headerTextView.setText(week_days[index].toUpperCase());
+
+		return convertView;
+	}
+
+	@Override
+	public long getHeaderId(int position) {
+		if(shouldDisplayLunch && shouldDisplayDinner)
+			return position / 2;
+
+		return position;
 	}
 }
