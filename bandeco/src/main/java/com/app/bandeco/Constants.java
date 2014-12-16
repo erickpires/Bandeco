@@ -52,5 +52,8 @@ public final class Constants {
 	};
 	public static final String ASSETS_FOLDER = "file:///android_assets/";
 
+	public static final int COLLAPSED_MAX_LINES = 3;
+	public static final int ANIMATION_DURATION = 100;
+
 	private Constants(){}
 }

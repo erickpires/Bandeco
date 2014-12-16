@@ -2,7 +2,6 @@
     android:id="@+id/week_list_view"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:divider="@null"
-    android:dividerHeight="2dp">
+    android:dividerHeight="1dp" >
 
 </ListView>
