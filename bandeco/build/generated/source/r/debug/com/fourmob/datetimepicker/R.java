@@ -10,20 +10,20 @@ public final class R {
 	public static final class color {
 		public static final int ampm_text_color = 0x7f070007;
 		public static final int blue = 0x7f070010;
-		public static final int calendar_header = 0x7f070019;
-		public static final int circle_background = 0x7f07001a;
-		public static final int darker_blue = 0x7f07001b;
-		public static final int date_picker_selector = 0x7f070053;
-		public static final int date_picker_text_normal = 0x7f07001c;
-		public static final int date_picker_view_animator = 0x7f07001d;
-		public static final int date_picker_year_selector = 0x7f070054;
-		public static final int done_text_color = 0x7f070055;
-		public static final int done_text_color_disabled = 0x7f070022;
-		public static final int done_text_color_normal = 0x7f070023;
-		public static final int line_background = 0x7f07002c;
-		public static final int numbers_text_color = 0x7f070034;
-		public static final int transparent_black = 0x7f070048;
-		public static final int white = 0x7f070049;
+		public static final int calendar_header = 0x7f07001a;
+		public static final int circle_background = 0x7f07001b;
+		public static final int darker_blue = 0x7f07001c;
+		public static final int date_picker_selector = 0x7f070055;
+		public static final int date_picker_text_normal = 0x7f07001d;
+		public static final int date_picker_view_animator = 0x7f07001e;
+		public static final int date_picker_year_selector = 0x7f070056;
+		public static final int done_text_color = 0x7f070057;
+		public static final int done_text_color_disabled = 0x7f070023;
+		public static final int done_text_color_normal = 0x7f070024;
+		public static final int line_background = 0x7f07002d;
+		public static final int numbers_text_color = 0x7f070035;
+		public static final int transparent_black = 0x7f07004a;
+		public static final int white = 0x7f07004b;
 	}
 	public static final class dimen {
 		public static final int ampm_label_size = 0x7f080027;
@@ -34,19 +34,19 @@ public final class R {
 		public static final int date_picker_view_animator_height = 0x7f08002c;
 		public static final int day_number_select_circle_radius = 0x7f08002d;
 		public static final int day_number_size = 0x7f08002e;
-		public static final int dialog_height = 0x7f080054;
+		public static final int dialog_height = 0x7f080055;
 		public static final int done_label_size = 0x7f080039;
 		public static final int extra_time_label_margin = 0x7f08003b;
-		public static final int footer_height = 0x7f080056;
+		public static final int footer_height = 0x7f080057;
 		public static final int header_height = 0x7f08003c;
-		public static final int left_side_width = 0x7f080055;
+		public static final int left_side_width = 0x7f080056;
 		public static final int minimum_margin_sides = 0x7f08003e;
 		public static final int minimum_margin_top_bottom = 0x7f08003f;
 		public static final int month_day_label_text_size = 0x7f080041;
 		public static final int month_label_size = 0x7f080042;
 		public static final int month_list_item_header_height = 0x7f080043;
-		public static final int month_list_item_padding = 0x7f080057;
-		public static final int month_list_item_size = 0x7f080058;
+		public static final int month_list_item_padding = 0x7f080058;
+		public static final int month_list_item_size = 0x7f080059;
 		public static final int month_select_circle_radius = 0x7f080044;
 		public static final int picker_dimen = 0x7f080048;
 		public static final int selected_calendar_layout_height = 0x7f080049;
@@ -54,10 +54,10 @@ public final class R {
 		public static final int selected_date_month_size = 0x7f08004b;
 		public static final int selected_date_year_size = 0x7f08004c;
 		public static final int separator_padding = 0x7f08004d;
-		public static final int time_label_right_padding = 0x7f080059;
-		public static final int time_label_size = 0x7f080050;
-		public static final int year_label_height = 0x7f080052;
-		public static final int year_label_text_size = 0x7f080053;
+		public static final int time_label_right_padding = 0x7f08005a;
+		public static final int time_label_size = 0x7f080051;
+		public static final int year_label_height = 0x7f080053;
+		public static final int year_label_text_size = 0x7f080054;
 	}
 	public static final class id {
 		public static final int ampm_hitspace = 0x7f09007f;

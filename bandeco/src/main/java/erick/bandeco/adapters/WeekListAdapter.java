@@ -2,11 +2,13 @@ package erick.bandeco.adapters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.app.bandeco.Constants;
@@ -15,6 +17,7 @@ import com.app.bandeco.Utils;
 
 import java.util.ArrayList;
 
+import erick.bandeco.database.DatabaseHelper;
 import erick.bandeco.model.Day;
 import erick.bandeco.model.Meal;
 import erick.bandeco.model.Week;
@@ -27,10 +30,11 @@ public class WeekListAdapter extends BaseAdapter {
 	private boolean shouldDisplayLunch;
 	private boolean shouldDisplayDinner;
 
-	ArrayList<Meal> lunchList;
-	ArrayList<Meal> dinnerList;
+	private ArrayList<Meal> lunchList;
+	private ArrayList<Meal> dinnerList;
 
 	private int selected = 0;
+	private int[] stripesResources;
 
 	public WeekListAdapter(Activity activity, Week week, boolean shouldDisplayLunch, boolean shouldDisplayDinner) {
 		this.activity = activity;
@@ -43,6 +47,27 @@ public class WeekListAdapter extends BaseAdapter {
 		if (shouldDisplayDinner) dinnerList = new ArrayList<Meal>();
 
 		fillLists();
+		makeStripesResources();
+	}
+
+	private void makeStripesResources() {
+		stripesResources = new int[getCount()];
+
+		DatabaseHelper databaseHelper = new DatabaseHelper(context);
+		SQLiteDatabase db = databaseHelper.getReadableDatabase();
+		for(int i = 0; i < stripesResources.length; i++){
+			Meal meal = getMeal(i);
+
+			if(Utils.hasDislikedItem(meal, db, context))
+				stripesResources[i] = R.drawable.red_strip;
+
+			else if(Utils.hasLikedItem(meal, db, context))
+				stripesResources[i] = R.drawable.blue_stripe;
+			else
+				stripesResources[i] = 0;
+
+		}
+		db.close();
 	}
 
 	private void fillLists() {
@@ -90,10 +115,12 @@ public class WeekListAdapter extends BaseAdapter {
 
 		TextView title = (TextView) convertView.findViewById(R.id.title);
 		TextView body = (TextView) convertView.findViewById(R.id.body);
+		ImageView stripeImageView = (ImageView) convertView.findViewById(R.id.stripe_image_view);
 
 		title.setText(Utils.getMealType(meal, context).toUpperCase());
 		body.setText(Utils.getTextFromMeal(meal, context));
-
+		stripeImageView.setBackgroundResource(stripesResources[position]);
+		
 		boolean isExpanding = position == selected;
 
 		changeItemHeight(convertView, body, parent, isExpanding, !isBeenCreated);
@@ -134,6 +161,9 @@ public class WeekListAdapter extends BaseAdapter {
 							View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
 
 		endHeight = view.getMeasuredHeight();
+
+		if(startHeight == endHeight)
+			return;
 
 		HeightAnimation heightAnimation = new HeightAnimation(view, startHeight, endHeight);
 		heightAnimation.setDuration(Constants.ANIMATION_DURATION);

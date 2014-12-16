@@ -1,6 +1,7 @@
 package com.app.bandeco;
 
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
@@ -50,7 +51,7 @@ public class NotificationService extends Service {
 
 		String notificationMessage = Utils.getTextFromMeal(meal, getApplicationContext());
 
-		if (shouldNotify(notifyWhenOption, meal, database)) {
+		if (shouldNotify(notifyWhenOption, meal, database, getApplicationContext())) {
 			MealNotification.notify(getApplicationContext(), Utils.getMealType(meal, getApplicationContext()), notificationMessage);
 		}
 
@@ -59,27 +60,15 @@ public class NotificationService extends Service {
 		return START_NOT_STICKY;
 	}
 
-	private static boolean shouldNotify(int notifyWhenOption, Meal meal, SQLiteDatabase db) {
+	private static boolean shouldNotify(int notifyWhenOption, Meal meal, SQLiteDatabase db, Context context) {
 		if (notifyWhenOption == Settings.NOTIFY_ALWAYS)
 			return true;
 
-		if (notifyWhenOption == Settings.NOTIFY_IF_LIKE) {
-			ArrayList<String> likeList = OperationsWithDB.getListFromDB(db, PositiveWords.TABLE_NAME, new String[]{PositiveWords.WORDS});
-			return hasMatch(meal, likeList);
-		} else if (notifyWhenOption == Settings.NOTIFY_IF_NOT_DISLIKE) {
-			ArrayList<String> dislikeList = OperationsWithDB.getListFromDB(db, NegativeWords.TABLE_NAME, new String[]{NegativeWords.WORDS});
-			return !hasMatch(meal, dislikeList);
-		}
+		if (notifyWhenOption == Settings.NOTIFY_IF_LIKE)
+			return Utils.hasLikedItem(meal, db, context);
 
-		return false;
-	}
-
-	private static boolean hasMatch(Meal meal, ArrayList<String> list) {
-		String tmp = meal.toString();
-
-		for (String s : list)
-			if (tmp.contains(s))
-				return true;
+		else if (notifyWhenOption == Settings.NOTIFY_IF_NOT_DISLIKE)
+			return !Utils.hasDislikedItem(meal, db, context);
 
 		return false;
 	}

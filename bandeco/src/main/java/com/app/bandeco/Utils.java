@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.AssetManager;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -15,8 +16,10 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Calendar;
 
+import erick.bandeco.database.DatabaseContract;
 import erick.bandeco.model.Day;
 import erick.bandeco.model.Meal;
 import erick.bandeco.view.Settings;
@@ -203,6 +206,28 @@ public final class Utils {
 		String msg = String.format(context.getString(R.string.inviting_you), mealType.toLowerCase()) + "\n" + mealBody;
 		shareIntent.putExtra(Intent.EXTRA_TEXT, msg);
 		return shareIntent;
+	}
+
+	public static boolean hasDislikedItem(Meal meal, SQLiteDatabase db, Context context){
+		ArrayList<String> dislikeList = OperationsWithDB.getListFromDB(db, DatabaseContract.NegativeWords.TABLE_NAME, new String[]{DatabaseContract.NegativeWords.WORDS});
+
+		return hasMatch(meal, dislikeList, context);
+	}
+
+	public static boolean hasLikedItem(Meal meal, SQLiteDatabase db, Context context){
+		ArrayList<String> likeList = OperationsWithDB.getListFromDB(db, DatabaseContract.PositiveWords.TABLE_NAME, new String[]{DatabaseContract.PositiveWords.WORDS});
+
+		return hasMatch(meal, likeList, context);
+	}
+
+	public static boolean hasMatch(Meal meal, ArrayList<String> list, Context context) {
+		String tmp = getTextFromMeal(meal, context).toLowerCase();
+
+		for (String s : list)
+			if (tmp.contains(s.toLowerCase()))
+				return true;
+
+		return false;
 	}
 
 	private Utils(){}
