@@ -121,22 +121,68 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WeekListAdapter.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="WeekListAdapter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/adapters/WeekListAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53125" vertical-offset="2064" max-vertical-offset="2640">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2064" max-vertical-offset="2640">
               <caret line="184" column="61" selection-start-line="184" selection-start-column="61" selection-end-line="184" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="build.gradle" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bandeco/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="24" max-vertical-offset="615">
-              <caret line="33" column="49" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.49479166" vertical-offset="0" max-vertical-offset="615">
+              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="About.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/About.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1138" max-vertical-offset="1965">
+              <caret line="101" column="33" selection-start-line="101" selection-start-column="33" selection-end-line="101" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3912#4043#0" expanded="true" />
+                <element signature="e#4037#4038#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListDialogFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/ListDialogFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="1050">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Settings.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/Settings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3298" max-vertical-offset="7155">
+              <caret line="312" column="58" selection-start-line="312" selection-start-column="58" selection-end-line="312" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LicensesDialogFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/LicensesDialogFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -421,6 +467,11 @@
                 <option name="description" value="Runs lint on the Release build" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/bandeco" />
                 <option name="name" value="lintRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on just the fatal issues in the Release build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/bandeco" />
+                <option name="name" value="lintVitalRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/bandeco" />
@@ -1013,7 +1064,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4252286748350" />
+        <entry key="$PROJECT_DIR$" value="4252288497780" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1457,7 +1508,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/bandeco/src/main/assets/licenses.htm" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/drawable/my_selector.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/drawable/dialog_selector.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/layout/list_layout.xml" />
@@ -1468,11 +1518,9 @@
         <option value="$PROJECT_DIR$/bandeco/src/main/res/drawable/about_links_selector.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/layout/activity_about.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/ListWrapper.java" />
-        <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/ListDialogFragment.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/OperationsWithDB.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/teste.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/layout/open_source_view.xml" />
-        <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/About.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/drawable/oval.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/MealNotification.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/DayFragment.java" />
@@ -1487,7 +1535,6 @@
         <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Main.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/adapters/TabsAdapter.java" />
-        <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/Settings.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/model/Week.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/HeightAnimation.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Constants.java" />
@@ -1502,12 +1549,16 @@
         <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/Utils.java" />
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/com/app/bandeco/NotificationService.java" />
-        <option value="$PROJECT_DIR$/bandeco/build.gradle" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/layout/week_fragment.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/WeekFragment.java" />
-        <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/adapters/WeekListAdapter.java" />
         <option value="$PROJECT_DIR$/bandeco/src/main/res/layout/week_list_header.xml" />
         <option value="$PROJECT_DIR$/bandeco/src/main/assets/licenses.html" />
+        <option value="$PROJECT_DIR$/bandeco/build.gradle" />
+        <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/adapters/WeekListAdapter.java" />
+        <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/LicensesDialogFragment.java" />
+        <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/About.java" />
+        <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/ListDialogFragment.java" />
+        <option value="$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/Settings.java" />
       </list>
     </option>
   </component>
@@ -2132,6 +2183,7 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31023455" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986637" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.38859275" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -2153,7 +2205,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -2206,17 +2257,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/menu/about.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/menu/settings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
@@ -2434,20 +2478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/About.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9756944" vertical-offset="578" max-vertical-offset="1470">
-          <caret line="110" column="58" selection-start-line="110" selection-start-column="58" selection-end-line="110" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6078" max-vertical-offset="7050">
-          <caret line="523" column="68" selection-start-line="523" selection-start-column="68" selection-end-line="523" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/layout/words_list_layout.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="660">
@@ -2471,13 +2501,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="354" max-vertical-offset="945">
           <caret line="55" column="53" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/ListDialogFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.010416667" vertical-offset="294" max-vertical-offset="1095">
-          <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -2599,14 +2622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bandeco/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="24" max-vertical-offset="615">
-          <caret line="33" column="49" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bandeco/src/main/res/layout/week_fragment.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.027272727" vertical-offset="0" max-vertical-offset="550">
@@ -2658,8 +2673,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/adapters/WeekListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53125" vertical-offset="2064" max-vertical-offset="2640">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2064" max-vertical-offset="2640">
           <caret line="184" column="61" selection-start-line="184" selection-start-column="61" selection-end-line="184" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/LicensesDialogFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/About.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1138" max-vertical-offset="1965">
+          <caret line="101" column="33" selection-start-line="101" selection-start-column="33" selection-end-line="101" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3912#4043#0" expanded="true" />
+            <element signature="e#4037#4038#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/ListDialogFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="1050">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/src/main/java/erick/bandeco/view/Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3298" max-vertical-offset="7155">
+          <caret line="312" column="58" selection-start-line="312" selection-start-column="58" selection-end-line="312" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bandeco/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49479166" vertical-offset="0" max-vertical-offset="615">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
           <folding />
         </state>
       </provider>

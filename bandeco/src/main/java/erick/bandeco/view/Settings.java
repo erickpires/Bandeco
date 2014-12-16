@@ -105,6 +105,8 @@ public class Settings extends ActionBarActivity {
 
 	private ArrayList<String> negativeList;
 	private ArrayList<String> positiveList;
+	private Bundle negativeBundle = new Bundle();
+	private Bundle positiveBundle = new Bundle();
 	private SQLiteDatabase database;
 	private DialogFragment currentDialog;
 
@@ -190,6 +192,9 @@ public class Settings extends ActionBarActivity {
 
 		positiveList = getListFromDB(database, DatabaseContract.PositiveWords.TABLE_NAME, new String[]{DatabaseContract.PositiveWords.WORDS});
 		negativeList = getListFromDB(database, DatabaseContract.NegativeWords.TABLE_NAME, new String[]{DatabaseContract.NegativeWords.WORDS});
+
+		positiveBundle.putSerializable("list", positiveList);
+		negativeBundle.putSerializable("list", negativeList);
 	}
 
 	private void createUI() {
@@ -281,7 +286,8 @@ public class Settings extends ActionBarActivity {
 			public void onClick(View v) {
 				shouldUpdateDB = true;
 
-				ListDialogFragment dialogFragment = new ListDialogFragment(negativeList);
+				ListDialogFragment dialogFragment = new ListDialogFragment();
+				dialogFragment.setArguments(negativeBundle);
 				dialogFragment.setOnDismissListener(new DialogInterface.OnDismissListener() {
 					@Override
 					public void onDismiss(DialogInterface dialog) {
@@ -303,7 +309,8 @@ public class Settings extends ActionBarActivity {
 			public void onClick(View v) {
 				shouldUpdateDB = true;
 
-				ListDialogFragment dialogFragment = new ListDialogFragment(positiveList);
+				ListDialogFragment dialogFragment = new ListDialogFragment();
+				dialogFragment.setArguments(positiveBundle);
 				dialogFragment.setOnDismissListener(new DialogInterface.OnDismissListener() {
 					@Override
 					public void onDismiss(DialogInterface dialog) {

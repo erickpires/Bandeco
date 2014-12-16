@@ -19,20 +19,17 @@ import static android.content.DialogInterface.OnDismissListener;
 
 public class ListDialogFragment extends DialogFragment {
 
-	private ArrayList<String> list;
 	private OnDismissListener onDismissListener;
 	private LinearLayout listLinearLayout;
 	private ListWrapper wrapper;
 
-	public ListDialogFragment(ArrayList<String> list) {
-		super();
-
-		this.list = list;
-	}
-
 	@NonNull
 	@Override
 	public Dialog onCreateDialog(Bundle savedInstanceState) {
+		super.onCreateDialog(savedInstanceState);
+
+		ArrayList<String> list = (ArrayList<String>) getArguments().getSerializable("list");
+
 		LayoutInflater inflater = getActivity().getLayoutInflater();
 
 		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -41,7 +38,7 @@ public class ListDialogFragment extends DialogFragment {
 
 		listLinearLayout = (LinearLayout) layout.findViewById(R.id.list);
 
-		wrapper = new ListWrapper(listLinearLayout, inflater, this.list);
+		wrapper = new ListWrapper(listLinearLayout, inflater, list);
 
 		final Button button = (Button) layout.findViewById(R.id.new_element_button);
 

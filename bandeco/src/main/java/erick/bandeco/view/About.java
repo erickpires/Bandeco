@@ -1,5 +1,6 @@
 package erick.bandeco.view;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
@@ -21,7 +22,9 @@ import com.app.bandeco.Constants;
 import com.app.bandeco.R;
 import com.app.bandeco.Utils;
 
-public class About extends ActionBarActivity {
+import java.io.Serializable;
+
+public class About extends ActionBarActivity implements Serializable{
 
 	private static final Uri myTwitter = Uri.parse("https://twitter.com/ericktpires");
 	private static final Uri designerDribbble = Uri.parse("https://dribbble.com/aPronsky");
@@ -87,20 +90,26 @@ public class About extends ActionBarActivity {
 		textViewOpenSourceLicenses.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				(new LicensesDialogFragment()).show(getSupportFragmentManager(), "licenses");
+				Bundle bundle = new Bundle();
+				bundle.putSerializable("about", About.this);
+				LicensesDialogFragment dialog = new LicensesDialogFragment();
+				dialog.setArguments(bundle);
+				dialog.show(getSupportFragmentManager(), "licenses");
 			}
 		});
 	}
 
-	private class LicensesDialogFragment extends DialogFragment {
+	@SuppressLint("ValidFragment")
+	public class LicensesDialogFragment extends DialogFragment {
 		@NonNull
 		@Override
 		public Dialog onCreateDialog(Bundle savedInstanceState) {
+
 			setRetainInstance(true);
 			AlertDialog.Builder builder = new AlertDialog.Builder(About.this);
 			LayoutInflater inflater = getActivity().getLayoutInflater();
 
-			View rootView =  inflater.inflate(R.layout.open_source_view, null);
+			View rootView = inflater.inflate(R.layout.open_source_view, null);
 			WebView openSourceLicensesWebView = (WebView) rootView.findViewById(R.id.licenses_web_view);
 			String licensesData = Utils.readAssetAndClose(getAssets(), "licenses.html");
 
