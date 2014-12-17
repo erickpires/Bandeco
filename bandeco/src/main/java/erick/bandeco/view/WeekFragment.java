@@ -4,10 +4,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ListView;
 
 import com.app.bandeco.Constants;
 import com.app.bandeco.Main;
@@ -42,6 +42,18 @@ public class WeekFragment extends Fragment {
 				weekListAdapter.setSelected(position);
 			}
 		});
+
+		try {
+			final Main mainActivity = (Main) getActivity();
+
+			listView.setOnTouchListener(new View.OnTouchListener() {
+				@Override
+				public boolean onTouch(View v, MotionEvent event) {
+					mainActivity.hideFabs();
+					return false;
+				}
+			});
+		}catch (Exception ignored){}
 
 		return parentView;
 	}

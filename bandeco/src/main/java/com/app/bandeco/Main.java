@@ -48,32 +48,16 @@ public class Main extends ActionBarActivity {
 		toolbar.setLogo(R.drawable.ic_logo);
 		setSupportActionBar(toolbar);
 
-
-
-
 		View parentLayout = findViewById(R.id.parent_layout_main);
 
-		//LinearLayout fabs_layout = (LinearLayout) findViewById(R.id.fabs_layout);
 		ImageButton fab_invite = (ImageButton) findViewById(R.id.fab_invite);
 		fab_invite_lunch = findViewById(R.id.fab_invite_lunch);
 		fab_invite_dinner = findViewById(R.id.fab_invite_dinner);
 
-		/*if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-			LayoutTransition layoutTransition = new LayoutTransition();
-			layoutTransition.setDuration(100);
-			fabs_layout.setLayoutTransition(layoutTransition);
-		}*/
-
 		fab_invite.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				if(fab_invite_lunch.getVisibility() == View.GONE){
-					fab_invite_lunch.setVisibility(View.VISIBLE);
-					fab_invite_dinner.setVisibility(View.VISIBLE);
-				}else {
-					fab_invite_lunch.setVisibility(View.GONE);
-					fab_invite_dinner.setVisibility(View.GONE);
-				}
+				toggleFabs();
 			}
 		});
 
@@ -91,6 +75,27 @@ public class Main extends ActionBarActivity {
 		Utils.changeStatusColor(this, parentLayout);
 
 		database.close();
+	}
+
+	private void toggleFabs() {
+		if(isFabsHidden())
+			showFabs();
+		else
+			hideFabs();
+	}
+
+	private boolean isFabsHidden() {
+		return fab_invite_lunch.getVisibility() == View.GONE;
+	}
+
+	public void hideFabs() {
+		fab_invite_lunch.setVisibility(View.GONE);
+		fab_invite_dinner.setVisibility(View.GONE);
+	}
+
+	public void showFabs() {
+		fab_invite_lunch.setVisibility(View.VISIBLE);
+		fab_invite_dinner.setVisibility(View.VISIBLE);
 	}
 
 	@Override
@@ -176,8 +181,7 @@ public class Main extends ActionBarActivity {
 			Intent invitationIntentChooser = Intent.createChooser(invitationIntent, getString(R.string.share));
 			startActivity(invitationIntentChooser);
 
-			fab_invite_lunch.setVisibility(View.GONE);
-			fab_invite_dinner.setVisibility(View.GONE);
+			hideFabs();
 		}
 	}
 }
