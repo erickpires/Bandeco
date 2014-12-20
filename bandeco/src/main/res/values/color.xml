@@ -14,7 +14,8 @@
     <color name="status_color">#FFc26a1d</color>
     <color name="fab_text_shadow">#33555555</color>
 
+    <color name="meal_title_text_color">#ff2555c2</color>
+
     <color name="blue_stripe_color">#FF1A8EC5</color>
     <color name="red_stripe_color">#FFE05A5C</color>
-    <!-- <color name="link_blue">#FF3887CF</color> -->
 </resources>

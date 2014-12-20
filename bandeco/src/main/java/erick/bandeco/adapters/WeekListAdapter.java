@@ -34,15 +34,16 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 	private ArrayList<Meal> lunchList;
 	private ArrayList<Meal> dinnerList;
 
-	private int selected = 0;
+	private int selected;
 	private int[] stripesResources;
 
-	public WeekListAdapter(Activity activity, Week week, boolean shouldDisplayLunch, boolean shouldDisplayDinner) {
+	public WeekListAdapter(Activity activity, Week week, boolean shouldDisplayLunch, boolean shouldDisplayDinner, int currentSelected) {
 		this.activity = activity;
 		this.context = activity.getApplicationContext();
 		this.week = week;
 		this.shouldDisplayLunch = shouldDisplayLunch;
 		this.shouldDisplayDinner = shouldDisplayDinner;
+		this.selected = currentSelected;
 
 		if (shouldDisplayLunch) lunchList = new ArrayList<Meal>();
 		if (shouldDisplayDinner) dinnerList = new ArrayList<Meal>();
@@ -83,6 +84,7 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 	public void setSelected(int selected) {
 		if (this.selected == selected)
 			return;
+
 		this.selected = selected;
 		notifyDataSetChanged();
 	}
@@ -105,8 +107,16 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 	}
 
 	@Override
+	public long getHeaderId(int position) {
+		if(shouldDisplayLunch && shouldDisplayDinner)
+			return position / 2;
+
+		return position;
+	}
+
+	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		boolean isBeenCreated = convertView == null;
+		boolean isBeenCreated = (convertView == null);
 		if (convertView == null) {
 			LayoutInflater layoutInflater = activity.getLayoutInflater();
 			convertView = layoutInflater.inflate(R.layout.week_list_element, parent, false);
@@ -119,6 +129,7 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 		ImageView stripeImageView = (ImageView) convertView.findViewById(R.id.stripe_image_view);
 
 		title.setText(Utils.getMealType(meal, context).toUpperCase());
+		title.setTypeface(Utils.getRobotoThin(context));
 		body.setText(Utils.getTextFromMeal(meal, context));
 		stripeImageView.setBackgroundResource(stripesResources[position]);
 		
@@ -127,48 +138,6 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 		changeItemHeight(convertView, body, parent, isExpanding, !isBeenCreated);
 
 		return convertView;
-	}
-
-	private Meal getMeal(int position) {
-		if (shouldDisplayLunch && shouldDisplayDinner) {
-			if (position % 2 == 0)
-				return lunchList.get(position / 2);
-			else
-				return dinnerList.get(position / 2);
-		} else if (shouldDisplayLunch) {
-			return lunchList.get(position);
-		} else {
-			return dinnerList.get(position);
-		}
-	}
-
-	private void changeItemHeight(View view, TextView body, View parent, boolean isExpending, boolean shouldAnimate) {
-		int maxLines = isExpending ? Integer.MAX_VALUE : Constants.COLLAPSED_MAX_LINES;
-		TextUtils.TruncateAt ellipsize = isExpending ? null : TextUtils.TruncateAt.END;
-
-		body.setEllipsize(ellipsize);
-
-		if (!shouldAnimate) {
-			body.setMaxLines(maxLines);
-			return;
-		}
-
-		int startHeight = view.getMeasuredHeight();
-		int endHeight;
-
-		body.setMaxLines(maxLines);
-
-		view.measure(View.MeasureSpec.makeMeasureSpec(parent.getWidth(), View.MeasureSpec.EXACTLY),
-							View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
-
-		endHeight = view.getMeasuredHeight();
-
-		if(startHeight == endHeight)
-			return;
-
-		HeightAnimation heightAnimation = new HeightAnimation(view, startHeight, endHeight);
-		heightAnimation.setDuration(Constants.ANIMATION_DURATION);
-		view.startAnimation(heightAnimation);
 	}
 
 	@Override
@@ -187,11 +156,45 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 		return convertView;
 	}
 
-	@Override
-	public long getHeaderId(int position) {
-		if(shouldDisplayLunch && shouldDisplayDinner)
-			return position / 2;
+	private Meal getMeal(int position) {
+		if (shouldDisplayLunch && shouldDisplayDinner) {
+			if (position % 2 == 0)
+				return lunchList.get(position / 2);
+			else
+				return dinnerList.get(position / 2);
+		} else if (shouldDisplayLunch) {
+			return lunchList.get(position);
+		} else {
+			return dinnerList.get(position);
+		}
+	}
 
-		return position;
+	private void changeItemHeight(View view, TextView body, View parent, boolean isExpended, boolean shouldAnimate) {
+		int maxLines = isExpended ? Integer.MAX_VALUE : Constants.COLLAPSED_MAX_LINES;
+		TextUtils.TruncateAt ellipsize = isExpended ? null : TextUtils.TruncateAt.END;
+
+		body.setEllipsize(ellipsize);
+
+		if (!shouldAnimate) {
+			body.setMaxLines(maxLines);
+			return;
+		}
+
+		int startHeight = view.getMeasuredHeight();
+		int endHeight;
+
+		body.setMaxLines(maxLines);
+
+		view.measure(View.MeasureSpec.makeMeasureSpec(parent.getWidth(), View.MeasureSpec.EXACTLY),
+					 View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
+
+		endHeight = view.getMeasuredHeight();
+
+		if(startHeight == endHeight)
+			return;
+
+		HeightAnimation heightAnimation = new HeightAnimation(view, startHeight, endHeight);
+		heightAnimation.setDuration(Constants.ANIMATION_DURATION);
+		view.startAnimation(heightAnimation);
 	}
 }

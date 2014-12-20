@@ -124,6 +124,9 @@
     <color name="material_blue_grey_950">#ff21272b</color>
     <color name="material_deep_teal_200">#ff80cbc4</color>
     <color name="material_deep_teal_500">#ff009688</color>
+    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="meal_title_text_color">#ff2555c2</color>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <color name="numbers_text_color">#8c8c8c</color>
@@ -230,10 +233,6 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
-    <eat-comment/>
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <dimen name="ampm_label_size">16sp</dimen>
@@ -271,6 +270,7 @@
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="large_fab_diameter">50dp</dimen>
+    <dimen name="meal_title_text_size">20sp</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <dimen name="minimum_margin_sides">48dip</dimen>
@@ -286,7 +286,6 @@
     <dimen name="month_select_circle_radius">45dip</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
     <eat-comment/>
-    <dimen name="my_margin">32dp</dimen>
     <dimen name="padding_side_fab_text">7dp</dimen>
     <dimen name="padding_vertical_fab_text">5dp</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
@@ -305,11 +304,6 @@
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <dimen name="time_label_size">60sp</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/dimens.xml -->
-    <eat-comment/>
-    <dimen name="top_padding">10px</dimen>
-    <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
-    <eat-comment/>
     <dimen name="year_label_height">64dip</dimen>
     <dimen name="year_label_text_size">22dip</dimen>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
@@ -368,7 +362,6 @@
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">É Peixe Hoje?</string>
-    <string name="cardapio_atualizado">Cardápio Atualizado</string>
     <!-- From: file:/home/erick/AndroidStudioWorkspace/Bandeco/bandeco/build/intermediates/exploded-aar/com.github.flavienlaurent.datetimepicker/library/0.0.2/res/values/values.xml -->
     <eat-comment/>
     <item format="float" name="circle_radius_multiplier" type="string">0.82</item>

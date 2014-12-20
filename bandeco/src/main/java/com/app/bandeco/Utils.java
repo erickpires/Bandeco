@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -27,6 +28,15 @@ import erick.bandeco.view.Settings;
 import static com.app.bandeco.Constants.DAYS_TO_NOTIFY_CODES;
 
 public final class Utils {
+
+	private static Typeface robotoThinSingleton;
+
+	public static Typeface getRobotoThin(Context context){
+		if(robotoThinSingleton == null)
+			robotoThinSingleton = Typeface.createFromAsset(context.getAssets(), "Roboto-Thin.ttf");
+
+		return robotoThinSingleton;
+	}
 
 	@TargetApi(Build.VERSION_CODES.KITKAT)
 	public static void changeStatusColor(ActionBarActivity activity, View parentLayout) {

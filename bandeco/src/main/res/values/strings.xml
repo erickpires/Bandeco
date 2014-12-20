@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">É Peixe Hoje?</string>
     <string name="action_settings">Configurações</string>
     <string name="action_update">Atualizar</string>
@@ -9,8 +8,6 @@
     <string name="desc">Description</string>
     <string name="hoje">Hoje</string>
     <string name="semana">Semana</string>
-
-    <string name="cardapio_atualizado">Cardápio Atualizado</string>
 
     <string name="versao">Versão: </string>
 
