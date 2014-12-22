@@ -2,25 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:paddingLeft="@dimen/default_minimal_padding"
     android:paddingRight="@dimen/default_minimal_padding"
-    android:paddingBottom="@dimen/minimum_vertical_padding"
-    android:paddingTop="@dimen/minimum_vertical_padding"
     android:background="@color/white">
 
+<FrameLayout
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:id="@+id/drag_and_drop" >
 
     <ImageView
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:src="@drawable/ic_drag"
-        android:id="@+id/drag_and_drop"
-        android:paddingRight="@dimen/default_minimal_padding" />
+        android:paddingRight="@dimen/default_minimal_padding"
+        android:layout_gravity="center_vertical" />
+</FrameLayout>
 
     <CheckBox
+        android:layout_marginBottom="@dimen/minimum_vertical_padding"
+        android:layout_marginTop="@dimen/minimum_vertical_padding"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
-        android:text="New CheckBox"
         android:id="@+id/menu_entry_checkbox" />
 
 </LinearLayout>

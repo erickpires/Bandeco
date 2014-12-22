@@ -262,14 +262,25 @@ public class Settings extends ActionBarActivity {
 
 				LayoutInflater inflater = getLayoutInflater();
 				View view = inflater.inflate(R.layout.menu_entries_list, null);
-				DynamicListView dynamicListView = (DynamicListView) view.findViewById(R.id.menu_entries_dynamic_listview);
+				final DynamicListView dynamicListView = (DynamicListView) view.findViewById(R.id.menu_entries_dynamic_listview);
 
 				MenuEntriesListAdapter adapter = new MenuEntriesListAdapter(Settings.this, menuEntriesOrder, enabledMenuEntries);
 				dynamicListView.setAdapter(adapter);
 
 				dynamicListView.enableDragAndDrop();
-				dynamicListView.setDraggableManager(new mTouchViewDraggableManager(R.id.drag_and_drop));
 
+				dynamicListView.setDraggableManager(new mTouchViewDraggableManager(R.id.drag_and_drop));
+				//TODO: maybe set the long click to also drag and drop (maybe use the
+				// tag of the view to get the view position on the list)
+				/*
+				dynamicListView.setOnLongClickListener(new View.OnLongClickListener() {
+					@Override
+					public boolean onLongClick(View v) {
+						dynamicListView.startDragging(v.);
+						return true;
+					}
+				});
+				*/
 				builder.setView(view);
 
 				AlertDialog alertDialog = builder.create();
