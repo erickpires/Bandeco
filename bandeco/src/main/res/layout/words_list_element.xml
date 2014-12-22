@@ -14,7 +14,10 @@
         android:id="@+id/list_element_text"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:maxLines="1"
+        android:lines="1"
+        android:singleLine="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
