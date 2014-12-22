@@ -141,57 +141,66 @@ public final class Utils {
 			return context.getResources().getString(R.string.dinner);
 	}
 
+	public static class MealTextInfo{
+
+		private final Integer[] menuEntriesOrder;
+		private final Boolean[] enabledMenuEntries;
+		private final String[] menuEntries;
+
+		public MealTextInfo(Context context){
+			SharedPreferences preferences = context.getSharedPreferences(context.getString(R.string.app_name), 0);
+
+			int menuEntriesOrderCoded = preferences.getInt(Settings.MENU_ENTRIES_ORDER, Constants.DEFAULT_MENU_ENTRIES_CODE);
+			menuEntriesOrder = Utils.extractMenuCodesFromInt(menuEntriesOrderCoded);
+
+			int enabledMenuEntriesCoded = preferences.getInt(Settings.ENABLED_MENU_ENTRIES, Constants.ALL_MENU_ENTRIES_CODE);
+			enabledMenuEntries = Utils.extractEnabledMenuEntriesFromInt(enabledMenuEntriesCoded, menuEntriesOrder);
+
+			menuEntries = context.getResources().getStringArray(R.array.menu_entries);
+		}
+	}
+
 	public static String getTextFromMeal(Meal meal, Context context) {
-		SharedPreferences preferences = context.getSharedPreferences(context.getString(R.string.app_name), 0);
 
-		int menuEntriesOrderCoded = preferences.getInt(Settings.MENU_ENTRIES_ORDER, Constants.DEFAULT_MENU_ENTRIES_CODE);
-		Integer[] menuEntriesOrder = Utils.extractMenuCodesFromInt(menuEntriesOrderCoded);
+		MealTextInfo mealTextInfo = new Utils.MealTextInfo(context);
 
-		int enabledMenuEntriesCoded = preferences.getInt(Settings.ENABLED_MENU_ENTRIES, Constants.ALL_MENU_ENTRIES_CODE);
-		Boolean[] enabledMenuEntries = Utils.extractEnabledMenuEntriesFromInt(enabledMenuEntriesCoded, menuEntriesOrder);
+		return getTextFromMeal(meal, mealTextInfo);
+	}
 
-		String text = "";
-		String[] menuEntries = context.getResources().getStringArray(R.array.menu_entries);
+	public static String getTextFromMeal(Meal meal, MealTextInfo mealTextInfo){
+		String result = "";
 
-		for (int i = 0; i < menuEntriesOrder.length; i++) {
-			if (!enabledMenuEntries[i])
+		for (int i = 0; i < mealTextInfo.menuEntriesOrder.length; i++) {
+			if (!mealTextInfo.enabledMenuEntries[i])
 				continue;
 
-			text += menuEntries[menuEntriesOrder[i]] + ": ";
-			switch (menuEntriesOrder[i]) {
+			result += mealTextInfo.menuEntries[mealTextInfo.menuEntriesOrder[i]] + ": ";
+			switch (mealTextInfo.menuEntriesOrder[i]) {
 				case Constants.CODE_OF_PRATO_PRINCIPAL:
-					text += meal.getPratoPrincipal() + "\n";
+					result += meal.getPratoPrincipal() + "\n";
 					break;
 				case Constants.CODE_OF_PRATO_VEGETARIANO:
-					text += meal.getPratoVegetariano() + "\n";
+					result += meal.getPratoVegetariano() + "\n";
 					break;
 				case Constants.CODE_OF_ACOMPANHAMENTO:
-					text += meal.getAcompanhamento() + "\n";
+					result += meal.getAcompanhamento() + "\n";
 					break;
 				case Constants.CODE_OF_GUARNICAO:
-					text += meal.getGuarnicao() + "\n";
+					result += meal.getGuarnicao() + "\n";
 					break;
 				case Constants.CODE_OF_ENTRADA:
-					text += meal.getEntrada() + "\n";
+					result += meal.getEntrada() + "\n";
 					break;
 				case Constants.CODE_OF_SOBREMESA:
-					text += meal.getSobremesa() + "\n";
+					result += meal.getSobremesa() + "\n";
 					break;
 				case Constants.CODE_OF_REFRESCO:
-					text += meal.getRefresco() + "\n";
+					result += meal.getRefresco() + "\n";
 					break;
 			}
 		}
 
-		return text;
-	}
-
-	//TODO use a calendar instead of day
-	public static String getDayOfTheWeek(Day day, Context context) {
-		String[] daysOfTheWeek = context.getResources().getStringArray(R.array.days_array);
-		int weekDay = day.getWeekDay() % 7;
-
-		return daysOfTheWeek[weekDay];
+		return result;
 	}
 
 	public static String readAssetAndClose(AssetManager assetManager, String assetName) {

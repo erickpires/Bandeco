@@ -36,6 +36,8 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 
 	private int selected;
 	private int[] stripesResources;
+	private String[] week_days;
+	private Utils.MealTextInfo mealTextInfo;
 
 	public WeekListAdapter(Activity activity, Week week, boolean shouldDisplayLunch, boolean shouldDisplayDinner, int currentSelected) {
 		this.activity = activity;
@@ -48,6 +50,8 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 		if (shouldDisplayLunch) lunchList = new ArrayList<Meal>();
 		if (shouldDisplayDinner) dinnerList = new ArrayList<Meal>();
 
+		mealTextInfo = new Utils.MealTextInfo(context);
+		week_days = context.getResources().getStringArray(R.array.days_array);
 		fillLists();
 		makeStripesResources();
 	}
@@ -130,7 +134,7 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 
 		title.setText(Utils.getMealType(meal, context).toUpperCase());
 		title.setTypeface(Utils.getRobotoThin(context));
-		body.setText(Utils.getTextFromMeal(meal, context));
+		body.setText(Utils.getTextFromMeal(meal, mealTextInfo));
 		stripeImageView.setBackgroundResource(stripesResources[position]);
 		
 		boolean isExpanding = position == selected;
@@ -147,7 +151,6 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 			convertView = layoutInflater.inflate(R.layout.week_list_header, parent, false);
 		}
 
-		String[] week_days = context.getResources().getStringArray(R.array.days_array);
 		int index = (int) getHeaderId(position);
 
 		TextView headerTextView = (TextView) convertView.findViewById(R.id.header_text_view);
