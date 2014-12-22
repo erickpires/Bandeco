@@ -1,10 +1,13 @@
 package com.app.bandeco;
 
+import android.annotation.TargetApi;
 import android.app.Service;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteDatabaseLockedException;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
 import android.os.IBinder;
 import android.support.v4.content.LocalBroadcastManager;
 import android.widget.Toast;
@@ -75,22 +78,29 @@ public class UpdateService extends Service {
 
 	private void updateDatabaseInfo(Html html, Date date) {
 		DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext());
-		SQLiteDatabase database = databaseHelper.getWritableDatabase();
+		try {
+			SQLiteDatabase database = databaseHelper.getWritableDatabase();
 
-		Week week = new Week(html.getTables());
+			Week week = new Week(html.getTables());
 
-		for (int i = 0; i < DAYS_IN_THE_WEEK; i++) {
-			Day day = week.getDayAt(i);
+			for (int i = 0; i < DAYS_IN_THE_WEEK; i++) {
+				Day day = week.getDayAt(i);
 
-			day.getLunch();
+				day.getLunch();
 
-			insertMealInDatabase(database, day.getLunch(), i, MEAL_TYPE_LUNCH);
-			insertMealInDatabase(database, day.getDinner(), i, MEAL_TYPE_DINNER);
+				insertMealInDatabase(database, day.getLunch(), i, MEAL_TYPE_LUNCH);
+				insertMealInDatabase(database, day.getDinner(), i, MEAL_TYPE_DINNER);
 
-			updateLastModifiedInDatabase(database, date);
+				updateLastModifiedInDatabase(database, date);
+			}
+
+			Main.week = OperationsWithDB.getWeekFromDatabase(database);
+
+			database.close();
+		}catch (Exception e){
+			e.printStackTrace();
+			//TODO: Log
 		}
-
-		database.close();
 	}
 
 	private boolean checkConnection() {

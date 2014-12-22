@@ -1,8 +1,13 @@
 package erick.bandeco.view;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.LocalBroadcastManager;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -68,6 +73,7 @@ public class WeekFragment extends Fragment {
 		return parentView;
 	}
 
+	LocalBroadcastManager localBroadcastManager;
 	@Override
 	public void onResume() {
 		super.onResume();
@@ -75,7 +81,27 @@ public class WeekFragment extends Fragment {
 		int nextMealPosition = getNextMealPositionInList();
 		listView.setSelection(nextMealPosition);
 		weekListAdapter.setSelected(nextMealPosition);
+
+		localBroadcastManager = LocalBroadcastManager.getInstance(getActivity().getApplicationContext());
+		localBroadcastManager.registerReceiver(messageReceiver, new IntentFilter("update_event"));
 	}
+
+	@Override
+	public void onPause() {
+		super.onPause();
+
+		localBroadcastManager.unregisterReceiver(messageReceiver);
+	}
+
+	private BroadcastReceiver messageReceiver = new BroadcastReceiver() {
+		@Override
+		//TODO: try to not have to create a new adapter
+		public void onReceive(Context context, Intent intent) {
+			int nextMealPosition = getNextMealPositionInList();
+			weekListAdapter = new WeekListAdapter(getActivity(), Main.week, displayLunch,displayDinner, nextMealPosition);
+			listView.setAdapter(weekListAdapter);
+		}
+	};
 
 	int getNextMealPositionInList() {
 		Calendar today = Calendar.getInstance();

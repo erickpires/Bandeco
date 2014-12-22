@@ -27,26 +27,26 @@ public class MealNotification {
 		// This image is used as the notification's large icon (thumbnail).
 		final Bitmap picture = BitmapFactory.decodeResource(res, R.drawable.ic_stat_fork_knife);
 
-		final NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
-
-														   .setDefaults(Notification.DEFAULT_ALL)
-														   .setSmallIcon(R.drawable.ic_stat_fork_knife)
-														   .setContentTitle(title)
-														   .setContentText(text)
-														   .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-														   .setLargeIcon(picture)
-														   .setTicker(title)
-														   .setContentIntent(
-																					PendingIntent.getActivity(
-																													 context,
-																													 0,
-																													 new Intent(context, Main.class),
-																													 PendingIntent.FLAG_UPDATE_CURRENT)
-														   )
-														   .setStyle(new NotificationCompat.BigTextStyle()
-																			 .bigText(text)
-																			 .setBigContentTitle(title))
-														   .setAutoCancel(true);
+		final NotificationCompat.Builder builder =
+				new NotificationCompat.Builder(context)
+						.setDefaults(Notification.DEFAULT_ALL)
+								 //.setSmallIcon(R.drawable.ic_stat_fork_knife)
+						.setContentTitle(title)
+						.setContentText(text)
+						.setPriority(NotificationCompat.PRIORITY_DEFAULT)
+						.setLargeIcon(picture)
+						.setTicker(title)
+						.setContentIntent(
+												 PendingIntent.getActivity(
+																				  context,
+																				  0,
+																				  new Intent(context, Main.class),
+																				  PendingIntent.FLAG_UPDATE_CURRENT)
+						)
+						.setStyle(new NotificationCompat.BigTextStyle()
+										  .bigText(text)
+										  .setBigContentTitle(title))
+						.setAutoCancel(true);
 
 		String share = context.getString(R.string.share);
 		Intent shareIntent = Utils.getInvitationIntent(context, title, text);

@@ -39,9 +39,7 @@ public class Main extends ActionBarActivity {
 
 		//TODO: week should not be here
 		databaseHelper = new DatabaseHelper(getBaseContext());
-		SQLiteDatabase database = databaseHelper.getReadableDatabase();
-		week = OperationsWithDB.getWeekFromDatabase(database);
-
+		updateWeek();
 		setContentView(R.layout.activity_main);
 
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -73,7 +71,11 @@ public class Main extends ActionBarActivity {
 		fab_invite_dinner.setOnClickListener(new InvitationOnClickListener(Constants.MEAL_TYPE_DINNER));
 
 		Utils.changeStatusColor(this, parentLayout);
+	}
 
+	public void updateWeek(){
+		SQLiteDatabase database = databaseHelper.getReadableDatabase();
+		week = OperationsWithDB.getWeekFromDatabase(database);
 		database.close();
 	}
 
@@ -96,31 +98,6 @@ public class Main extends ActionBarActivity {
 	public void showFabs() {
 		fab_invite_lunch.setVisibility(View.VISIBLE);
 		fab_invite_dinner.setVisibility(View.VISIBLE);
-	}
-
-	@Override
-	public void onResume() {
-		super.onResume();
-		//TODO: dataSetChange
-		LocalBroadcastManager.getInstance(this).registerReceiver(messageReceiver, new IntentFilter("update_event"));
-	}
-
-	private BroadcastReceiver messageReceiver = new BroadcastReceiver() {
-		@Override
-		public void onReceive(Context context, Intent intent) {
-			updateData();
-		}
-	};
-
-	private void updateData() {
-		SQLiteDatabase database = databaseHelper.getReadableDatabase();
-		week = OperationsWithDB.getWeekFromDatabase(database);
-		database.close();
-		/*try {
-			//TODO: dataSetChange
-		} catch (IllegalStateException ignored) {
-		}*/
-
 	}
 
 	@Override
