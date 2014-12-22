@@ -95,11 +95,8 @@ public class WeekFragment extends Fragment {
 
 	private BroadcastReceiver messageReceiver = new BroadcastReceiver() {
 		@Override
-		//TODO: try to not have to create a new adapter
 		public void onReceive(Context context, Intent intent) {
-			int nextMealPosition = getNextMealPositionInList();
-			weekListAdapter = new WeekListAdapter(getActivity(), Main.week, displayLunch,displayDinner, nextMealPosition);
-			listView.setAdapter(weekListAdapter);
+			weekListAdapter.weekHasChanged(Main.week);
 		}
 	};
 

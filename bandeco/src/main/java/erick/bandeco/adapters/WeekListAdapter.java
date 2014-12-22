@@ -15,8 +15,6 @@ import com.app.bandeco.Constants;
 import com.app.bandeco.R;
 import com.app.bandeco.Utils;
 
-import java.util.ArrayList;
-
 import erick.bandeco.database.DatabaseHelper;
 import erick.bandeco.model.Day;
 import erick.bandeco.model.Meal;
@@ -31,8 +29,8 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 	private boolean shouldDisplayLunch;
 	private boolean shouldDisplayDinner;
 
-	private ArrayList<Meal> lunchList;
-	private ArrayList<Meal> dinnerList;
+	private Meal[] lunchArray;
+	private Meal[] dinnerArray;
 
 	private int selected;
 	private int[] stripesResources;
@@ -47,13 +45,21 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 		this.shouldDisplayDinner = shouldDisplayDinner;
 		this.selected = currentSelected;
 
-		if (shouldDisplayLunch) lunchList = new ArrayList<Meal>();
-		if (shouldDisplayDinner) dinnerList = new ArrayList<Meal>();
+		if (shouldDisplayLunch) lunchArray = new Meal[7];
+		if (shouldDisplayDinner) dinnerArray = new Meal[7];
 
 		mealTextInfo = new Utils.MealTextInfo(context);
 		week_days = context.getResources().getStringArray(R.array.days_array);
-		fillLists();
+
+		fillArrays();
 		makeStripesResources();
+	}
+
+	public void weekHasChanged(Week week){
+		this.week = week;
+		fillArrays();
+		makeStripesResources();
+		notifyDataSetChanged();
 	}
 
 	private void makeStripesResources() {
@@ -76,12 +82,12 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 		db.close();
 	}
 
-	private void fillLists() {
+	private void fillArrays() {
 		for (Day day : week.getDays()) {
 			if (shouldDisplayLunch)
-				lunchList.add(day.getLunch());
+				lunchArray[day.getWeekDay()] = day.getLunch();
 			if (shouldDisplayDinner)
-				dinnerList.add(day.getDinner());
+				dinnerArray[day.getWeekDay()] = day.getDinner();
 		}
 	}
 
@@ -95,8 +101,8 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 
 	@Override
 	public int getCount() {
-		int count = lunchList != null ? lunchList.size() : 0;
-		count += dinnerList != null ? dinnerList.size() : 0;
+		int count = lunchArray != null ? lunchArray.length : 0;
+		count += dinnerArray != null ? dinnerArray.length : 0;
 		return count;
 	}
 
@@ -162,13 +168,13 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 	private Meal getMeal(int position) {
 		if (shouldDisplayLunch && shouldDisplayDinner) {
 			if (position % 2 == 0)
-				return lunchList.get(position / 2);
+				return lunchArray[position / 2];
 			else
-				return dinnerList.get(position / 2);
+				return dinnerArray[position / 2];
 		} else if (shouldDisplayLunch) {
-			return lunchList.get(position);
+			return lunchArray[position];
 		} else {
-			return dinnerList.get(position);
+			return dinnerArray[position];
 		}
 	}
 
