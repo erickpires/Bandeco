@@ -3,13 +3,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/white"
     android:paddingLeft="@dimen/default_minimal_padding"
     android:paddingRight="@dimen/default_minimal_padding">
 
     <EditText
-        android:layout_width="fill_parent"
+        android:inputType="text"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:id="@+id/list_element_text"
         android:focusable="true"
