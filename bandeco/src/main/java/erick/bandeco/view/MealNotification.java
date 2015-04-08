@@ -30,7 +30,7 @@ public class MealNotification {
 		final NotificationCompat.Builder builder =
 				new NotificationCompat.Builder(context)
 						.setDefaults(Notification.DEFAULT_ALL)
-								 //.setSmallIcon(R.drawable.ic_stat_fork_knife)
+						.setSmallIcon(R.drawable.ic_stat_fork_knife)
 						.setContentTitle(title)
 						.setContentText(text)
 						.setPriority(NotificationCompat.PRIORITY_DEFAULT)

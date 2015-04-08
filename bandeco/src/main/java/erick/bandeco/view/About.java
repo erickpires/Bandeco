@@ -19,6 +19,7 @@ import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.app.bandeco.Constants;
+import com.app.bandeco.NotificationService;
 import com.app.bandeco.R;
 import com.app.bandeco.Utils;
 
@@ -72,6 +73,7 @@ public class About extends ActionBarActivity implements Serializable{
 			public void onClick(View v) {
 				Intent openUrl = new Intent(Intent.ACTION_VIEW, myTwitter);
 				startActivity(openUrl);
+
 			}
 		});
 

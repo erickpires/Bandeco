@@ -87,7 +87,7 @@ public class Html {
 		str = str.replaceAll("<[^>]*>", "");
 		str = str.replaceAll("&nbsp;", "");
 		str = str.replaceAll("[\t]+", " ");
-		str = str.replaceAll("[ ]+", " ");
+		str = str.replaceAll("[ ]+", " ");//TODO
 		str = str.replaceAll(" [ ]+", " ");
 		str = str.replaceAll("(c|C)( )?/", "com");
 
