@@ -1,19 +1,18 @@
 package com.app.bandeco;
 
 import android.annotation.TargetApi;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.content.LocalBroadcastManager;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -29,8 +28,9 @@ public class Main extends ActionBarActivity {
 	public static Week week;
 
 	private DatabaseHelper databaseHelper;
-	private View fab_invite_lunch;
-	private View fab_invite_dinner;
+	private View fabInviteLunch;
+	private View fabInviteDinner;
+	private boolean fabsAreVisible;
 
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	@Override
@@ -49,8 +49,10 @@ public class Main extends ActionBarActivity {
 		View parentLayout = findViewById(R.id.parent_layout_main);
 
 		ImageButton fab_invite = (ImageButton) findViewById(R.id.fab_invite);
-		fab_invite_lunch = findViewById(R.id.fab_invite_lunch);
-		fab_invite_dinner = findViewById(R.id.fab_invite_dinner);
+		fabInviteLunch = findViewById(R.id.fab_invite_lunch);
+		fabInviteDinner = findViewById(R.id.fab_invite_dinner);
+		View fabInviteLunchImage = findViewById(R.id.fab_invite_lunch_image);
+		View fabInviteDinnerImage = findViewById(R.id.fab_invite_dinner_image);
 
 		fab_invite.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -67,37 +69,92 @@ public class Main extends ActionBarActivity {
 			}
 		});
 
-		fab_invite_lunch.setOnClickListener(new InvitationOnClickListener(Constants.MEAL_TYPE_LUNCH));
-		fab_invite_dinner.setOnClickListener(new InvitationOnClickListener(Constants.MEAL_TYPE_DINNER));
+		fabInviteLunch.setOnClickListener(new InvitationOnClickListener(Constants.MEAL_TYPE_LUNCH));
+		fabInviteDinner.setOnClickListener(new InvitationOnClickListener(Constants.MEAL_TYPE_DINNER));
+
+		ViewCompat.setElevation(fab_invite, 5f);
+		ViewCompat.setElevation(fabInviteLunchImage, 5f);
+		ViewCompat.setElevation(fabInviteDinnerImage, 5f);
 
 		Utils.changeStatusColor(this, parentLayout);
 	}
 
-	public void updateWeek(){
+	public void updateWeek() {
 		SQLiteDatabase database = databaseHelper.getReadableDatabase();
 		week = OperationsWithDB.getWeekFromDatabase(database);
 		database.close();
 	}
 
 	private void toggleFabs() {
-		if(isFabsHidden())
+		if (isFabsHidden())
 			showFabs();
 		else
 			hideFabs();
 	}
 
-	private boolean isFabsHidden() {
-		return fab_invite_lunch.getVisibility() == View.GONE;
-	}
-
-	public void hideFabs() {
-		fab_invite_lunch.setVisibility(View.GONE);
-		fab_invite_dinner.setVisibility(View.GONE);
+	public boolean isFabsHidden() {
+		return !fabsAreVisible;
 	}
 
 	public void showFabs() {
-		fab_invite_lunch.setVisibility(View.VISIBLE);
-		fab_invite_dinner.setVisibility(View.VISIBLE);
+		fabsAreVisible = true;
+		showWithTranslation(fabInviteLunch);
+		showWithTranslation(fabInviteDinner);
+	}
+
+	public void hideFabs() {
+		fabsAreVisible = false;
+		hideWithTranslation(fabInviteLunch);
+		hideWithTranslation(fabInviteDinner);
+	}
+
+	private void showWithTranslation(final View view) {
+		//TODO: 500 is big enough? this value should be calculated, not be a magic number
+		int displacement = 500;
+		TranslateAnimation translateAnimation = new TranslateAnimation(0, 0, displacement, 0);
+		translateAnimation.setDuration(Constants.SHOW_ANIMATION_DURATION);
+
+		translateAnimation.setAnimationListener(new Animation.AnimationListener() {
+			@Override
+			public void onAnimationStart(Animation animation) {
+				view.setVisibility(View.VISIBLE);
+			}
+
+			@Override
+			public void onAnimationEnd(Animation animation) {
+			}
+
+			@Override
+			public void onAnimationRepeat(Animation animation) {
+			}
+		});
+
+		view.startAnimation(translateAnimation);
+	}
+
+	private void hideWithTranslation(final View view) {
+		//TODO: 500 is big enough? this value should be calculated, not be a magic number
+		int displacement = 500;
+		TranslateAnimation translateAnimation = new TranslateAnimation(0, 0, 0, displacement);
+		//TODO: magic number
+		translateAnimation.setDuration(Constants.HIDE_ANIMATION_DURATION);
+
+		translateAnimation.setAnimationListener(new Animation.AnimationListener() {
+			@Override
+			public void onAnimationStart(Animation animation) {
+			}
+
+			@Override
+			public void onAnimationRepeat(Animation animation) {
+			}
+
+			@Override
+			public void onAnimationEnd(Animation animation) {
+				view.setVisibility(View.GONE);
+			}
+		});
+
+		view.startAnimation(translateAnimation);
 	}
 
 	@Override
@@ -131,6 +188,7 @@ public class Main extends ActionBarActivity {
 
 	private class InvitationOnClickListener implements View.OnClickListener {
 		private int mealType;
+
 		public InvitationOnClickListener(int mealType) {
 			this.mealType = mealType;
 		}
@@ -140,11 +198,11 @@ public class Main extends ActionBarActivity {
 			Day today = week.getToday();
 			Meal meal;
 
-			switch (mealType){
-				case Constants.MEAL_TYPE_LUNCH :
+			switch (mealType) {
+				case Constants.MEAL_TYPE_LUNCH:
 					meal = today.getLunch();
 					break;
-				case Constants.MEAL_TYPE_DINNER :
+				case Constants.MEAL_TYPE_DINNER:
 					meal = today.getDinner();
 					break;
 				default:

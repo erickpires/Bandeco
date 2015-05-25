@@ -1,8 +1,8 @@
 <RelativeLayout
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/parent_layout_main"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -22,9 +22,9 @@
     <fragment
         android:id="@+id/week_fragment"
         android:name="erick.bandeco.view.WeekFragment"
-        android:layout_below="@+id/toolbar"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_below="@+id/toolbar"
         tools:layout="@layout/week_fragment"/>
 
     <FrameLayout
@@ -62,18 +62,13 @@
                     android:textColor="@color/fab_text"
                     android:textStyle="bold"/>
 
-                <FrameLayout
+                <ImageButton
+                    android:id="@+id/fab_invite_lunch_image"
                     android:layout_width="@dimen/small_fab_diameter"
                     android:layout_height="@dimen/small_fab_diameter"
-                    android:background="@drawable/fab_bg_selector">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_day"/>
-                </FrameLayout>
-
+                    android:layout_gravity="center"
+                    android:background="@drawable/fab_bg_selector"
+                    android:src="@drawable/ic_day"/>
             </LinearLayout>
 
             <LinearLayout
@@ -100,17 +95,13 @@
                     android:textColor="@color/fab_text"
                     android:textStyle="bold"/>
 
-                <FrameLayout
+                <ImageButton
+                    android:id="@+id/fab_invite_dinner_image"
                     android:layout_width="@dimen/small_fab_diameter"
                     android:layout_height="@dimen/small_fab_diameter"
-                    android:background="@drawable/fab_bg_selector">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_night"/>
-                </FrameLayout>
+                    android:layout_gravity="center"
+                    android:background="@drawable/fab_bg_selector"
+                    android:src="@drawable/ic_night"/>
             </LinearLayout>
 
             <ImageButton
@@ -124,8 +115,6 @@
                 android:background="@drawable/fab_bg_selector"
                 android:contentDescription="@string/share"
                 android:src="@drawable/ic_person_add_white"/>
-
-
         </LinearLayout>
     </FrameLayout>
 

@@ -63,7 +63,8 @@ public class WeekFragment extends Fragment {
 			listView.setOnTouchListener(new View.OnTouchListener() {
 				@Override
 				public boolean onTouch(View v, MotionEvent event) {
-					mainActivity.hideFabs();
+					if(!mainActivity.isFabsHidden())
+						mainActivity.hideFabs();
 					return false;
 				}
 			});

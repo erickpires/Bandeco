@@ -203,7 +203,7 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 			return;
 
 		HeightAnimation heightAnimation = new HeightAnimation(view, startHeight, endHeight);
-		heightAnimation.setDuration(Constants.ANIMATION_DURATION);
+		heightAnimation.setDuration(Constants.HEIGHT_ANIMATION_DURATION);
 		view.startAnimation(heightAnimation);
 	}
 }
