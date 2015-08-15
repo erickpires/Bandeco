@@ -1,8 +1,10 @@
-package com.app.bandeco;
+package erick.bandeco.database;
 
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.app.bandeco.Constants;
 
 import java.util.ArrayList;
 import java.util.Date;

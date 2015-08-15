@@ -24,7 +24,7 @@ public class Week {
 	}
 
 	public Week(List<Table> tables) {
-		for (Table table : tables)
+		for (Table table : tables) {
 			if (table.searchValueInColumn(0, "Acompanhamento") != -1) {
 				if (table.searchValueInColumn(0, "Almoço") != -1)
 					lunchTable = table;
@@ -32,6 +32,7 @@ public class Week {
 				if (table.searchValueInColumn(0, "Jantar") != -1)
 					dinnerTable = table;
 			}
+		}
 
 		if (lunchTable == null || dinnerTable == null)
 			throw new RuntimeException("Couldn't find tables");
@@ -44,18 +45,19 @@ public class Week {
 	private void createWeek() {
 		for (int i = 0; i < 7; i++) {
 			Meal lunch = new Meal(lunchTable.getColumn(i + columnsOffset, startingRow), lunchIndexer, Constants.MEAL_TYPE_LUNCH);
-			Meal dinner = new Meal(dinnerTable.getColumn(i + columnsOffset, startingRow), dinnerIndexer, Constants.MEAL_TYPE_DINNER);
+			Meal dinner = new Meal(dinnerTable.getColumn(i + columnsOffset, 0), dinnerIndexer, Constants.MEAL_TYPE_DINNER);
 
 			days[i] = new Day(lunch, dinner, i);
 		}
 	}
 
 	private void createIndexers() {
-		//TODO find a proper name for tmp
+		//TODO: find a proper name for tmp
 		List<String> tmp = lunchTable.getColumn(0, startingRow);
 		lunchIndexer = new Indexer(tmp);
 
 		tmp = dinnerTable.getColumn(0, startingRow);
+
 		dinnerIndexer = new Indexer(tmp);
 	}
 

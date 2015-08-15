@@ -17,6 +17,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import erick.bandeco.database.DatabaseHelper;
+import erick.bandeco.database.OperationsWithDB;
 import erick.bandeco.model.Day;
 import erick.bandeco.model.Meal;
 import erick.bandeco.model.Week;

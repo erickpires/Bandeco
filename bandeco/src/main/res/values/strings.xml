@@ -68,6 +68,8 @@
         <item>Domingo</item>
     </string-array>
 
+    <string name="day_of_month">%1$d / %2$d</string>
+
     <string name="share">Convidar alguém</string>
     <string name="inviting_you">Estou te convidando para o %1$s de hoje</string>
 

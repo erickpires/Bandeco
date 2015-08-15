@@ -7,11 +7,19 @@ public class Day {
 	private Meal lunch;
 	private Meal dinner;
 	private int weekDay;
+	private int monthDay;
+	private int month;
 
 	public Day(Meal lunch, Meal dinner, int weekDay) {
+		this(lunch, dinner, weekDay, 0, 1);
+	}
+
+	public Day(Meal lunch, Meal dinner, int weekDay, int monthDay, int month) {
 		this.lunch = lunch;
 		this.dinner = dinner;
 		this.weekDay = weekDay;
+		this.monthDay = monthDay;
+		this.month = month;
 
 		lunch.setDay(this);
 		dinner.setDay(this);
@@ -42,5 +50,13 @@ public class Day {
 
 	public int getWeekDay() {
 		return weekDay;
+	}
+
+	public int getMonthDay() {
+		return monthDay;
+	}
+
+	public int getMonth() {
+		return month;
 	}
 }

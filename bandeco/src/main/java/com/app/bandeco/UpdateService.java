@@ -1,13 +1,10 @@
 package com.app.bandeco;
 
-import android.annotation.TargetApi;
 import android.app.Service;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteDatabaseLockedException;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.Build;
 import android.os.IBinder;
 import android.support.v4.content.LocalBroadcastManager;
 import android.widget.Toast;
@@ -19,6 +16,7 @@ import java.net.URLConnection;
 import java.util.Date;
 
 import erick.bandeco.database.DatabaseHelper;
+import erick.bandeco.database.OperationsWithDB;
 import erick.bandeco.html.Html;
 import erick.bandeco.model.Day;
 import erick.bandeco.model.Week;
@@ -27,8 +25,8 @@ import static com.app.bandeco.Constants.DAYS_IN_THE_WEEK;
 import static com.app.bandeco.Constants.MEAL_TYPE_DINNER;
 import static com.app.bandeco.Constants.MEAL_TYPE_LUNCH;
 import static com.app.bandeco.Constants.SITE_URL;
-import static com.app.bandeco.OperationsWithDB.insertMealInDatabase;
-import static com.app.bandeco.OperationsWithDB.updateLastModifiedInDatabase;
+import static erick.bandeco.database.OperationsWithDB.insertMealInDatabase;
+import static erick.bandeco.database.OperationsWithDB.updateLastModifiedInDatabase;
 
 public class UpdateService extends Service {
 

@@ -10,6 +10,7 @@ import android.os.IBinder;
 import java.util.Calendar;
 
 import erick.bandeco.database.DatabaseHelper;
+import erick.bandeco.database.OperationsWithDB;
 import erick.bandeco.model.Day;
 import erick.bandeco.model.Meal;
 import erick.bandeco.view.MealNotification;

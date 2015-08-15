@@ -15,6 +15,8 @@ import com.app.bandeco.Constants;
 import com.app.bandeco.R;
 import com.app.bandeco.Utils;
 
+import java.util.Calendar;
+
 import erick.bandeco.database.DatabaseHelper;
 import erick.bandeco.model.Day;
 import erick.bandeco.model.Meal;
@@ -36,6 +38,7 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 	private int[] stripesResources;
 	private String[] week_days;
 	private Utils.MealTextInfo mealTextInfo;
+	private String dateFormatString;
 
 	public WeekListAdapter(Activity activity, Week week, boolean shouldDisplayLunch, boolean shouldDisplayDinner, int currentSelected) {
 		this.activity = activity;
@@ -50,6 +53,7 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 
 		mealTextInfo = new Utils.MealTextInfo(context);
 		week_days = context.getResources().getStringArray(R.array.days_array);
+		dateFormatString = context.getString(R.string.day_of_month);
 
 		fillArrays();
 		makeStripesResources();
@@ -159,8 +163,12 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 
 		int index = (int) getHeaderId(position);
 
+
+		Day day = getMeal(position).getDay();
+		String headerText = week_days[index].toUpperCase();// TODO: + " - " + String.format(dateFormatString, day.getMonthDay(), day.getMonth());
+
 		TextView headerTextView = (TextView) convertView.findViewById(R.id.header_text_view);
-		headerTextView.setText(week_days[index].toUpperCase());
+		headerTextView.setText(headerText);
 
 		return convertView;
 	}

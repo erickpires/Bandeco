@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 import erick.bandeco.database.DatabaseContract;
+import erick.bandeco.database.OperationsWithDB;
 import erick.bandeco.model.Day;
 import erick.bandeco.model.Meal;
 import erick.bandeco.view.Settings;
