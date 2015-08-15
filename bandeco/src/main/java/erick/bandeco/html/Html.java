@@ -41,7 +41,7 @@ public class Html {
 					if(!data.parent().parent().parent().equals(table))
 						continue;
 
-					currentTable.add(currentRow, formatData(data.text()));
+					currentTable.add(currentRow, getDataFromLine("" + data));
 				}
 				currentRow++;
 			}
@@ -54,12 +54,16 @@ public class Html {
 		return tables;
 	}
 
-	private static String formatData(String str) {
+	private static String getDataFromLine(String str) {
+		str = str.replaceAll("<br>", Constants.BREAK_LINE);
+		str = str.replaceAll("<[^>]*>", "");
+		str = str.replaceAll("&nbsp;", "");
 		str = str.replaceAll("[\t]+", " ");
-		str = str.replaceAll("[ ]+", " ");
+		str = str.replaceAll("[\n]+", " ");
+		str = str.replaceAll("[ ]+", " ");//TODO
 		str = str.replaceAll(" [ ]+", " ");
 		str = str.replaceAll("(c|C)( )?/", "com");
 
-		return str.trim();
+		return str;
 	}
 }

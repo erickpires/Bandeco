@@ -70,7 +70,7 @@ public class Meal {
 			refresco = tableColumn.get(indexer.getIndexOfRefresco());
 
 
-		//formatText();
+		formatText();
 
 		acompanhamento = arroz;
 
