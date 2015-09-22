@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimaryDark"
         app:theme="@style/AppThemeToolbar"
-        app:popupTheme="@style/Theme.AppCompat.Light" />
+        android:popupTheme="@style/Theme.AppCompat.Light" />
 
     <ScrollView
         android:layout_width="fill_parent"

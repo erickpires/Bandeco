@@ -18,4 +18,6 @@
 
     <color name="blue_stripe_color">#FF1A8EC5</color>
     <color name="red_stripe_color">#FFE05A5C</color>
+
+    <color name="link_text_material_light">#FF009788</color>
 </resources>
