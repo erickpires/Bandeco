@@ -1,6 +1,7 @@
 package com.app.bandeco;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -40,7 +41,7 @@ public final class Utils {
 	}
 
 	@TargetApi(Build.VERSION_CODES.KITKAT)
-	public static void changeStatusColor(ActionBarActivity activity, View parentLayout) {
+	public static void changeStatusColor(Activity activity, View parentLayout) {
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT &&
 					Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {  // Let Lollipop handle this
 			parentLayout.setFitsSystemWindows(true);

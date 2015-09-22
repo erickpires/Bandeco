@@ -8,12 +8,14 @@
     <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/toolbar_color</item>
         <item name="colorPrimaryDark">@color/toolbar_color</item>
+        <item name="colorAccent">@color/fab_bg</item>
         <item name="android:windowNoTitle">true</item>
     </style>
 
     <style name="AppThemeToolbar" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/status_color</item>
         <item name="colorPrimaryDark">@color/toolbar_color</item>
+        <item name="colorAccent">@color/fab_bg</item>
         <item name="android:windowNoTitle">true</item>
     </style>
 

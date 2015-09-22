@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -56,20 +55,6 @@ public class WeekFragment extends Fragment {
 				weekListAdapter.setSelected(position);
 			}
 		});
-
-		try {
-			final Main mainActivity = (Main) getActivity();
-
-			listView.setOnTouchListener(new View.OnTouchListener() {
-				@Override
-				public boolean onTouch(View v, MotionEvent event) {
-					if(!mainActivity.isFabsHidden())
-						mainActivity.hideFabs();
-					return false;
-				}
-			});
-		} catch (Exception ignored) {
-		}
 
 		return parentView;
 	}
