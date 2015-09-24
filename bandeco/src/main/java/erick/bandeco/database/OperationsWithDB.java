@@ -12,11 +12,37 @@ import java.util.Date;
 import erick.bandeco.model.Meal;
 import erick.bandeco.model.Week;
 
+import static erick.bandeco.database.DatabaseContract.*;
 import static erick.bandeco.database.DatabaseContract.LastUpdate;
 import static erick.bandeco.database.DatabaseContract.Meals;
 
 
 public final class OperationsWithDB {
+
+	public static void insertMealDayDateInDatabase(SQLiteDatabase db, int day, Date date) {
+		ContentValues values = new ContentValues();
+
+		values.put(MealsDate.DAY, day);
+		values.put(MealsDate.DATE, Constants.dateFormat.format(date));
+
+		db.insertWithOnConflict(MealsDate.TABLE_NAME, null, values, SQLiteDatabase.CONFLICT_REPLACE);
+	}
+
+	public static Date getMealDayDateFromDatabase(SQLiteDatabase db, int day) {
+
+		String selection = MealsDate.DAY + "=?";
+		String[] selectionValues = {String.valueOf(day)};
+
+		Cursor cursor = db.query(MealsDate.TABLE_NAME, new String[]{MealsDate.DATE},
+								 selection, selectionValues, null, null, null);
+
+		if(cursor.moveToFirst()) {
+			long dateMillisec = cursor.getLong(cursor.getColumnIndex(MealsDate.DATE));
+
+			return new Date(dateMillisec);
+		}
+		return null;
+	}
 
 	public static void insertMealInDatabase(SQLiteDatabase db, Meal meal, int day, int mealType) {
 		ContentValues values = new ContentValues();

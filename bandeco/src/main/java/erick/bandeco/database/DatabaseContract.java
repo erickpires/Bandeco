@@ -16,6 +16,20 @@ public abstract class DatabaseContract {
 				"DROP TABLE IF EXISTS " + TABLE_NAME + ";";
 	}
 
+	public static abstract class MealsDate {
+		public static final String TABLE_NAME = "meals_date";
+		public static final String DAY = "day";
+		public static final String DATE = "meal_date";
+
+		public static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + " ( " +
+														  DAY + " INTEGER PRIMARY KEY, " +
+														  DATE + " DATETIME" +
+														  ");";
+
+		public static final String DESTROY_TABLE =
+				"DROP TABLE IF EXISTS " + TABLE_NAME + ";";
+	}
+
 	public static abstract class Meals {
 		public static final String TABLE_NAME = "meals";
 		public static final String MEAL_TYPE = "meal_type";
