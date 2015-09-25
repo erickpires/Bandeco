@@ -3,6 +3,7 @@ package erick.bandeco.model;
 import com.app.bandeco.Constants;
 
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import erick.bandeco.html.Indexer;
@@ -23,7 +24,7 @@ public class Week {
 
 	}
 
-	public Week(List<Table> tables) {
+	public Week(List<Table> tables, Date lastMofiedDate) {
 		for (Table table : tables) {
 			if (table.searchValueInColumn(0, "Acompanhamento") != -1) {
 				if (table.searchValueInColumn(0, "Almoço") != -1)
@@ -40,6 +41,7 @@ public class Week {
 		createIndexers();
 
 		createWeek();
+		setDaysDate(lastMofiedDate);
 	}
 
 	private void createWeek() {
@@ -86,5 +88,20 @@ public class Week {
 			dinner.setDay(week.days[i]);
 		}
 		return week;
+	}
+
+	private void setDaysDate(Date lastModifiedDate) {
+		Calendar lastModifiedCalendar = Calendar.getInstance();
+		lastModifiedCalendar.setTime(lastModifiedDate);
+
+		lastModifiedCalendar.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
+
+		for(int i = 0; i < days.length; i++){
+			Calendar dayCalendar = (Calendar) lastModifiedCalendar.clone();
+			dayCalendar.add(Calendar.DAY_OF_YEAR, i);
+			days[i].setDate(dayCalendar);
+
+			System.out.println("Updating day " + i + " w/ date " + dayCalendar.get(Calendar.DAY_OF_MONTH) + "/" + dayCalendar.get(Calendar.MONTH));
+		}
 	}
 }

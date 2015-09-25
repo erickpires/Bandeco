@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -20,8 +19,8 @@ import erick.bandeco.database.OperationsWithDB;
 import erick.bandeco.model.Day;
 import erick.bandeco.model.Meal;
 import erick.bandeco.model.Week;
-import erick.bandeco.view.About;
-import erick.bandeco.view.Settings;
+import erick.bandeco.controller.About;
+import erick.bandeco.controller.Settings;
 
 public class Main extends AppCompatActivity {
 

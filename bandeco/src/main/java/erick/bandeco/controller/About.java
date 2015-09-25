@@ -1,4 +1,4 @@
-package erick.bandeco.view;
+package erick.bandeco.controller;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -19,7 +19,6 @@ import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.app.bandeco.Constants;
-import com.app.bandeco.NotificationService;
 import com.app.bandeco.R;
 import com.app.bandeco.Utils;
 

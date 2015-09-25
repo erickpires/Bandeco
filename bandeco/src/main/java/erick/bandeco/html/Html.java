@@ -7,20 +7,22 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Html {
 
 	private List<Table> tables = new ArrayList<Table>();
+	private Date lastModified;
 
 	public Html(URLConnection connection) throws IOException {
 
 		Document doc = Jsoup.parse(connection.getInputStream(), connection.getContentEncoding(), connection.getURL().getPath());
+
+		lastModified = new Date(connection.getLastModified());
 
 		createTables(doc);
 	}
@@ -65,5 +67,9 @@ public class Html {
 		str = str.replaceAll("(c|C)( )?/", "com");
 
 		return str;
+	}
+
+	public Date getLastModified() {
+		return lastModified;
 	}
 }

@@ -9,7 +9,6 @@ import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Build;
-import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.view.WindowManager;
 
@@ -25,7 +24,7 @@ import erick.bandeco.database.DatabaseContract;
 import erick.bandeco.database.OperationsWithDB;
 import erick.bandeco.model.Day;
 import erick.bandeco.model.Meal;
-import erick.bandeco.view.Settings;
+import erick.bandeco.controller.Settings;
 
 import static com.app.bandeco.Constants.DAYS_TO_NOTIFY_CODES;
 

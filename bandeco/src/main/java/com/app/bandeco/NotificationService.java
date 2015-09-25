@@ -13,8 +13,8 @@ import erick.bandeco.database.DatabaseHelper;
 import erick.bandeco.database.OperationsWithDB;
 import erick.bandeco.model.Day;
 import erick.bandeco.model.Meal;
-import erick.bandeco.view.MealNotification;
-import erick.bandeco.view.Settings;
+import erick.bandeco.controller.MealNotification;
+import erick.bandeco.controller.Settings;
 
 public class NotificationService extends Service {
 

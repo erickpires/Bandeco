@@ -1,4 +1,4 @@
-package erick.bandeco.view;
+package erick.bandeco.controller;
 
 import android.annotation.TargetApi;
 import android.app.Notification;

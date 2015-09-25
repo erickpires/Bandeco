@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import com.app.bandeco.Constants;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 import erick.bandeco.model.Meal;
@@ -19,11 +20,11 @@ import static erick.bandeco.database.DatabaseContract.Meals;
 
 public final class OperationsWithDB {
 
-	public static void insertMealDayDateInDatabase(SQLiteDatabase db, int day, Date date) {
+	public static void insertMealDayDateInDatabase(SQLiteDatabase db, int day, long date) {
 		ContentValues values = new ContentValues();
 
 		values.put(MealsDate.DAY, day);
-		values.put(MealsDate.DATE, Constants.dateFormat.format(date));
+		values.put(MealsDate.DATE, date);
 
 		db.insertWithOnConflict(MealsDate.TABLE_NAME, null, values, SQLiteDatabase.CONFLICT_REPLACE);
 	}
@@ -99,6 +100,13 @@ public final class OperationsWithDB {
 	public static Week getWeekFromDatabase(SQLiteDatabase database) {
 		Week week = Week.createEmptyWeek();
 
+		getMealsFromDatabase(week, database);
+		getMealsDayDateFromDatabase(week, database);
+
+		return week;
+	}
+
+	private static void getMealsFromDatabase(Week week, SQLiteDatabase database) {
 		Cursor cursor = database.query(Meals.TABLE_NAME, Constants.mealProjection, null, null, null, null, null);
 
 		if (cursor.moveToFirst())
@@ -110,8 +118,21 @@ public final class OperationsWithDB {
 				setMealWithCursor(meal, cursor);
 
 			} while (cursor.moveToNext());
+	}
 
-		return week;
+	private static void getMealsDayDateFromDatabase(Week week, SQLiteDatabase database) {
+		Cursor cursor = database.query(MealsDate.TABLE_NAME, null, null, null, null, null, null);
+
+		if (cursor.moveToFirst())
+			do {
+				int day = cursor.getInt(cursor.getColumnIndex(MealsDate.DAY));
+				long dateMilliseconds = cursor.getLong(cursor.getColumnIndex(MealsDate.DATE));
+
+				Calendar dayDate = Calendar.getInstance();
+				dayDate.setTime(new Date(dateMilliseconds));
+
+				week.getDayAt(day).setDate(dayDate);
+			} while (cursor.moveToNext());
 	}
 
 	public static void saveListToDB(SQLiteDatabase database, ArrayList<String> list, String table, String column) {

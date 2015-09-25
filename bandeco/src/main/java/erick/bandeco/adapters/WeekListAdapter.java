@@ -15,13 +15,11 @@ import com.app.bandeco.Constants;
 import com.app.bandeco.R;
 import com.app.bandeco.Utils;
 
-import java.util.Calendar;
-
 import erick.bandeco.database.DatabaseHelper;
 import erick.bandeco.model.Day;
 import erick.bandeco.model.Meal;
 import erick.bandeco.model.Week;
-import erick.bandeco.view.HeightAnimation;
+import erick.bandeco.controller.HeightAnimation;
 import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
 
 public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAdapter {
@@ -165,7 +163,7 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 
 
 		Day day = getMeal(position).getDay();
-		String headerText = week_days[index].toUpperCase();// TODO: + " - " + String.format(dateFormatString, day.getMonthDay(), day.getMonth());
+		String headerText = week_days[index].toUpperCase() + " - " + String.format(dateFormatString, day.getMonthDay(), day.getMonth());
 
 		TextView headerTextView = (TextView) convertView.findViewById(R.id.header_text_view);
 		headerTextView.setText(headerText);

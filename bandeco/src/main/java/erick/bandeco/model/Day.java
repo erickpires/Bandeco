@@ -1,5 +1,8 @@
 package erick.bandeco.model;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import static com.app.bandeco.Constants.MEAL_TYPE_DINNER;
 import static com.app.bandeco.Constants.MEAL_TYPE_LUNCH;
 
@@ -7,19 +10,17 @@ public class Day {
 	private Meal lunch;
 	private Meal dinner;
 	private int weekDay;
-	private int monthDay;
-	private int month;
+	private Calendar date;
 
 	public Day(Meal lunch, Meal dinner, int weekDay) {
-		this(lunch, dinner, weekDay, 0, 1);
+		this(lunch, dinner, weekDay, null);
 	}
 
-	public Day(Meal lunch, Meal dinner, int weekDay, int monthDay, int month) {
+	public Day(Meal lunch, Meal dinner, int weekDay, Calendar date) {
 		this.lunch = lunch;
 		this.dinner = dinner;
 		this.weekDay = weekDay;
-		this.monthDay = monthDay;
-		this.month = month;
+		this.date = date;
 
 		lunch.setDay(this);
 		dinner.setDay(this);
@@ -53,10 +54,18 @@ public class Day {
 	}
 
 	public int getMonthDay() {
-		return monthDay;
+		return date.get(Calendar.DAY_OF_MONTH);
 	}
 
 	public int getMonth() {
-		return month;
+		return date.get(Calendar.MONTH);
+	}
+
+	public Calendar getDate() {
+		return date;
+	}
+
+	public void setDate(Calendar date) {
+		this.date = date;
 	}
 }

@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Calendar;
 import java.util.Date;
 
 import erick.bandeco.database.DatabaseHelper;
@@ -25,6 +26,7 @@ import static com.app.bandeco.Constants.DAYS_IN_THE_WEEK;
 import static com.app.bandeco.Constants.MEAL_TYPE_DINNER;
 import static com.app.bandeco.Constants.MEAL_TYPE_LUNCH;
 import static com.app.bandeco.Constants.SITE_URL;
+import static erick.bandeco.database.OperationsWithDB.insertMealDayDateInDatabase;
 import static erick.bandeco.database.OperationsWithDB.insertMealInDatabase;
 import static erick.bandeco.database.OperationsWithDB.updateLastModifiedInDatabase;
 
@@ -51,11 +53,11 @@ public class UpdateService extends Service {
 
 					URLConnection connection = url.openConnection();
 
-					Date date = new Date(connection.getLastModified());
+					//Date date = new Date(connection.getLastModified());
 
 					Html html = new Html(connection);
 
-					updateDatabaseInfo(html, date);
+					updateDatabaseInfo(html);
 
 					LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(new Intent("update_event"));
 				} catch (MalformedURLException e) {
@@ -74,22 +76,25 @@ public class UpdateService extends Service {
 		return START_NOT_STICKY;
 	}
 
-	private void updateDatabaseInfo(Html html, Date date) {
+	private void updateDatabaseInfo(Html html) {
 		DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext());
 		try {
 			SQLiteDatabase database = databaseHelper.getWritableDatabase();
 
-			Week week = new Week(html.getTables());
+			Week week = new Week(html.getTables(), html.getLastModified());
 
 			for (int i = 0; i < DAYS_IN_THE_WEEK; i++) {
 				Day day = week.getDayAt(i);
 
-				day.getLunch();
+				//day.getLunch();
+				//updateLastModifiedInDatabase(database, date);
 
 				insertMealInDatabase(database, day.getLunch(), i, MEAL_TYPE_LUNCH);
 				insertMealInDatabase(database, day.getDinner(), i, MEAL_TYPE_DINNER);
 
-				updateLastModifiedInDatabase(database, date);
+				Calendar dayDate = day.getDate();
+				if(dayDate != null)
+					insertMealDayDateInDatabase(database, i, dayDate.getTimeInMillis());
 			}
 
 			Main.week = OperationsWithDB.getWeekFromDatabase(database);
