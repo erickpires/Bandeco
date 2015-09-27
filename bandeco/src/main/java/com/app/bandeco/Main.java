@@ -84,6 +84,7 @@ public class Main extends AppCompatActivity {
 		});
 	}
 
+	@SuppressWarnings("WeakerAccess")
 	public void updateWeek() {
 		SQLiteDatabase database = databaseHelper.getReadableDatabase();
 		week = OperationsWithDB.getWeekFromDatabase(database);
@@ -97,17 +98,17 @@ public class Main extends AppCompatActivity {
 			hideFabs();
 	}
 
-	public boolean isFabsHidden() {
+	private boolean isFabsHidden() {
 		return inviteLunchFab.getVisibility() != View.VISIBLE &&
 					   inviteDinnerFab.getVisibility() != View.VISIBLE;
 	}
 
-	public void showFabs() {
+	private void showFabs() {
 		inviteLunchFab.show();
 		inviteDinnerFab.show();
 	}
 
-	public void hideFabs() {
+	private void hideFabs() {
 		inviteLunchFab.hide();
 		inviteDinnerFab.hide();
 	}

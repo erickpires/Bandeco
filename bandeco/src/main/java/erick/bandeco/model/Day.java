@@ -12,14 +12,9 @@ public class Day {
 	private Calendar date;
 
 	public Day(Meal lunch, Meal dinner, int weekDay) {
-		this(lunch, dinner, weekDay, null);
-	}
-
-	public Day(Meal lunch, Meal dinner, int weekDay, Calendar date) {
 		this.lunch = lunch;
 		this.dinner = dinner;
 		this.weekDay = weekDay;
-		this.date = date;
 
 		lunch.setDay(this);
 		dinner.setDay(this);
@@ -58,6 +53,10 @@ public class Day {
 
 	public long getDateMilliseconds() {
 		return date.getTimeInMillis();
+	}
+
+	public boolean hasDateAvaible() {
+		return date != null;
 	}
 
 	public void setDate(Calendar date) {

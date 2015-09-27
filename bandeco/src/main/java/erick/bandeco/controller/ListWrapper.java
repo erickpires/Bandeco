@@ -10,7 +10,7 @@ import com.app.bandeco.R;
 
 import java.util.ArrayList;
 
-public class ListWrapper {
+class ListWrapper {
 
 	private ArrayList<String> wordsList;
 	private ArrayList<View> viewsList;
@@ -20,7 +20,7 @@ public class ListWrapper {
 	public ListWrapper(LinearLayout view, LayoutInflater inflater, ArrayList<String> list) {
 		this.view = view;
 		this.inflater = inflater;
-		this.viewsList = new ArrayList<View>();
+		this.viewsList = new ArrayList<>();
 
 		this.wordsList = list;
 		for (String ignored : wordsList) createListViewElement();

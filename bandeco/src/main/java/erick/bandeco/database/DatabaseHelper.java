@@ -8,7 +8,7 @@ import static erick.bandeco.database.DatabaseContract.*;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-	public static final String DB_NAME = "Bandeco.db";
+	private static final String DB_NAME = "Bandeco.db";
 	private static final int DATABASE_VERSION = 3;
 
 	public DatabaseHelper(Context context) {

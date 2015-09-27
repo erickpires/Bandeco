@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimaryDark"
         android:paddingLeft="@dimen/default_minimal_padding"
+        android:paddingStart="@dimen/default_minimal_padding"
 
         app:contentInsetStart="5dp"
         app:popupTheme="@style/Theme.AppCompat.Light"

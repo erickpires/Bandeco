@@ -14,12 +14,12 @@ import com.nhaarman.listviewanimations.util.Swappable;
 
 
 public class MenuEntriesListAdapter extends BaseAdapter implements Swappable {
-	final long[] magicVibrationPattern = {0, 12, 10, 12};
+	private final long[] magicVibrationPattern = {0, 12, 10, 12};
 
-	Context context;
+	private Context context;
 	private Integer[] menuEntriesOrder;
-	String[] entries;
-	Boolean[] checked;
+	private String[] entries;
+	private Boolean[] checked;
 
 
 	public MenuEntriesListAdapter(Context context, Integer[] menuEntriesOrder, Boolean[] checked) {

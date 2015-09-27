@@ -11,8 +11,9 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,7 +53,8 @@ import static java.util.Calendar.SECOND;
 import static java.util.Calendar.getInstance;
 
 
-public class Settings extends ActionBarActivity {
+@SuppressWarnings("WeakerAccess")
+public class Settings extends AppCompatActivity {
 
 	public static final int NOTIFY_ALWAYS = 0;
 	public static final int NOTIFY_IF_LIKE = 1;
@@ -269,7 +271,7 @@ public class Settings extends ActionBarActivity {
 
 				dynamicListView.enableDragAndDrop();
 
-				dynamicListView.setDraggableManager(new mTouchViewDraggableManager(R.id.drag_and_drop));
+				dynamicListView.setDraggableManager(new mTouchViewDraggableManager());
 				//TODO: maybe set the long click to also drag and drop (maybe use the
 				// tag of the view to get the view position on the list)
 				/*
@@ -475,9 +477,11 @@ public class Settings extends ActionBarActivity {
 	private int getColor(boolean enabled) {
 		int color;
 		if (enabled)
-			color = getResources().getColor(R.color.primary_text_color);
+			color = ContextCompat.getColor(getApplicationContext(), R.color.primary_text_color);
+			//color = getResources().getColor(R.color.primary_text_color);
 		else
-			color = getResources().getColor(R.color.grey_text);
+			color = ContextCompat.getColor(getApplicationContext(), R.color.grey_text);
+			//color = getResources().getColor(R.color.grey_text);
 		return color;
 	}
 
@@ -570,8 +574,8 @@ public class Settings extends ActionBarActivity {
 	private class mTouchViewDraggableManager extends TouchViewDraggableManager {
 		final long[] magicVibrationPattern = {0, 7, 14, 7};
 
-		public mTouchViewDraggableManager(int drag_and_drop) {
-			super(drag_and_drop);
+		public mTouchViewDraggableManager() {
+			super(R.id.drag_and_drop);
 		}
 
 		@Override

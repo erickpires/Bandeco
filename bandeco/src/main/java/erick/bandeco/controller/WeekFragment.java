@@ -59,7 +59,7 @@ public class WeekFragment extends Fragment {
 		return parentView;
 	}
 
-	LocalBroadcastManager localBroadcastManager;
+	private LocalBroadcastManager localBroadcastManager;
 	@Override
 	public void onResume() {
 		super.onResume();
@@ -86,7 +86,7 @@ public class WeekFragment extends Fragment {
 		}
 	};
 
-	int getNextMealPositionInList() {
+	private int getNextMealPositionInList() {
 		Calendar today = Calendar.getInstance();
 		int dayNumber = Day.adaptDayOfWeek(today.get(Calendar.DAY_OF_WEEK));
 

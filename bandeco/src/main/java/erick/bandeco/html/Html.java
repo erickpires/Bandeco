@@ -15,7 +15,7 @@ import java.util.List;
 
 public class Html {
 
-	private List<Table> tables = new ArrayList<Table>();
+	private List<Table> tables = new ArrayList<>();
 	private Date lastModified;
 
 	public Html(URLConnection connection) throws IOException {
@@ -27,7 +27,7 @@ public class Html {
 		createTables(doc);
 	}
 
-	private void createTables(Document doc) throws IOException {
+	private void createTables(Document doc) {
 
 		for (Element table : doc.select("table")) {
 			Table currentTable = new Table();

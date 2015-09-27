@@ -162,8 +162,13 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 
 
 		Day day = getMeal(position).getDay();
-		String dateString = DateUtils.formatDateTime(context, day.getDateMilliseconds(), DateUtils.FORMAT_NO_YEAR)
-									 .toUpperCase();
+		String dateString;
+		if(day.hasDateAvaible())
+			dateString = DateUtils.formatDateTime(context, day.getDateMilliseconds(), DateUtils.FORMAT_NO_YEAR);
+		else
+			dateString = context.getString(R.string.no_available_date);
+
+		dateString = dateString.toUpperCase();
 		String headerText = week_days[index].toUpperCase() + ", " + dateString;
 
 		TextView headerTextView = (TextView) convertView.findViewById(R.id.header_text_view);

@@ -8,16 +8,18 @@ public class Table {
 	/**
 	 *
 	 */
-	List<List<String>> table = new ArrayList<List<String>>();
+	private List<List<String>> table = new ArrayList<>();
 
 	public String getElement(int row, int column) {
 		return table.get(row).get(column);
 	}
 
+	@SuppressWarnings("WeakerAccess")
 	public int rows() {
 		return table.size();
 	}
 
+	@SuppressWarnings("WeakerAccess")
 	public int columns(int row) {
 		return table.get(row).size();
 	}
@@ -44,6 +46,7 @@ public class Table {
 		table.get(row).add(value);
 	}
 
+	@SuppressWarnings("SameParameterValue")
 	public int searchValueInColumn(int column, String value) {
 		for (int i = 0; i < table.size(); i++) {
 			String s = table.get(i).get(column);
@@ -54,7 +57,7 @@ public class Table {
 	}
 
 	public List<String> getColumn(int column, int start) {
-		List<String> l = new ArrayList<String>();
+		List<String> l = new ArrayList<>();
 
 		for (int i = start; i < rows(); i++)
 			if (columns(i) > column)

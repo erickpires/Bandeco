@@ -8,13 +8,7 @@
     <dimen name="double_vertical_padding">15dp</dimen>
     <dimen name="minimum_vertical_padding">7dp</dimen>
 
-    <dimen name="small_fab_padding">15dp</dimen>
-    <dimen name="padding_vertical_fab_text">5dp</dimen>
-    <dimen name="padding_side_fab_text">7dp</dimen>
     <dimen name="fab_elevation">6dp</dimen>
-
-    <dimen name="large_fab_diameter">50dp</dimen>
-    <dimen name="small_fab_diameter">40dp</dimen>
 
     <dimen name="stripe_width">7dp</dimen>
 

@@ -9,6 +9,7 @@ import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Build;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.view.WindowManager;
 
@@ -47,7 +48,8 @@ public final class Utils {
 			activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 			SystemBarTintManager tintManager = new SystemBarTintManager(activity);
 			tintManager.setStatusBarTintEnabled(true);
-			tintManager.setStatusBarTintColor(activity.getResources().getColor(R.color.status_color));
+			int color = ContextCompat.getColor(activity.getApplicationContext(), R.color.status_color);
+			tintManager.setStatusBarTintColor(color);
 		}
 	}
 
@@ -204,6 +206,7 @@ public final class Utils {
 		return result;
 	}
 
+	@SuppressWarnings("SameParameterValue")
 	public static String readAssetAndClose(AssetManager assetManager, String assetName) {
 		String assetData = "";
 		try {
@@ -240,7 +243,7 @@ public final class Utils {
 		return hasMatch(meal, likeList, context);
 	}
 
-	public static boolean hasMatch(Meal meal, ArrayList<String> list, Context context) {
+	private static boolean hasMatch(Meal meal, ArrayList<String> list, Context context) {
 		String tmp = getTextFromMeal(meal, context).toLowerCase();
 
 		for (String s : list)

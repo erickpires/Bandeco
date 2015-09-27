@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingLeft="@dimen/default_minimal_padding"
@@ -17,13 +18,15 @@
         android:layout_height="20dp"
         android:src="@drawable/ic_drag"
         android:paddingRight="@dimen/default_minimal_padding"
-        android:layout_gravity="center_vertical" />
+        android:paddingEnd="@dimen/default_minimal_padding"
+        android:layout_gravity="center_vertical"
+        tools:ignore="ContentDescription"/>
 </FrameLayout>
 
     <CheckBox
         android:layout_marginBottom="@dimen/minimum_vertical_padding"
         android:layout_marginTop="@dimen/minimum_vertical_padding"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/menu_entry_checkbox" />
 

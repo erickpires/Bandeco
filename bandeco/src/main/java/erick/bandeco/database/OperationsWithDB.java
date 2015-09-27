@@ -14,8 +14,6 @@ import erick.bandeco.model.Meal;
 import erick.bandeco.model.Week;
 
 import static erick.bandeco.database.DatabaseContract.*;
-import static erick.bandeco.database.DatabaseContract.LastUpdate;
-import static erick.bandeco.database.DatabaseContract.Meals;
 
 
 public final class OperationsWithDB {
@@ -45,6 +43,7 @@ public final class OperationsWithDB {
 		db.insertWithOnConflict(Meals.TABLE_NAME, null, values, SQLiteDatabase.CONFLICT_REPLACE);
 	}
 
+	//TODO: Use this method
 	public static void updateLastModifiedInDatabase(SQLiteDatabase db, Date date) {
 		ContentValues values = new ContentValues();
 

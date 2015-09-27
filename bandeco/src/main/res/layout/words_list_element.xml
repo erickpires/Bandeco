@@ -25,6 +25,7 @@
         android:layout_height="fill_parent"
         android:id="@+id/delete_button"
         android:background="@drawable/dialog_selector"
-        android:src="@drawable/ic_action_remove" />
+        android:src="@drawable/ic_action_remove"
+        android:contentDescription="@string/delete_entry" />
 
 </LinearLayout>

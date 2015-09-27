@@ -4,10 +4,6 @@
     <string name="action_settings">Configurações</string>
     <string name="action_update">Atualizar</string>
     <string name="action_about">Sobre</string>
-    <string name="title">Title</string>
-    <string name="desc">Description</string>
-    <string name="hoje">Hoje</string>
-    <string name="semana">Semana</string>
 
     <string name="versao">Versão: </string>
 
@@ -76,5 +72,8 @@
 
     <string name="title_activity_about">Sobre</string>
     <string name="title_activity_settings">Configurações</string>
+
+    <string name="delete_entry">Deletar entrada da lista.</string>
+    <string name="no_available_date">Data indisponível</string>
 
 </resources>

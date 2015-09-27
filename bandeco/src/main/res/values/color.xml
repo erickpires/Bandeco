@@ -4,16 +4,13 @@
     <color name="bg_grey">#FFbfbfbf</color>
     <color name="bg_light_grey">#ffe0e0e0</color>
     <color name="bg_dark_grey">#ff9b9b9b</color>
-    <color name="fab_text">#8d0d0d0d</color>
     <!-- TODO: maybe change this to white after remaking the UI -->
 
-    <color name="almost_white">#fff8f8f8</color>
     <color name="bg_color">#ffefefef</color>
     <color name="primary_text_color">#FF000000</color>
     <color name="toolbar_color">#FFe67e22</color>
     <color name="fab_bg">#fffe9323</color>
     <color name="status_color">#FFc26a1d</color>
-    <color name="fab_text_shadow">#33555555</color>
 
     <color name="meal_title_text_color">#ff2555c2</color>
 

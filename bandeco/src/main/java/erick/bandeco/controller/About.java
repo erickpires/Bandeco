@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,7 +24,7 @@ import com.app.bandeco.Utils;
 
 import java.io.Serializable;
 
-public class About extends ActionBarActivity implements Serializable{
+public class About extends AppCompatActivity implements Serializable{
 
 	private static final Uri myTwitter = Uri.parse("https://twitter.com/ericktpires");
 	private static final Uri designerDribbble = Uri.parse("https://dribbble.com/aPronsky");
