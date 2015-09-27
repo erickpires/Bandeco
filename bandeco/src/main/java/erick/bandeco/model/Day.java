@@ -1,7 +1,6 @@
 package erick.bandeco.model;
 
 import java.util.Calendar;
-import java.util.Date;
 
 import static com.app.bandeco.Constants.MEAL_TYPE_DINNER;
 import static com.app.bandeco.Constants.MEAL_TYPE_LUNCH;
@@ -53,16 +52,12 @@ public class Day {
 		return weekDay;
 	}
 
-	public int getMonthDay() {
-		return date.get(Calendar.DAY_OF_MONTH);
-	}
-
-	public int getMonth() {
-		return date.get(Calendar.MONTH);
-	}
-
 	public Calendar getDate() {
 		return date;
+	}
+
+	public long getDateMilliseconds() {
+		return date.getTimeInMillis();
 	}
 
 	public void setDate(Calendar date) {

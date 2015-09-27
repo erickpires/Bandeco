@@ -29,22 +29,6 @@ public final class OperationsWithDB {
 		db.insertWithOnConflict(MealsDate.TABLE_NAME, null, values, SQLiteDatabase.CONFLICT_REPLACE);
 	}
 
-	public static Date getMealDayDateFromDatabase(SQLiteDatabase db, int day) {
-
-		String selection = MealsDate.DAY + "=?";
-		String[] selectionValues = {String.valueOf(day)};
-
-		Cursor cursor = db.query(MealsDate.TABLE_NAME, new String[]{MealsDate.DATE},
-								 selection, selectionValues, null, null, null);
-
-		if(cursor.moveToFirst()) {
-			long dateMillisec = cursor.getLong(cursor.getColumnIndex(MealsDate.DATE));
-
-			return new Date(dateMillisec);
-		}
-		return null;
-	}
-
 	public static void insertMealInDatabase(SQLiteDatabase db, Meal meal, int day, int mealType) {
 		ContentValues values = new ContentValues();
 
@@ -65,7 +49,8 @@ public final class OperationsWithDB {
 		ContentValues values = new ContentValues();
 
 		values.put(LastUpdate.TABLE_ID, 0);
-		values.put(LastUpdate.DATE, Constants.dateFormat.format(date));
+		//values.put(LastUpdate.DATE, Constants.dateFormat.format(date));
+		values.put(LastUpdate.DATE, date.getTime());
 
 		db.insertWithOnConflict(LastUpdate.TABLE_NAME, null, values, SQLiteDatabase.CONFLICT_REPLACE);
 	}
@@ -84,6 +69,7 @@ public final class OperationsWithDB {
 			setMealWithCursor(meal, cursor);
 		}
 
+		cursor.close();
 		return meal;
 	}
 
@@ -118,6 +104,7 @@ public final class OperationsWithDB {
 				setMealWithCursor(meal, cursor);
 
 			} while (cursor.moveToNext());
+		cursor.close();
 	}
 
 	private static void getMealsDayDateFromDatabase(Week week, SQLiteDatabase database) {
@@ -129,10 +116,11 @@ public final class OperationsWithDB {
 				long dateMilliseconds = cursor.getLong(cursor.getColumnIndex(MealsDate.DATE));
 
 				Calendar dayDate = Calendar.getInstance();
-				dayDate.setTime(new Date(dateMilliseconds));
+				dayDate.setTimeInMillis(dateMilliseconds);
 
 				week.getDayAt(day).setDate(dayDate);
 			} while (cursor.moveToNext());
+		cursor.close();
 	}
 
 	public static void saveListToDB(SQLiteDatabase database, ArrayList<String> list, String table, String column) {
@@ -150,7 +138,7 @@ public final class OperationsWithDB {
 	}
 
 	public static ArrayList<String> getListFromDB(SQLiteDatabase database, String table, String[] projection) {
-		ArrayList<String> list = new ArrayList<String>();
+		ArrayList<String> list = new ArrayList<>();
 
 		Cursor cursor = database.query(table, projection, null, null, null, null, null);
 
@@ -162,6 +150,7 @@ public final class OperationsWithDB {
 
 			while (cursor.moveToNext());
 
+		cursor.close();
 		return list;
 	}
 

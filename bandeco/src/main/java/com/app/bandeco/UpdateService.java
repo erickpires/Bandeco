@@ -10,11 +10,9 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.widget.Toast;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.Calendar;
-import java.util.Date;
 
 import erick.bandeco.database.DatabaseHelper;
 import erick.bandeco.database.OperationsWithDB;
@@ -28,7 +26,6 @@ import static com.app.bandeco.Constants.MEAL_TYPE_LUNCH;
 import static com.app.bandeco.Constants.SITE_URL;
 import static erick.bandeco.database.OperationsWithDB.insertMealDayDateInDatabase;
 import static erick.bandeco.database.OperationsWithDB.insertMealInDatabase;
-import static erick.bandeco.database.OperationsWithDB.updateLastModifiedInDatabase;
 
 public class UpdateService extends Service {
 
@@ -53,16 +50,13 @@ public class UpdateService extends Service {
 
 					URLConnection connection = url.openConnection();
 
-					//Date date = new Date(connection.getLastModified());
-
 					Html html = new Html(connection);
 
 					updateDatabaseInfo(html);
 
 					LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(new Intent("update_event"));
-				} catch (MalformedURLException e) {
-					e.printStackTrace();
 				} catch (IOException e) {
+					//TODO(Maybe): treat MalformedURLException differently
 					e.printStackTrace();
 				} finally {
 					stopSelf();
@@ -85,9 +79,6 @@ public class UpdateService extends Service {
 
 			for (int i = 0; i < DAYS_IN_THE_WEEK; i++) {
 				Day day = week.getDayAt(i);
-
-				//day.getLunch();
-				//updateLastModifiedInDatabase(database, date);
 
 				insertMealInDatabase(database, day.getLunch(), i, MEAL_TYPE_LUNCH);
 				insertMealInDatabase(database, day.getDinner(), i, MEAL_TYPE_DINNER);

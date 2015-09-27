@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.text.TextUtils;
+import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +37,6 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 	private int[] stripesResources;
 	private String[] week_days;
 	private Utils.MealTextInfo mealTextInfo;
-	private String dateFormatString;
 
 	public WeekListAdapter(Activity activity, Week week, boolean shouldDisplayLunch, boolean shouldDisplayDinner, int currentSelected) {
 		this.activity = activity;
@@ -51,7 +51,6 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 
 		mealTextInfo = new Utils.MealTextInfo(context);
 		week_days = context.getResources().getStringArray(R.array.days_array);
-		dateFormatString = context.getString(R.string.day_of_month);
 
 		fillArrays();
 		makeStripesResources();
@@ -163,7 +162,9 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 
 
 		Day day = getMeal(position).getDay();
-		String headerText = week_days[index].toUpperCase() + " - " + String.format(dateFormatString, day.getMonthDay(), day.getMonth());
+		String dateString = DateUtils.formatDateTime(context, day.getDateMilliseconds(), DateUtils.FORMAT_NO_YEAR)
+									 .toUpperCase();
+		String headerText = week_days[index].toUpperCase() + ", " + dateString;
 
 		TextView headerTextView = (TextView) convertView.findViewById(R.id.header_text_view);
 		headerTextView.setText(headerText);

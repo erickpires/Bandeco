@@ -100,8 +100,6 @@ public class Week {
 			Calendar dayCalendar = (Calendar) lastModifiedCalendar.clone();
 			dayCalendar.add(Calendar.DAY_OF_YEAR, i);
 			days[i].setDate(dayCalendar);
-
-			System.out.println("Updating day " + i + " w/ date " + dayCalendar.get(Calendar.DAY_OF_MONTH) + "/" + dayCalendar.get(Calendar.MONTH));
 		}
 	}
 }
