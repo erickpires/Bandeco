@@ -3,7 +3,7 @@ package com.app.bandeco;
 import erick.bandeco.database.DatabaseContract;
 
 public final class Constants {
-	public static final String SITE_URL_OFICIAL = "http://www.nutricao.ufrj.br/cardapio.htm";
+	public static final String SITE_URL_OFICIAL = "http://www2.nutricao.ufrj.br/cardapio.htm";
 	public static final String SITE_URL_BACKUP = "http://dcc.ufrj.br/~erickpires/cardapio1.htm";
 	public static String SITE_URL = SITE_URL_OFICIAL;
 
