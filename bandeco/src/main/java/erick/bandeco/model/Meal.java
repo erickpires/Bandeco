@@ -66,8 +66,10 @@ public class Meal {
 				refresco = sobremesaRefresco[1];
 			else
 				refresco = "";
-		} else
+		} else {
+			sobremesa = tmp;
 			refresco = tableColumn.get(indexer.getIndexOfRefresco());
+		}
 
 
 		formatText();
@@ -79,13 +81,13 @@ public class Meal {
 	}
 
 	private void formatText() {
-		entrada = entrada.trim();
-		pratoPrincipal = pratoPrincipal.trim();
-		vegetariana = vegetariana.trim();
-		guarnicao = guarnicao.trim();
+//		entrada = entrada.trim();
+//		pratoPrincipal = pratoPrincipal.trim();
+//		vegetariana = vegetariana.trim();
+//		guarnicao = guarnicao.trim();
 		feijao = feijao.trim();
-		sobremesa = sobremesa.trim();
-		refresco = refresco.trim();
+//		sobremesa = sobremesa.trim();
+//		refresco = refresco.trim();
 		arroz = arroz.trim();
 
 		entrada = entrada.replace(BREAK_LINE, "");
@@ -93,7 +95,7 @@ public class Meal {
 		vegetariana = vegetariana.replace(BREAK_LINE, "");
 		guarnicao = guarnicao.replace(BREAK_LINE, "");
 		feijao = feijao.replace(BREAK_LINE, "");
-		sobremesa = sobremesa.replace(BREAK_LINE, "");
+//		sobremesa = sobremesa.replace(BREAK_LINE, "");
 		refresco = refresco.replace(BREAK_LINE, "");
 		arroz = arroz.replace(BREAK_LINE, "");
 

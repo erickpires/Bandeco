@@ -58,7 +58,7 @@ public class Week {
 		List<String> tmp = lunchTable.getColumn(0, startingRow);
 		lunchIndexer = new Indexer(tmp);
 
-		tmp = dinnerTable.getColumn(0, startingRow);
+		tmp = dinnerTable.getColumn(0, 0);
 
 		dinnerIndexer = new Indexer(tmp);
 	}

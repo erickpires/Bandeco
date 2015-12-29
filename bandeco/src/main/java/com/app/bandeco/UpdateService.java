@@ -13,10 +13,13 @@ import java.io.IOException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 import erick.bandeco.database.DatabaseHelper;
 import erick.bandeco.database.OperationsWithDB;
 import erick.bandeco.html.Html;
+import erick.bandeco.html.Table;
 import erick.bandeco.model.Day;
 import erick.bandeco.model.Week;
 
@@ -71,11 +74,32 @@ public class UpdateService extends Service {
 	}
 
 	private void updateDatabaseInfo(Html html) {
+		if(html.getTables().size() == 0)
+			throw new RuntimeException("No table to work with");
+
 		DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext());
 		try {
 			SQLiteDatabase database = databaseHelper.getWritableDatabase();
 
-			Week week = new Week(html.getTables(), html.getLastModified());
+			Table gDocsTables = html.getTables().get(0);
+			gDocsTables.trimCells();
+			gDocsTables.removeBlankLines();
+
+			List<Table> mealsTables = gDocsTables.split("JANTAR");
+
+			if(mealsTables.size() < 2)
+				throw new RuntimeException("Could not parse the google docs table");
+
+			String updateTableLine = mealsTables.get(1).getLineContainingIgnoreCase("atualizado");
+
+			Date lastModifiedDate = Utils.getDateFromTableLine(updateTableLine);
+
+			if(lastModifiedDate == null) {
+				// TODO: The app should know how to work with the update date unsetted
+				lastModifiedDate = html.getLastModified();
+			}
+
+			Week week = new Week(mealsTables, lastModifiedDate);
 
 			for (int i = 0; i < DAYS_IN_THE_WEEK; i++) {
 				Day day = week.getDayAt(i);
