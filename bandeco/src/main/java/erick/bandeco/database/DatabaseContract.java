@@ -34,6 +34,7 @@ public abstract class DatabaseContract {
 		public static final String TABLE_NAME = "meals";
 		public static final String MEAL_TYPE = "meal_type";
 		public static final String DAY = "day";
+		public static final String IS_RECESS = "is_recess";
 		public static final String ENTRADA = "entrada";
 		public static final String GUARNICAO = "guarnicao";
 		public static final String PRATO_PRINCIPAL = "prato_principal";
@@ -46,6 +47,7 @@ public abstract class DatabaseContract {
 				"CREATE TABLE " + TABLE_NAME + " ( " +
 						MEAL_TYPE + " INTEGER, " +
 						DAY + " INTEGER, " +
+						IS_RECESS + " INTEGER, " +
 						ENTRADA + " TEXT, " +
 						GUARNICAO + " TEXT, " +
 						PRATO_PRINCIPAL + " TEXT, " +

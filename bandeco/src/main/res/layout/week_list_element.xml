@@ -29,6 +29,14 @@
             android:textColor="@color/meal_title_text_color"/>
 
         <TextView
+            android:id="@+id/recess_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/recess"
+            android:textSize="@dimen/recess_text_size"/>
+
+        <TextView
             android:id="@+id/body"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>

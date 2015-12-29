@@ -21,6 +21,7 @@ public class Meal {
 	private String acompanhamento;
 	private int type;
 	private Day day;
+	private boolean isRecess;
 
 	public Meal(int mealType) {
 		this.type = mealType;
@@ -39,6 +40,7 @@ public class Meal {
 		String tmp;
 
 		this.type = type;
+		isRecess = false;
 
 		entrada = tableColumn.get(indexer.getIndexOfEntrada());
 		pratoPrincipal = tableColumn.get(indexer.getIndexOfPratoPrincipal());
@@ -78,6 +80,28 @@ public class Meal {
 
 		if (feijao.length() > 0)
 			acompanhamento += " e " + feijao;
+
+		testForRecess();
+	}
+
+	private void testForRecess() {
+		isRecess = true;
+		if(entrada.toLowerCase().contains(Constants.RECESS))
+			return;
+		if(pratoPrincipal.toLowerCase().contains(Constants.RECESS))
+			return;
+		if(vegetariana.toLowerCase().contains(Constants.RECESS))
+			return;
+		if(guarnicao.toLowerCase().contains(Constants.RECESS))
+			return;
+		if(acompanhamento.toLowerCase().contains(Constants.RECESS))
+			return;
+		if(sobremesa.toLowerCase().contains(Constants.RECESS))
+			return;
+		if(refresco.toLowerCase().contains(Constants.RECESS))
+			return;
+
+		isRecess = false;
 	}
 
 	private void formatText() {
@@ -90,17 +114,25 @@ public class Meal {
 //		refresco = refresco.trim();
 		arroz = arroz.trim();
 
-		entrada = entrada.replace(BREAK_LINE, "");
-		pratoPrincipal = pratoPrincipal.replace(BREAK_LINE, "");
-		vegetariana = vegetariana.replace(BREAK_LINE, "");
-		guarnicao = guarnicao.replace(BREAK_LINE, "");
-		feijao = feijao.replace(BREAK_LINE, "");
+//		entrada = entrada.replace(BREAK_LINE, "");
+//		pratoPrincipal = pratoPrincipal.replace(BREAK_LINE, "");
+//		vegetariana = vegetariana.replace(BREAK_LINE, "");
+//		guarnicao = guarnicao.replace(BREAK_LINE, "");
+//		feijao = feijao.replace(BREAK_LINE, "");
 //		sobremesa = sobremesa.replace(BREAK_LINE, "");
-		refresco = refresco.replace(BREAK_LINE, "");
-		arroz = arroz.replace(BREAK_LINE, "");
+//		refresco = refresco.replace(BREAK_LINE, "");
+//		arroz = arroz.replace(BREAK_LINE, "");
 
 		arroz = arroz.replaceAll(" */ *", " ou ");
 
+	}
+
+	public boolean isRecess() {
+		return isRecess;
+	}
+
+	public void setIsRecess(boolean isRecess) {
+		this.isRecess = isRecess;
 	}
 
 	public String getEntrada() {

@@ -71,9 +71,10 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 		for(int i = 0; i < stripesResources.length; i++){
 			Meal meal = getMeal(i);
 
-			if(Utils.hasDislikedItem(meal, db, context))
+			if(meal.isRecess())
+				stripesResources[i] = 0;
+			else if(Utils.hasDislikedItem(meal, db, context))
 				stripesResources[i] = R.drawable.red_strip;
-
 			else if(Utils.hasLikedItem(meal, db, context))
 				stripesResources[i] = R.drawable.blue_stripe;
 			else
@@ -137,15 +138,23 @@ public class WeekListAdapter extends BaseAdapter implements StickyListHeadersAda
 
 		TextView title = (TextView) convertView.findViewById(R.id.title);
 		TextView body = (TextView) convertView.findViewById(R.id.body);
+		TextView recessTextView = (TextView) convertView.findViewById(R.id.recess_text_view);
 		ImageView stripeImageView = (ImageView) convertView.findViewById(R.id.stripe_image_view);
 
 		title.setText(Utils.getMealType(meal, context).toUpperCase());
 		title.setTypeface(Utils.getRobotoThin(context));
-		body.setText(Utils.getTextFromMeal(meal, mealTextInfo));
 		stripeImageView.setBackgroundResource(stripesResources[position]);
-		
-		boolean isExpanding = position == selected;
 
+		if(!meal.isRecess()) {
+			recessTextView.setVisibility(View.GONE);
+			body.setText(Utils.getTextFromMeal(meal, mealTextInfo));
+		}
+		else {
+			recessTextView.setVisibility(View.VISIBLE);
+			body.setText("");
+		}
+
+		boolean isExpanding = position == selected;
 		changeItemHeight(convertView, body, parent, isExpanding, !isBeenCreated);
 
 		return convertView;

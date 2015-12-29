@@ -75,4 +75,6 @@
     <string name="delete_entry">Delete list entry.</string>
     <string name="no_available_date">Date unavailable</string>
 
+    <string name="recess">RECESS</string>
+
 </resources>

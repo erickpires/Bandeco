@@ -94,10 +94,10 @@ public class UpdateService extends Service {
 
 			Date lastModifiedDate = Utils.getDateFromTableLine(updateTableLine);
 
-			if(lastModifiedDate == null) {
-				// TODO: The app should know how to work with the update date unsetted
-				lastModifiedDate = html.getLastModified();
-			}
+//			if(lastModifiedDate == null) {
+//				// TODO: The app should know how to work with the update date unsetted
+//				lastModifiedDate = html.getLastModified();
+//			}
 
 			Week week = new Week(mealsTables, lastModifiedDate);
 

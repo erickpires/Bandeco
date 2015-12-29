@@ -30,8 +30,11 @@ public final class OperationsWithDB {
 	public static void insertMealInDatabase(SQLiteDatabase db, Meal meal, int day, int mealType) {
 		ContentValues values = new ContentValues();
 
+		int isRecess = meal.isRecess() ? 1 : 0;
+
 		values.put(Meals.MEAL_TYPE, mealType);
 		values.put(Meals.DAY, day);
+		values.put(Meals.IS_RECESS, isRecess);
 		values.put(Meals.ENTRADA, meal.getEntrada());
 		values.put(Meals.GUARNICAO, meal.getGuarnicao());
 		values.put(Meals.PRATO_PRINCIPAL, meal.getPratoPrincipal());
@@ -73,6 +76,12 @@ public final class OperationsWithDB {
 	}
 
 	private static void setMealWithCursor(Meal meal, Cursor cursor) {
+		boolean isRecess = cursor.getInt(cursor.getColumnIndex(Meals.IS_RECESS)) == 1;
+		meal.setIsRecess(isRecess);
+
+		if(isRecess)
+			return;
+
 		meal.setEntrada(cursor.getString(cursor.getColumnIndex(Meals.ENTRADA)));
 		meal.setGuarnicao(cursor.getString(cursor.getColumnIndex(Meals.GUARNICAO)));
 		meal.setPratoPrincipal(cursor.getString(cursor.getColumnIndex(Meals.PRATO_PRINCIPAL)));

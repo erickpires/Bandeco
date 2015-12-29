@@ -76,4 +76,6 @@
     <string name="delete_entry">Deletar entrada da lista.</string>
     <string name="no_available_date">Data indisponível</string>
 
+    <string name="recess">RECESSO</string>
+
 </resources>
