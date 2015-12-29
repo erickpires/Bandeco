@@ -4,7 +4,7 @@ import erick.bandeco.database.DatabaseContract;
 
 public final class Constants {
 	public static final String SITE_URL_OFICIAL = "https://docs.google.com/spreadsheets/d/1YvCqBrNw5l4EFNplmpRBFrFJpjl4EALlVNDk3pwp_dQ/pubhtml";
-	public static final String SITE_URL_BACKUP = "http://dcc.ufrj.br/~erickpires/cardapio1.htm";
+	public static final String SITE_URL_BACKUP = "https://docs.google.com/spreadsheets/d/1Zpm1Qz3mIzob5hAYYq29_FbYT15j0damxZSWFBGyk0M/pubhtml";
 	public static String SITE_URL = SITE_URL_OFICIAL;
 
 	public static final String BREAK_LINE = ";;";

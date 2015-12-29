@@ -17,7 +17,6 @@ public class Week {
 	private Table dinnerTable;
 	private Indexer lunchIndexer;
 	private Indexer dinnerIndexer;
-	private static final int startingRow = 1;
 	private static final int columnsOffset = 1;
 
 	private Week() {
@@ -46,21 +45,19 @@ public class Week {
 
 	private void createWeek() {
 		for (int i = 0; i < 7; i++) {
-			Meal lunch = new Meal(lunchTable.getColumn(i + columnsOffset, startingRow), lunchIndexer, Constants.MEAL_TYPE_LUNCH);
-			Meal dinner = new Meal(dinnerTable.getColumn(i + columnsOffset, 0), dinnerIndexer, Constants.MEAL_TYPE_DINNER);
+			Meal lunch = new Meal(lunchTable.getColumn(i + columnsOffset), lunchIndexer, Constants.MEAL_TYPE_LUNCH);
+			Meal dinner = new Meal(dinnerTable.getColumn(i + columnsOffset), dinnerIndexer, Constants.MEAL_TYPE_DINNER);
 
 			days[i] = new Day(lunch, dinner, i);
 		}
 	}
 
 	private void createIndexers() {
-		//TODO: find a proper name for tmp
-		List<String> tmp = lunchTable.getColumn(0, startingRow);
-		lunchIndexer = new Indexer(tmp);
+		List<String> mealTypesColumn = lunchTable.getColumn(0);
+		lunchIndexer = new Indexer(mealTypesColumn);
 
-		tmp = dinnerTable.getColumn(0, 0);
-
-		dinnerIndexer = new Indexer(tmp);
+		mealTypesColumn = dinnerTable.getColumn(0);
+		dinnerIndexer = new Indexer(mealTypesColumn);
 	}
 
 	public Day[] getDays(){

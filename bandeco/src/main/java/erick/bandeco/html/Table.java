@@ -20,7 +20,7 @@ public class Table {
 	}
 
 	@SuppressWarnings("WeakerAccess")
-	public int columns(int row) {
+	public int numberOfColumnsAtRow(int row) {
 		return table.get(row).size();
 	}
 
@@ -63,11 +63,19 @@ public class Table {
 	public List<String> getColumn(int column, int start) {
 		List<String> l = new ArrayList<>();
 
-		for (int i = start; i < rows(); i++)
-			if (columns(i) > column)
-				l.add(getElement(i, column));
+		for (int i = start; i < rows(); i++) {
+			String item = null;
+			if (numberOfColumnsAtRow(i) > column)
+				item = getElement(i, column);
+
+			l.add(item);
+		}
 
 		return l;
+	}
+
+	public List<String> getColumn(int column) {
+		return getColumn(column, 0);
 	}
 
 	@Override
